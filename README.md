@@ -217,21 +217,6 @@ nk-coercive-diplomacy-reddit/
 
 ---
 
-## Citation
-
-If you use this code or data in your research, please cite:
-
-```bibtex
-@misc{sin2024nkcoercive,
-  author = {Sin, Jun},
-  title = {The Impact of North Korea's Coercive Diplomacy Strategy on U.S. Online Public Opinion},
-  year = {2024},
-  publisher = {GitHub},
-  url = {https://github.com/yourusername/nk-coercive-diplomacy-reddit}
-}
-```
-
----
 
 ## License
 
