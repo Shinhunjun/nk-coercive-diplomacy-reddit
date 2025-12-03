@@ -62,7 +62,7 @@ This repository contains the code and data for analyzing how North Korea's coerc
 ### Data Access
 
 - **Sample Data**: `data/sample/` (50 posts per period, included in repo)
-- **Full Dataset**: [Google Drive Link](https://drive.google.com/drive/folders/1v0MlJEjHp5kODXL5jRflJvJLSPpAcFWZ?usp=sharing)
+- **Full Dataset**: [Google Drive Link](https://drive.google.com/drive/folders/1NRIMwN4X3fLKZdRlwQWoY8747EeXDetn?usp=sharing)
 - **Analysis Results**: `data/results/` (all JSON files included)
 
 See [data/README.md](data/README.md) for detailed data documentation.

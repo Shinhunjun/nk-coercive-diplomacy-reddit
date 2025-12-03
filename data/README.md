@@ -30,7 +30,7 @@ data/
 
 The complete dataset is available on Google Drive:
 
-🔗 **[Download Full Dataset](https://drive.google.com/drive/folders/1v0MlJEjHp5kODXL5jRflJvJLSPpAcFWZ?usp=sharing)**
+🔗 **[Download Full Dataset](https://drive.google.com/drive/folders/1NRIMwN4X3fLKZdRlwQWoY8747EeXDetn?usp=sharing)**
 
 ### Full Dataset Contents
 
