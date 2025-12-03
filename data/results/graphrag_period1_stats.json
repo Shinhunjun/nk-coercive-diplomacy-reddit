@@ -1,0 +1,34 @@
+{
+  "total_entities": 131,
+  "total_relationships": 168,
+  "kim_jong_un_connections": 4,
+  "entity_types": {
+    "EVENT": 36,
+    "ORGANIZATION": 34,
+    "GEO": 28,
+    "PERSON": 26,
+    "": 7
+  },
+  "top_entities": [
+    "NORTH KOREA",
+    "SOUTH KOREA",
+    "KOREAN PENINSULA",
+    "US",
+    "UNITED STATES",
+    "CHINA",
+    "KOREAN WAR",
+    "KIM JONG-UN",
+    "SEOUL",
+    "DPRK",
+    "MOON",
+    "NUCLEAR PROGRAM",
+    "USA",
+    "KIM JONG UN",
+    "THAAD",
+    "NUCLEAR WAR",
+    "ROK",
+    "MISSILE LAUNCH",
+    "PENTAGON",
+    "TRUMP ADMINISTRATION"
+  ]
+}

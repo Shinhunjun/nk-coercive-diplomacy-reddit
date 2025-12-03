@@ -1,0 +1,26 @@
+{
+  "period1": {
+    "entities": 131,
+    "relationships": 168,
+    "kim_connections": 11,
+    "trump_connections": 5,
+    "war_relations_pct": 58.333333333333336,
+    "peace_relations_pct": 5.357142857142857
+  },
+  "period2": {
+    "entities": 135,
+    "relationships": 173,
+    "kim_connections": 17,
+    "trump_connections": 18,
+    "war_relations_pct": 52.601156069364166,
+    "peace_relations_pct": 21.965317919075144
+  },
+  "changes": {
+    "entities_change": 4,
+    "relationships_change": 5,
+    "kim_connections_change": 6,
+    "trump_connections_change": 13,
+    "peace_relations_pct_change": 16.608175061932286
+  },
+  "h3_supported": true
+}

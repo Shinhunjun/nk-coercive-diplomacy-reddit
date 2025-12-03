@@ -1,0 +1,29 @@
+{
+  "method": "Gemini LLM (gemini-2.0-flash-exp) with relaxed safety",
+  "period1": {
+    "total_valid": 24,
+    "frame_distribution": {
+      "THREAT": 15,
+      "NEUTRAL": 4,
+      "DIPLOMACY": 3,
+      "HUMANITARIAN": 2
+    },
+    "threat_pct": 62.5,
+    "diplomacy_pct": 12.5
+  },
+  "period2": {
+    "total_valid": 9,
+    "frame_distribution": {
+      "NEUTRAL": 5,
+      "DIPLOMACY": 4
+    },
+    "threat_pct": 0.0,
+    "diplomacy_pct": 44.44444444444444
+  },
+  "comparison": {
+    "threat_change": -62.5,
+    "diplomacy_change": 31.944444444444443,
+    "chi2": 13.153439153439153,
+    "p_value": 0.004316265062734892
+  }
+}

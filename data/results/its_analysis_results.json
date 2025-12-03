@@ -1,0 +1,15 @@
+{
+  "intervention_point": "2018-03",
+  "r_squared": 0.2173026803266923,
+  "r_squared_adj": 0.12699145113361832,
+  "f_statistic": 2.406153501267563,
+  "f_pvalue": 0.09012421363605648,
+  "beta0_const": -0.28270065824421564,
+  "beta1_time": -0.01692231839584587,
+  "beta2_intervention": 0.29265062324739577,
+  "beta3_time_after": 0.01428957305288246,
+  "pvalue_time": 0.1897106789219471,
+  "pvalue_intervention": 0.04402075043333503,
+  "pvalue_time_after": 0.38682097039659125,
+  "causal_effect": 0.5212837920935152
+}

@@ -1,0 +1,26 @@
+{
+  "hypothesis1_sentiment": {
+    "supported": true,
+    "posts_change": 0.22980885448997007,
+    "posts_pvalue": 0.0004942557045668834,
+    "comments_change": 0.07442519656036456,
+    "comments_pvalue": 3.615490133081415e-06
+  },
+  "hypothesis2_framing": {
+    "supported": true,
+    "threat_change": -24.213755247013232,
+    "partner_change": 10.77817242492735,
+    "pvalue": 1.1567565471736406e-12
+  },
+  "keyword_analysis": {
+    "ratio_change": -13.837837837837839,
+    "threat_change": -296,
+    "peace_change": 72
+  },
+  "its_analysis": {
+    "intervention_effect": 0.29265062324739577,
+    "pvalue": 0.04402075043333503,
+    "causal_effect": 0.5212837920935152
+  },
+  "conclusion": "All hypotheses SUPPORTED"
+}

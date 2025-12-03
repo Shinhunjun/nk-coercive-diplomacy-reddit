@@ -1,0 +1,14 @@
+{
+  "threat_total_p1": 623,
+  "threat_total_p2": 327,
+  "peace_total_p1": 37,
+  "peace_total_p2": 109,
+  "threat_rate_p1": 1.6394736842105264,
+  "threat_rate_p2": 1.0030674846625767,
+  "peace_rate_p1": 0.09736842105263158,
+  "peace_rate_p2": 0.3343558282208589,
+  "ratio_p1": 16.83783783783784,
+  "ratio_p2": 3.0,
+  "chi2": 83.8543176752076,
+  "pvalue": 5.326114415713437e-20
+}
