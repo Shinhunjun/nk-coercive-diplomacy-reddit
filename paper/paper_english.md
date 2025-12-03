@@ -2,7 +2,7 @@
 
 ---
 
-**Jun Sin**
+**Hunjun Sin**
 
 Research Collaboration with University of Texas at Austin (Professor Mohit Singhal)
 
@@ -437,7 +437,3 @@ Complete analysis code is available on GitHub:
   - `src/data_collector.py`: Data collection
 
 ---
-
-*Analysis completed: December 2024*
-*Researcher: Jun Sin*
-*Collaboration: UT Austin - Professor Mohit Singhal*

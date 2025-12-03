@@ -4,9 +4,7 @@
 
 ---
 
-**신현준 (Jun Sin)**
-
-University of Texas at Austin 협력 연구
+**신현준 (Hunjun Sin)**
 
 ---
 
