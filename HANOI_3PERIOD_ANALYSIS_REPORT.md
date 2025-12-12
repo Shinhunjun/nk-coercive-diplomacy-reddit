@@ -1,7 +1,14 @@
 # Hanoi Summit 3-Period DID Analysis Report
 
 **분석일**: 2025-12-12  
-**연구 질문**: 싱가포르 회담과 하노이 회담 결렬이 북한에 대한 Reddit 여론 framing에 미친 영향
+
+## Research Questions (Confirmed by Prof. Singhal)
+
+**RQ1**: "How do high-stakes diplomatic summits affect public opinion framing on social media, and do failed negotiations lead to symmetric reversals of opinion gains?"
+
+**RQ2**: "Can social media discourse predict or reflect the 'rally-round-the-flag' effect during diplomatic engagement cycles?"
+
+**Methodology**: LLM-based framing analysis + Difference-in-Differences design
 
 ---
 
