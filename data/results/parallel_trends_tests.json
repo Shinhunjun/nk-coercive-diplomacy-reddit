@@ -1,0 +1,16 @@
+{
+  "Iran": {
+    "verdict": "PASS",
+    "coefficient": 0.002891838976360698,
+    "p_value": 0.9236073498072412,
+    "nk_slope": -0.016744656236286844,
+    "control_slope": -0.019636495212647542,
+    "slope_difference": 0.002891838976360698,
+    "threshold": 0.1,
+    "model_summary": {
+      "r_squared": 0.06853496619548571,
+      "n_obs": 27
+    },
+    "control_group": "Iran"
+  }
+}

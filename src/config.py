@@ -45,6 +45,77 @@ PERIODS = {
 # Intervention point for ITS analysis
 INTERVENTION_DATE = "2018-03-08"  # Trump accepts summit invitation
 
+# Control group topics for DID analysis
+CONTROL_GROUPS = {
+    'iran': {
+        'keywords': [
+            # Core terms (already collected)
+            # 'iran', 'iranian', 'tehran',
+            # 'JCPOA', 'nuclear deal', 'iran nuclear', 'rouhani', 'khamenei', 'sanctions iran',
+
+            # NEW: Leaders
+            'zarif', 'soleimani', 'ayatollah',
+            # NEW: Nuclear/Politics
+            'iran sanctions', 'iran deal', 'iran agreement',
+            # NEW: Military
+            'IRGC', 'revolutionary guard', 'quds force', 'iran military',
+            'iran missile',
+            # NEW: Regional
+            'persian gulf', 'strait of hormuz', 'iran syria'
+        ],
+        'nuclear_keywords': ['nuclear', 'enrichment', 'uranium'],
+        'notes': 'JCPOA withdrawal May 2018 - potential confounder'
+    },
+    'russia': {
+        'keywords': [
+            # Core terms (already collected)
+            # 'russia', 'russian', 'putin', 'moscow', 'kremlin',
+
+            # NEW: Leaders
+            'lavrov', 'medvedev',
+            # NEW: Politics
+            'russia sanctions', 'russian sanctions', 'russia election',
+            'russia interference', 'russia hack', 'russian hacking',
+            # NEW: Military
+            'russian military', 'russia ukraine', 'russia crimea',
+            'russia syria', 'russia nato',
+            # NEW: Economy
+            'gazprom', 'nord stream', 'russia oil'
+        ],
+        'investigation_keywords': ['mueller', 'investigation', 'collusion'],
+        'notes': 'Mueller investigation March 2019 - potential confounder'
+    },
+    'china': {
+        'keywords': [
+            # Core terms (already collected)
+            # 'china', 'chinese', 'beijing', 'xi jinping',
+
+            # NEW: Leaders
+            'li keqiang', 'wang yi',
+            # NEW: Politics
+            'china trade', 'one china', 'taiwan china',
+            'south china sea', 'china policy',
+            # NEW: Military
+            'PLA', 'china military', 'china navy', 'china missile',
+            # NEW: Economy
+            'belt and road', 'china economy', 'china manufacturing'
+        ],
+        'trade_keywords': ['trade war', 'tariff', 'huawei'],
+        'notes': 'Trade war March 2018 - concurrent with NK intervention'
+    }
+}
+
+# DID estimation settings
+DID_CONFIG = {
+    'pre_period_start': '2017-01',
+    'pre_period_end': '2018-02',  # Month before intervention
+    'post_period_start': '2018-03',  # Intervention month
+    'post_period_end': '2019-06',
+    'cluster_level': 'month',  # For clustered standard errors
+    'alpha': 0.05,  # Significance level
+    'parallel_trends_threshold': 0.10  # p-value threshold for violation
+}
+
 # Framing categories
 FRAME_CATEGORIES = [
     "THREAT",       # Military threat framing

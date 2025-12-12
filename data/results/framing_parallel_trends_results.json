@@ -1,0 +1,26 @@
+{
+  "Iran": {
+    "control_group": "Iran",
+    "beta4_treat_time": 0.02666867362263263,
+    "se": 0.025765685599643172,
+    "p_value": 0.3006473602604893,
+    "pass": true,
+    "n_obs": 28
+  },
+  "Russia": {
+    "control_group": "Russia",
+    "beta4_treat_time": 0.09618845096363161,
+    "se": 0.0333745710887581,
+    "p_value": 0.003950493822145878,
+    "pass": false,
+    "n_obs": 28
+  },
+  "China": {
+    "control_group": "China",
+    "beta4_treat_time": 0.05576331181385083,
+    "se": 0.03683306147215412,
+    "p_value": 0.13003922100703907,
+    "pass": true,
+    "n_obs": 28
+  }
+}

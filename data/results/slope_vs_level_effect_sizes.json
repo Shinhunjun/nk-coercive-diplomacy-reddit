@@ -1,0 +1,66 @@
+{
+  "slope": {
+    "Iran": {
+      "did_slope_estimate": 0.0014663272328574563,
+      "nk_pre_slope": -0.002218848125888403,
+      "nk_post_slope": 0.004600943355372379,
+      "nk_slope_change": 0.006819791481260782,
+      "control_pre_slope": -0.0070207779678009286,
+      "control_post_slope": -0.001667313719397603,
+      "control_slope_change": 0.005353464248403325,
+      "pooled_sd": 0.08758024401052976,
+      "cohens_d": 0.016742671243084914,
+      "nk_residual_sd": 0.05144464359019452,
+      "control_residual_sd": 0.11451066577689407
+    },
+    "Russia": {
+      "did_slope_estimate": 0.007755184869931197,
+      "nk_pre_slope": -0.002218848125888403,
+      "nk_post_slope": 0.004600943355372379,
+      "nk_slope_change": 0.006819791481260782,
+      "control_pre_slope": 0.0014653395534326716,
+      "control_post_slope": 0.0005299461647622555,
+      "control_slope_change": -0.0009353933886704161,
+      "pooled_sd": 0.09148986965516723,
+      "cohens_d": 0.08476550353783562,
+      "nk_residual_sd": 0.05144464359019452,
+      "control_residual_sd": 0.12071134254714129
+    },
+    "China": {
+      "did_slope_estimate": 0.01698725621015723,
+      "nk_pre_slope": -0.002218848125888403,
+      "nk_post_slope": 0.004600943355372379,
+      "nk_slope_change": 0.006819791481260782,
+      "control_pre_slope": 0.010083862505954824,
+      "control_post_slope": -8.360222294162816e-05,
+      "control_slope_change": -0.010167464728896451,
+      "pooled_sd": 0.06810650354087104,
+      "cohens_d": 0.2494219395650387,
+      "nk_residual_sd": 0.05144464359019452,
+      "control_residual_sd": 0.08244049773952077
+    }
+  },
+  "level": {
+    "Iran": {
+      "did_estimate": 0.06271334158796688,
+      "pooled_sd": 0.08672534639464424,
+      "cohens_d": 0.7231258702915917,
+      "nk_pre_sd": 0.05029254497615259,
+      "control_pre_sd": 0.11370675794906883
+    },
+    "Russia": {
+      "did_estimate": 0.06369917312263429,
+      "pooled_sd": 0.08800178081723825,
+      "cohens_d": 0.7238395920069445,
+      "nk_pre_sd": 0.05029254497615259,
+      "control_pre_sd": 0.11573187929895432
+    },
+    "China": {
+      "did_estimate": 0.07984742385893112,
+      "pooled_sd": 0.07141417600424599,
+      "cohens_d": 1.1180892691975293,
+      "nk_pre_sd": 0.05029254497615259,
+      "control_pre_sd": 0.0887966742605531
+    }
+  }
+}

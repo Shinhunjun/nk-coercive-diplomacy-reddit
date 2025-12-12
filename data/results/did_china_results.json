@@ -1,0 +1,33 @@
+{
+  "control_group": "China",
+  "n_observations": 221,
+  "n_treatment": 128,
+  "n_control": 93,
+  "ols": {
+    "did_estimate": 0.007429018942368486,
+    "se": 0.005547696724473601,
+    "p_value": 0.18195296771476968,
+    "ci_lower": -0.0035061085253286182,
+    "ci_upper": 0.01836414641006559,
+    "r_squared": 0.04930786977189805,
+    "beta4_pre_trend_diff": -0.005233197839700568,
+    "beta4_pvalue": 0.32752996843085014,
+    "beta5_level_change": -0.04062619006443222,
+    "beta5_pvalue": 0.6957324766388273
+  },
+  "slopes": {
+    "nk_pre_slope": -0.004703784479209756,
+    "nk_post_slope": 0.00272523446315873,
+    "nk_slope_change": 0.007429018942368486,
+    "control_pre_slope": 0.0005294133604908124,
+    "control_post_slope": 0.0005294133604908124,
+    "control_slope_change": 0.0
+  },
+  "clustered": {
+    "did_estimate": 0.007429018942368486,
+    "se": 0.004762725972966701,
+    "p_value": 0.11880124677252969,
+    "ci_lower": -0.001905752432879734,
+    "ci_upper": 0.016763790317616704
+  }
+}

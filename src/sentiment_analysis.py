@@ -13,7 +13,7 @@ from tqdm import tqdm
 import warnings
 warnings.filterwarnings('ignore')
 
-from config import SENTIMENT_MODEL, SAMPLE_DIR, RESULTS_DIR
+from src.config import SENTIMENT_MODEL, SAMPLE_DIR, RESULTS_DIR
 
 
 class SentimentAnalyzer:

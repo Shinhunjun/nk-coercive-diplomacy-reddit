@@ -1,0 +1,44 @@
+{
+  "Iran": {
+    "monthly_slope_did": 0.006819791481260797,
+    "monthly_se": 0.004558099215902667,
+    "monthly_p": 0.13460363445925522,
+    "cumulative_effect": 0.10229687221891196,
+    "cumulative_se": 0.06837148823854,
+    "cumulative_t_stat": 1.4961919778901158,
+    "cumulative_p": 0.14064878974046735,
+    "cumulative_ci_lower": -0.03490055621226712,
+    "cumulative_ci_upper": 0.23949430065009103,
+    "n_months": 15,
+    "df": 52.0,
+    "clustered": true
+  },
+  "Russia": {
+    "monthly_slope_did": 0.006819791481260781,
+    "monthly_se": 0.004562719692726052,
+    "monthly_p": 0.13499879979213963,
+    "cumulative_effect": 0.1022968722189117,
+    "cumulative_se": 0.06844079539089078,
+    "cumulative_t_stat": 1.4946768463846207,
+    "cumulative_p": 0.14116100189169067,
+    "cumulative_ci_lower": -0.03510375783534744,
+    "cumulative_ci_upper": 0.23969750227317085,
+    "n_months": 15,
+    "df": 51.0,
+    "clustered": true
+  },
+  "China": {
+    "monthly_slope_did": 0.006819791481260803,
+    "monthly_se": 0.004558099215902705,
+    "monthly_p": 0.13460363445925805,
+    "cumulative_effect": 0.10229687221891205,
+    "cumulative_se": 0.06837148823854057,
+    "cumulative_t_stat": 1.4961919778901047,
+    "cumulative_p": 0.14064878974047024,
+    "cumulative_ci_lower": -0.03490055621226816,
+    "cumulative_ci_upper": 0.23949430065009225,
+    "n_months": 15,
+    "df": 52.0,
+    "clustered": true
+  }
+}

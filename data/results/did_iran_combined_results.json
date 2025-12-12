@@ -1,0 +1,28 @@
+{
+  "model_type": "DID_ITS_style",
+  "data_source": "combined_posts_comments",
+  "standard_errors": "HAC_Newey_West_lag3",
+  "level_change": {
+    "coefficient": -0.02241038457943018,
+    "se_ols": 0.08738421527741835,
+    "se_hac": 0.09329885388388978,
+    "pvalue": 0.8101752147064164,
+    "ci_lower": -0.20527277799071908,
+    "ci_upper": 0.16045200883185873
+  },
+  "slope_change": {
+    "coefficient": 0.0015329881648522207,
+    "se_ols": 0.01019937126411388,
+    "se_hac": 0.00944178955888896,
+    "pvalue": 0.8710207659518945,
+    "ci_lower": -0.016972579320176463,
+    "ci_upper": 0.020038555649880906
+  },
+  "basic_2x2_did": {
+    "coefficient": 0.06271334158796679,
+    "se_hac": 0.05219352635178228,
+    "pvalue": 0.22953636370433417,
+    "ci_lower": -0.039584090287668725,
+    "ci_upper": 0.16501077346360232
+  }
+}

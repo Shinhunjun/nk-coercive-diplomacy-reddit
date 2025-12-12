@@ -1,0 +1,39 @@
+/Users/hunjunsin/Desktop/Jun/nk-coercive-diplomacy-reddit/src/did_analysis.py:45: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  self.combined['month_date'] = pd.to_datetime(self.combined['month'] + '-01')
+================================================================================
+DID ANALYSIS: NK COERCIVE DIPLOMACY (WEEKLY)
+All Control Groups (Iran, Russia, China)
+================================================================================
+
+Loading NK weekly data (treatment group)...
+  NK: 130 weeks
+  Weeks with data: 128
+  Mean sentiment: -0.3267
+
+================================================================================
+CONTROL GROUP: IRAN
+================================================================================
+
+Loaded Iran data: 130 weeks
+  Weeks with data: 69
+  Mean sentiment: -0.3008
+Traceback (most recent call last):
+  File "/Users/hunjunsin/Desktop/Jun/nk-coercive-diplomacy-reddit/scripts/run_did_analysis_weekly.py", line 146, in <module>
+    main()
+  File "/Users/hunjunsin/Desktop/Jun/nk-coercive-diplomacy-reddit/scripts/run_did_analysis_weekly.py", line 55, in main
+    analyzer = DIDAnalyzer(
+  File "/Users/hunjunsin/Desktop/Jun/nk-coercive-diplomacy-reddit/src/did_analysis.py", line 45, in __init__
+    self.combined['month_date'] = pd.to_datetime(self.combined['month'] + '-01')
+  File "/Users/hunjunsin/.pyenv/versions/3.10.12/lib/python3.10/site-packages/pandas/core/tools/datetimes.py", line 1072, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/Users/hunjunsin/.pyenv/versions/3.10.12/lib/python3.10/site-packages/pandas/core/tools/datetimes.py", line 437, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+  File "/Users/hunjunsin/.pyenv/versions/3.10.12/lib/python3.10/site-packages/pandas/core/arrays/datetimes.py", line 2415, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+  File "pandas/_libs/tslib.pyx", line 412, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslibs/conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "pandas/_libs/tslibs/parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "pandas/_libs/tslibs/parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2017-W01-01, at position 0

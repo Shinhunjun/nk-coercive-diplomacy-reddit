@@ -1,0 +1,33 @@
+{
+  "control_group": "Iran",
+  "n_observations": 59,
+  "n_treatment": 30,
+  "n_control": 29,
+  "ols": {
+    "did_estimate": 0.006705217473883101,
+    "se": 0.007059878877703938,
+    "p_value": 0.34662577678910955,
+    "ci_lower": -0.007461465920184001,
+    "ci_upper": 0.020871900867950204,
+    "r_squared": 0.11789052996621485,
+    "beta4_pre_trend_diff": 0.0015291492946439265,
+    "beta4_pvalue": 0.8134473883482076,
+    "beta5_level_change": -0.10521624323566221,
+    "beta5_pvalue": 0.401003954071701
+  },
+  "slopes": {
+    "nk_pre_slope": -0.002115627021678054,
+    "nk_post_slope": 0.004589590452205047,
+    "nk_slope_change": 0.006705217473883101,
+    "control_pre_slope": -0.0036447763163219805,
+    "control_post_slope": -0.0036447763163219805,
+    "control_slope_change": 0.0
+  },
+  "clustered": {
+    "did_estimate": 0.006705217473883101,
+    "se": 0.004522867811500552,
+    "p_value": 0.13820342705085312,
+    "ci_lower": -0.0021594405434934762,
+    "ci_upper": 0.015569875491259677
+  }
+}
