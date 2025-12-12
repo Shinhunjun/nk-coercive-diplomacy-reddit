@@ -1,0 +1,118 @@
+{
+  "analysis": "3-Period DID Analysis: Hanoi Summit Impact",
+  "periods": {
+    "pre_singapore": {
+      "name": "Pre-Singapore Summit",
+      "start": "2017-01",
+      "end": "2018-05",
+      "period_id": 1
+    },
+    "singapore_hanoi": {
+      "name": "Singapore to Hanoi",
+      "start": "2018-06",
+      "end": "2019-02",
+      "period_id": 2
+    },
+    "post_hanoi": {
+      "name": "Post-Hanoi Collapse",
+      "start": "2019-03",
+      "end": "2019-06",
+      "period_id": 3
+    }
+  },
+  "did_results": {
+    "singapore_effect": {
+      "comparison": "Singapore Summit Effect",
+      "period_pre": 1,
+      "period_post": 2,
+      "nk_pre": -0.6915411591948865,
+      "nk_post": 0.039629083519603196,
+      "nk_change": 0.7311702427144896,
+      "china_pre": -0.5206564494879276,
+      "china_post": -0.7485121334876728,
+      "china_change": -0.2278556839997452,
+      "did_estimate": 0.9590259267142348,
+      "did_coefficient": 0.9590259267142356,
+      "did_pvalue": 0.0017615591802008063,
+      "did_ci_lower": 0.358062848039181,
+      "did_ci_upper": 1.5599890053892902,
+      "cohens_d": 1.6445867816071509,
+      "significant": true
+    },
+    "hanoi_effect": {
+      "comparison": "Hanoi Collapse Effect",
+      "period_pre": 2,
+      "period_post": 3,
+      "nk_pre": 0.039629083519603196,
+      "nk_post": 0.051995879056009386,
+      "nk_change": 0.01236679553640619,
+      "china_pre": -0.7485121334876728,
+      "china_post": -0.34850971749699167,
+      "china_change": 0.4000024159906811,
+      "did_estimate": -0.3876356204542749,
+      "did_coefficient": -0.3876356204542751,
+      "did_pvalue": 0.3201435899770614,
+      "did_ci_lower": -1.151848297859045,
+      "did_ci_upper": 0.37657705695049487,
+      "cohens_d": -0.6970406275303702,
+      "significant": false
+    },
+    "overall_change": {
+      "comparison": "Overall Change",
+      "period_pre": 1,
+      "period_post": 3,
+      "nk_pre": -0.6915411591948865,
+      "nk_post": 0.051995879056009386,
+      "nk_change": 0.7435370382508959,
+      "china_pre": -0.5206564494879276,
+      "china_post": -0.34850971749699167,
+      "china_change": 0.1721467319909359,
+      "did_estimate": 0.57139030625996,
+      "did_coefficient": 0.5713903062599589,
+      "did_pvalue": 0.1220037653731282,
+      "did_ci_lower": -0.15280248527582907,
+      "did_ci_upper": 1.2955830977957468,
+      "cohens_d": 1.0205939316681476,
+      "significant": false
+    }
+  },
+  "period_statistics": {
+    "period_1": {
+      "name": "Pre-Singapore Summit",
+      "mean_framing": -0.6915411591948865,
+      "std_framing": 0.7237110883257384,
+      "total_posts": 5822,
+      "n_months": 17
+    },
+    "period_2": {
+      "name": "Singapore to Hanoi",
+      "mean_framing": 0.039629083519603196,
+      "std_framing": 0.5974873616528996,
+      "total_posts": 1699,
+      "n_months": 9
+    },
+    "period_3": {
+      "name": "Post-Hanoi Collapse",
+      "mean_framing": 0.051995879056009386,
+      "std_framing": 0.48520782778096944,
+      "total_posts": 1486,
+      "n_months": 4
+    },
+    "ttests": {
+      "p1_vs_p2": {
+        "t_stat": -2.592246403880019,
+        "p_value": 0.015981941183404628
+      },
+      "p2_vs_p3": {
+        "t_stat": -0.03616374462507533,
+        "p_value": 0.9717997255557995
+      },
+      "p1_vs_p3": {
+        "t_stat": -1.9347649075285176,
+        "p_value": 0.06804941679271756
+      }
+    }
+  },
+  "control_group": "China",
+  "treatment_group": "North Korea"
+}
