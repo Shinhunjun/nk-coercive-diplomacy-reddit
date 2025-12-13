@@ -5,16 +5,24 @@ The historic 2018 Singapore Summit between U.S. President Donald Trump and North
 
 \subsection{Research Questions}
 
+We investigate the causal impact of diplomatic summits on public opinion through two primary lenses:
+
 \begin{itemize}
-    \item \textbf{RQ1}: How do high-stakes diplomatic summits affect public opinion framing on social media, and do failed negotiations lead to symmetric reversals of opinion gains?
-    \item \textbf{RQ2}: Can social media discourse predict or reflect the ``rally-round-the-flag'' effect during diplomatic engagement cycles?
-    \item \textbf{RQ3}: How do discourse network structures change across diplomatic event cycles?
+    \item \textbf{RQ1 (Adversary Perception)}: How do high-stakes diplomatic summits affect public opinion toward adversary nations? 
+    \begin{itemize}
+        \item Does the \textit{content} of discourse (framing/sentiment) change significantly?
+        \item Does the \textit{structure} of discourse networks shift to support these framing changes? (Analyzed via GraphRAG)
+    \end{itemize}
+    
+    \item \textbf{RQ2 (Dynamics \& Asymmetry)}: Do failed negotiations lead to symmetric reversals of opinion gains, or do positive effects persist? (Testing the ``ratchet effect'')
 \end{itemize}
+
+\noindent\textit{Note on Scope: While traditional ``rally-round-the-flag'' literature focuses on domestic leader approval, this study focuses on adversary perception. We are currently collecting additional data to analyze leader-centric sentiment (e.g., perception of President Trump) as a distinct follow-up study.}
 
 \subsection{Contributions}
 
 \begin{enumerate}
-    \item \textbf{Methodological}: We introduce a validated pipeline combining LLM-based framing analysis with human expert annotation (military officers) for domain-specific content classification.
-    \item \textbf{Empirical}: We provide causal evidence of diplomatic events' impact on online discourse using Difference-in-Differences with multiple control groups.
-    \item \textbf{Theoretical}: We extend the ``rally-round-the-flag'' literature to social media contexts, examining asymmetry between diplomatic successes and failures.
+    \item \textbf{Methodological}: A validated pipeline combining LLM-based framing analysis with human expert annotation (military officers).
+    \item \textbf{Empirical}: Causal evidence of summit effects on adversary perception using Difference-in-Differences with multiple controls.
+    \item \textbf{Theoretical}: Evidence of asymmetric effects---diplomatic successes produce larger gains than failures produce reversals.
 \end{enumerate}
