@@ -287,7 +287,36 @@ With clean periods, China and Iran satisfy parallel trends for P1→P2. All cont
 
 **Interpretation**: The failed Hanoi Summit led to a significant reversal in framing (DID = -0.30 to -0.88), with NK-related discussions returning toward more threat-oriented framing across all control group comparisons.
 
-### 5.6 Visualizations
+### 5.6 RQ3: Network Structure Changes (GraphRAG Analysis)
+
+To understand the structural changes in discourse networks across summit events, we apply GraphRAG (Graph-based Retrieval Augmented Generation) to construct knowledge graphs for each analysis period.
+
+#### Methodology
+
+1. **Entity Extraction**: Extract entities (actors, locations, concepts) from posts using NER
+2. **Relationship Mapping**: Identify relationships between entities (mentions, co-occurrence)
+3. **Community Detection**: Apply Louvain algorithm to identify discourse communities
+4. **Temporal Comparison**: Compare network metrics across P1, P2, and P3
+
+#### Planned Analyses
+
+| Metric | Description | Expected Finding |
+|--------|-------------|------------------|
+| **Node Count** | Number of unique entities | ↑ during diplomacy period |
+| **Edge Density** | Connection intensity | ↑ during active negotiations |
+| **Modularity** | Community separation | ↓ during diplomatic engagement |
+| **Centrality Shift** | Key actor changes | Kim/Trump centrality ↑ in P2 |
+| **New Communities** | Emerging topic clusters | "Peace", "Denuclearization" clusters in P2 |
+
+#### Hypotheses
+
+- **H1**: P2 (Singapore-Hanoi) will show increased entity diversity and new diplomatic actor nodes
+- **H2**: Community structure will shift from "threat-focused" to "diplomacy-focused" clusters
+- **H3**: Post-Hanoi (P3) will show partial reversion toward P1 network structure
+
+[TO BE COMPLETED: Detailed GraphRAG analysis results]
+
+### 5.7 Visualizations
 
 #### Figure 1: Research Timeline and Key Events
 
