@@ -231,7 +231,42 @@ The data reveals an asymmetric rally effect:
 
 This suggests that while diplomatic failures cause sentiment reversals, the gains from successful summits are not fully erased—indicating a partial "ratchet effect" in public opinion.
 
-### 5.5 Visualizations
+### 5.5 RQ1: Summit Effects on Framing
+
+#### Parallel Trends Validation (Monthly Aggregated)
+
+| Comparison | Control | Pre-period | P-value | Satisfied |
+|------------|---------|------------|---------|-----------|
+| P1→P2 | China | P1 | 0.002 | ✗ |
+| P1→P2 | **Iran** | P1 | **0.12** | **✓** |
+| P1→P2 | Russia | P1 | 0.0002 | ✗ |
+| P2→P3 | China | P2 | 0.94 | ✓ |
+| P2→P3 | Iran | P2 | 0.50 | ✓ |
+| P2→P3 | Russia | P2 | 0.32 | ✓ |
+
+**Note**: For P1→P2, only Iran satisfies parallel trends. All controls satisfy for P2→P3.
+
+#### Singapore Summit Effect on Framing (P1→P2)
+
+| Control | DID Estimate | P-value | Parallel Trends |
+|---------|--------------|---------|-----------------|
+| China | +1.23 | <0.0001 | ✗ Violated |
+| **Iran** | **+0.89** | **<0.0001** | **✓ Satisfied** |
+| Russia | +0.97 | <0.0001 | ✗ Violated |
+
+**Primary result (Iran as control)**: DID = **+0.89** (p<0.0001), indicating a significant shift toward more diplomatic framing after Singapore Summit.
+
+#### Hanoi Summit Effect on Framing (P2→P3)
+
+| Control | DID Estimate | P-value | Parallel Trends |
+|---------|--------------|---------|-----------------|
+| **China** | **-1.05** | **<0.0001** | **✓ Satisfied** |
+| **Iran** | **-0.50** | **<0.0001** | **✓ Satisfied** |
+| **Russia** | **-0.98** | **<0.0001** | **✓ Satisfied** |
+
+**Interpretation**: The failed Hanoi Summit led to a significant reversal in framing, with NK-related discussions becoming more threat-oriented across all control group comparisons.
+
+### 5.6 Visualizations
 
 #### Figure 1: Research Timeline and Key Events
 
