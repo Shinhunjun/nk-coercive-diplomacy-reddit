@@ -8,6 +8,9 @@ import sys
 import json
 from tqdm import tqdm
 from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env file
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -43,18 +46,30 @@ class ExtendedFramingAnalyzer:
 Post:
 {text}
 
-Respond in JSON format:
-{{"frame": "CATEGORY", "confidence": 0.0-1.0, "reason": "brief explanation"}}"""
+You must respond with valid JSON only:
+{{"frame": "CATEGORY", "confidence": 0.8, "reason": "brief explanation"}}"""
 
         try:
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.3,
-                max_tokens=150
+                max_tokens=150,
+                response_format={"type": "json_object"}
             )
-            result = json.loads(response.choices[0].message.content)
+            content = response.choices[0].message.content
+            result = json.loads(content)
+            # Validate frame is in allowed categories
+            if result.get('frame') not in FRAME_CATEGORIES:
+                result['frame'] = 'NEUTRAL'
             return result
+        except json.JSONDecodeError as e:
+            # Try to extract frame from text if JSON fails
+            content = response.choices[0].message.content if 'response' in dir() else ""
+            for frame in FRAME_CATEGORIES:
+                if frame in content.upper():
+                    return {"frame": frame, "confidence": 0.6, "reason": f"Extracted from: {content[:50]}"}
+            return {"frame": "NEUTRAL", "confidence": 0.5, "reason": f"JSON Error: {str(e)}"}
         except Exception as e:
             return {"frame": "NEUTRAL", "confidence": 0.5, "reason": f"Error: {str(e)}"}
 
