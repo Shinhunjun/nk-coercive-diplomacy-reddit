@@ -186,48 +186,56 @@ As a complementary measure to cognitive framing, we employ sentiment analysis to
 
 ### 5.3 RQ1: Summit Effects on Sentiment
 
-#### Parallel Trends Validation
+#### Period Definition
 
-Before DID estimation, we verified the parallel trends assumption for each control group:
+Consistent with the framing analysis, we apply clean periods excluding transition months:
 
-| Comparison | Control | Pre-period | β3 (trend diff) | P-value | Satisfied |
-|------------|---------|------------|-----------------|---------|-----------|
-| P1→P2 | China | P1 | +0.005 | 0.25 | ✓ |
-| P1→P2 | Iran | P1 | +0.001 | 0.87 | ✓ |
-| P1→P2 | Russia | P1 | +0.008 | 0.08 | ✓ |
-| P2→P3 | China | P2 | -0.003 | 0.69 | ✓ |
-| P2→P3 | Iran | P2 | +0.001 | 0.97 | ✓ |
-| P2→P3 | Russia | P2 | -0.003 | 0.77 | ✓ |
+- **P1**: 2017.01 - 2018.02 (Pre-Announcement)
+- **P2**: 2018.06 - 2019.01 (Singapore-Hanoi)
+- **P3**: 2019.03 - 2019.12 (Post-Hanoi)
+- *Excluded*: 2018.03-05, 2019.02 (Transition periods)
 
-All parallel trends tests pass (p > 0.05), validating the DID design.
+#### Parallel Trends Validation (Monthly Aggregated)
 
-#### Singapore Summit Effect (Period 1 → Period 2)
+| Comparison | Control | Pre-period | P-value | Satisfied |
+|------------|---------|------------|---------|-----------|
+| P1→P2 | **China** | P1 | **0.99** | **✓** |
+| P1→P2 | **Iran** | P1 | **0.83** | **✓** |
+| P1→P2 | **Russia** | P1 | **0.20** | **✓** |
+| P2→P3 | **China** | P2 | **0.69** | **✓** |
+| P2→P3 | **Iran** | P2 | **0.75** | **✓** |
+| P2→P3 | **Russia** | P2 | **0.88** | **✓** |
 
-| Control | DID Estimate | P-value | Interpretation |
-|---------|--------------|---------|----------------|
-| China | **+0.196** | <0.0001 | Large positive shift |
-| Iran | **+0.077** | <0.0001 | Moderate positive shift |
-| Russia | **+0.111** | <0.0001 | Moderate positive shift |
+All parallel trends tests pass (p > 0.05), validating the DID design for all control groups.
 
-**Interpretation**: The Singapore Summit led to a statistically significant positive shift in sentiment toward North Korea across all three control group comparisons.
+#### Singapore Summit Effect (P1→P2)
 
-#### Hanoi Summit Effect (Period 2 → Period 3)
+| Control | DID Estimate | P-value | Parallel Trends |
+|---------|--------------|---------|-----------------|
+| **China** | **+0.21** | <0.0001 | **✓ Satisfied** |
+| **Iran** | **+0.10** | <0.0001 | **✓ Satisfied** |
+| **Russia** | **+0.14** | <0.0001 | **✓ Satisfied** |
 
-| Control | DID Estimate | P-value | Interpretation |
-|---------|--------------|---------|----------------|
-| China | **-0.106** | <0.0001 | Large negative reversal |
-| Iran | **-0.048** | 0.004 | Moderate negative reversal |
-| Russia | **-0.104** | <0.0001 | Large negative reversal |
+**Interpretation**: The Singapore Summit led to a statistically significant positive shift in sentiment (+0.10 to +0.21) toward North Korea across all control group comparisons.
 
-**Interpretation**: The failed Hanoi Summit led to a statistically significant negative shift in sentiment, partially reversing the gains from the Singapore Summit.
+#### Hanoi Summit Effect (P2→P3)
+
+| Control | DID Estimate | P-value | Parallel Trends |
+|---------|--------------|---------|-----------------|
+| **China** | **-0.11** | <0.0001 | **✓ Satisfied** |
+| **Iran** | **-0.06** | 0.001 | **✓ Satisfied** |
+| **Russia** | **-0.12** | <0.0001 | **✓ Satisfied** |
+
+**Interpretation**: The failed Hanoi Summit led to a statistically significant negative shift in sentiment (-0.06 to -0.12), partially reversing the gains from the Singapore Summit.
 
 ### 5.4 RQ2: Rally-Round-the-Flag Patterns
 
 The data reveals an asymmetric rally effect:
 
-1. **Summit Success Effect**: Singapore Summit produced a sentiment improvement of +0.077 to +0.196 (depending on control group)
-2. **Summit Failure Effect**: Hanoi Summit produced a sentiment decline of -0.048 to -0.106
-3. **Net Effect**: Overall sentiment remained slightly improved from baseline (+0.03 vs Iran, significant at p=0.006)
+1. **Summit Success Effect**: Singapore Summit produced a sentiment improvement of +0.10 to +0.21
+2. **Summit Failure Effect**: Hanoi Summit produced a sentiment decline of -0.06 to -0.12
+3. **Net Effect**: The positive gains slightly outweigh the negative reversal
+
 This suggests that while diplomatic failures cause sentiment reversals, the gains from successful summits are not fully erased—indicating a partial "ratchet effect" in public opinion.
 
 ### 5.5 RQ1: Summit Effects on Framing
