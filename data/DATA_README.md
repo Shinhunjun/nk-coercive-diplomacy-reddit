@@ -1,77 +1,75 @@
-# Data Directory Structure
+# Data Version Control
 
-This document tracks all data files in the project for the NK Coercive Diplomacy Reddit analysis.
+Last Updated: 2025-12-13
 
-## Analysis Period
+## Source Data Files (Use These for Analysis)
 
-- **Full Period**: 2017.01 - 2019.12
-- **Period 1 (Pre-Singapore)**: 2017.01 - 2018.05
-- **Period 2 (Singapore-Hanoi)**: 2018.06 - 2019.02
-- **Period 3 (Post-Hanoi)**: 2019.03 - 2019.12
+### Primary Analysis Files (2017.01 - 2019.06)
 
----
+| Group | File | Rows | Size | Modified |
+|-------|------|------|------|----------|
+| **NK** | `data/nk/nk_posts_merged.csv` | 9,007 | 3.8MB | 2025-12-09 |
+| **China** | `data/control/china_posts_merged.csv` | 5,179 | 1.6MB | 2025-12-09 |
+| **Iran** | `data/control/iran_posts_merged.csv` | 4,279 | 1.5MB | 2025-12-09 |
+| **Russia** | `data/control/russia_posts_merged.csv` | 7,988 | 2.9MB | 2025-12-09 |
 
-## Final Analysis Files (USE THESE)
+### Extended Period (2019.07 - 2019.12)
 
-| File | Group | Period | Posts | Sentiment | Framing |
-|------|-------|--------|-------|-----------|---------|
-| `data/final/nk_final.csv` | NK | 2017.01-2019.12 | ~12K | ✅ | ✅ |
-| `data/final/china_final.csv` | China | 2017.01-2019.12 | ~7K | ✅ | ✅ |
-| `data/final/iran_final.csv` | Iran | 2017.01-2019.12 | ~5K | ✅ | ✅ |
-| `data/final/russia_final.csv` | Russia | 2017.01-2019.12 | ~9K | ✅ | ✅ |
-
----
-
-## Source Data Files
-
-### NK Data (`data/nk/`)
-
-| File | Description | Period |
-|------|-------------|--------|
-| `nk_posts_merged.csv` | Original collected posts | 2017.01-2019.06 |
-| `nk_posts_hanoi_extended.csv` | Extended collection | 2019.07-2019.12 |
-
-### Control Groups (`data/control/`)
-
-| File | Description | Period |
-|------|-------------|--------|
-| `china_posts_full.csv` | Full China posts | 2017.01-2019.06 |
-| `china_posts_hanoi_extended.csv` | Extended China | 2019.07-2019.12 |
-| `iran_posts_full.csv` | Full Iran posts | 2017.01-2019.06 |
-| `iran_posts_hanoi_extended.csv` | Extended Iran | 2019.07-2019.12 |
-| `russia_posts_full.csv` | Full Russia posts | 2017.01-2019.06 |
-| `russia_posts_hanoi_extended.csv` | Extended Russia | 2019.07-2019.12 |
+| Group | File | Rows | Size | Modified |
+|-------|------|------|------|----------|
+| NK | `data/nk/nk_posts_hanoi_extended.csv` | 1,652 | 0.6MB | 2025-12-12 |
+| China | `data/control/china_posts_hanoi_extended.csv` | 2,845 | 1.2MB | 2025-12-12 |
+| Iran | `data/control/iran_posts_hanoi_extended.csv` | 1,704 | 0.6MB | 2025-12-12 |
+| Russia | `data/control/russia_posts_hanoi_extended.csv` | 2,273 | 0.8MB | 2025-12-12 |
 
 ---
 
-## Analysis Columns in Final Files
+## Sentiment Data (RoBERTa)
 
-| Column | Description |
-|--------|-------------|
-| `id` | Reddit post ID |
-| `title` | Post title |
-| `selftext` | Post body |
-| `subreddit` | Source subreddit |
-| `created_utc` | Unix timestamp |
-| `datetime` | Parsed datetime |
-| `month` | YYYY-MM format |
-| `period` | P1_PreSingapore / P2_SingaporeHanoi / P3_PostHanoi |
-| `topic` | nk / china / iran / russia |
-| `sentiment_score` | RoBERTa sentiment (-1 to +1) |
-| `sentiment_label` | negative / neutral / positive |
-| `frame` | THREAT / DIPLOMACY / NEUTRAL / ECONOMIC / HUMANITARIAN |
-| `frame_score` | Numeric frame (-2 to +2) |
+| Group | File | Rows | Modified |
+|-------|------|------|----------|
+| NK | `data/sentiment/nk_posts_sentiment.csv` | 11,887 | 2025-12-09 |
+| China | `data/sentiment/china_posts_sentiment.csv` | 6,663 | 2025-12-09 |
+| Iran | `data/sentiment/iran_posts_sentiment.csv` | 5,219 | 2025-12-09 |
+| Russia | `data/sentiment/russia_posts_sentiment.csv` | 9,152 | 2025-12-09 |
 
 ---
 
-## Scripts
+## Framing Data (GPT-4o-mini)
 
-| Script | Purpose |
-|--------|---------|
-| `scripts/create_final_dataset.py` | Creates unified final datasets |
-| `scripts/sentiment_3period_did_analysis.py` | 3-period DID on sentiment |
-| `scripts/hanoi_3period_did_analysis.py` | 3-period DID on framing |
+| Group | File | Rows | Modified |
+|-------|------|------|----------|
+| NK | `data/framing/nk_posts_framed.csv` | 10,448 | 2025-12-09 |
+| China | `data/framing/china_posts_framed.csv` | 5,921 | 2025-12-09 |
+| Iran | `data/framing/iran_posts_framed.csv` | 4,749 | 2025-12-09 |
+| Russia | `data/framing/russia_posts_framed.csv` | 8,570 | 2025-12-09 |
 
 ---
 
-*Last updated: 2025-12-13*
+## Analysis Periods
+
+- **P1_PreSingapore**: 2017-01 to 2018-05
+- **P2_SingaporeHanoi**: 2018-06 to 2019-02
+- **P3_PostHanoi**: 2019-03 to 2019-12
+
+---
+
+## Data Pipeline
+
+```
+1. Raw collection -> *_posts.csv, *_posts_full.csv
+2. Merged/balanced -> *_posts_merged.csv (USE THIS)
+3. Extended period -> *_posts_hanoi_extended.csv
+4. Sentiment -> data/sentiment/*_posts_sentiment.csv
+5. Framing -> data/framing/*_posts_framed.csv
+6. Final -> data/final/*_final.csv (combined with sentiment + framing)
+```
+
+---
+
+## Notes
+
+- `_merged.csv`: Balanced monthly distribution, primary source
+- `_full.csv`: Complete unfiltered data
+- `_balanced.csv`: Subset with equal pre/post counts
+- `_roberta.csv`: Subset with RoBERTa sentiment applied

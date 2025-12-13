@@ -16,57 +16,23 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def load_and_prepare_data():
-    """Load all sentiment data and prepare for analysis."""
+    """Load all sentiment data from final datasets."""
     print("=" * 70)
-    print("LOADING SENTIMENT DATA")
+    print("LOADING FINAL DATASETS")
     print("=" * 70)
     
-    # NK existing data (2017.01 - 2019.06)
-    nk_existing = pd.read_csv('data/processed/nk_posts_roberta_sentiment.csv')
-    nk_existing['datetime'] = pd.to_datetime(nk_existing['created_utc'], unit='s')
-    print(f"NK existing: {len(nk_existing)} posts")
+    # Load final datasets (already have sentiment and period)
+    nk = pd.read_csv('data/final/nk_final.csv')
+    china = pd.read_csv('data/final/china_final.csv')
+    iran = pd.read_csv('data/final/iran_final.csv')
+    russia = pd.read_csv('data/final/russia_final.csv')
     
-    # NK extended data (2019.07 - 2019.12)
-    nk_extended = pd.read_csv('data/sentiment/nk_posts_hanoi_extended_sentiment.csv')
-    nk_extended['datetime'] = pd.to_datetime(nk_extended['created_utc'], unit='s')
-    print(f"NK extended: {len(nk_extended)} posts")
+    print(f"NK: {len(nk)} posts")
+    print(f"China: {len(china)} posts")
+    print(f"Iran: {len(iran)} posts")
+    print(f"Russia: {len(russia)} posts")
     
-    # Combine NK
-    nk_all = pd.concat([nk_existing, nk_extended], ignore_index=True)
-    nk_all['topic'] = 'nk'
-    print(f"NK total: {len(nk_all)} posts")
-    
-    # Control groups - existing
-    china_existing = pd.read_csv('data/processed/china_posts_roberta_sentiment.csv')
-    iran_existing = pd.read_csv('data/processed/iran_posts_roberta_sentiment.csv')
-    russia_existing = pd.read_csv('data/processed/russia_posts_roberta_sentiment.csv')
-    
-    # Control groups - extended
-    china_extended = pd.read_csv('data/sentiment/china_posts_hanoi_extended_sentiment.csv')
-    iran_extended = pd.read_csv('data/sentiment/iran_posts_hanoi_extended_sentiment.csv')
-    russia_extended = pd.read_csv('data/sentiment/russia_posts_hanoi_extended_sentiment.csv')
-    
-    # Combine control groups
-    for df in [china_existing, china_extended]: 
-        df['datetime'] = pd.to_datetime(df['created_utc'], unit='s')
-    for df in [iran_existing, iran_extended]: 
-        df['datetime'] = pd.to_datetime(df['created_utc'], unit='s')
-    for df in [russia_existing, russia_extended]: 
-        df['datetime'] = pd.to_datetime(df['created_utc'], unit='s')
-    
-    china_all = pd.concat([china_existing, china_extended], ignore_index=True)
-    china_all['topic'] = 'china'
-    print(f"China total: {len(china_all)} posts")
-    
-    iran_all = pd.concat([iran_existing, iran_extended], ignore_index=True)
-    iran_all['topic'] = 'iran'
-    print(f"Iran total: {len(iran_all)} posts")
-    
-    russia_all = pd.concat([russia_existing, russia_extended], ignore_index=True)
-    russia_all['topic'] = 'russia'
-    print(f"Russia total: {len(russia_all)} posts")
-    
-    return nk_all, china_all, iran_all, russia_all
+    return nk, china, iran, russia
 
 
 def assign_period(df):
@@ -156,14 +122,8 @@ def main():
     print("  P3: Post-Hanoi (2019.03 - 2019.12)")
     print()
     
-    # Load data
+    # Load data (already has period column from create_final_dataset.py)
     nk, china, iran, russia = load_and_prepare_data()
-    
-    # Assign periods
-    nk = assign_period(nk)
-    china = assign_period(china)
-    iran = assign_period(iran)
-    russia = assign_period(russia)
     
     # Calculate period statistics
     print("\n" + "=" * 70)
