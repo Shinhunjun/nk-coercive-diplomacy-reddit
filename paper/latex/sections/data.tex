@@ -1,0 +1,61 @@
+% Data
+\section{Data}
+
+\subsection{Data Collection}
+
+We collected Reddit posts from January 2017 to December 2019 using the Arctic Shift API, targeting major news and politics subreddits:
+
+\begin{itemize}
+    \item r/worldnews
+    \item r/politics
+    \item r/news
+    \item r/geopolitics
+    \item r/NeutralPolitics
+\end{itemize}
+
+\subsection{Treatment and Control Groups}
+
+\begin{table}[h]
+\centering
+\caption{Dataset Overview}
+\begin{tabular}{llrl}
+\hline
+\textbf{Group} & \textbf{Topic} & \textbf{Posts} & \textbf{Role} \\
+\hline
+Treatment & North Korea & 10,659 & Primary analysis \\
+Control 1 & China & 8,024 & Trade war confounder \\
+Control 2 & Iran & 5,983 & Nuclear deal comparison \\
+Control 3 & Russia & 10,261 & Investigation confounder \\
+\hline
+\end{tabular}
+\label{tab:dataset}
+\end{table}
+
+\subsection{Key Events Timeline}
+
+\begin{table}[h]
+\centering
+\caption{Key Events}
+\begin{tabular}{lll}
+\hline
+\textbf{Date} & \textbf{Event} & \textbf{Expected Effect} \\
+\hline
+2018-03-08 & Summit Announcement & Initial positive shift \\
+2018-06-12 & Singapore Summit & Peak diplomatic framing \\
+2019-02-27 & Hanoi Summit (Failed) & Potential reversal \\
+\hline
+\end{tabular}
+\label{tab:events}
+\end{table}
+
+\subsection{Analysis Periods}
+
+To avoid contamination from anticipation effects, we define analysis periods excluding transition months:
+
+\begin{itemize}
+    \item \textbf{P1: Pre-Announcement} (2017.01 -- 2018.02): Before Trump-Kim summit announcement
+    \item \textbf{Transition} (2018.03 -- 2018.05): Anticipation period (excluded)
+    \item \textbf{P2: Singapore-Hanoi} (2018.06 -- 2019.01): Post-Singapore, pre-Hanoi
+    \item \textbf{Transition} (2019.02): Hanoi Summit month (excluded)
+    \item \textbf{P3: Post-Hanoi} (2019.03 -- 2019.12): Post-summit collapse
+\end{itemize}

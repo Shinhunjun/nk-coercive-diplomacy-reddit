@@ -1,0 +1,49 @@
+% Method
+\section{Method}
+
+\subsection{Human Annotation Benchmark}
+
+To validate our automated classification approach, we developed a human annotation benchmark:
+
+\textbf{Annotators}: Two military officers with expertise in North Korean affairs and international security.
+
+\textbf{Frame Categories}:
+\begin{itemize}
+    \item \textbf{THREAT} (-2): Military capabilities, provocations, danger
+    \item \textbf{ECONOMIC} (-1): Sanctions, trade, financial aspects
+    \item \textbf{NEUTRAL} (0): Factual reporting, balanced
+    \item \textbf{HUMANITARIAN} (+1): Human rights, refugees, aid
+    \item \textbf{DIPLOMACY} (+2): Negotiations, peace, cooperation
+\end{itemize}
+
+\subsection{LLM-Based Framing Classification}
+
+We use GPT-4o-mini for frame classification with zero-shot prompting. The model classifies each post into one of five categories with a confidence score.
+
+\subsection{Sentiment Analysis}
+
+We employ RoBERTa (\texttt{cardiffnlp/twitter-roberta-base-sentiment-latest}) for sentiment analysis:
+\begin{itemize}
+    \item \textbf{Scale}: Continuous score from -1 (Negative) to +1 (Positive)
+    \item \textbf{Rationale}: While framing captures \textit{how} topics are discussed, sentiment captures the \textit{emotional valence}
+\end{itemize}
+
+\subsection{Difference-in-Differences Design}
+
+Our DID specification:
+
+\begin{equation}
+Y_{it} = \alpha + \beta_1 \text{Post}_t + \beta_2 \text{Treatment}_i + \beta_3 (\text{Post}_t \times \text{Treatment}_i) + \epsilon_{it}
+\end{equation}
+
+where $\beta_3$ represents the causal effect of the summit on framing/sentiment.
+
+\subsubsection{Parallel Trends Validation}
+
+Before DID estimation, we verify the parallel trends assumption using monthly aggregated data:
+
+\begin{equation}
+Y_{it} = \alpha + \beta_1 \text{Time}_t + \beta_2 \text{Treatment}_i + \beta_3 (\text{Time}_t \times \text{Treatment}_i) + \epsilon_{it}
+\end{equation}
+
+A significant $\beta_3$ (p < 0.05) indicates violation of the parallel trends assumption.

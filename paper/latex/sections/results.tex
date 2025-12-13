@@ -1,0 +1,181 @@
+% Results
+\section{Results}
+
+\subsection{RQ1: Summit Effects on Sentiment}
+
+\subsubsection{Parallel Trends Validation}
+
+\begin{table}[h]
+\centering
+\caption{Parallel Trends Test Results (Sentiment)}
+\begin{tabular}{llccc}
+\hline
+\textbf{Comparison} & \textbf{Control} & \textbf{P-value} & \textbf{Satisfied} \\
+\hline
+P1$\rightarrow$P2 & China & 0.99 & \checkmark \\
+P1$\rightarrow$P2 & Iran & 0.83 & \checkmark \\
+P1$\rightarrow$P2 & Russia & 0.20 & \checkmark \\
+P2$\rightarrow$P3 & China & 0.69 & \checkmark \\
+P2$\rightarrow$P3 & Iran & 0.75 & \checkmark \\
+P2$\rightarrow$P3 & Russia & 0.88 & \checkmark \\
+\hline
+\end{tabular}
+\label{tab:pt_sentiment}
+\end{table}
+
+\subsubsection{Singapore Summit Effect (P1$\rightarrow$P2)}
+
+\begin{table}[h]
+\centering
+\caption{Sentiment DID: Singapore Summit Effect}
+\begin{tabular}{lccc}
+\hline
+\textbf{Control} & \textbf{DID} & \textbf{P-value} & \textbf{Parallel Trends} \\
+\hline
+China & \textbf{+0.21} & $<$0.0001 & \checkmark \\
+Iran & \textbf{+0.10} & $<$0.0001 & \checkmark \\
+Russia & \textbf{+0.14} & $<$0.0001 & \checkmark \\
+\hline
+\end{tabular}
+\label{tab:did_sentiment_p1p2}
+\end{table}
+
+\subsubsection{Hanoi Summit Effect (P2$\rightarrow$P3)}
+
+\begin{table}[h]
+\centering
+\caption{Sentiment DID: Hanoi Summit Effect}
+\begin{tabular}{lccc}
+\hline
+\textbf{Control} & \textbf{DID} & \textbf{P-value} & \textbf{Parallel Trends} \\
+\hline
+China & \textbf{-0.11} & $<$0.0001 & \checkmark \\
+Iran & \textbf{-0.06} & 0.001 & \checkmark \\
+Russia & \textbf{-0.12} & $<$0.0001 & \checkmark \\
+\hline
+\end{tabular}
+\label{tab:did_sentiment_p2p3}
+\end{table}
+
+\subsection{RQ2: Rally-Round-the-Flag Patterns}
+
+The data reveals an asymmetric rally effect:
+
+\begin{enumerate}
+    \item \textbf{Summit Success Effect}: Singapore Summit produced a sentiment improvement of +0.10 to +0.21
+    \item \textbf{Summit Failure Effect}: Hanoi Summit produced a sentiment decline of -0.06 to -0.12
+    \item \textbf{Net Effect}: The positive gains slightly outweigh the negative reversal
+\end{enumerate}
+
+This suggests that while diplomatic failures cause sentiment reversals, the gains from successful summits are not fully erased---indicating a partial ``ratchet effect'' in public opinion.
+
+\subsection{Summit Effects on Framing}
+
+\subsubsection{Parallel Trends Validation}
+
+\begin{table}[h]
+\centering
+\caption{Parallel Trends Test Results (Framing)}
+\begin{tabular}{llccc}
+\hline
+\textbf{Comparison} & \textbf{Control} & \textbf{P-value} & \textbf{Satisfied} \\
+\hline
+P1$\rightarrow$P2 & China & 0.12 & \checkmark \\
+P1$\rightarrow$P2 & Iran & 0.77 & \checkmark \\
+P1$\rightarrow$P2 & Russia & 0.03 & $\times$ \\
+P2$\rightarrow$P3 & China & 0.41 & \checkmark \\
+P2$\rightarrow$P3 & Iran & 0.79 & \checkmark \\
+P2$\rightarrow$P3 & Russia & 0.51 & \checkmark \\
+\hline
+\end{tabular}
+\label{tab:pt_framing}
+\end{table}
+
+\subsubsection{Singapore Summit Effect on Framing (P1$\rightarrow$P2)}
+
+\begin{table}[h]
+\centering
+\caption{Framing DID: Singapore Summit Effect}
+\begin{tabular}{lccc}
+\hline
+\textbf{Control} & \textbf{DID} & \textbf{P-value} & \textbf{Parallel Trends} \\
+\hline
+China & \textbf{+1.28} & $<$0.0001 & \checkmark \\
+Iran & \textbf{+0.85} & $<$0.0001 & \checkmark \\
+Russia & +1.04 & $<$0.0001 & $\times$ \\
+\hline
+\end{tabular}
+\label{tab:did_framing_p1p2}
+\end{table}
+
+\subsubsection{Hanoi Summit Effect on Framing (P2$\rightarrow$P3)}
+
+\begin{table}[h]
+\centering
+\caption{Framing DID: Hanoi Summit Effect}
+\begin{tabular}{lccc}
+\hline
+\textbf{Control} & \textbf{DID} & \textbf{P-value} & \textbf{Parallel Trends} \\
+\hline
+China & \textbf{-0.88} & $<$0.0001 & \checkmark \\
+Iran & \textbf{-0.30} & 0.003 & \checkmark \\
+Russia & \textbf{-0.83} & $<$0.0001 & \checkmark \\
+\hline
+\end{tabular}
+\label{tab:did_framing_p2p3}
+\end{table}
+
+\subsection{RQ3: Network Structure Changes}
+
+[TO BE COMPLETED: GraphRAG Analysis Results]
+
+\subsection{Visualizations}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_timeline.png}
+\caption{Research Timeline and Key Events}
+\label{fig:timeline}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/fig2_framing_trends.png}
+\caption{Monthly Framing Score Trends: NK vs Control Groups}
+\label{fig:framing_trends}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3_frame_distribution.png}
+\caption{Frame Distribution by Period (North Korea)}
+\label{fig:frame_distribution}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/fig4_did_visualization.png}
+\caption{Difference-in-Differences Visualization}
+\label{fig:did}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/fig5_frame_heatmap.png}
+\caption{Frame Category Heatmap (North Korea)}
+\label{fig:heatmap}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/fig6_sentiment_trends.png}
+\caption{Monthly Sentiment Score Trends}
+\label{fig:sentiment_trends}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/fig7_sentiment_framing_corr.png}
+\caption{Sentiment vs Framing Correlation}
+\label{fig:correlation}
+\end{figure}

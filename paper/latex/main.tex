@@ -1,0 +1,64 @@
+% Main LaTeX file - ICWSM Paper
+\documentclass[letterpaper]{article}
+
+% AAAI/ICWSM packages
+\usepackage{aaai25}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage[hyphens]{url}
+\usepackage{graphicx}
+\urlstyle{rm}
+\def\UrlFont{\rm}
+\usepackage{natbib}
+\usepackage{caption}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+% Additional packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+
+% PDF metadata
+\pdfinfo{
+/TemplateVersion (2025.1)
+}
+
+% Title and authors
+\title{Summit Diplomacy and Social Media Framing: \\
+A Causal Analysis of U.S.-North Korea Summits on Reddit Public Opinion}
+
+\author{
+Jun Sin \\
+University of Texas at Austin \\
+austin, TX, USA \\
+jun.sin@utexas.edu
+}
+
+\begin{document}
+
+\maketitle
+
+% Abstract
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+% Main sections
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/data}
+\input{sections/method}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% References
+\bibliographystyle{aaai25}
+\bibliography{references}
+
+\end{document}
