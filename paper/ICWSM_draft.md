@@ -228,43 +228,56 @@ The data reveals an asymmetric rally effect:
 1. **Summit Success Effect**: Singapore Summit produced a sentiment improvement of +0.077 to +0.196 (depending on control group)
 2. **Summit Failure Effect**: Hanoi Summit produced a sentiment decline of -0.048 to -0.106
 3. **Net Effect**: Overall sentiment remained slightly improved from baseline (+0.03 vs Iran, significant at p=0.006)
-
 This suggests that while diplomatic failures cause sentiment reversals, the gains from successful summits are not fully erased—indicating a partial "ratchet effect" in public opinion.
 
 ### 5.5 RQ1: Summit Effects on Framing
+
+#### Period Definition and Methodology
+
+To avoid contamination from anticipation effects, we define analysis periods excluding transition months:
+
+| Period | Date Range | Rationale |
+|--------|------------|-----------|
+| **P1: Pre-Announcement** | 2017.01 - 2018.02 | Before Trump-Kim summit announcement (2018.03.08) |
+| *Transition* | 2018.03 - 2018.05 | Anticipation period (excluded) |
+| **P2: Singapore-Hanoi** | 2018.06 - 2019.01 | Post-Singapore, Pre-Hanoi meeting month |
+| *Transition* | 2019.02 | Hanoi Summit month (excluded) |
+| **P3: Post-Hanoi** | 2019.03 - 2019.12 | Post-summit collapse period |
+
+This approach ensures clean pre-treatment periods for parallel trends testing.
 
 #### Parallel Trends Validation (Monthly Aggregated)
 
 | Comparison | Control | Pre-period | P-value | Satisfied |
 |------------|---------|------------|---------|-----------|
-| P1→P2 | China | P1 | 0.002 | ✗ |
-| P1→P2 | **Iran** | P1 | **0.12** | **✓** |
-| P1→P2 | Russia | P1 | 0.0002 | ✗ |
-| P2→P3 | China | P2 | 0.94 | ✓ |
-| P2→P3 | Iran | P2 | 0.50 | ✓ |
-| P2→P3 | Russia | P2 | 0.32 | ✓ |
+| P1→P2 | **China** | P1 | **0.12** | **✓** |
+| P1→P2 | **Iran** | P1 | **0.77** | **✓** |
+| P1→P2 | Russia | P1 | 0.03 | ✗ |
+| P2→P3 | **China** | P2 | **0.41** | **✓** |
+| P2→P3 | **Iran** | P2 | **0.79** | **✓** |
+| P2→P3 | **Russia** | P2 | **0.51** | **✓** |
 
-**Note**: For P1→P2, only Iran satisfies parallel trends. All controls satisfy for P2→P3.
+With clean periods, China and Iran satisfy parallel trends for P1→P2. All controls satisfy for P2→P3.
 
 #### Singapore Summit Effect on Framing (P1→P2)
 
 | Control | DID Estimate | P-value | Parallel Trends |
 |---------|--------------|---------|-----------------|
-| China | +1.23 | <0.0001 | ✗ Violated |
-| **Iran** | **+0.89** | **<0.0001** | **✓ Satisfied** |
-| Russia | +0.97 | <0.0001 | ✗ Violated |
+| **China** | **+1.28** | **<0.0001** | **✓ Satisfied** |
+| **Iran** | **+0.85** | **<0.0001** | **✓ Satisfied** |
+| Russia | +1.04 | <0.0001 | ✗ Violated |
 
-**Primary result (Iran as control)**: DID = **+0.89** (p<0.0001), indicating a significant shift toward more diplomatic framing after Singapore Summit.
+**Primary result**: Using China and Iran as controls (both satisfying parallel trends), the Singapore Summit produced a DID estimate of **+0.85 to +1.28** (p<0.0001), indicating a substantial shift toward diplomatic framing.
 
 #### Hanoi Summit Effect on Framing (P2→P3)
 
 | Control | DID Estimate | P-value | Parallel Trends |
 |---------|--------------|---------|-----------------|
-| **China** | **-1.05** | **<0.0001** | **✓ Satisfied** |
-| **Iran** | **-0.50** | **<0.0001** | **✓ Satisfied** |
-| **Russia** | **-0.98** | **<0.0001** | **✓ Satisfied** |
+| **China** | **-0.88** | **<0.0001** | **✓ Satisfied** |
+| **Iran** | **-0.30** | **0.003** | **✓ Satisfied** |
+| **Russia** | **-0.83** | **<0.0001** | **✓ Satisfied** |
 
-**Interpretation**: The failed Hanoi Summit led to a significant reversal in framing, with NK-related discussions becoming more threat-oriented across all control group comparisons.
+**Interpretation**: The failed Hanoi Summit led to a significant reversal in framing (DID = -0.30 to -0.88), with NK-related discussions returning toward more threat-oriented framing across all control group comparisons.
 
 ### 5.6 Visualizations
 
