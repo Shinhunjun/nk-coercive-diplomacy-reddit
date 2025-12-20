@@ -47,7 +47,7 @@ Create a **gold-standard benchmark** to:
 | Cohen's Kappa | > 0.70 | Inter-rater reliability |
 | Sample Size | 1,330 posts | Statistical power |
 | LLM Accuracy | Report actual | Validation metric |
-| Completion Time | 6-7 weeks | Project timeline |
+| Completion Time | 2 weeks | Project timeline |
 
 ---
 
@@ -273,12 +273,12 @@ Update `annotation_codebook.md`:
 
 | Batch | Posts | Timeline |
 |-------|-------|----------|
-| Batch 1 | 101-300 | Week 2 |
-| Batch 2 | 301-500 | Week 3 |
-| Batch 3 | 501-700 | Week 4 |
-| Batch 4 | 701-900 | Week 5 |
-| Batch 5 | 901-1,100 | Week 5-6 |
-| Batch 6 | 1,101-1,330 | Week 6 |
+| Batch 1 | 101-300 | Day 4-5 |
+| Batch 2 | 301-500 | Day 4-5 |
+| Batch 3 | 501-700 | Day 6-7 |
+| Batch 4 | 701-900 | Day 6-7 |
+| Batch 5 | 901-1,100 | Day 8-9 |
+| Batch 6 | 1,101-1,330 | Day 8-9 |
 
 #### After Each Batch
 
@@ -521,18 +521,39 @@ Only use when **truly** objective with no clear framing.
 
 ## 8. Timeline & Deliverables
 
-### Timeline (6-7 Weeks)
+### Timeline (2 Weeks)
 
-| Week | Phase | Activities | Hours/Person |
-|------|-------|------------|--------------|
-| 1 | Pilot | Annotate 100, discuss, refine, re-annotate | 8-10 |
-| 2 | Main | Batch 1 (200 posts) | 8-10 |
-| 3 | Main | Batch 2 (200 posts) | 8-10 |
-| 4 | Main | Batch 3 (200 posts) | 8-10 |
-| 5 | Main | Batch 4 (200 posts) | 8-10 |
-| 6 | Main | Batches 5-6 (330 posts) | 10-12 |
-| 7 | Resolution | Disagreement resolution | 6-8 |
-| **Total** | | | **56-68 hours** |
+| Day | Phase | Activities | Hours/Person |
+|-----|-------|------------|--------------|
+| **Day 1-2** | Pilot | Annotate 100, calculate IRR | 5-6 |
+| **Day 3** | Pilot | Discussion, codebook refinement, re-annotate | 4-5 |
+| **Day 4-5** | Main | Batch 1-2 (400 posts) | 10 |
+| **Day 6-7** | Main | Batch 3-4 (400 posts) | 10 |
+| **Day 8-9** | Main | Batch 5-6 (430 posts) | 10 |
+| **Day 10-11** | Main | Final batch + IRR check | 8 |
+| **Day 12-13** | Resolution | Disagreement resolution | 8 |
+| **Day 14** | Finalize | Final review, data cleanup | 3-4 |
+| **Total** | | | **58-63 hours** |
+
+**Daily commitment**: ~4-5 hours/day for 2 weeks
+
+### Accelerated Schedule Notes
+
+> [!TIP]
+> **2-week timeline is achievable with**:
+>
+> - Consistent 4-5 hours daily commitment
+> - Focused annotation sessions (minimize distractions)
+> - Quick turnaround on batch IRR checks
+> - Efficient disagreement resolution meetings
+
+> [!WARNING]
+> **To maintain quality**:
+>
+> - Don't rush through posts (2-3 min each minimum)
+> - Take breaks every 1-2 hours
+> - Document uncertain cases thoroughly
+> - Keep codebook updated in real-time
 
 ### Deliverables
 
