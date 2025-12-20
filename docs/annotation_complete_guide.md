@@ -166,8 +166,8 @@ Ensures representation of:
 
 **Examples**:
 
-- ✅ "South Korean President visits North Korea"
 - ✅ "China announces new economic policy"
+- ✅ "Russia holds presidential election"
 - ❌ "China's aggressive new policy threatens region" (THREAT)
 
 ---

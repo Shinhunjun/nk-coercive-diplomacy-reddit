@@ -42,8 +42,8 @@ You are classifying Reddit posts about international affairs into **one of five 
 
 **Examples**:
 
-- "South Korean President visits North Korea"
 - "China announces new economic policy"
+- "Russia holds presidential election"
 - "Russian election results announced"
 
 ---
