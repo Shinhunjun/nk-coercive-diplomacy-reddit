@@ -2,7 +2,7 @@
 
 **Version**: 1.0  
 **Last Updated**: 2025-12-20  
-**Annotators**: [Annotator 1 Name], [Annotator 2 Name]
+**Annotators**: [Hunjun Shin], [Hunbae Moon]
 
 ---
 
