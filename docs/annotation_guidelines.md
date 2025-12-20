@@ -10,9 +10,11 @@ You are classifying Reddit posts about international affairs into **one of five 
 
 ## Framing Categories
 
+> **Note**: These definitions match exactly what was used in the automated classification system.
+
 ### 1. THREAT
 
-**Focus**: Military danger, nuclear weapons, missiles, war, aggression, hostile actions
+**Definition**: Military threat, nuclear weapons, missiles, war risk
 
 **Examples**:
 
@@ -20,13 +22,11 @@ You are classifying Reddit posts about international affairs into **one of five 
 - "Iran threatens to restart nuclear program"  
 - "Russia deploys troops near Ukrainian border"
 
-**Key words**: missile, nuclear, attack, threaten, war, military, weapons, invasion, provocative
-
 ---
 
 ### 2. DIPLOMACY
 
-**Focus**: Negotiations, peace talks, diplomatic engagement, cooperation, summits, treaties
+**Definition**: Negotiation, dialogue, peace, cooperation
 
 **Examples**:
 
@@ -34,13 +34,11 @@ You are classifying Reddit posts about international affairs into **one of five 
 - "Iran nuclear deal negotiations resume"
 - "China and US agree to trade talks"
 
-**Key words**: talks, summit, negotiate, agreement, peace, diplomat, cooperation, treaty, meeting
-
 ---
 
 ### 3. NEUTRAL
 
-**Focus**: Factual reporting without clear positive/negative framing, news updates, objective information
+**Definition**: Neutral information delivery
 
 **Examples**:
 
@@ -48,13 +46,11 @@ You are classifying Reddit posts about international affairs into **one of five 
 - "China announces new economic policy"
 - "Russian election results announced"
 
-**Key words**: announces, reports, states, according to, update, official statement
-
 ---
 
 ### 4. ECONOMIC
 
-**Focus**: Sanctions, trade, economic impact, business relations, financial matters
+**Definition**: Economic sanctions, trade aspects
 
 **Examples**:
 
@@ -62,21 +58,17 @@ You are classifying Reddit posts about international affairs into **one of five 
 - "US-China trade war escalates"
 - "Iran oil exports hit by sanctions"
 
-**Key words**: sanctions, trade, economy, tariffs, exports, imports, business, market, investment
-
 ---
 
 ### 5. HUMANITARIAN
 
-**Focus**: Human rights, refugees, citizens' welfare, humanitarian issues, living conditions
+**Definition**: Human rights, refugees, civilian issues
 
 **Examples**:
 
 - "North Korean defector shares story of escape"
 - "Human rights violations reported in Iran"
 - "Russian citizens protest government policies"
-
-**Key words**: human rights, refugees, citizens, people, humanitarian, prison, freedom, protest, civilians
 
 ---
 
@@ -108,7 +100,7 @@ Only use NEUTRAL when there's no clear positive/negative/threatening framing. Pu
 |-----------|-------------------|
 | Trade war with tariffs AND diplomatic talks | Choose dominant focus |
 | Nuclear negotiations (weapons + talks) | DIPLOMACY if talks emphasized, THREAT if weapons emphasized |
-| Sanctions hurting citizens | ECONOMIC (primary mechanism) or HUMANITARIAN (if citizen suffering is focus) |
+| Sanctions hurting citizens | ECONOMIC (primary mechanism) or HUMANITARIAN (if civilian suffering is focus) |
 | Failed diplomatic summit | DIPLOMACY (still about negotiations) |
 | Military exercises as show of force | THREAT |
 
