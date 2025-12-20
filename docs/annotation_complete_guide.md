@@ -693,5 +693,3 @@ After completion:
 - [ ] Ready for LLM validation
 
 ---
-
-**Good luck! This rigorous process will produce high-quality data for your ICWSM paper.** 🎓
