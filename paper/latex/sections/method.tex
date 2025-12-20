@@ -3,17 +3,44 @@
 
 \subsection{Human Annotation Benchmark}
 
-To validate our automated classification approach, we developed a human annotation benchmark:
+To validate our LLM-based framing classification, we developed a rigorous human annotation benchmark following established protocols in computational social science.
 
-\textbf{Annotators}: Two military officers with expertise in North Korean affairs and international security.
+\subsubsection{Annotators}
+Two military officers with expertise in North Korean affairs and international security independently labeled posts. Both annotators have domain knowledge essential for accurately interpreting geopolitical discourse.
 
-\textbf{Frame Categories}:
+\subsubsection{Sampling Strategy}
+We employed stratified proportional sampling to create a representative validation dataset of 1,330 Reddit posts:
+
 \begin{itemize}
-    \item \textbf{THREAT} (-2): Military capabilities, provocations, danger
-    \item \textbf{ECONOMIC} (-1): Sanctions, trade, financial aspects
-    \item \textbf{NEUTRAL} (0): Factual reporting, balanced
-    \item \textbf{HUMANITARIAN} (+1): Human rights, refugees, aid
-    \item \textbf{DIPLOMACY} (+2): Negotiations, peace, cooperation
+    \item \textbf{Countries}: North Korea (n=335), China (n=337), Iran (n=337), Russia (n=321)
+    \item \textbf{Time Periods}: P1 Pre-Singapore (n=512), P2 Singapore-Hanoi (n=256), P3 Post-Hanoi (n=562)
+    \item \textbf{Total Strata}: 60 (4 countries $\times$ 3 periods $\times$ 5 frames)
+    \item \textbf{Minimum per stratum}: 10 posts to ensure rare category representation
+\end{itemize}
+
+\subsubsection{Frame Categories}
+Following the same definitions used for LLM classification:
+\begin{itemize}
+    \item \textbf{THREAT} (-2): Military threat, nuclear weapons, missiles, war risk
+    \item \textbf{ECONOMIC} (-1): Economic sanctions, trade aspects
+    \item \textbf{NEUTRAL} (0): Neutral information delivery
+    \item \textbf{HUMANITARIAN} (+1): Human rights, refugees, civilian issues
+    \item \textbf{DIPLOMACY} (+2): Negotiation, dialogue, peace, cooperation
+\end{itemize}
+
+\subsubsection{Annotation Process}
+We followed an iterative codebook refinement approach:
+\begin{enumerate}
+    \item \textbf{Pilot Round}: Both annotators independently labeled 100 posts, calculated initial inter-rater reliability, discussed disagreements, and refined the codebook with edge case decision rules.
+    \item \textbf{Main Annotation}: Remaining 1,230 posts annotated in batches with ongoing IRR monitoring to ensure consistent quality.
+    \item \textbf{Disagreement Resolution}: All disagreements resolved through discussion to produce final consensus labels (not discarding disagreements).
+\end{enumerate}
+
+\subsubsection{Inter-Rater Reliability}
+We report Cohen's $\kappa$ as our primary reliability measure:
+\begin{itemize}
+    \item \textbf{Initial Agreement}: $\kappa$ = [TBD] (before resolution)
+    \item \textbf{Interpretation}: [substantial/almost perfect] agreement per Landis \& Koch (1977)
 \end{itemize}
 
 \subsection{LLM-Based Framing Classification}
