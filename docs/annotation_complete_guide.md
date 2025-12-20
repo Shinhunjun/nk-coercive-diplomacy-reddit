@@ -325,6 +325,63 @@ For each disagreement:
 
 ---
 
+### ⚠️ IMPORTANT: What to Do with Disagreements?
+
+**Question**: After achieving Kappa > 0.70, do we only keep samples where both annotators agreed, or do we resolve disagreements?
+
+**Answer**: **Resolve ALL disagreements through discussion. Keep all 1,330 samples.**
+
+#### Why NOT Discard Disagreements?
+
+| Approach | Problems |
+|----------|----------|
+| ❌ **Only keep agreements** | • Biases dataset toward "easy" cases<br>• Loses valuable edge cases<br>• Reduces sample size<br>• Not standard practice<br>• Artificially inflates LLM accuracy |
+| ✅ **Resolve all disagreements** | • Uses full 1,330 samples<br>• Captures difficult cases<br>• Standard in NLP/social science<br>• More rigorous<br>• True LLM performance |
+
+#### Example Scenario
+
+If you achieve κ = 0.75 (substantial agreement):
+
+| Outcome | Count | What to Do |
+|---------|-------|------------|
+| **Both agree** | ~1,000 posts (75%) | `final_frame` = agreed label |
+| **Disagree** | ~330 posts (25%) | **Discuss → consensus → `final_frame`** |
+| **Final dataset** | **1,330 posts** | **All have consensus labels** |
+
+#### What Gets Reported in Paper
+
+**Methods Section**:
+> "Two annotators independently labeled all 1,330 posts. Initial inter-rater reliability was Cohen's κ = 0.75 (substantial agreement). Disagreements (n = 330, 24.8%) were resolved through discussion to produce final consensus labels used for LLM validation."
+
+**Results Section**:
+
+- **IRR (before consensus)**: κ = 0.75
+- **LLM vs Human (consensus)**: Accuracy = X%, F1 = Y
+
+#### Rare Exception: Irreconcilable Disagreements
+
+If after discussion you **still cannot agree** on a post (<1% of cases):
+
+- Document it as "ambiguous"
+- Consider excluding (but this should be extremely rare)
+- Report in paper: "X posts (0.X%) were excluded due to irreconcilable ambiguity"
+
+#### Summary
+
+**Standard practice**:
+
+1. ✅ Calculate Kappa on independent annotations (report this)
+2. ✅ Resolve ALL disagreements through discussion
+3. ✅ Use all 1,330 consensus labels for LLM validation
+
+**Do NOT**:
+
+- ❌ Discard disagreements
+- ❌ Only use agreements
+- ❌ Vote without discussion
+
+---
+
 ## 6. Codebook & Decision Rules
 
 ### Core Annotation Rules
