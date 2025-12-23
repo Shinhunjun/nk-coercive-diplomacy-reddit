@@ -1,21 +1,26 @@
-% Introduction
 \section{Introduction}
 
-The historic 2018 Singapore Summit between U.S. President Donald Trump and North Korean leader Kim Jong Un marked the first-ever meeting between sitting leaders of the two nations. This diplomatic breakthrough, followed by the collapsed Hanoi Summit in February 2019, provides a unique natural experiment to study how high-stakes international events shape online public opinion.
+Public opinion toward foreign adversaries is rarely shaped by isolated facts alone, but rather by how international events are framed and discussed in public discourse. In the context of diplomacy, high-stakes summits serve not only as policy interventions but also as salient narrative events that can reorient how adversary states are collectively interpreted, evaluated, and debated.
+
+Existing research on public opinion and foreign policy has largely relied on survey-based measures of approval or sentiment, often focusing on short-term emotional responses to international crises. While such approaches capture shifts in affect, they provide limited insight into how the \textit{structure and framing} of discourse evolve over time—particularly in online environments where narratives are co-produced by media, political elites, and the public. In particular, survey instruments are ill-suited to capture how narratives are contested, reproduced, and restructured within participatory online discourse.
+
+This study argues that understanding diplomatic effects on public opinion requires moving beyond sentiment alone to examine framing dynamics: how adversaries are discussed, which narratives become dominant, and how these narratives persist or dissipate following political events. We focus on two closely linked but distinct dimensions of online discourse: (1) \textit{content}, reflected in sentiment and framing, and (2) \textit{structure}, reflected in how narratives are interconnected within discourse networks. Focusing solely on content-level change risks overlooking how diplomatic events may reorganize the relationships among narratives themselves.
+
+We examine these dynamics through the case of U.S.–North Korea summit diplomacy. The historic 2018 Singapore Summit between U.S. President Donald Trump and North Korean leader Kim Jong Un marked the first-ever meeting between sitting leaders of the two nations and was widely framed as a diplomatic breakthrough. Less than a year later, the February 2019 Hanoi Summit collapsed without agreement, providing a contrasting case of diplomatic failure. Together, these events constitute a natural experiment for examining how successful and failed diplomacy causally reshape online discourse toward a long-standing adversary.
+
+Leveraging large-scale Reddit discussions from 2017 to 2019, we combine a Difference-in-Differences research design with validated LLM-based framing classification to identify causal shifts in discourse. In addition to measuring changes in sentiment and framing, we examine whether diplomatic events also reorganize the underlying structure of discourse by altering narrative connectivity and centrality within discourse networks.
+
+By integrating content-level and structural analyses, this study contributes to computational social science in three ways. First, it provides causal evidence that diplomatic summits significantly reshape how adversary nations are framed in online discourse. Second, it demonstrates that these effects are asymmetric: successful diplomacy produces larger framing shifts that tend to persist more strongly than subsequent diplomatic failures fully reverse. Third, it introduces a scalable yet domain-sensitive methodology that combines LLM-based analysis with expert human validation to study geopolitical discourse at scale.
 
 \subsection{Research Questions}
 
-We investigate the causal impact of diplomatic summits on public opinion through two complementary dimensions:
+This study investigates how high-stakes diplomatic events reshape online discourse toward a foreign adversary across both content and structure. Specifically, we ask:
 
 \begin{itemize}
-    \item \textbf{RQ1 (Content Change)}: How do high-stakes diplomatic summits affect the \textit{content} of public opinion (framing and sentiment) toward adversary nations?
-    \item \textbf{RQ2 (Structural Change)}: How does the underlying \textit{network structure} of discourse change across different phases of diplomatic engagement?
+    \item \textbf{RQ1 (Content Change)}: How do high-stakes diplomatic summits causally affect sentiment and framing toward North Korea in online discourse?
+    
+    \item \textbf{RQ2 (Structural Reorganization)}: How do these diplomatic events restructure the organization of online discourse, as reflected in changes to discourse networks and narrative connectivity?
+    
+    \item \textbf{RQ3 (Methodological Validity)}: To what extent can LLM-based framing classification align with human expert judgments in geopolitical discourse analysis?
 \end{itemize}
-
-\subsection{Contributions}
-
-\begin{enumerate}
-    \item \textbf{Methodological}: A validated pipeline combining LLM-based framing analysis with human expert annotation (military officers).
-    \item \textbf{Empirical}: Causal evidence of summit effects on adversary perception using Difference-in-Differences with multiple controls.
-    \item \textbf{Theoretical}: Evidence of asymmetric effects---diplomatic successes produce larger gains than failures produce reversals.
-\end{enumerate}
+}

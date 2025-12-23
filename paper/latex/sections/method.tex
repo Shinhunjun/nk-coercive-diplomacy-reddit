@@ -1,76 +1,75 @@
-% Method
+%==============================================================================
+% METHOD
+%==============================================================================
 \section{Method}
 
 \subsection{Human Annotation Benchmark}
 
-To validate our LLM-based framing classification, we developed a rigorous human annotation benchmark following established protocols in computational social science.
+To validate our LLM-based framing classification in a domain-sensitive setting, we constructed a gold-standard human annotation benchmark following established protocols in computational social science. The benchmark serves three purposes: (1) estimate inter-rater reliability, (2) produce consensus labels for model validation, and (3) characterize systematic model errors.
 
 \subsubsection{Annotators}
-Two military officers with expertise in North Korean affairs and international security independently labeled posts. Both annotators have domain knowledge essential for accurately interpreting geopolitical discourse.
+Two military officers with expertise in North Korean affairs and international security independently labeled the benchmark samples. Domain expertise is critical for interpreting geopolitical discourse where the same topic (e.g., nuclear weapons) can be framed differently depending on emphasis (e.g., negotiation vs.\ escalation).
 
 \subsubsection{Sampling Strategy}
-We employed stratified proportional sampling to create a representative validation dataset of 1,330 Reddit posts:
+We employed stratified sampling to create a validation dataset of 1,330 Reddit posts. Stratification ensures coverage across countries, time periods, and rare frames, enabling a fair comparison between human and LLM labels.
 
 \begin{itemize}
-    \item \textbf{Countries}: North Korea (n=335), China (n=337), Iran (n=337), Russia (n=321)
-    \item \textbf{Time Periods}: P1 Pre-Singapore (n=512), P2 Singapore-Hanoi (n=256), P3 Post-Hanoi (n=562)
-    \item \textbf{Total Strata}: 60 (4 countries $\times$ 3 periods $\times$ 5 frames)
-    \item \textbf{Minimum per stratum}: 10 posts to ensure rare category representation
+    \item \textbf{Countries}: North Korea (n=335; treatment), China (n=337), Iran (n=337), Russia (n=321)
+    \item \textbf{Time Periods}: P1 Pre-Singapore (n=512), P2 Singapore--Hanoi (n=256), P3 Post-Hanoi (n=562)
+    \item \textbf{Frames}: THREAT, ECONOMIC, NEUTRAL, HUMANITARIAN, DIPLOMACY
+    \item \textbf{Total strata}: 60 (4 countries $\times$ 3 periods $\times$ 5 frames), with a minimum of 10 posts per stratum to preserve representation of rare categories
 \end{itemize}
 
 \subsubsection{Frame Categories}
-Following the same definitions used for LLM classification:
+Annotators used the same framing definitions as our LLM classifier to ensure construct equivalence:
 \begin{itemize}
     \item \textbf{THREAT} (-2): Military threat, nuclear weapons, missiles, war risk
-    \item \textbf{ECONOMIC} (-1): Economic sanctions, trade aspects
-    \item \textbf{NEUTRAL} (0): Neutral information delivery
-    \item \textbf{HUMANITARIAN} (+1): Human rights, refugees, civilian issues
-    \item \textbf{DIPLOMACY} (+2): Negotiation, dialogue, peace, cooperation
+    \item \textbf{ECONOMIC} (-1): Economic sanctions, trade, and financial impacts
+    \item \textbf{NEUTRAL} (0): Descriptive reporting without clear evaluative framing
+    \item \textbf{HUMANITARIAN} (+1): Human rights, refugees, civilian welfare, defector narratives
+    \item \textbf{DIPLOMACY} (+2): Negotiation, dialogue, summits, peace initiatives, cooperation
 \end{itemize}
 
-\subsubsection{Annotation Process}
-We followed an iterative codebook refinement approach:
+\subsubsection{Annotation Procedure}
+We followed an iterative codebook refinement approach to improve consistency and document decision rules for edge cases:
 \begin{enumerate}
-    \item \textbf{Pilot Round}: Both annotators independently labeled 100 posts, calculated initial inter-rater reliability, discussed disagreements, and refined the codebook with edge case decision rules.
-    \item \textbf{Main Annotation}: Remaining 1,230 posts annotated in batches with ongoing IRR monitoring to ensure consistent quality.
-    \item \textbf{Disagreement Resolution}: All disagreements resolved through discussion to produce final consensus labels (not discarding disagreements).
+    \item \textbf{Pilot Round}: Both annotators independently labeled 100 posts. We computed initial inter-rater reliability, reviewed disagreements, and refined the codebook with explicit decision rules.
+    \item \textbf{Main Annotation}: The remaining 1,230 posts were labeled independently in batches with periodic reliability checks to monitor drift.
+    \item \textbf{Disagreement Resolution}: Disagreements were resolved through structured discussion using the finalized codebook to produce consensus labels for evaluation. We retained all samples rather than discarding disagreements to avoid biasing the benchmark toward ``easy'' cases.
 \end{enumerate}
 
 \subsubsection{Inter-Rater Reliability}
-We report Cohen's $\kappa$ as our primary reliability measure:
+We report Cohen's $\kappa$ on the independent (pre-consensus) labels as our primary reliability measure:
 \begin{itemize}
-    \item \textbf{Initial Agreement}: $\kappa$ = [TBD] (before resolution)
-    \item \textbf{Interpretation}: [substantial/almost perfect] agreement per Landis \& Koch (1977)
+    \item \textbf{Overall}: $\kappa$ = [TBD]
+    \item \textbf{Interpretation}: [TBD: moderate/substantial/almost perfect] agreement following Landis \& Koch (1977)
 \end{itemize}
+We also report a confusion matrix and per-category agreement to characterize where disagreements concentrate (e.g., NEUTRAL vs.\ ECONOMIC).
 
 \subsection{LLM-Based Framing Classification}
 
-We use GPT-4o-mini for frame classification with zero-shot prompting. The model classifies each post into one of five categories with a confidence score.
+We classify each Reddit post into one of five framing categories using GPT-4o-mini with zero-shot prompting. The prompt provides category definitions and requires a single label output; the model also returns a confidence score. For robustness, we (i) evaluate agreement against the consensus benchmark and (ii) conduct sensitivity checks using only high-confidence predictions (Section~\ref{sec:robustness}).
 
 \subsection{Sentiment Analysis}
 
-We employ RoBERTa-based sentiment model\footnote{cardiffnlp/twitter-roberta-base-sentiment-latest} for sentiment analysis:
-\begin{itemize}
-    \item \textbf{Scale}: Continuous score from -1 (Negative) to +1 (Positive)
-    \item \textbf{Rationale}: While framing captures \textit{how} topics are discussed, sentiment captures the \textit{emotional valence}
-\end{itemize}
+We compute sentiment using a RoBERTa-based sentiment model\footnote{cardiffnlp/twitter-roberta-base-sentiment-latest}. Sentiment is mapped to a continuous score from -1 (negative) to +1 (positive). While framing captures \textit{how} North Korea is discussed, sentiment captures \textit{emotional valence}, enabling complementary measurement of content change.
 
 \subsection{Difference-in-Differences Design}
 
-Our DID specification:
+To estimate the causal impact of summit diplomacy on discourse, we use a Difference-in-Differences (DID) design with North Korea as the treatment group and China, Iran, and Russia as control groups. Our baseline specification is:
 
 \begin{equation}
-Y_{it} = \alpha + \beta_1 \text{Post}_t + \beta_2 \text{Treatment}_i + \beta_3 (\text{Post}_t \times \text{Treatment}_i) + \epsilon_{it}
+Y_{it} = \alpha + \beta_1 \text{Post}_t + \beta_2 \text{Treatment}_i + \beta_3 (\text{Post}_t \times \text{Treatment}_i) + \epsilon_{it},
 \end{equation}
 
-where $\beta_3$ represents the causal effect of the summit on framing/sentiment.
+where $Y_{it}$ denotes either sentiment or framing, and $\beta_3$ captures the DID estimate of the summit effect.
 
 \subsubsection{Parallel Trends Validation}
 
-Before DID estimation, we verify the parallel trends assumption using monthly aggregated data:
+We test the parallel trends assumption using pre-treatment monthly aggregates:
 
 \begin{equation}
-Y_{it} = \alpha + \beta_1 \text{Time}_t + \beta_2 \text{Treatment}_i + \beta_3 (\text{Time}_t \times \text{Treatment}_i) + \epsilon_{it}
+Y_{it} = \alpha + \beta_1 \text{Time}_t + \beta_2 \text{Treatment}_i + \beta_3 (\text{Time}_t \times \text{Treatment}_i) + \epsilon_{it}.
 \end{equation}
 
-A significant $\beta_3$ (p < 0.05) indicates violation of the parallel trends assumption.
+A significant $\beta_3$ (p $<$ 0.05) indicates a violation of parallel trends. We report these tests for each treatment--control pairing and each event window considered in the main analysis.

@@ -1,0 +1,61 @@
+You are an AI assistant analyzing Reddit discourse about North Korea during the 2017-2019 period, which includes the Singapore Summit (2018-06) and Hanoi Summit (2019-02).
+
+# Goal
+Write a comprehensive report of a community of entities found in Reddit discussions about North Korea. This analysis supports RQ2: understanding how diplomatic events restructure the organization of online discourse through changes in narrative connectivity and community structure.
+
+# Report Structure
+
+The report should include the following sections:
+
+- TITLE: community's name that represents its key entities
+- SUMMARY: An executive summary of the community's structure and how entities are interconnected
+- DISCOURSE_THEME: Classify the dominant theme: THREAT, DIPLOMACY, HUMANITARIAN, ECONOMIC, or MIXED
+- NARRATIVE_CONNECTIVITY: Analyze the structural role of this community:
+  - Which entities serve as central hubs connecting different narratives?
+  - Are there bridge entities linking threat and diplomacy narratives?
+  - How tightly clustered is this community (high/medium/low cohesion)?
+- CENTRAL_ACTORS: List the 3-5 most connected entities and their structural roles
+- IMPACT SEVERITY RATING: Float score 0-10 for how central this community is to NK-US discourse
+- RATING EXPLANATION: Single sentence explanation
+- DETAILED FINDINGS: 5-10 key insights about narrative structure
+
+Key structural patterns to identify:
+- **Hub entities**: Highly connected nodes that bridge multiple topics
+- **Bridge narratives**: Entities connecting threat and diplomacy discourse
+- **Isolated clusters**: Self-contained narrative communities
+- **Emerging connections**: New relationships that didn't exist in prior periods
+
+Return output as JSON:
+    {{
+        "title": <report_title>,
+        "summary": <executive_summary>,
+        "discourse_theme": <THREAT|DIPLOMACY|HUMANITARIAN|ECONOMIC|MIXED>,
+        "narrative_connectivity": {{
+            "hub_entities": [<list of central connecting entities>],
+            "bridge_narratives": [<entities linking different themes>],
+            "cohesion_level": <HIGH|MEDIUM|LOW>,
+            "structural_role": <description of community's role in discourse network>
+        }},
+        "central_actors": [
+            {{"entity": <name>, "role": <structural role description>}}
+        ],
+        "rating": <impact_severity_rating>,
+        "rating_explanation": <rating_explanation>,
+        "findings": [
+            {{"summary": <insight_summary>, "explanation": <insight_explanation>}}
+        ]
+    }}
+
+# Grounding Rules
+
+Points supported by data should list their data references as follows:
+"This is an example sentence [Data: <dataset name> (record ids)]."
+
+Do not list more than 5 record ids. Add "+more" if there are more.
+Limit the total report length to {max_report_length} words.
+
+# Real Data
+
+{input_text}
+
+Output:

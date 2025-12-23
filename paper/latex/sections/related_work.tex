@@ -1,18 +1,42 @@
-% Related Work
+%==============================================================================
+% RELATED WORK
+%==============================================================================
 \section{Related Work}
 
-\subsection{Rally-Round-the-Flag Effect}
+\subsection{Media Framing in International Discourse}
 
-The rally-round-the-flag effect describes the phenomenon where public approval of national leaders increases during international crises or major foreign policy events \cite{mueller1970}. While extensively studied in traditional polling contexts, its manifestation in social media discourse remains underexplored.
+Framing theory examines how issues are selectively presented and organized to promote particular interpretations, evaluations, and responses \cite{entman1993}. Rather than merely conveying information, frames highlight certain aspects of reality while obscuring others, thereby shaping how audiences understand political events and actors. In the context of international affairs, framing is especially consequential, as foreign adversaries are often interpreted through simplified narratives emphasizing threat, cooperation, or moral evaluation.
 
-\subsection{Media Framing}
+A substantial body of communication research has identified recurring, domain-general frames in political news coverage. Semetko and Valkenburg \cite{semetko2000} propose five widely used generic news frames—conflict, economic consequences, human interest, attribution of responsibility, and morality—which have since served as a foundation for empirical framing studies across media systems and issue domains. Subsequent work has applied these frames to international relations contexts, demonstrating that security-related conflict, economic sanctions, and humanitarian concerns constitute dominant interpretive lenses in foreign policy reporting.
 
-Framing theory posits that how information is presented significantly influences audience interpretation \cite{entman1993}. In international relations coverage, common frames include threat, diplomacy, economic, and humanitarian perspectives \cite{iyengar1991}.
+Within studies of international conflict and diplomacy, conflict-oriented frames emphasizing military threat, escalation, and security dilemmas are particularly prevalent, often shaping adversary images and public risk perceptions. At the same time, diplomatic engagement introduces alternative frames centered on negotiation, cooperation, and conflict resolution, which can substantially alter how adversarial states are discussed. Prior research suggests that these cooperative frames are not merely the absence of conflict framing, but constitute a distinct narrative logic emphasizing dialogue, reciprocity, and the possibility of peaceful change.
 
-\subsection{Social Media and Public Opinion}
+\subsection{Framing and Narrative Dynamics in International Politics}
 
-Reddit, as a major discussion platform, has been increasingly used to study public opinion dynamics \cite{baumgartner2020}. Unlike Twitter, Reddit's structure enables longer-form discussion and topical organization through subreddits.
+Beyond identifying frame categories, framing research highlights the importance of narrative dynamics—how frames are linked, reinforced, and reorganized over time in response to political events \cite{entman1993}. In international politics, narratives connect events, actors, and causal interpretations into coherent storylines that shape collective understanding of foreign policy developments.
 
-\subsection{LLMs for Content Analysis}
+Prior framing studies have predominantly focused on traditional media outlets or small-scale manually coded datasets, limiting their ability to capture dynamic framing shifts in response to discrete diplomatic events. As a result, less is known about how framing evolves within large-scale, participatory online discussions, where narratives are co-produced by journalists, political elites, and the public. Understanding these dynamics is particularly important for diplomacy, where symbolic events such as summits may not only change evaluative tone but also reorganize how issues and actors are narratively connected.
 
-Recent work has demonstrated the effectiveness of large language models for text classification tasks previously requiring human annotation \cite{gilardi2023}. However, validation against domain experts remains critical for specialized content.
+Our work extends this literature by examining longitudinal changes in framing within online discourse and by analyzing how diplomatic engagement and failure reshape the narrative positioning of an adversary nation over time.
+
+\subsection{Event-Driven Opinion Change in Foreign Policy}
+
+A large body of research examines how major political and diplomatic events influence public opinion on foreign policy. Prior studies show that elite signaling, high-profile negotiations, and symbolic diplomatic actions can alter public attitudes by reshaping issue salience and interpretive contexts. These effects are most often studied through surveys or approval metrics, focusing on short-term affective responses to salient international events.
+
+However, survey-based approaches primarily capture aggregate opinion shifts and provide limited insight into how foreign adversaries are discursively constructed in public communication. Moreover, they face challenges in capturing fine-grained temporal dynamics and attributing causal effects when multiple international developments unfold concurrently. As a result, existing approaches often miss how diplomatic events reconfigure the narrative dimensions through which adversaries are interpreted, beyond changes in approval or sentiment.
+
+Our study builds on this literature by examining how discrete diplomatic summits causally reshape online discourse toward a foreign adversary, focusing on framing dynamics rather than approval or support.
+
+\subsection{Online Discourse and Public Opinion on Social Media}
+
+Social media platforms have become central venues for public deliberation on international politics. Research using platforms such as Twitter and Reddit has explored agenda-setting, polarization, and narrative diffusion in response to global events \cite{baumgartner2020}. Compared to Twitter, Reddit supports longer-form discussion and community-based topical organization, making it particularly well-suited for studying discursive framing rather than isolated reactions.
+
+Nevertheless, much of the social media literature relies on descriptive or correlational analyses, limiting causal interpretation. Studies often document shifts in sentiment or topic prevalence without explicitly isolating the effects of discrete political interventions. Our study addresses this gap by applying a Difference-in-Differences design with multiple control countries, enabling causal inference about how summit diplomacy altered both sentiment and framing within online discourse.
+
+\subsection{Large Language Models for Political Text Analysis}
+
+Recent advances in large language models (LLMs) have enabled automated analysis of political text at unprecedented scale \cite{gilardi2023}. LLMs have been successfully applied to sentiment analysis, stance detection, and framing classification, reducing reliance on costly manual annotation and enabling longitudinal analysis across large corpora.
+
+Despite these advances, concerns remain regarding construct validity and domain specificity, particularly for geopolitically sensitive content. Many studies deploy LLMs without systematic validation against expert human judgments, raising questions about reliability in specialized domains. Our work contributes to this emerging literature by constructing a gold-standard human annotation benchmark and explicitly validating LLM-based framing classification against expert consensus prior to using model outputs for causal analysis.
+
+Together, these strands of research motivate a framing-centered, event-driven, and causally grounded analysis of online discourse surrounding diplomatic engagement.

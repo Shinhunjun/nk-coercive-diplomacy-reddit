@@ -2,7 +2,23 @@
 
 ## Overview
 
-This directory contains knowledge graph outputs from Microsoft GraphRAG analysis of Reddit discourse about North Korea during two distinct periods.
+This directory contains knowledge graph outputs from Microsoft GraphRAG analysis of Reddit discourse about North Korea. The analysis is aligned with the Difference-in-Differences (DID) study design documented in `DID_ANALYSIS_REPORT.md`.
+
+---
+
+## Analysis Period Design
+
+The GraphRAG analysis follows the same temporal structure as the DID framing analysis:
+
+| Period | Date Range | Duration | Description |
+|--------|------------|----------|-------------|
+| **Pre-Intervention** | 2017-01 ~ 2018-02 | 14 months | Maximum pressure / tension era |
+| **Gap (Excluded)** | 2018-03 ~ 2018-05 | 3 months | Transition period excluded to reduce noise |
+| **Post-Intervention** | 2018-06 ~ 2019-06 | 13 months | Summit diplomacy era |
+
+**Intervention Event**: 2018-03-08 (NK-US Summit Announcement)
+
+> **Note**: The 3-month gap period (March-May 2018) is excluded to capture long-term structural changes rather than immediate news saturation effects.
 
 ---
 
@@ -12,13 +28,13 @@ This directory contains knowledge graph outputs from Microsoft GraphRAG analysis
 graphrag/
 ├── README.md              # This file
 ├── settings.yaml          # GraphRAG configuration
-├── period1/               # Tension Period (2017.01-2018.02)
+├── period1/               # Pre-Intervention (2017.01-2018.02)
 │   ├── entities.parquet
 │   ├── relationships.parquet
 │   ├── communities.parquet
 │   ├── community_reports.parquet
 │   └── text_units.parquet
-└── period2/               # Diplomacy Period (2018.06-2019.06)
+└── period2/               # Post-Intervention (2018.06-2019.06)
     ├── entities.parquet
     ├── relationships.parquet
     ├── communities.parquet
@@ -40,18 +56,20 @@ graphrag/
 
 ---
 
-## Key Findings (H4)
+## Key Findings
 
 ### Kim Jong Un's Network Evolution
 
-**Tension Period Connections:**
+**Pre-Intervention Connections:**
+
 - NORTH KOREA
 - MISSILE LAUNCH
 - NUCLEAR PROGRAM
 - KIM JONG-NAM (assassination)
 - SANCTIONS
 
-**Diplomacy Period New Connections:**
+**Post-Intervention New Connections:**
+
 - TRUMP (new, central)
 - SINGAPORE SUMMIT
 - PANMUNJOM
@@ -60,15 +78,15 @@ graphrag/
 
 ### Trump Entity Emergence
 
-| Metric | Tension | Diplomacy |
-|--------|---------|-----------|
+| Metric | Pre-Intervention | Post-Intervention |
+|--------|------------------|-------------------|
 | Connections | 5 | 18 |
 | Entity Rank | >10 | 3rd |
 
 ### Relationship Type Changes
 
-| Type | Tension | Diplomacy |
-|------|---------|-----------|
+| Type | Pre-Intervention | Post-Intervention |
+|------|------------------|-------------------|
 | War/Threat | 58.3% | 52.6% |
 | Peace/Diplomacy | 5.4% | **22.0%** |
 
@@ -79,6 +97,7 @@ graphrag/
 ### entities.parquet
 
 Contains all extracted entities:
+
 - `id`: Unique entity ID
 - `name`: Entity name
 - `type`: Entity type (PERSON, GEO, EVENT, ORGANIZATION)
@@ -88,6 +107,7 @@ Contains all extracted entities:
 ### relationships.parquet
 
 Contains entity relationships:
+
 - `source`: Source entity ID
 - `target`: Target entity ID
 - `description`: Relationship description
@@ -97,6 +117,7 @@ Contains entity relationships:
 ### communities.parquet
 
 Contains detected communities:
+
 - `id`: Community ID
 - `level`: Hierarchy level (0-3)
 - `title`: Community title
@@ -105,6 +126,7 @@ Contains detected communities:
 ### community_reports.parquet
 
 Contains LLM-generated community summaries:
+
 - `community_id`: Reference to community
 - `title`: Summary title
 - `summary`: Full text summary
@@ -144,6 +166,7 @@ graphrag init --root .
 ### Step 3: Configure settings.yaml
 
 Key settings:
+
 ```yaml
 llm:
   api_key: ${OPENAI_API_KEY}
@@ -165,6 +188,7 @@ graphrag index --root .
 ```
 
 This will:
+
 1. Chunk the input text
 2. Extract entities and relationships
 3. Build the knowledge graph
