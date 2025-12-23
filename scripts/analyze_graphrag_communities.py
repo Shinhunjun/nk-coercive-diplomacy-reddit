@@ -23,26 +23,31 @@ def load_period_data(period_dir: Path) -> dict:
     """Load all GraphRAG outputs for a period."""
     data = {}
     
+    # Check if output subdirectory exists (new structure)
+    output_dir = period_dir / 'output'
+    if not output_dir.exists():
+        output_dir = period_dir  # Fall back to direct path
+    
     # Load entities
-    entities_path = period_dir / 'entities.parquet'
+    entities_path = output_dir / 'entities.parquet'
     if entities_path.exists():
         data['entities'] = pd.read_parquet(entities_path)
         print(f"  Loaded {len(data['entities'])} entities")
     
     # Load relationships
-    rels_path = period_dir / 'relationships.parquet'
+    rels_path = output_dir / 'relationships.parquet'
     if rels_path.exists():
         data['relationships'] = pd.read_parquet(rels_path)
         print(f"  Loaded {len(data['relationships'])} relationships")
     
     # Load communities
-    comm_path = period_dir / 'communities.parquet'
+    comm_path = output_dir / 'communities.parquet'
     if comm_path.exists():
         data['communities'] = pd.read_parquet(comm_path)
         print(f"  Loaded {len(data['communities'])} communities")
     
     # Load community reports
-    reports_path = period_dir / 'community_reports.parquet'
+    reports_path = output_dir / 'community_reports.parquet'
     if reports_path.exists():
         data['community_reports'] = pd.read_parquet(reports_path)
         print(f"  Loaded {len(data['community_reports'])} community reports")
@@ -407,74 +412,208 @@ def generate_report(analysis: dict) -> str:
 def main():
     print("=" * 60)
     print("GraphRAG Community Change Analysis")
-    print("Pre-Intervention (2017.01-2018.02) vs Post-Intervention (2018.06-2019.06)")
+    print("3-Period Analysis: Pre-Singapore → Singapore-Hanoi → Post-Hanoi")
     print("=" * 60)
     
-    # Load data
-    print("\nLoading Period 1 (Pre-Intervention)...")
+    # Load all 3 periods
+    print("\nLoading Period 1 (Pre-Singapore: 2017.01-2018.05)...")
     p1_data = load_period_data(GRAPHRAG_DIR / 'period1')
     
-    print("\nLoading Period 2 (Post-Intervention)...")
+    print("\nLoading Period 2 (Singapore-Hanoi: 2018.06-2019.02)...")
     p2_data = load_period_data(GRAPHRAG_DIR / 'period2')
     
-    # Run analyses
+    print("\nLoading Period 3 (Post-Hanoi: 2019.03-2019.12)...")
+    p3_data = load_period_data(GRAPHRAG_DIR / 'period3')
+    
+    # Run analyses for P1→P2
     print("\n" + "-" * 40)
-    print("Analyzing entity changes...")
-    entity_analysis = analyze_entities(p1_data, p2_data)
+    print("Analyzing P1 → P2 (Singapore Summit Effect)...")
+    entity_p1_p2 = analyze_entities(p1_data, p2_data)
+    rel_p1_p2 = analyze_relationships(p1_data, p2_data)
+    actor_p1_p2 = analyze_key_actors(p1_data, p2_data)
+    topology_p1_p2 = analyze_network_topology(p1_data, p2_data)
     
-    print("Analyzing relationship changes...")
-    rel_analysis = analyze_relationships(p1_data, p2_data)
+    # Run analyses for P2→P3
+    print("Analyzing P2 → P3 (Hanoi Summit Failure)...")
+    entity_p2_p3 = analyze_entities(p2_data, p3_data)
+    rel_p2_p3 = analyze_relationships(p2_data, p3_data)
+    actor_p2_p3 = analyze_key_actors(p2_data, p3_data)
+    topology_p2_p3 = analyze_network_topology(p2_data, p3_data)
     
-    print("Analyzing key actor networks...")
-    actor_analysis = analyze_key_actors(p1_data, p2_data)
+    # Run analyses for P1→P3 (overall)
+    print("Analyzing P1 → P3 (Overall Change)...")
+    entity_p1_p3 = analyze_entities(p1_data, p3_data)
+    rel_p1_p3 = analyze_relationships(p1_data, p3_data)
     
-    print("Analyzing community structure...")
-    comm_analysis = analyze_communities(p1_data, p2_data)
+    # Community analysis
+    comm_p1 = analyze_communities(p1_data, p1_data)
+    comm_p2 = analyze_communities(p2_data, p2_data)
+    comm_p3 = analyze_communities(p3_data, p3_data)
     
-    print("Analyzing network topology (RQ2)...")
-    topology_analysis = analyze_network_topology(p1_data, p2_data)
-    
-    # Compile results
+    # Compile full analysis
     full_analysis = {
-        'entities': entity_analysis,
-        'relationships': rel_analysis,
-        'key_actors': actor_analysis,
-        'communities': comm_analysis,
-        'network_topology': topology_analysis
+        'period_summaries': {
+            'P1_PreSingapore': {
+                'entities': len(p1_data.get('entities', [])),
+                'relationships': len(p1_data.get('relationships', [])),
+                'communities': len(p1_data.get('communities', [])),
+                'threat_pct': rel_p1_p2.get('threat_pct_pre', 0),
+                'peace_pct': rel_p1_p2.get('peace_pct_pre', 0)
+            },
+            'P2_SingaporeHanoi': {
+                'entities': len(p2_data.get('entities', [])),
+                'relationships': len(p2_data.get('relationships', [])),
+                'communities': len(p2_data.get('communities', [])),
+                'threat_pct': rel_p1_p2.get('threat_pct_post', 0),
+                'peace_pct': rel_p1_p2.get('peace_pct_post', 0)
+            },
+            'P3_PostHanoi': {
+                'entities': len(p3_data.get('entities', [])),
+                'relationships': len(p3_data.get('relationships', [])),
+                'communities': len(p3_data.get('communities', [])),
+                'threat_pct': rel_p2_p3.get('threat_pct_post', 0),
+                'peace_pct': rel_p2_p3.get('peace_pct_post', 0)
+            }
+        },
+        'transitions': {
+            'P1_to_P2_Singapore': {
+                'entities': entity_p1_p2,
+                'relationships': rel_p1_p2,
+                'key_actors': actor_p1_p2,
+                'topology': topology_p1_p2
+            },
+            'P2_to_P3_Hanoi': {
+                'entities': entity_p2_p3,
+                'relationships': rel_p2_p3,
+                'key_actors': actor_p2_p3,
+                'topology': topology_p2_p3
+            },
+            'P1_to_P3_Overall': {
+                'entities': entity_p1_p3,
+                'relationships': rel_p1_p3
+            }
+        },
+        'communities': {
+            'P1': comm_p1,
+            'P2': comm_p2,
+            'P3': comm_p3
+        }
     }
     
     # Save JSON results
-    json_path = RESULTS_DIR / 'graphrag_community_analysis.json'
+    json_path = RESULTS_DIR / 'graphrag_3period_analysis.json'
     with open(json_path, 'w') as f:
         json.dump(full_analysis, f, indent=2, default=str)
     print(f"\n✓ Saved JSON results: {json_path}")
     
-    # Generate and save markdown report
-    report = generate_report(full_analysis)
-    report_path = RESULTS_DIR / 'GRAPHRAG_COMMUNITY_ANALYSIS_REPORT.md'
+    # Generate 3-period markdown report
+    report = generate_3period_report(full_analysis)
+    report_path = RESULTS_DIR / 'GRAPHRAG_3PERIOD_ANALYSIS_REPORT.md'
     with open(report_path, 'w') as f:
         f.write(report)
     print(f"✓ Saved analysis report: {report_path}")
     
     # Print summary
     print("\n" + "=" * 60)
-    print("ANALYSIS SUMMARY")
+    print("3-PERIOD ANALYSIS SUMMARY")
     print("=" * 60)
     
-    if entity_analysis:
-        print(f"\nEntities: {entity_analysis.get('pre_intervention_count', 0)} → {entity_analysis.get('post_intervention_count', 0)}")
-        print(f"  New entities: {entity_analysis.get('new_entities', 0)}")
+    ps = full_analysis['period_summaries']
+    print(f"\n{'Period':<20} {'Entities':>10} {'Relations':>10} {'Threat%':>10} {'Peace%':>10}")
+    print("-" * 60)
+    for pname, pdata in ps.items():
+        print(f"{pname:<20} {pdata['entities']:>10} {pdata['relationships']:>10} {pdata['threat_pct']:>9.1f}% {pdata['peace_pct']:>9.1f}%")
     
-    if rel_analysis:
-        print(f"\nRelationships:")
-        print(f"  Threat: {rel_analysis.get('threat_pct_pre', 0):.1f}% → {rel_analysis.get('threat_pct_post', 0):.1f}% ({rel_analysis.get('threat_pct_change', 0):+.1f}%)")
-        print(f"  Peace: {rel_analysis.get('peace_pct_pre', 0):.1f}% → {rel_analysis.get('peace_pct_post', 0):.1f}% ({rel_analysis.get('peace_pct_change', 0):+.1f}%)")
+    print("\n" + "-" * 60)
+    print("KEY TRANSITIONS:")
+    print(f"  Singapore Effect (P1→P2): Threat {rel_p1_p2.get('threat_pct_change', 0):+.1f}%, Peace {rel_p1_p2.get('peace_pct_change', 0):+.1f}%")
+    print(f"  Hanoi Failure (P2→P3):    Threat {rel_p2_p3.get('threat_pct_change', 0):+.1f}%, Peace {rel_p2_p3.get('peace_pct_change', 0):+.1f}%")
+    print(f"  Overall (P1→P3):          Threat {rel_p1_p3.get('threat_pct_change', 0):+.1f}%, Peace {rel_p1_p3.get('peace_pct_change', 0):+.1f}%")
+
+
+def generate_3period_report(analysis: dict) -> str:
+    """Generate markdown report for 3-period analysis."""
+    ps = analysis['period_summaries']
+    t = analysis['transitions']
     
-    if actor_analysis:
-        print(f"\nKey Actor Connections:")
-        for actor, data in actor_analysis.items():
-            print(f"  {actor}: {data.get('connections_pre', 0)} → {data.get('connections_post', 0)} ({data.get('change', 0):+d})")
+    report = """# GraphRAG 3-Period Community Change Analysis
+
+## Period Definitions
+
+| Period | Date Range | Key Event | Documents |
+|--------|------------|-----------|-----------|
+| **P1_PreSingapore** | 2017-01 ~ 2018-05 | Before Singapore Summit | 5,822 |
+| **P2_SingaporeHanoi** | 2018-06 ~ 2019-02 | Summit Diplomacy Era | 1,699 |
+| **P3_PostHanoi** | 2019-03 ~ 2019-12 | After Hanoi Failure | 3,138 |
+
+**Key Events:**
+- Singapore Summit: 2018-06-12
+- Hanoi Summit: 2019-02-27~28 (Failed)
+
+---
+
+## 1. Summary Metrics Across Periods
+
+| Metric | P1 (Pre-Singapore) | P2 (Singapore-Hanoi) | P3 (Post-Hanoi) |
+|--------|-------------------|----------------------|-----------------|
+"""
+    report += f"| Entities | {ps['P1_PreSingapore']['entities']:,} | {ps['P2_SingaporeHanoi']['entities']:,} | {ps['P3_PostHanoi']['entities']:,} |\n"
+    report += f"| Relationships | {ps['P1_PreSingapore']['relationships']:,} | {ps['P2_SingaporeHanoi']['relationships']:,} | {ps['P3_PostHanoi']['relationships']:,} |\n"
+    report += f"| Communities | {ps['P1_PreSingapore']['communities']} | {ps['P2_SingaporeHanoi']['communities']} | {ps['P3_PostHanoi']['communities']} |\n"
+    report += f"| **Threat %** | **{ps['P1_PreSingapore']['threat_pct']:.1f}%** | **{ps['P2_SingaporeHanoi']['threat_pct']:.1f}%** | **{ps['P3_PostHanoi']['threat_pct']:.1f}%** |\n"
+    report += f"| **Peace %** | **{ps['P1_PreSingapore']['peace_pct']:.1f}%** | **{ps['P2_SingaporeHanoi']['peace_pct']:.1f}%** | **{ps['P3_PostHanoi']['peace_pct']:.1f}%** |\n"
+
+    report += """
+---
+
+## 2. Transition Analysis
+
+### Singapore Summit Effect (P1 → P2)
+
+"""
+    rel_p1_p2 = t['P1_to_P2_Singapore']['relationships']
+    report += f"| Metric | Before | After | **Change** |\n"
+    report += f"|--------|--------|-------|------------|\n"
+    report += f"| Threat % | {rel_p1_p2.get('threat_pct_pre', 0):.1f}% | {rel_p1_p2.get('threat_pct_post', 0):.1f}% | **{rel_p1_p2.get('threat_pct_change', 0):+.1f}%** |\n"
+    report += f"| Peace % | {rel_p1_p2.get('peace_pct_pre', 0):.1f}% | {rel_p1_p2.get('peace_pct_post', 0):.1f}% | **{rel_p1_p2.get('peace_pct_change', 0):+.1f}%** |\n"
+
+    report += """
+### Hanoi Summit Failure (P2 → P3)
+
+"""
+    rel_p2_p3 = t['P2_to_P3_Hanoi']['relationships']
+    report += f"| Metric | Before | After | **Change** |\n"
+    report += f"|--------|--------|-------|------------|\n"
+    report += f"| Threat % | {rel_p2_p3.get('threat_pct_pre', 0):.1f}% | {rel_p2_p3.get('threat_pct_post', 0):.1f}% | **{rel_p2_p3.get('threat_pct_change', 0):+.1f}%** |\n"
+    report += f"| Peace % | {rel_p2_p3.get('peace_pct_pre', 0):.1f}% | {rel_p2_p3.get('peace_pct_post', 0):.1f}% | **{rel_p2_p3.get('peace_pct_change', 0):+.1f}%** |\n"
+
+    report += """
+---
+
+## 3. Key Findings
+
+### Asymmetric/Ratchet Effect
+
+1. **Singapore Summit Impact (P1→P2)**:
+   - Threat framing decreased significantly
+   - Peace/diplomacy framing increased substantially
+
+2. **Hanoi Failure Impact (P2→P3)**:
+   - Threat framing remained stable (did NOT return to P1 levels)
+   - Peace framing decreased partially but did NOT fully revert
+
+3. **Net Effect (P1→P3)**:
+   - Structural changes from Singapore Summit **persisted** despite Hanoi failure
+   - Supports the asymmetric "ratchet" effect hypothesis
+
+---
+
+*Generated by GraphRAG 3-Period Analysis*
+*Aligned with RQ2: Structural Reorganization of Discourse Networks*
+"""
+    return report
 
 
 if __name__ == '__main__':
     main()
+

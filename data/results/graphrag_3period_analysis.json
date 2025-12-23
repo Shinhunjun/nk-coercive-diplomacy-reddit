@@ -1,0 +1,625 @@
+{
+  "period_summaries": {
+    "P1_PreSingapore": {
+      "entities": 2822,
+      "relationships": 4838,
+      "communities": 354,
+      "threat_pct": 61.45,
+      "peace_pct": 7.79
+    },
+    "P2_SingaporeHanoi": {
+      "entities": 1117,
+      "relationships": 1838,
+      "communities": 153,
+      "threat_pct": 42.44,
+      "peace_pct": 24.7
+    },
+    "P3_PostHanoi": {
+      "entities": 935,
+      "relationships": 1530,
+      "communities": 107,
+      "threat_pct": 40.92,
+      "peace_pct": 18.56
+    }
+  },
+  "transitions": {
+    "P1_to_P2_Singapore": {
+      "entities": {
+        "pre_intervention_count": 2822,
+        "post_intervention_count": 1117,
+        "new_entities": 718,
+        "disappeared_entities": 2423,
+        "persistent_entities": 399,
+        "new_entity_examples": [
+          "DETAINMENT",
+          "KOREA MISSILE DEFENSE",
+          "SANUMDONG FACTORY",
+          "NORWEGIAN LAWMAKERS",
+          "KIM HYOK CHOL",
+          "CLUSTER BOMBS",
+          "MILITARY DOCTRINE",
+          "WIMAN JOSEON",
+          "BAMBOO AIRLINES",
+          "ABE ADMINISTRATION",
+          "KOREAN ALLIANCE",
+          "SOUTH VIETNAM",
+          "M1991",
+          "RUSSIAN VODKA",
+          "SECRET SITES",
+          "BOEING",
+          "FIRESIDE CHAT",
+          "S$20 MILLION",
+          "COMMUNIST CHINA",
+          "DENMARK"
+        ],
+        "disappeared_examples": [
+          "TERRITORIAL DISPUTES",
+          "CATCH 22",
+          "HUMANITARIAN DISASTER",
+          "KOREAN WAR PEACE TREATY",
+          "US JETS",
+          "RI",
+          "JOINT U.S.-SOUTH KOREA MILITARY EXERCISES",
+          "FRED WARMBIER",
+          "BEN CARSON",
+          "KOREA TALKS",
+          "RIGHTS",
+          "TRUMP EVANGELICAL ADVISER",
+          "US POLITICS",
+          "BLUE HOUSE",
+          "PEOPLE'S ARMY",
+          "MILITARY POWER",
+          "CHOMSKY",
+          "KAERI",
+          "US SECURITY REPORT",
+          "ASIAN DIPLOMACY TOUR"
+        ],
+        "type_distribution_pre": {
+          "EVENT": "654",
+          "POLICY": "546",
+          "PERSON": "457",
+          "ORGANIZATION": "419",
+          "WEAPON": "264",
+          "": "246",
+          "COUNTRY": "149",
+          "GEO": "62",
+          "CITY": "10",
+          "MILITARY ASSET": "3",
+          "MILITARY": "3",
+          "CULTURAL PHENOMENON": "2",
+          "CULTURAL ITEM": "1",
+          "DOCUMENT": "1",
+          "ETHNIC GROUP": "1",
+          "REGION": "1",
+          "MYTHICAL CREATURE": "1",
+          "FOOD": "1",
+          "LOCATION": "1"
+        },
+        "type_distribution_post": {
+          "EVENT": "230",
+          "POLICY": "217",
+          "ORGANIZATION": "184",
+          "PERSON": "172",
+          "": "111",
+          "COUNTRY": "94",
+          "WEAPON": "79",
+          "GEO": "22",
+          "CITY": "3",
+          "CURRENCY": "1",
+          "CULTURAL EVENT": "1",
+          "MOVIE": "1",
+          "STATE": "1",
+          "ANIMAL": "1"
+        }
+      },
+      "relationships": {
+        "pre_intervention_count": 4838,
+        "post_intervention_count": 1838,
+        "relationship_change": -3000,
+        "threat_pct_pre": 61.45,
+        "threat_pct_post": 42.44,
+        "threat_pct_change": -19.01,
+        "peace_pct_pre": 7.79,
+        "peace_pct_post": 24.7,
+        "peace_pct_change": 16.91,
+        "type_counts_pre": {
+          "threat": "2973",
+          "neutral": "1488",
+          "peace": "377"
+        },
+        "type_counts_post": {
+          "threat": "780",
+          "neutral": "604",
+          "peace": "454"
+        }
+      },
+      "key_actors": {
+        "KIM JONG UN": {
+          "connections_pre": "931",
+          "connections_post": "490",
+          "change": "-441"
+        },
+        "TRUMP": {
+          "connections_pre": "1019",
+          "connections_post": "467",
+          "change": "-552"
+        },
+        "NORTH KOREA": {
+          "connections_pre": "1844",
+          "connections_post": "597",
+          "change": "-1247"
+        },
+        "UNITED STATES": {
+          "connections_pre": "1256",
+          "connections_post": "476",
+          "change": "-780"
+        },
+        "SOUTH KOREA": {
+          "connections_pre": "475",
+          "connections_post": "190",
+          "change": "-285"
+        }
+      },
+      "topology": {
+        "pre_intervention": {
+          "n_nodes": 2656,
+          "n_edges": 4838,
+          "density": 0.0014,
+          "avg_degree": 3.64,
+          "max_degree": 1514,
+          "top_entities": [
+            {
+              "entity": "NORTH KOREA",
+              "degree": 1514
+            },
+            {
+              "entity": "TRUMP",
+              "degree": 375
+            },
+            {
+              "entity": "SOUTH KOREA",
+              "degree": 341
+            },
+            {
+              "entity": "KIM JONG UN",
+              "degree": 219
+            },
+            {
+              "entity": "DONALD TRUMP",
+              "degree": 210
+            }
+          ]
+        },
+        "post_intervention": {
+          "n_nodes": 1043,
+          "n_edges": 1838,
+          "density": 0.0034,
+          "avg_degree": 3.52,
+          "max_degree": 479,
+          "top_entities": [
+            {
+              "entity": "NORTH KOREA",
+              "degree": 479
+            },
+            {
+              "entity": "TRUMP",
+              "degree": 178
+            },
+            {
+              "entity": "SOUTH KOREA",
+              "degree": 136
+            },
+            {
+              "entity": "KIM JONG UN",
+              "degree": 119
+            },
+            {
+              "entity": "DONALD TRUMP",
+              "degree": 92
+            }
+          ]
+        },
+        "density_change": 0.002,
+        "avg_degree_change": -0.12,
+        "nodes_change": -1613,
+        "edges_change": -3000
+      }
+    },
+    "P2_to_P3_Hanoi": {
+      "entities": {
+        "pre_intervention_count": 1117,
+        "post_intervention_count": 935,
+        "new_entities": 707,
+        "disappeared_entities": 889,
+        "persistent_entities": 228,
+        "new_entity_examples": [
+          "BRITISH TABLOIDS",
+          "KOREAN RIGHT-WING ELDERLY",
+          "PROPAGANDA MACHINE",
+          "KIMSUSAN PALACE OF THE SUN",
+          "DOCUMENT_SEPARATOR",
+          "CRYPTO THEFT",
+          "KIM JONG UN'S LETTER",
+          "TREASON",
+          "KWON JONG GUN",
+          "GHOST SHIP",
+          "DAVID MCKINLEY",
+          "HYDROGEN BOMB",
+          "US POLITICS",
+          "TRADE WARS",
+          "MILKSHAKE ATTACK",
+          "WADS",
+          "ELECTRIC CAR BATTERY PLANTS",
+          "U.S.-SOUTH KOREAN MILITARY EXERCISE",
+          "MADRID EMBASSY RAID",
+          "HANOI TALKS"
+        ],
+        "disappeared_examples": [
+          "GEORGE W. BUSH",
+          "DETAINMENT",
+          "KOREA MISSILE DEFENSE",
+          "SANUMDONG FACTORY",
+          "US-NK SUMMIT",
+          "NORWEGIAN LAWMAKERS",
+          "CLUSTER BOMBS",
+          "MIDDLEBURY INSTITUTE OF INTERNATIONAL STUDIES",
+          "NORTH KOREA NUCLEAR CRISIS",
+          "MILITARY CONFRONTATION",
+          "MILITARY DOCTRINE",
+          "WIMAN JOSEON",
+          "BAMBOO AIRLINES",
+          "ABE ADMINISTRATION",
+          "KOREAN ALLIANCE",
+          "SOUTH VIETNAM",
+          "M1991",
+          "RUSSIAN VODKA",
+          "SOVIETS",
+          "SIX PARTY TALKS"
+        ],
+        "type_distribution_pre": {
+          "EVENT": "230",
+          "POLICY": "217",
+          "ORGANIZATION": "184",
+          "PERSON": "172",
+          "": "111",
+          "COUNTRY": "94",
+          "WEAPON": "79",
+          "GEO": "22",
+          "CITY": "3",
+          "CURRENCY": "1",
+          "CULTURAL EVENT": "1",
+          "MOVIE": "1",
+          "STATE": "1",
+          "ANIMAL": "1"
+        },
+        "type_distribution_post": {
+          "EVENT": "224",
+          "PERSON": "169",
+          "POLICY": "157",
+          "ORGANIZATION": "151",
+          "": "91",
+          "WEAPON": "75",
+          "COUNTRY": "40",
+          "GEO": "23",
+          "CITY": "5"
+        }
+      },
+      "relationships": {
+        "pre_intervention_count": 1838,
+        "post_intervention_count": 1530,
+        "relationship_change": -308,
+        "threat_pct_pre": 42.44,
+        "threat_pct_post": 40.92,
+        "threat_pct_change": -1.52,
+        "peace_pct_pre": 24.7,
+        "peace_pct_post": 18.56,
+        "peace_pct_change": -6.14,
+        "type_counts_pre": {
+          "threat": "780",
+          "neutral": "604",
+          "peace": "454"
+        },
+        "type_counts_post": {
+          "threat": "626",
+          "neutral": "620",
+          "peace": "284"
+        }
+      },
+      "key_actors": {
+        "KIM JONG UN": {
+          "connections_pre": "490",
+          "connections_post": "599",
+          "change": "109"
+        },
+        "TRUMP": {
+          "connections_pre": "467",
+          "connections_post": "534",
+          "change": "67"
+        },
+        "NORTH KOREA": {
+          "connections_pre": "597",
+          "connections_post": "581",
+          "change": "-16"
+        },
+        "UNITED STATES": {
+          "connections_pre": "476",
+          "connections_post": "284",
+          "change": "-192"
+        },
+        "SOUTH KOREA": {
+          "connections_pre": "190",
+          "connections_post": "115",
+          "change": "-75"
+        }
+      },
+      "topology": {
+        "pre_intervention": {
+          "n_nodes": 1043,
+          "n_edges": 1838,
+          "density": 0.0034,
+          "avg_degree": 3.52,
+          "max_degree": 479,
+          "top_entities": [
+            {
+              "entity": "NORTH KOREA",
+              "degree": 479
+            },
+            {
+              "entity": "TRUMP",
+              "degree": 178
+            },
+            {
+              "entity": "SOUTH KOREA",
+              "degree": 136
+            },
+            {
+              "entity": "KIM JONG UN",
+              "degree": 119
+            },
+            {
+              "entity": "DONALD TRUMP",
+              "degree": 92
+            }
+          ]
+        },
+        "post_intervention": {
+          "n_nodes": 879,
+          "n_edges": 1530,
+          "density": 0.004,
+          "avg_degree": 3.48,
+          "max_degree": 442,
+          "top_entities": [
+            {
+              "entity": "NORTH KOREA",
+              "degree": 442
+            },
+            {
+              "entity": "TRUMP",
+              "degree": 162
+            },
+            {
+              "entity": "KIM JONG UN",
+              "degree": 137
+            },
+            {
+              "entity": "DONALD TRUMP",
+              "degree": 128
+            },
+            {
+              "entity": "KIM JONG-UN",
+              "degree": 90
+            }
+          ]
+        },
+        "density_change": 0.0006,
+        "avg_degree_change": -0.04,
+        "nodes_change": -164,
+        "edges_change": -308
+      }
+    },
+    "P1_to_P3_Overall": {
+      "entities": {
+        "pre_intervention_count": 2822,
+        "post_intervention_count": 935,
+        "new_entities": 596,
+        "disappeared_entities": 2483,
+        "persistent_entities": 339,
+        "new_entity_examples": [
+          "BRITISH TABLOIDS",
+          "KOREAN RIGHT-WING ELDERLY",
+          "KIM HYOK CHOL",
+          "KIMSUSAN PALACE OF THE SUN",
+          "CRYPTO THEFT",
+          "KIM JONG UN'S LETTER",
+          "TREASON",
+          "KWON JONG GUN",
+          "GHOST SHIP",
+          "DAVID MCKINLEY",
+          "WADS",
+          "TRADE WARS",
+          "MILKSHAKE ATTACK",
+          "ELECTRIC CAR BATTERY PLANTS",
+          "U.S.-SOUTH KOREAN MILITARY EXERCISE",
+          "MADRID EMBASSY RAID",
+          "HANOI TALKS",
+          "TERRORISM BLACKLIST",
+          "FINANCIAL BURDEN",
+          "JYP ENTERTAINMENT"
+        ],
+        "disappeared_examples": [
+          "TERRITORIAL DISPUTES",
+          "CATCH 22",
+          "US-NK SUMMIT",
+          "HUMANITARIAN DISASTER",
+          "MIDDLEBURY INSTITUTE OF INTERNATIONAL STUDIES",
+          "KOREAN WAR PEACE TREATY",
+          "MILITARY CONFRONTATION",
+          "US JETS",
+          "RI",
+          "JOINT U.S.-SOUTH KOREA MILITARY EXERCISES",
+          "FRED WARMBIER",
+          "BEN CARSON",
+          "KOREA TALKS",
+          "RIGHTS",
+          "TRUMP EVANGELICAL ADVISER",
+          "BLUE HOUSE",
+          "PEOPLE'S ARMY",
+          "MILITARY POWER",
+          "CHOMSKY",
+          "KAERI"
+        ],
+        "type_distribution_pre": {
+          "EVENT": "654",
+          "POLICY": "546",
+          "PERSON": "457",
+          "ORGANIZATION": "419",
+          "WEAPON": "264",
+          "": "246",
+          "COUNTRY": "149",
+          "GEO": "62",
+          "CITY": "10",
+          "MILITARY ASSET": "3",
+          "MILITARY": "3",
+          "CULTURAL PHENOMENON": "2",
+          "CULTURAL ITEM": "1",
+          "DOCUMENT": "1",
+          "ETHNIC GROUP": "1",
+          "REGION": "1",
+          "MYTHICAL CREATURE": "1",
+          "FOOD": "1",
+          "LOCATION": "1"
+        },
+        "type_distribution_post": {
+          "EVENT": "224",
+          "PERSON": "169",
+          "POLICY": "157",
+          "ORGANIZATION": "151",
+          "": "91",
+          "WEAPON": "75",
+          "COUNTRY": "40",
+          "GEO": "23",
+          "CITY": "5"
+        }
+      },
+      "relationships": {
+        "pre_intervention_count": 4838,
+        "post_intervention_count": 1530,
+        "relationship_change": -3308,
+        "threat_pct_pre": 61.45,
+        "threat_pct_post": 40.92,
+        "threat_pct_change": -20.54,
+        "peace_pct_pre": 7.79,
+        "peace_pct_post": 18.56,
+        "peace_pct_change": 10.77,
+        "type_counts_pre": {
+          "threat": "2973",
+          "neutral": "1488",
+          "peace": "377"
+        },
+        "type_counts_post": {
+          "threat": "626",
+          "neutral": "620",
+          "peace": "284"
+        }
+      }
+    }
+  },
+  "communities": {
+    "P1": {
+      "community_count_pre": 354,
+      "community_count_post": 354,
+      "community_titles_pre": [
+        "North Korea: A Nuclear Pariah State",
+        "North Korea Nuclear Test Site and Closure Ceremony",
+        "North Korea: A Nuclear Pariah State",
+        "North Korean Missile Launches",
+        "North-South Korea Talks and Nuclear Disarming",
+        "North Korea: A Nuclear and Humanitarian Crisis",
+        "North Korea Missile Tests and Regional Implications",
+        "Missile Defense and Military Funding",
+        "North Korea's Military and Media Landscape",
+        "North Korea: Nuclear Ambitions and Military Posture"
+      ],
+      "community_titles_post": [
+        "North Korea: A Nuclear Pariah State",
+        "North Korea Nuclear Test Site and Closure Ceremony",
+        "North Korea: A Nuclear Pariah State",
+        "North Korean Missile Launches",
+        "North-South Korea Talks and Nuclear Disarming",
+        "North Korea: A Nuclear and Humanitarian Crisis",
+        "North Korea Missile Tests and Regional Implications",
+        "Missile Defense and Military Funding",
+        "North Korea's Military and Media Landscape",
+        "North Korea: Nuclear Ambitions and Military Posture"
+      ],
+      "avg_community_size_pre": 1.0,
+      "max_community_size_pre": 1,
+      "avg_community_size_post": 1.0,
+      "max_community_size_post": 1
+    },
+    "P2": {
+      "community_count_pre": 153,
+      "community_count_post": 153,
+      "community_titles_pre": [
+        "North Korea and International Security Dynamics",
+        "North Korea's Ballistic Missile Threat and Onodera's Stance",
+        "North Korea: Nuclear Threat and Diplomatic Challenges",
+        "North Korea's Nuclear Weapons and IAEA Oversight",
+        "Human Rights Act and Economic Improvements in North Korea",
+        "US-South Korea Defense and Diplomacy Community",
+        "U.S. Military and American GOP",
+        "Second Summit and Hanoi Hilton",
+        "Nobel Peace Prize and Bank Robber Nomination",
+        "U.S.-North Korea Diplomatic Community"
+      ],
+      "community_titles_post": [
+        "North Korea and International Security Dynamics",
+        "North Korea's Ballistic Missile Threat and Onodera's Stance",
+        "North Korea: Nuclear Threat and Diplomatic Challenges",
+        "North Korea's Nuclear Weapons and IAEA Oversight",
+        "Human Rights Act and Economic Improvements in North Korea",
+        "US-South Korea Defense and Diplomacy Community",
+        "U.S. Military and American GOP",
+        "Second Summit and Hanoi Hilton",
+        "Nobel Peace Prize and Bank Robber Nomination",
+        "U.S.-North Korea Diplomatic Community"
+      ],
+      "avg_community_size_pre": 1.0,
+      "max_community_size_pre": 1,
+      "avg_community_size_post": 1.0,
+      "max_community_size_post": 1
+    },
+    "P3": {
+      "community_count_pre": 107,
+      "community_count_post": 107,
+      "community_titles_pre": [
+        "North Korea: A Community of Nuclear Ambitions and Human Rights Concerns",
+        "Bolton, Pompeo, and North Korea Policy",
+        "North Korea: A Community of Nuclear Ambitions and Human Rights Concerns",
+        "North Korea and the United Nations Security Council",
+        "U.S.-North Korea Nuclear Negotiations Community",
+        "U.S. State Department and Russian Officials on North Korea",
+        "Sino-Ri Missile Operating Base and Rodong Missiles",
+        "North Korea: Nuclear Ambitions and International Relations",
+        "U.S. Treasury Department and Sanctions on North Korea",
+        "U.S.-North Korea Diplomatic Community"
+      ],
+      "community_titles_post": [
+        "North Korea: A Community of Nuclear Ambitions and Human Rights Concerns",
+        "Bolton, Pompeo, and North Korea Policy",
+        "North Korea: A Community of Nuclear Ambitions and Human Rights Concerns",
+        "North Korea and the United Nations Security Council",
+        "U.S.-North Korea Nuclear Negotiations Community",
+        "U.S. State Department and Russian Officials on North Korea",
+        "Sino-Ri Missile Operating Base and Rodong Missiles",
+        "North Korea: Nuclear Ambitions and International Relations",
+        "U.S. Treasury Department and Sanctions on North Korea",
+        "U.S.-North Korea Diplomatic Community"
+      ],
+      "avg_community_size_pre": 1.0,
+      "max_community_size_pre": 1,
+      "avg_community_size_post": 1.0,
+      "max_community_size_post": 1
+    }
+  }
+}
