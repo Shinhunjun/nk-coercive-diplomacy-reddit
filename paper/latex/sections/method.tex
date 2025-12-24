@@ -3,73 +3,114 @@
 %==============================================================================
 \section{Method}
 
-\subsection{Human Annotation Benchmark}
+\subsection{Data Collection}
 
-To validate our LLM-based framing classification in a domain-sensitive setting, we constructed a gold-standard human annotation benchmark following established protocols in computational social science. The benchmark serves three purposes: (1) estimate inter-rater reliability, (2) produce consensus labels for model validation, and (3) characterize systematic model errors.
+We collected Reddit posts from January 2017 to December 2019 using the Arctic Shift API, targeting major subreddits: r/worldnews, r/politics, r/news, r/geopolitics, and r/NeutralPolitics.
 
-\subsubsection{Annotators}
-Two military officers with expertise in North Korean affairs and international security independently labeled the benchmark samples. Domain expertise is critical for interpreting geopolitical discourse where the same topic (e.g., nuclear weapons) can be framed differently depending on emphasis (e.g., negotiation vs.\ escalation).
+\subsubsection{Treatment and Control Groups}
 
-\subsubsection{Sampling Strategy}
-We employed stratified sampling to create a validation dataset of 1,330 Reddit posts. Stratification ensures coverage across countries, time periods, and rare frames, enabling a fair comparison between human and LLM labels.
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{3pt}
+\caption{Dataset Overview}
+\begin{tabular}{llrl}
+\hline
+\textbf{Group} & \textbf{Topic} & \textbf{N} & \textbf{Role} \\
+\hline
+Treatment & N. Korea & 10,659 & Primary \\
+Control 1 & China & 8,024 & Trade confounder \\
+Control 2 & Iran & 5,983 & Nuclear comparison \\
+Control 3 & Russia & 10,261 & Investigation \\
+\hline
+\end{tabular}
+\label{tab:dataset}
+\end{table}
 
+\subsubsection{Key Events and Analysis Periods}
+
+To avoid anticipation effects, we define three analysis periods excluding transition months:
 \begin{itemize}
-    \item \textbf{Countries}: North Korea (n=335; treatment), China (n=337), Iran (n=337), Russia (n=321)
-    \item \textbf{Time Periods}: P1 Pre-Singapore (n=512), P2 Singapore--Hanoi (n=256), P3 Post-Hanoi (n=562)
-    \item \textbf{Frames}: THREAT, ECONOMIC, NEUTRAL, HUMANITARIAN, DIPLOMACY
-    \item \textbf{Total strata}: 60 (4 countries $\times$ 3 periods $\times$ 5 frames), with a minimum of 10 posts per stratum to preserve representation of rare categories
+    \item \textbf{P1} (2017.01--2018.02): Pre-Announcement
+    \item \textbf{P2} (2018.06--2019.01): Singapore-Hanoi
+    \item \textbf{P3} (2019.03--2019.12): Post-Hanoi
+    \item \textit{Excluded}: 2018.03--05, 2019.02 (Transition periods)
 \end{itemize}
 
-\subsubsection{Frame Categories}
-Annotators used the same framing definitions as our LLM classifier to ensure construct equivalence:
+Key diplomatic events include the Singapore Summit (2018-06-12), which marked peak diplomatic engagement, and the Hanoi Summit (2019-02-27), which ended without agreement.
+
+%------------------------------------------------------------------------------
+\subsection{Outcome Measurement}
+
+We measure two complementary dimensions of discourse: \textit{framing} (how North Korea is narratively positioned) and \textit{sentiment} (emotional valence).
+
+\subsubsection{Framing Classification}
+
+We classify each Reddit post into one of five framing categories using GPT-4o-mini with zero-shot prompting:
 \begin{itemize}
     \item \textbf{THREAT} (-2): Military threat, nuclear weapons, missiles, war risk
     \item \textbf{ECONOMIC} (-1): Economic sanctions, trade, and financial impacts
     \item \textbf{NEUTRAL} (0): Descriptive reporting without clear evaluative framing
-    \item \textbf{HUMANITARIAN} (+1): Human rights, refugees, civilian welfare, defector narratives
-    \item \textbf{DIPLOMACY} (+2): Negotiation, dialogue, summits, peace initiatives, cooperation
+    \item \textbf{HUMANITARIAN} (+1): Human rights, refugees, civilian welfare
+    \item \textbf{DIPLOMACY} (+2): Negotiation, dialogue, summits, peace initiatives
 \end{itemize}
 
-\subsubsection{Annotation Procedure}
-We followed an iterative codebook refinement approach to improve consistency and document decision rules for edge cases:
-\begin{enumerate}
-    \item \textbf{Pilot Round}: Both annotators independently labeled 100 posts. We computed initial inter-rater reliability, reviewed disagreements, and refined the codebook with explicit decision rules.
-    \item \textbf{Main Annotation}: The remaining 1,230 posts were labeled independently in batches with periodic reliability checks to monitor drift.
-    \item \textbf{Disagreement Resolution}: Disagreements were resolved through structured discussion using the finalized codebook to produce consensus labels for evaluation. We retained all samples rather than discarding disagreements to avoid biasing the benchmark toward ``easy'' cases.
-\end{enumerate}
+The prompt provides category definitions and requires a single label output; the model also returns a confidence score.
 
-\subsubsection{Inter-Rater Reliability}
-We report Cohen's $\kappa$ on the independent (pre-consensus) labels as our primary reliability measure:
-\begin{itemize}
-    \item \textbf{Overall}: $\kappa$ = [TBD]
-    \item \textbf{Interpretation}: [TBD: moderate/substantial/almost perfect] agreement following Landis \& Koch (1977)
-\end{itemize}
-We also report a confusion matrix and per-category agreement to characterize where disagreements concentrate (e.g., NEUTRAL vs.\ ECONOMIC).
-
-\subsection{LLM-Based Framing Classification}
-
-We classify each Reddit post into one of five framing categories using GPT-4o-mini with zero-shot prompting. The prompt provides category definitions and requires a single label output; the model also returns a confidence score. For robustness, we (i) evaluate agreement against the consensus benchmark and (ii) conduct sensitivity checks using only high-confidence predictions (Section~\ref{sec:robustness}).
-
-\subsection{Sentiment Analysis}
+\subsubsection{Sentiment Analysis}
 
 We compute sentiment using a RoBERTa-based sentiment model\footnote{cardiffnlp/twitter-roberta-base-sentiment-latest}. Sentiment is mapped to a continuous score from -1 (negative) to +1 (positive). While framing captures \textit{how} North Korea is discussed, sentiment captures \textit{emotional valence}, enabling complementary measurement of content change.
 
-\subsection{Difference-in-Differences Design}
+\subsubsection{Human Annotation Benchmark}
 
-To estimate the causal impact of summit diplomacy on discourse, we use a Difference-in-Differences (DID) design with North Korea as the treatment group and China, Iran, and Russia as control groups. Our baseline specification is:
+To validate our LLM-based classification in a domain-sensitive setting, we constructed a gold-standard human annotation benchmark. Two military officers with expertise in North Korean affairs independently labeled 1,330 stratified samples (4 countries $\times$ 3 periods $\times$ 5 frames, minimum 10 posts per stratum).
+
+We followed an iterative codebook refinement approach:
+\begin{enumerate}
+    \item \textbf{Pilot Round}: 100 posts labeled independently with reliability assessment
+    \item \textbf{Main Annotation}: Remaining posts labeled in batches with periodic checks
+    \item \textbf{Disagreement Resolution}: Structured discussion to produce consensus labels
+\end{enumerate}
+
+Inter-rater reliability (Cohen's $\kappa$) and LLM-human agreement metrics are reported in Section~5 (RQ3).
+
+%------------------------------------------------------------------------------
+\subsection{Causal Identification}
+
+We estimate the causal impact of summit diplomacy using a Difference-in-Differences (DID) design with North Korea as the treated group and control countries (China, Iran, Russia) as comparisons.
+
+\subsubsection{Difference-in-Differences Specification}
+
+Our main specification uses two-way fixed effects:
 
 \begin{equation}
-Y_{it} = \alpha + \beta_1 \text{Post}_t + \beta_2 \text{Treatment}_i + \beta_3 (\text{Post}_t \times \text{Treatment}_i) + \epsilon_{it},
+Y_{g,t} = \alpha_g + \gamma_t + \beta \big(\text{Treat}_g \times \text{Post}_t\big) + \epsilon_{g,t},
 \end{equation}
 
-where $Y_{it}$ denotes either sentiment or framing, and $\beta_3$ captures the DID estimate of the summit effect.
+where $Y_{g,t}$ is the monthly average sentiment (or framing) for group $g$ in month $t$, 
+$\alpha_g$ and $\gamma_t$ denote group and month fixed effects, and $\beta$ captures the DID estimate of the summit effect.
+We report heteroskedasticity-robust standard errors clustered at the group level.
 
 \subsubsection{Parallel Trends Validation}
 
-We test the parallel trends assumption using pre-treatment monthly aggregates:
+We assess the parallel trends assumption by testing for differential pre-treatment trends between North Korea and each control group:
 
 \begin{equation}
-Y_{it} = \alpha + \beta_1 \text{Time}_t + \beta_2 \text{Treatment}_i + \beta_3 (\text{Time}_t \times \text{Treatment}_i) + \epsilon_{it}.
+Y_{g,t} = \alpha + \delta_1 t + \delta_2 \text{Treat}_g + \delta_3 (t \times \text{Treat}_g) + \epsilon_{g,t},
 \end{equation}
 
-A significant $\beta_3$ (p $<$ 0.05) indicates a violation of parallel trends. We report these tests for each treatment--control pairing and each event window considered in the main analysis.
+where $t$ is a linear month index in the pre-period. A statistically significant $\delta_3$ indicates a pre-trend violation. Results are reported in Section~5.
+
+%------------------------------------------------------------------------------
+\subsection{Additional Analyses: Network Structure}
+
+Beyond content-level changes, we examine whether diplomatic events reorganize the \textit{structure} of discourse using GraphRAG~\cite{edge2024graphrag}. We construct knowledge graphs from Reddit discussions for each period, extracting entities (persons, countries, events, policies, weapons) and their relationships.
+
+Network-level metrics include:
+\begin{itemize}
+    \item \textbf{Density}: Proportion of possible connections realized
+    \item \textbf{Community structure}: Hierarchical clustering of narratives
+    \item \textbf{Relationship framing}: Classification of edges as threat/peace/neutral
+    \item \textbf{Keyword evolution}: Dominant themes in community summaries
+\end{itemize}
+
+This structural analysis addresses RQ2 by testing whether content-level framing shifts are accompanied by reorganization of discourse networks.

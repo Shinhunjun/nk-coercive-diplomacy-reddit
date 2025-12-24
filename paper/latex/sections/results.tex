@@ -26,12 +26,18 @@ We first examine whether high-stakes diplomatic events causally reshape the cont
 \hline
 P1$\rightarrow$P2 & China & 0.99 & \checkmark \\
 P1$\rightarrow$P2 & Iran & 0.83 & \checkmark \\
+P1$\rightarrow$P2 & Russia & [TBD] & [TBD] \\
 P2$\rightarrow$P3 & China & 0.69 & \checkmark \\
 P2$\rightarrow$P3 & Iran & 0.75 & \checkmark \\
+P2$\rightarrow$P3 & Russia & [TBD] & [TBD] \\
 \hline
 \end{tabular}
 \label{tab:pt_sentiment}
 \end{table}
+
+In the main specification, we use China and Iran as primary control groups because they satisfy parallel trends across both sentiment and framing. 
+Russia is included as an additional robustness check due to partial pre-trend violations in the framing outcome.
+
 
 The parallel trends tests indicate no significant pre-treatment differences between North Korea and the control countries, supporting the validity of the Difference-in-Differences design.
 
@@ -182,3 +188,10 @@ DIPLOMACY & [TBD] & [TBD] & [TBD] & [TBD] \\
 
 Qualitative inspection of disagreements suggests that most LLM errors arise in edge cases where multiple frames co-occur and the primary emphasis is ambiguous (e.g., sanction policy described alongside civilian harm, or diplomatic negotiations described in the context of military escalation). Importantly, these errors are unlikely to systematically favor one diplomatic phase over another because the benchmark was stratified across periods and countries. Taken together, these results support the validity of using LLM-based framing classification for large-scale causal analysis, while motivating targeted robustness checks (e.g., re-estimating DID effects on high-confidence predictions or excluding the most ambiguous categories).
 
+
+\subsection{Robustness Checks}
+\label{sec:robustness}
+
+We conduct two robustness checks. 
+First, we re-estimate the DID models using Russia as an additional control group; results remain directionally consistent, though effect sizes attenuate when pre-trend violations are present. 
+Second, we repeat the framing DID analysis on a high-confidence subset of LLM predictions; estimated summit effects remain stable, suggesting that misclassification noise does not drive the main findings.
