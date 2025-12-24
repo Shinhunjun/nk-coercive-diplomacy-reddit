@@ -12,13 +12,13 @@
 
 | Metric | Pre-Intervention | Post-Intervention | Change |
 |--------|------------------|-------------------|--------|
-| Total Entities | 131 | 135 | +4 |
-| New Entities | - | 106 | - |
-| Disappeared | 102 | - | - |
-| Persistent | 29 | 29 | - |
+| Total Entities | 2822 | 1117 | -1705 |
+| New Entities | - | 718 | - |
+| Disappeared | 2423 | - | - |
+| Persistent | 399 | 399 | - |
 
 ### New Entities (Post-Intervention)
-NORTH KOREAN DEFECTOR, JOHN BOLTON, SIMA YI, VICTOR CHA, YONGBYON, U.S., GWANGJU UPRISING, KOREAN WAR II, KOREAN AIR, KANG
+NORTHROP GRUMMAN, FREEDOM GUARDIAN, SUMMIT COMMEMORATIVE MEDALLIONS, MACARTHUR, YAHOO, 平壌, DE-MILITARISED ZONE, SINGAPORE MEETING, COMPREHENSIVE DOCUMENT, FUKUSHIMA NO. 1 NUCLEAR PLANT
 
 ---
 
@@ -26,9 +26,9 @@ NORTH KOREAN DEFECTOR, JOHN BOLTON, SIMA YI, VICTOR CHA, YONGBYON, U.S., GWANGJU
 
 | Metric | Pre-Intervention | Post-Intervention | Change |
 |--------|------------------|-------------------|--------|
-| Total Relationships | 168 | 173 | +5 |
-| Threat Relations % | 78.0% | 49.7% | -28.3% |
-| Peace Relations % | 3.6% | 11.6% | **+8.0%** |
+| Total Relationships | 4838 | 1838 | -3000 |
+| Threat Relations % | 61.5% | 42.4% | -19.0% |
+| Peace Relations % | 7.8% | 24.7% | **+16.9%** |
 
 ---
 
@@ -36,11 +36,11 @@ NORTH KOREAN DEFECTOR, JOHN BOLTON, SIMA YI, VICTOR CHA, YONGBYON, U.S., GWANGJU
 
 | Actor | Pre-Intervention Connections | Post-Intervention Connections | Change |
 |-------|------------------------------|-------------------------------|--------|
-| KIM JONG UN | 24 | 40 | **+16** |
-| TRUMP | 8 | 18 | **+10** |
-| NORTH KOREA | 97 | 83 | -14 |
-| UNITED STATES | 54 | 43 | -11 |
-| SOUTH KOREA | 39 | 54 | **+15** |
+| KIM JONG UN | 931 | 490 | -441 |
+| TRUMP | 1019 | 467 | -552 |
+| NORTH KOREA | 1844 | 597 | -1247 |
+| UNITED STATES | 1256 | 476 | -780 |
+| SOUTH KOREA | 475 | 190 | -285 |
 
 ---
 
@@ -48,23 +48,23 @@ NORTH KOREAN DEFECTOR, JOHN BOLTON, SIMA YI, VICTOR CHA, YONGBYON, U.S., GWANGJU
 
 | Metric | Pre-Intervention | Post-Intervention |
 |--------|------------------|-------------------|
-| Community Count | 17 | 19 |
+| Community Count | 354 | 153 |
 | Avg Community Size | 1.0 | 1.0 |
 | Max Community Size | 1 | 1 |
 
 ### Community Themes (Pre-Intervention)
-1. Moon Jae-in and the Jeondaehyop Movement
-2. South Korea and Regional Security Dynamics
-3. China's Geopolitical Influence and Military Dynamics
-4. U.S.-North Korea Relations and Cyber Threats
-5. North Korea's Nuclear Program and Leadership
+1. North Korea: A Nuclear Pariah State
+2. North Korea Nuclear Test Site and Closure Ceremony
+3. North Korea: A Nuclear Pariah State
+4. North Korean Missile Launches
+5. North-South Korea Talks and Nuclear Disarming
 
 ### Community Themes (Post-Intervention)
-1. South Korea: A Geopolitical Nexus
-2. Gwangju Uprising and Mike Gravel
-3. North Korea: Nuclear Ambitions and Regional Tensions
-4. Pyongyang and the Pyongyang Summit
-5. Sakkanmol and Hwajung County Missile Activities
+1. North Korea and International Security Dynamics
+2. North Korea's Ballistic Missile Threat and Onodera's Stance
+3. North Korea: Nuclear Threat and Diplomatic Challenges
+4. North Korea's Nuclear Weapons and IAEA Oversight
+5. Human Rights Act and Economic Improvements in North Korea
 
 ---
 
