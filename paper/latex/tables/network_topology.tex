@@ -1,17 +1,22 @@
 \begin{table}[t]
 \centering
-\caption{Network Topology Metrics Across Diplomatic Periods}
-\begin{tabular}{lcccccc}
+\setlength{\tabcolsep}{3pt}
+\caption{Network Topology Metrics Across Periods}
+\small
+\begin{tabular}{lccccc}
 \hline
-\textbf{Metric} & \textbf{P1} & \textbf{P2} & \textbf{P3} & \textbf{P1$\rightarrow$P2} & \textbf{P2$\rightarrow$P3} \\
+\textbf{Metric} & \textbf{P1} & \textbf{P2} & \textbf{P3} & \textbf{$\Delta_1$} & \textbf{$\Delta_2$} \\
 \hline
-Nodes & 2,656 & 1,043 & 879 & $-60.7\%$ & $-15.7\%$ \\
-Edges & 4,552 & 1,726 & 1,429 & $-62.1\%$ & $-17.2\%$ \\
+Nodes & 2,656 & 1,043 & 879 & $-61\%$ & $-16\%$ \\
+Edges & 4,552 & 1,726 & 1,429 & $-62\%$ & $-17\%$ \\
 Density ($\times10^{-3}$) & 1.3 & 3.2 & 3.7 & $+146\%$ & $+16\%$ \\
-Avg Degree & 3.43 & 3.31 & 3.25 & $-3.4\%$ & $-1.8\%$ \\
-Clustering Coef. & 0.215 & 0.198 & 0.210 & $-7.9\%$ & $+6.0\%$ \\
-Components & 25 & 23 & 16 & $-8.0\%$ & $-30.4\%$ \\
+Avg Degree & 3.43 & 3.31 & 3.25 & $-3\%$ & $-2\%$ \\
+Clustering & 0.215 & 0.198 & 0.210 & $-8\%$ & $+6\%$ \\
+Components & 25 & 23 & 16 & $-8\%$ & $-30\%$ \\
 \hline
 \end{tabular}
+\begin{flushleft}
+\footnotesize{$\Delta_1$: P1$\rightarrow$P2; $\Delta_2$: P2$\rightarrow$P3}
+\end{flushleft}
 \label{tab:network_topology}
 \end{table}
