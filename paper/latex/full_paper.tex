@@ -64,7 +64,6 @@ A Causal Analysis of U.S.-North Korea Summits on Reddit Public Opinion}
 \maketitle
 
 \begin{abstract}
-% === BEGIN: sections/abstract.tex ===
 % Abstract
 
 High-stakes diplomatic summits can substantially reshape how foreign adversaries are discussed in public discourse, yet the causal mechanisms underlying these shifts remain poorly understood in online environments. This study examines how the 2018 Singapore Summit and the failed 2019 Hanoi Summit affected the framing of North Korea on Reddit. Leveraging over 35,000 Reddit posts from 2017--2019, we combine a Difference-in-Differences design with large language model (LLM)-based framing classification validated against expert human annotations by military officers.
@@ -73,8 +72,6 @@ Our results show that the Singapore Summit produced a significant shift away fro
 
 Together, these findings suggest that successful diplomatic engagement can induce asymmetric and durable changes in how adversaries are framed in online discourse. Methodologically, this study demonstrates how validated LLM-based framing analysis combined with causal inference can advance the study of event-driven opinion dynamics in computational social science.
 
-
-% === END: sections/abstract.tex ===
 \end{abstract}
 
 % Optional: Links to code/data (uncomment for camera-ready)
@@ -84,7 +81,6 @@ Together, these findings suggest that successful diplomatic engagement can induc
 % \end{links}
 
 % Main sections
-% === BEGIN: sections/introduction.tex ===
 \section{Introduction}
 
 Public opinion toward foreign adversaries is rarely shaped by isolated facts alone, but rather by how international events are framed and discussed in public discourse. In the context of diplomacy, high-stakes summits serve not only as policy interventions but also as salient narrative events that can reorient how adversary states are collectively interpreted, evaluated, and debated.
@@ -110,9 +106,6 @@ This study investigates how high-stakes diplomatic events reshape online discour
     
     \item \textbf{RQ3 (Methodological Validity)}: To what extent can LLM-based framing classification align with human expert judgments in geopolitical discourse analysis?
 \end{itemize}
-
-% === END: sections/introduction.tex ===
-% === BEGIN: sections/related_work.tex ===
 %==============================================================================
 % RELATED WORK
 %==============================================================================
@@ -146,7 +139,7 @@ Our study builds on this literature by examining how discrete diplomatic summits
 
 Social media platforms have become central venues for public deliberation on international politics. Research using platforms such as Twitter and Reddit has explored agenda-setting, polarization, and narrative diffusion in response to global events \cite{baumgartner2020}. Compared to Twitter, Reddit supports longer-form discussion and community-based topical organization, making it particularly well-suited for studying discursive framing rather than isolated reactions.
 
-Nevertheless, much of the social media literature relies on descriptive or correlational analyses, limiting causal interpretation. Studies often document shifts in sentiment or topic prevalence without explicitly isolating the effects of discrete political interventions. Our study addresses this gap by applying a Difference-in-Differences design with multiple control countries, enabling causal inference about how summit diplomacy altered both sentiment and framing within online discourse.
+Nevertheless, much of the social media literature relies on descriptive or correlational analyses, limiting causal interpretation. Studies often document shifts in sentiment or topic prevalence without explicitly isolating the effects of discrete political interventions. Recent work has begun applying quasi-experimental designs to social media contexts; for instance, \citet{kumarswamy2025causal} used a Difference-in-Differences approach with an external platform as control to study how Parler's replatforming affected content toxicity. Our study extends this methodological approach to the domain of international politics, applying DID with multiple control countries to isolate how summit diplomacy altered both sentiment and framing within online discourse.
 
 \subsection{Large Language Models for Political Text Analysis}
 
@@ -155,9 +148,6 @@ Recent advances in large language models (LLMs) have enabled automated analysis 
 Despite these advances, concerns remain regarding construct validity and domain specificity, particularly for geopolitically sensitive content. Many studies deploy LLMs without systematic validation against expert human judgments, raising questions about reliability in specialized domains. Our work contributes to this emerging literature by constructing a gold-standard human annotation benchmark and explicitly validating LLM-based framing classification against expert consensus prior to using model outputs for causal analysis.
 
 Together, these strands of research motivate a framing-centered, event-driven, and causally grounded analysis of online discourse surrounding diplomatic engagement.
-
-% === END: sections/related_work.tex ===
-% === BEGIN: sections/method.tex ===
 %==============================================================================
 % METHOD
 %==============================================================================
@@ -236,7 +226,7 @@ Inter-rater reliability (Cohen's $\kappa$) and LLM-human agreement metrics are r
 %------------------------------------------------------------------------------
 \subsection{Causal Identification}
 
-We estimate the causal impact of summit diplomacy using a Difference-in-Differences (DID) design with North Korea as the treated group and control countries (China, Iran, Russia) as comparisons.
+We estimate the causal impact of summit diplomacy using a Difference-in-Differences (DID) design with North Korea as the treated group and control countries (China, Iran, Russia) as comparisons. This approach follows recent work applying quasi-experimental methods to social media analysis, such as \citet{kumarswamy2025causal}, who used an external platform as a control group to isolate policy effects from confounding offline events. Similarly, we use discourse about other countries as counterfactual comparisons to identify summit-specific effects on North Korea framing.
 
 \subsubsection{Difference-in-Differences Specification}
 
@@ -274,9 +264,6 @@ Network-level metrics include:
 \end{itemize}
 
 This structural analysis addresses RQ2 by testing whether content-level framing shifts are accompanied by reorganization of discourse networks.
-
-% === END: sections/method.tex ===
-% === BEGIN: sections/results.tex ===
 %==============================================================================
 % RESULTS
 %==============================================================================
@@ -305,10 +292,10 @@ We first examine whether high-stakes diplomatic events causally reshape the cont
 \hline
 P1$\rightarrow$P2 & China & 0.99 & \checkmark \\
 P1$\rightarrow$P2 & Iran & 0.83 & \checkmark \\
-P1$\rightarrow$P2 & Russia & [TBD] & [TBD] \\
+P1$\rightarrow$P2 & Russia & 0.65 & \checkmark \\
 P2$\rightarrow$P3 & China & 0.69 & \checkmark \\
 P2$\rightarrow$P3 & Iran & 0.75 & \checkmark \\
-P2$\rightarrow$P3 & Russia & [TBD] & [TBD] \\
+P2$\rightarrow$P3 & Russia & 0.88 & \checkmark \\
 \hline
 \end{tabular}
 \label{tab:pt_sentiment}
@@ -382,7 +369,28 @@ Table~\ref{tab:network_topology} presents network-level metrics across the three
 
 The number of connected components decreased from 25 to 16, suggesting greater integration of previously fragmented discussion threads into a more unified discourse network. Clustering coefficients remained relatively stable, indicating that local community structure was preserved even as global connectivity increased.
 
-% FILE NOT FOUND: tables/network_topology.tex
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{3pt}
+\caption{Network Topology Metrics Across Periods}
+\small
+\begin{tabular}{lccccc}
+\hline
+\textbf{Metric} & \textbf{P1} & \textbf{P2} & \textbf{P3} & \textbf{$\Delta_1$} & \textbf{$\Delta_2$} \\
+\hline
+Nodes & 2,656 & 1,043 & 879 & $-61\%$ & $-16\%$ \\
+Edges & 4,552 & 1,726 & 1,429 & $-62\%$ & $-17\%$ \\
+Density ($\times10^{-3}$) & 1.3 & 3.2 & 3.7 & $+146\%$ & $+16\%$ \\
+Avg Degree & 3.43 & 3.31 & 3.25 & $-3\%$ & $-2\%$ \\
+Clustering & 0.215 & 0.198 & 0.210 & $-8\%$ & $+6\%$ \\
+Components & 25 & 23 & 16 & $-8\%$ & $-30\%$ \\
+\hline
+\end{tabular}
+\begin{flushleft}
+\footnotesize{$\Delta_1$: P1$\rightarrow$P2; $\Delta_2$: P2$\rightarrow$P3}
+\end{flushleft}
+\label{tab:network_topology}
+\end{table}
 
 \begin{figure*}[t]
 \centering
@@ -395,7 +403,25 @@ The number of connected components decreased from 25 to 16, suggesting greater i
 
 Beyond structural changes, we analyze the semantic content of relationships by classifying each edge based on keywords in its description. Table~\ref{tab:relationship_framing} and Figure~\ref{fig:framing_distribution} present the distribution of threat-oriented, peace-oriented, and neutral framings across periods.
 
-% FILE NOT FOUND: tables/relationship_framing.tex
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{4pt}
+\caption{Relationship Framing Distribution}
+\small
+\begin{tabular}{lccccc}
+\hline
+\textbf{Frame} & \textbf{P1} & \textbf{P2} & \textbf{P3} & \textbf{$\Delta_1$} & \textbf{$\Delta_2$} \\
+\hline
+Threat & 61.5\% & 42.4\% & 40.9\% & \textbf{$-19$pp} & $-1$pp \\
+Peace & 7.8\% & 24.7\% & 18.6\% & \textbf{$+17$pp} & $-6$pp \\
+Neutral & 30.8\% & 32.9\% & 40.5\% & $+2$pp & $+8$pp \\
+\hline
+\end{tabular}
+\begin{flushleft}
+\footnotesize{$\Delta_1$: P1$\rightarrow$P2; $\Delta_2$: P2$\rightarrow$P3; pp = percentage points}
+\end{flushleft}
+\label{tab:relationship_framing}
+\end{table}
 
 The results reveal a pronounced shift away from threat framing following the Singapore Summit: threat-oriented relationships decreased from 61.5\% in P1 to 42.4\% in P2 ($-19.1$ percentage points), while peace-oriented relationships more than tripled from 7.8\% to 24.7\% ($+16.9$ pp).
 
@@ -412,7 +438,27 @@ Critically, the Hanoi Summit failure produced only a partial reversion: threat f
 
 Using hierarchical community detection, we identified 354, 153, and 107 communities in P1, P2, and P3 respectively. Table~\ref{tab:keyword_evolution} shows the evolution of dominant keywords in community descriptions across periods.
 
-% FILE NOT FOUND: tables/keyword_evolution.tex
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{3pt}
+\caption{Top Keywords in Community Summaries}
+\small
+\begin{tabular}{clll}
+\hline
+\textbf{\#} & \textbf{P1} & \textbf{P2} & \textbf{P3} \\
+\hline
+1 & military (252) & nuclear (91) & intl. (58) \\
+2 & nuclear (203) & military (84) & diplomatic (44) \\
+3 & intl. (152) & intl. (67) & military (38) \\
+4 & security (117) & diplomatic (62) & kim (37) \\
+5 & diplomatic (96) & relations (50) & trump (33) \\
+\hline
+\multicolumn{4}{l}{\footnotesize{New in P2: \textit{efforts, ongoing, united}}} \\
+\multicolumn{4}{l}{\footnotesize{New in P3: \textit{trump, political, complex}}} \\
+\hline
+\end{tabular}
+\label{tab:keyword_evolution}
+\end{table}
 
 In P1, ``military'' was the most frequent keyword, reflecting the predominant threat-oriented discourse. By P2, ``nuclear'' and ``diplomatic'' rose in prominence, corresponding to summit-related discussions about denuclearization. Notably, new keywords emerged in P2 (``efforts,'' ``ongoing,'' ``united,'' ``states'') that were absent in P1, suggesting the introduction of cooperation-oriented vocabulary.
 
@@ -474,9 +520,6 @@ Qualitative inspection of disagreements suggests that most LLM errors arise in e
 We conduct two robustness checks. 
 First, we re-estimate the DID models using Russia as an additional control group; results remain directionally consistent, though effect sizes attenuate when pre-trend violations are present. 
 Second, we repeat the framing DID analysis on a high-confidence subset of LLM predictions; estimated summit effects remain stable, suggesting that misclassification noise does not drive the main findings.
-
-% === END: sections/results.tex ===
-% === BEGIN: sections/discussion.tex ===
 %==============================================================================
 % DISCUSSION
 %==============================================================================
@@ -513,9 +556,6 @@ These findings carry implications for diplomatic communication and public engage
 \subsection{Limitations and Future Work}
 
 Several limitations warrant consideration. First, Reddit users are not representative of the broader public, limiting external validity. Second, although our LLM-based framing classification is validated against expert annotations, systematic model biases may remain. Third, unobserved concurrent events may partially confound estimated effects despite our multi-control design. Future work could extend this approach to additional platforms, incorporate survey-based validation, and further explore structural discourse dynamics using network-based methods.
-
-% === END: sections/discussion.tex ===
-% === BEGIN: sections/conclusion.tex ===
 % Conclusion
 \section{Conclusion}
 
@@ -528,8 +568,6 @@ This study provides causal evidence of how high-stakes diplomatic summits affect
 \end{enumerate}
 
 Our methodology---combining LLM classification with expert validation and rigorous causal inference---provides a template for studying public opinion dynamics around international events. Future work should extend this analysis to other diplomatic contexts and examine the mechanisms underlying opinion persistence.
-
-% === END: sections/conclusion.tex ===
 
 % Acknowledgments (uncomment for camera-ready)
 % \section*{Acknowledgments}
