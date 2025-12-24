@@ -89,9 +89,60 @@ Taken together, these findings demonstrate that high-stakes diplomatic summits s
 
 \subsection{Structural Reorganization of Discourse Networks (RQ2)}
 
-To assess whether observed framing changes are reflected in the organization of discourse itself, we analyze discourse networks constructed from Reddit discussions across the three diplomatic phases. Using a graph-based representation of discourse, we examine changes in narrative connectivity, centrality, and community structure surrounding North Korea-related discussions.
+To assess whether observed framing changes are reflected in the organization of discourse itself, we analyze discourse networks constructed from Reddit discussions across the three diplomatic phases. Using GraphRAG~\cite{edge2024graphrag}, we extract entities and relationships from 10,659 documents, constructing knowledge graphs that capture how actors, events, and concepts are interconnected in public discourse.
 
-[TO BE COMPLETED: GraphRAG analysis results, including qualitative network visualization and quantitative structural metrics.]
+\subsubsection{Network Topology Changes}
+
+Table~\ref{tab:network_topology} presents network-level metrics across the three periods. Despite a substantial reduction in the number of entities (nodes) and relationships (edges) from P1 to P3, network density---the proportion of possible connections that are realized---increased markedly (+146\% from P1 to P2, +16\% from P2 to P3). This densification indicates that discourse became more focused and interconnected around a smaller set of central actors and themes following the Singapore Summit.
+
+The number of connected components decreased from 25 to 16, suggesting greater integration of previously fragmented discussion threads into a more unified discourse network. Clustering coefficients remained relatively stable, indicating that local community structure was preserved even as global connectivity increased.
+
+\input{tables/network_topology}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/fig_network_topology.png}
+\caption{Network Topology Metrics Across Diplomatic Periods. (A) Network density increased despite fewer nodes, indicating discourse concentration. (B) Entity count declined as discussions focused on key actors. (C) Community count decreased, reflecting narrative consolidation.}
+\label{fig:network_topology}
+\end{figure*}
+
+\subsubsection{Relationship Framing Shifts}
+
+Beyond structural changes, we analyze the semantic content of relationships by classifying each edge based on keywords in its description. Table~\ref{tab:relationship_framing} and Figure~\ref{fig:framing_distribution} present the distribution of threat-oriented, peace-oriented, and neutral framings across periods.
+
+\input{tables/relationship_framing}
+
+The results reveal a pronounced shift away from threat framing following the Singapore Summit: threat-oriented relationships decreased from 61.5\% in P1 to 42.4\% in P2 ($-19.1$ percentage points), while peace-oriented relationships more than tripled from 7.8\% to 24.7\% ($+16.9$ pp).
+
+Critically, the Hanoi Summit failure produced only a partial reversion: threat framing declined marginally to 40.9\% ($-1.5$ pp), and peace framing decreased to 18.6\% ($-6.1$ pp). This asymmetric pattern---where diplomatic gains are largely preserved despite event failure---provides network-level evidence for the ``ratchet effect'' observed in content-level framing analysis (RQ1).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\columnwidth]{figures/fig_framing_distribution.png}
+\caption{Relationship Framing Distribution Across Periods. The Singapore Summit (P1$\rightarrow$P2) produced a 19pp decline in threat framing and 17pp increase in peace framing. The Hanoi failure (P2$\rightarrow$P3) caused only partial reversion.}
+\label{fig:framing_distribution}
+\end{figure}
+
+\subsubsection{Community Theme Evolution}
+
+Using hierarchical community detection, we identified 354, 153, and 107 communities in P1, P2, and P3 respectively. Table~\ref{tab:keyword_evolution} shows the evolution of dominant keywords in community descriptions across periods.
+
+\input{tables/keyword_evolution}
+
+In P1, ``military'' was the most frequent keyword, reflecting the predominant threat-oriented discourse. By P2, ``nuclear'' and ``diplomatic'' rose in prominence, corresponding to summit-related discussions about denuclearization. Notably, new keywords emerged in P2 (``efforts,'' ``ongoing,'' ``united,'' ``states'') that were absent in P1, suggesting the introduction of cooperation-oriented vocabulary.
+
+In P3, while some threat-related terms returned, diplomatic framing persisted: ``diplomatic'' remained among the top keywords, and new terms (``trump,'' ``political'') emerged, indicating continued focus on leadership-level negotiations rather than a return to purely military discourse.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/fig_keyword_evolution.png}
+\caption{Top Keywords in Community Summaries by Period. (A) P1 dominated by ``military'' and ``security.'' (B) P2 shows rise of ``diplomatic'' and ``efforts.'' (C) P3 maintains diplomatic vocabulary while adding leadership-focused terms.}
+\label{fig:keyword_evolution}
+\end{figure*}
+
+Taken together, these structural analyses demonstrate that the Singapore Summit not only shifted the content of discourse (RQ1) but also reorganized its underlying network structure, concentrating attention on diplomatic themes and actors. The persistence of these structural changes following the Hanoi failure reinforces the ``ratchet effect'' hypothesis: high-profile diplomatic engagement creates durable shifts in how public discourse is organized, even when negotiations fail.
+
+
 
 
 \subsection{Validation of LLM-Based Framing (RQ3)}
