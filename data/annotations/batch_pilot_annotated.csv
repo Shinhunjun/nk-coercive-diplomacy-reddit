@@ -1,0 +1,107 @@
+sample_id,post_id,country,title,text,annotator_1_frame,annotator_2_frame,final_frame,notes
+1,e9b67m,IRAN,"The Atrocities Of IRGC Security Forces In Mahshahr, Iran",,HUMANITARIAN,NEUTRAL,unmatched,
+2,6x0s32,NK,' North Korea links latest missile launch to Japan’s annexation of Korea over a century ago. Even some South Koreans will like that.'',,THREAT,THREAT,THREAT,
+3,c23li0,CHINA,China pulls WTO suit over claim to be a market economy,,NEUTRAL,ECONOMIC,unmatched,
+4,9h6w16,NK,North Korea’s Kim agrees to dismantle main nuke site if U.S. takes steps too,,DIPLOMACY,DIPLOMACY,DIPLOMACY,
+5,6p3sbo,NK,Morales aside would you rather be dictator of North Korea or king of Saudi Arabia?,,NEUTRAL,NEUTRAL,NEUTRAL,
+6,ajcx29,RUSSIA,"Russia, Turkey, China denounce US interference in Venezuela",,DIPLOMACY,DIPLOMACY,DIPLOMACY,
+7,7szpx2,RUSSIA,Dutch agencies provide crucial intel about Russia's interference in US-elections,,NEUTRAL,NEUTRAL,NEUTRAL,
+8,96yei3,IRAN,Iran's Supreme Leader Khamenei rejects Trump offer of talks,,NEUTRAL ,DIPLOMACY,unmatched,"외교적 대화를 거부해서 외교적이나 거부했다는점에서 외교(긍정)이 아닌 외교(부정)임 우리의 카테고리의 외교는 평화적, 긍정적 양상을 외교로 분류하는데, 부정적 외교는 어떻게 하면 좋을까?"
+9,bzacye,NK,North Korean leader's slain half-brother was a CIA informant,[deleted],NEUTRAL,NEUTRAL,NEUTRAL,
+10,7bviz0,CHINA,"US, China have 'frank' exchange on South China Sea during Trump's Beijing visit",,DIPLOMACY,DIPLOMACY,DIPLOMACY,
+11,79xmko,RUSSIA,Former FBI agent says Russia interference began in 2014,,NEUTRAL,NEUTRAL,NEUTRAL,"이것도 애매한게, 러시아에 의한 선거개입이라는 위협인긴 한데 군사적위협은 아님,,우리의 카테코리의 위협은 군사적 위협만을 포함하고 있어서 중립으로 표기"
+12,a53ym2,CHINA,Tibetan Youth Self-Immolates Over China's Tibet Policies,,HUMANITARIAN,NEUTRAL,unmatched,
+13,bk9ydw,CHINA,"CNN Reports: Democrats take it up the ass as Barr laughs at them on the way with Trump for a round of Golf Friday. Biden comments China is our friend, hell we sell them missiles, tanks, and the last time I was in Taiwan well they are just beautiful people.",,NEUTRAL ,NEUTRAL,unmatched,이것도 애매한 이유가 국내정치와 관련된 사항임
+14,7llao0,NK,U.N. imposes tough new sanctions against North Korea,,ECONOMIC,ECONOMIC,ECONOMIC,
+15,7pbee5,NK,North Korea: All our nukes and strategic weapons are pointed at the US,[deleted],THREAT,THREAT,THREAT,
+16,d12e58,IRAN,"Iran activates advanced centrifuges, violates nuclear deal - National | Globalnews.ca",,THREAT,THREAT,THREAT,
+17,8qxauf,NK,"Trump brushes off Kim's human rights record, saying a lot of others have done 'bad things'",,DIPLOMACY,DIPLOMACY,DIPLOMACY,평화적 제스쳐? 규탄보단 옹호느낌이라?
+18,c6tu0a,IRAN,"Iran may stand down on nuclear THREAT after Europe, China work to bypass US sanctions",,NEUTRAL ,NEUTRAL,unmatched,
+19,9mewxr,IRAN,"Iran Political Prisoner Hamidreza Amini Issued Long Prison Sentence, Among His Charges Is Two years For “Insulting The Supreme Leader Ali Khamenei.”",,NEUTRAL ,NEUTRAL,unmatched,
+20,b4wgbv,NK,Trump will remove new North Korea-related sanctions because he 'likes' Kim Jong Un,,DIPLOMACY,DIPLOMACY,DIPLOMACY,
+21,953hc6,IRAN,U.S. revives sanctions to further damage Iran's economy,,ECONOMIC,ECONOMIC,ECONOMIC,
+22,6camiw,IRAN,Trump in Saudi Arabia signs $110B arms deal with Persian Gulf ally,[deleted],ECONOMIC,THREAT,unmatched,무기거래니깐? 거래로 봐야할지 아님 큰 차원에서 외교로 봐야할지?
+23,62my3i,CHINA,Will Russia-China-Iran common interests ever lead to military alliance?,"The three autocracies seem to be constantly strengthening their ties. Russia and China supported Teheran's nuclear ambitions; they all support Syrian goverment side in Syrian War; they may also share ECONOMIC interests in China's One Belt, One Road program. Their strategic goals, in Middle-East, Eastern Europe, Caucasus, SCS, Taiwan are all meeting with criticism from US and western world. Can you see, in 10 upcoming years, these three states forming military alliance, sort of heartland axis, being in opposition to the west? Could such alliance push their more aggresive goals simultaneously, forcing US to react but making such reaction more divied?",THREAT,NEUTRAL,unmatched,미국에 입장에선 중국 러시아 이란 동맹이 위협이니깐?
+24,7i6r2u,RUSSIA,"US to maintain Russia sanctions until it withdraws from Ukraine, Tillerson says",,ECONOMIC,ECONOMIC,ECONOMIC,
+25,7fkd80,IRAN,Iran Warns It Would Increase Missile Range if THREATened by Europe,,THREAT,THREAT,THREAT,
+26,ar5a7o,IRAN,Iranian Fake News in the New York Times. How Mullahs’ Regime Infiltrates Western Media.,[deleted],NEUTRAL ,NEUTRAL,unmatched,"12번과 동일 군사적 위협은 아닌데, 미국에 입장에서 언론 선동 여론전이 위협이긴함 이걸 중립으로 볼지 위협으로 볼지?"
+27,bd9muw,CHINA,"One Month, 500,000 Face Scans: How China Is Using A.I. to Profile a Minority",,HUMANITARIAN,NEUTRAL,unmatched,소수민족탄압느낌 
+28,byp0pd,CHINA,"More than 1 million protest in Hong Kong, organizers say, over Chinese extradition law",[deleted],HUMANITARIAN,NEUTRAL,unmatched,
+29,db5tek,CHINA,China's official manufacturing PMI contracted again in September,,NEUTRAL ,NEUTRAL,unmatched,
+30,c3q08l,IRAN,"Iran’s grand strategy tests U.S. and its allies Yemen, Iraq, Syria - Middle East | Jerusalem Post",,THREAT,THREAT,THREAT,
+31,bi9kqr,NK,Report on sentiment on the DPRK street regarding Kim Jong-un’s trip to Russia,,NEUTRAL,NEUTRAL,NEUTRAL,
+32,9ee0b9,NK,North Korea parade shows off military strength,,THREAT,THREAT,THREAT,
+33,7zfn51,RUSSIA,US is looking at potential new sanctions against Russia,,ECONOMIC,ECONOMIC,ECONOMIC,
+34,b56ab3,CHINA,Italy welcomes China's leader Xi Jinping and vast Belt and Road infrastructure project,,DIPLOMACY,DIPLOMACY,DIPLOMACY,"이것도 중국과 이탈리아의 외교 협력을 그냥 외교로 평가해야할지, 미국에 입장에서 유럽(서방)과 중국의 협력이니깐 위협으로 봐야할지, 아니면 그냥 중립적 정보제공으로 봐야할지 애매함. 정말 큰 범주에선 위협이고, 중국이나 이탈리아 입장에선 외교이고, 작은범위에선 그저 중국과 이탈리아가 협력한다는 정보전달 이니깐"
+35,79egdi,CHINA,Why is Turkey so eager to be led down the belt and road?,[deleted],NEUTRAL,NEUTRAL,NEUTRAL,
+36,6poshl,IRAN,"France: U.S. Sanctions on Iran, Russia Look Illegal",,ECONOMIC,ECONOMIC,ECONOMIC,
+37,c3xx6e,IRAN,"Trump says new sanctions on Iran to start Monday, dials back rhetoric",,ECONOMIC,ECONOMIC,ECONOMIC,
+38,a0de72,RUSSIA,"If Ukraine and Russia go to war, who would join?, should we fear WW3?","[I think we have all seen the news](https://www.bbc.com/news/world-europe-46338671) it seems that Ukraine will declare war, but they are not in NATO nor the EU so... what's next?, can they win?, how can the conflict be deescalated? ",THREAT,NEUTRAL,unmatched,이것도 정보전달 중립과 위협 살짝 애매..
+39,br6fu3,NK,North Korean women 'forced into sex slavery' in China-report,,HUMANITARIAN,HUMANITARIAN,HUMANITARIAN,
+40,avvnld,NK,North Korea denies Trump's account of summit collapse,,DIPLOMACY,DIPLOMACY,DIPLOMACY,
+41,c68w0v,IRAN,Europeans Race to Establish Trade With Iran,,ECONOMIC,ECONOMIC,ECONOMIC,
+42,caz8ot,NK,LIVE: South Korean president arrives in Pyongyang for inter-Korean summit,,DIPLOMACY,DIPLOMACY,DIPLOMACY,
+43,6xpkqi,NK,North Korea says has developed ‘advanced hydrogen bomb’ that can be fitted on ICBM,[deleted],THREAT,THREAT,THREAT,
+44,6zoms7,NK,Trump: UN's North Korea sanctions are 'not a big deal',[deleted],ECONOMIC,ECONOMIC,ECONOMIC,
+45,c57h1d,IRAN,US Air Force strikes on Iranian Military computer systems,,THREAT,THREAT,THREAT,
+46,9z4o6v,RUSSIA,"More British troops to be deployed to Ukraine in face of THREAT from Russia, MoD to announce",,NEUTRAL,THREAT,unmatched,이것도 애매 기준을 미국입장에서 볼것인가? 미국입장에서 보면 다른나라의 군사적 조치나 위협을 설명하는 문장은 그저 중립적임. 
+47,e0xl46,CHINA,Canada warned of fallout on Five Eyes relationship if Huawei allowed on 5G,,THREAT,THREAT,THREAT,
+48,e3f028,RUSSIA,Apple under fire for labelling Crimea as part of Russia in its apps,,NEUTRAL,NEUTRAL,NEUTRAL,
+49,e5lp74,IRAN,Reagan’s forgotten Iran-Contra escape may reveal more about Trump’s fate than Watergate,,NEUTRAL,NEUTRAL,NEUTRAL,국내정치..애매
+50,bmbzqi,CHINA,"Taiwan to Improve Ties With India, Official Says, Despite Chinese Disfavour",,NEUTRAL,DIPLOMACY,unmatched,대만입장에선 외교지만 미국 입장에선 정보전달이니깐 중립?
+51,ebtg82,RUSSIA,Rudy Giuliani Special Featured on Russian State TV,,NEUTRAL,NEUTRAL,NEUTRAL,
+52,aktlxs,CHINA,China Releases Footage of Successful Launch of Missile That Could Strike U.S. Territory,[deleted],THREAT,THREAT,THREAT,
+53,dqin3j,CHINA,China's economy struggles as consumers tighten belts,,ECONOMIC,ECONOMIC,ECONOMIC,
+54,bmnua4,IRAN,"Trump's top intelligence and military advisers held unusual meeting at CIA on Iran, officials say",,THREAT,THREAT,THREAT,이란문제 해결을위한 대전략이니깐 위협?
+55,ayi4z9,CHINA,"China’s economy is 12% smaller than official data say, study finds",,ECONOMIC,NEUTRAL,unmatched,
+56,7r7rbt,IRAN,U.S. Strategy Shift in Syria Turns Focus to Iran From ISIS,,THREAT,THREAT,THREAT,이것도 전략과 관련되어있으니깐 위협?
+57,dj8ggb,IRAN,Giuliani's work for Iranian group with bloody past could lead to more legal woes,,NEUTRAL,NEUTRAL,NEUTRAL,
+58,7m0jh2,CHINA,The rapid development of China ‘s service trade – International Trading Services Company,,ECONOMIC,ECONOMIC,ECONOMIC,"이것도 큰 범주에서 보면 경제적 위협이긴한데,, 애매하네 일단 좁은 의미로 경제"
+59,6zt5os,NK,"U.S. will suffer ‘greatest pain’ in wake of latest UN sanctions say North Korea | JoltaNews | Pakistan News - Breaking News - Business News Current Affairs, Politics",,THREAT,THREAT,THREAT,
+60,6u80oa,CHINA,"China military criticises 'wrong' U.S. moves on Taiwan, South China Sea",[deleted],THREAT,DIPLOMACY,unmatched,"이것도 군사적 위협은 아니긴한데,, 비난했으니깐 위협일것 같긴한데 위협의 문제는 군사만 포함하냐 아니면 포괄적 위협이냐가 애매하고 외교는 긍정/부정인지가 애매함"
+61,7n40e5,IRAN,Report: 3 protesters shot dead by Revolutionary Guards as Iran rallies intensify,,HUMANITARIAN,HUMANITARIAN,HUMANITARIAN,
+62,efetpx,RUSSIA,"Russian attacks devour 979 HUMANITARIAN aid workers, SNHR report says",,HUMANITARIAN,HUMANITARIAN,HUMANITARIAN,
+63,7q4rc5,IRAN,Iran rejects Trump’s demand for changes to Obama-era nuclear deal,,THREAT,DIPLOMACY,unmatched,61번과 동일사유
+64,5t8mko,CHINA,"Trump, Changing Course on Taiwan, Gives China an Upper Hand",,NEUTRAL,NEUTRAL,NEUTRAL,"이것도 트럼프를 비판하는 내용인데, 중국한테 유리하게 해줬다고 애매하네"
+65,dfhr7w,RUSSIA,Senate Republicans Say Russia Helped Trump—and Is Still Messing in US Elections,,NEUTRAL,NEUTRAL,NEUTRAL,국내정치 
+66,a67sf4,NK,"""Top Secret"" Intel Report Claims Russia, China Continue To Help North Korea Evade Sanctions",,ECONOMIC,ECONOMIC,ECONOMIC,"이것도 애매 미국입장에선 북중러 협력이 위협인데, 이걸 위협으로 볼거냐 아님 제재의 관점에서 경제로 볼거냐, 아니면 제3국들의 이야기니깐 중립으로 볼것인가"
+67,5v4o90,RUSSIA,Kremlin: Russia cannot take Crimea on lease from itself - Russia Beyond the Headlines,,NEUTRAL,DIPLOMACY,unmatched,
+68,a7ooir,RUSSIA,"Obama-like mistake': Republicans slam Trump over plan to withdraw troops from Syria, GOP lawmakers say vacuum will empower Russia, Iran and insurgent fighters",,NEUTRAL,NEUTRAL,NEUTRAL,국내정치치
+69,b161u7,IRAN,Iranian Islamic Revolutionary Guard Strategist Praises Parents Who Handed Over Their Oppositionist Children For Execution,,HUMANITARIAN,HUMANITARIAN,HUMANITARIAN,
+70,d8z3yx,CHINA,Iraq to join China's Belt and Road project,,ECONOMIC,ECONOMIC,ECONOMIC,이것도 위협으로 봐야할지 경제로 봐야할지 미국입장에선 이란 중국 협력이 큰 범주에서 위협인데 작은범주에선 그냥 둘이 경제적 협력한거니깐
+71,8oyfzt,CHINA,What Does China’s Belt and Road Initiative Mean for US Grand Strategy,,THREAT,THREAT,THREAT,71번과 동일 애매함. 일단 미국 대전략에 미치는 영향이니깐 이건 위협으로 평가
+72,c2om5r,CHINA,Apple wants to move a huge chunk of iPhone production away from China and cut its exposure to the trade war,,ECONOMIC,ECONOMIC,ECONOMIC,
+73,7oqhky,RUSSIA,"Russia 'simulated full-scale war' against Nato, says military commander - 'The scale & extent of the entire exercise was far greater than officially stated'",,THREAT,THREAT,THREAT,
+74,d2frz2,NK,North Korea fires 2 projectiles after offering talks with US - NBCNews.com,,THREAT,THREAT,THREAT,
+75,e6ry11,IRAN,US President Donald Trump: The UNSC Must Take Action on Iran. They are Killing Protesters. (VOA news clip),[deleted],HUMANITARIAN,HUMANITARIAN,HUMANITARIAN,
+76,9cin67,CHINA,Backlash builds against China as Belt and Road ties fray,,NEUTRAL,DIPLOMACY,unmatched,
+77,a70qr3,NK,North Korea says continued US sanctions put denuclearization at risk,,THREAT,THREAT,THREAT,
+78,bz0n33,CHINA,Trump Laments his Lack of China-Style Control of Fed Policy,,NEUTRAL,NEUTRAL,NEUTRAL,
+79,c0b03p,CHINA,"Chinese Cyberattack Hits Telegram, App Used by Hong Kong Protesters",,HUMANITARIAN,THREAT,unmatched,
+80,8lld1o,IRAN,Will Europe really be able to get around U.S. sanctions reguarding Iran ?,[removed],ECONOMIC,ECONOMIC,ECONOMIC,
+81,7aqe61,CHINA,"Once Formidable, Taiwan's Military Now Overshadowed by China's",,NEUTRAL,NEUTRAL,NEUTRAL,
+82,6kwebe,RUSSIA,"Kobe Bryant, Samuel L. Jackson, Marlon Wayans puzzled by Pacquiao defeat: ‘Russians hacked this decision’",,NEUTRAL,NEUTRAL,NEUTRAL,
+83,baq01s,RUSSIA,Angola Plans Manufacturing Russian Military Equipment,,THREAT,THREAT,THREAT,
+84,c6w48m,CHINA,chinese massage,,NEUTRAL,NEUTRAL,NEUTRAL,
+85,chhunx,NK,South Korea says North Korea fired 2 projectiles,,THREAT,THREAT,THREAT,
+86,5q0s5f,NK,China-Singapore Commodity and RMB Summit,,ECONOMIC,ECONOMIC,ECONOMIC,
+87,5uvwee,CHINA,U.S. carrier group patrols in South China Sea: U.S. navy,,THREAT,THREAT,THREAT,
+88,7o1vt0,NK,Japan's prime minister Abe says North Korea THREAT the 'severest since World War II'.,[deleted],THREAT,THREAT,THREAT,
+89,bdxits,RUSSIA,"Turkey eyes US sanctions waivers on Iran oil, Russia arms",,NEUTRAL,ECONOMIC,unmatched,
+90,6rya5g,CHINA,North Korea: China urges neighbour to stop missile tests- BBC News,,THREAT,DIPLOMACY,unmatched,"이것도 애매해, 중국이 북한한테 미사일 시험 그만하라고 한거니깐 전체적인 맥락은 미국한테 긍정적임 근데 이것도 위협이라고 봐야할지? 아니면 그냥 중립으로 해야할지?"
+91,br4le9,RUSSIA,Kushner Received $285M Loan From a Bank Tied To Russia Shortly Before Election:,,NEUTRAL,ECONOMIC,unmatched,
+92,7by4cx,IRAN,"Surprise! Iran has a small military budget, whether per capita or as percentage of GDP",[removed],NEUTRAL,NEUTRAL,NEUTRAL,
+93,7ct27s,NK,North Korea soldier shot while defecting at DMZ to South,,THREAT,HUMANITARIAN,unmatched,
+94,d6qyr0,CHINA,"Trump grants tariff exemptions to plastic straws, dog leashes and more from China - CNBC",,ECONOMIC,ECONOMIC,ECONOMIC,
+95,8q1u35,RUSSIA,Susan Rice: 'Disgraceful' for Trump to blame Obama for Russia's annexation of Crimea,,NEUTRAL,DIPLOMACY,unmatched,국내정치
+96,bv3g2j,NK,"Launched in 2002 and held each year at Singapore's Shangri-La Hotel, the summit is Asia's largest annual defence and security gathering. It seeks to promote bilateral dialogue among sometimes hostile adversaries, and is traditionally attended by delegates from Asia Pacific nations as well as the US.",,NEUTRAL,DIPLOMACY,unmatched,
+97,7p4dgp,NK,North Korea holds talks with South at the DMZ: Live updates,[deleted],DIPLOMACY,DIPLOMACY,DIPLOMACY,
+98,6o67m4,IRAN,ISIS Executes 2200 Students with Hands Tied: Iran's Gen. Soleimani,,HUMANITARIAN,HUMANITARIAN,HUMANITARIAN,
+99,7lj9kd,NK,UN slaps fresh sanctions on North Korea,,ECONOMIC,ECONOMIC,ECONOMIC,
+100,ctcxup,NK,Venezuela to Open Embassy in Pyongyang on Wednesday,,NEUTRAL,DIPLOMACY,unmatched,
+,,,,,,,,
+,,,,,,,,
+,,,,,mismatch count,match count,,
+,,,,,29,71,,
+,,,,,,match rate,,
+,,,,,,71,,

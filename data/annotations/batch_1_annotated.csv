@@ -1,0 +1,225 @@
+sample_id,post_id,country,title,text,annotator_1_frame,annotator_2_frame,final_frame,notes
+101,dux6ij,CHINA,"Xi Jinping reiterates rallying call to Chinese military, stresses need for Communist Party’s ‘grip’",,NEUTRAL ,NEUTRAL ,,"국가간 조치 사항이 아님, 하지만 군적 모먼트를 강화하는 이야기로써 threat은?"
+102,6t2ony,IRAN,"US to designate the IRGC, affiliates as terrorists",,DIPLOMACY,THREAT,,"사이버공격, 테러단체 지정, 적으로 규명 이것은 대화인가 물리적 조치는 아니지만 적대 행위로 바야 하는가"
+103,7f1h6s,IRAN,"Syria, Russia & Iran shift to DIPLOMACY, while US and allies push for war | WUC-News",,애매하다 DIP+THREAT 둘다있어,NEUTRAL ,,둘다 있어서 Neutral?
+104,6pi2k6,IRAN,US Navy ship fired warning shots at an Iranian boat in the Persian Gulf,[deleted],THREAT,THREAT,,
+105,ckrewe,IRAN,Germany refuses to join US-led naval mission in Strait of Hormuz,,NEUTRAL ,DIPLOMACY,,독일이 미국한테 군사 참여 안한다고 말한거라고 해석해야하나??? 그래서 Diplomac
+106,bmroaj,CHINA,Trump gambles with economy on China showdown as 2020 looms,,ECONOMIC,ECONOMIC,,
+107,74orlj,IRAN,Qatar holds unmovable U.S. air base in unstoppable conflict with Persian Gulf allies,[deleted],NEUTRAL ,NEUTRAL ,,
+108,85op8q,IRAN,"The United States, Iran, and the Middle East / Persian Gulf Tango: Past Blunders, Unavoidable Collaboration ← Farazian Focus",,NEUTRAL ,NEUTRAL ,,"대화의 모먼트인지 아닌지 모르겟음, 하지만 과거에는 분쟁했지만 지금은 협력 한다면 Diplomacy?"
+109,70a3u5,RUSSIA,Top Senate Foreign Relations Democrat warns : Turkey's Purchase of Russian missile system may trigger sanctions,,NEUTRAL ,ECONOMIC,,러시아의 무기 구매가 경제 제재를 야기한다
+110,adymto,IRAN,How Two Persian Gulf Nations Turned The US Media Into Their Battleground,,NEUTRAL ,NEUTRAL ,,
+111,bu4tuq,RUSSIA,U.S. to boycott flagship Russian investment forum over detained investor,,ECONOMIC,ECONOMIC,,
+112,6jb8vz,CHINA,Chinese Eat Baby Soup for Sex One Baby Policy Blamed for Killing Babies in China,,NEUTRAL ,NEUTRAL ,,
+113,7tn572,RUSSIA,Hundreds detained as protesters in Russia call for election boycott,,HUMANITARIAN,HUMANITARIAN,,
+114,eheui3,CHINA,Chinese metal mines feed the global demand for gadgets. They’re also poisoning China’s poorest regions.,,NEUTRAL ,NEUTRAL ,,humanitarian일 가능성?
+115,a9vd07,RUSSIA,Russia says Israeli strikes on Syria THREATened two civilian flights,,애매하다 중립 위협 중,NEUTRAL ,,
+116,brm9yz,NK,A 'fool of low IQ': North Korea derides US presidential candidate Joe Biden - CNN,,DIPLOMACY,DIPLOMACY,,
+117,8ql6ao,NK,4 winners and 4 losers from the Trump-Kim summit in Singapore,,DIPLOMACY,DIPLOMACY,,
+118,7ewn7r,RUSSIA,RUSSIA CLAIMS U.S. SUPPORTING 'TERRORISM' INSTEAD OF FIGHTING ISIS IN SYRIA,[deleted],DIPLOMACY,DIPLOMACY,,
+119,7gfz8u,NK,America Is Not Going to Denuclearize North Korea,,DIPLOMACY,DIPLOMACY,,
+120,ea6rev,CHINA,Schumer: Trump 'sold out' on China trade deal,,ECONOMIC,ECONOMIC,,
+121,a32s2i,RUSSIA,NATO allies say Russia is violating nuclear pact,,DIPLOMACY,DIPLOMACY,,
+122,8k0cbg,CHINA,US to give 'regular ARMS SALES' to Taiwan to help fight China as tensions continue to RISE,[deleted],DIPLOMACY,THREAT,,무기를 배치하는거라고 봐야하는걸까?
+123,bxj4vd,NK,"In response to North Korean missiles, Trump creates his own reality",,THREAT,THREAT,,
+124,5skogf,IRAN,Iran's Supreme Leader Ayatollah Khamenei says Donald Trump is showing 'the real face of America',,DIPLOMACY,DIPLOMACY,,
+125,7l0hpb,RUSSIA,Russia working on defensive measures to counter possible new U.S. sanctions - Kremlin,,ECONOMIC,ECONOMIC,,
+126,c6ggnp,RUSSIA,"Western liberalism is obsolete, warns Putin, ahead of May meeting",,DIPLOMACY,DIPLOMACY,,
+127,8gyd8r,CHINA,"For U.S. and China, Lasers and Missiles Heighten Military Tensions",,THREAT,THREAT,,
+128,73nqzd,NK,Trump Tillerson 'wasting time' negotiating with North Korea,,DIPLOMACY,DIPLOMACY,,
+129,d5y5ax,IRAN,Trump says he has ordered substantial increase of Iran sanctions,,ECONOMIC,ECONOMIC,,
+130,aktx8s,RUSSIA,A Trump insider got a board position right after the US lifted sanctions on a Russian company,,ECONOMIC,ECONOMIC,,
+131,bvy80j,CHINA,Majority sees Taiwan and China as separate: study,,NEUTRAL ,NEUTRAL ,,
+132,bfeqaj,RUSSIA,Ex-CIA agent demolishes Trump defender's talking point that Obama was to blame for Russian hacking,[deleted],NEUTRAL ,NEUTRAL ,,
+133,6lly73,RUSSIA,Trump tells Russia to stop 'destabilising' Ukraine,,DIPLOMACY,DIPLOMACY,,
+134,atxovw,RUSSIA,The US military hid its counter intelligence operations against Russian meddling in elections from Trump’s White House.,,NEUTRAL ,NEUTRAL ,,사실 서술에 느낌?
+135,7sj0g3,RUSSIA,Rex Tillerson: Russia bears responsibility for Syria chemical attacks,,THREAT,THREAT,,
+136,7mbm4f,IRAN,Propaganda Aiming to Prove Iran Supplied Missiles Backfires (Scott Ritter),,NEUTRAL ,NEUTRAL ,,
+137,c04v56,RUSSIA,Private armies and secret deals: Russia's drive into Africa – podcast,,NEUTRAL ,THREAT,,러시아의 군사 작전의 확장 개념인데 대상이 서방국가들이라고 봐야하는걸까
+138,b2i1s7,RUSSIA,Trump appears to claim UK invented Russia interference in 2016 election to 'bait' US into taking its side | The Independent,,NEUTRAL ,NEUTRAL ,,
+139,711zjd,CHINA,Trump's Trade Chief Calls China an Unprecedented THREAT to World Trade - Breitbart,,ECONOMIC,ECONOMIC,,
+140,e3muip,CHINA,Beijing condemn Italy's PMs for talking with Wong (HK activist),,DIPLOMACY,DIPLOMACY,,
+141,6bs203,RUSSIA,Robert Mueller appointed special counsel to oversee probe into Russia's interference in 2016 election,,NEUTRAL ,NEUTRAL ,,
+142,dzhpuj,IRAN,Iran protests: Rouhani claims victory against 'enemy' after crackdown,[deleted],HUMANITARIAN,HUMANITARIAN,,
+143,blfxht,RUSSIA,Syrian militants rocket Russian airbase in Syria - Russian military,,THREAT,THREAT,,
+144,90fm55,RUSSIA,"Russian Electoral Intervention: Strategic Genius or Something Else? - Dan Nexon argues that Moscow’s decision to back Trump was a risky gamble. Even though Trump managed to win and is damaging American power, leadership, and influence, this may very well harm Russia's interests in the long-term.",,NEUTRAL ,NEUTRAL ,,
+145,booqpq,IRAN,Iran’s Khamenei says ‘there is not going to be any war’ with US,[deleted],DIPLOMACY,DIPLOMACY,,
+146,702di7,RUSSIA,"Russia kicks off war games with Belarus as U.S., NATO watch anxiously",,THREAT,THREAT,,
+147,c6y034,RUSSIA,Turkey's Erdogan says U.S. will not impose sanctions over Russian missile deal,,DIPLOMACY,DIPLOMACY,,터키의 외교행위자가 두 국가에 대해서 한말이라 애매함.
+148,b376mz,NK,President Trump Just Sidelined His Own Top North Korea Negotiator,,NEUTRAL ,NEUTRAL ,,
+149,c305dh,RUSSIA,Noam Chomsky: The Real Election Meddling Isn't Coming From Russia,,NEUTRAL ,NEUTRAL ,,
+150,66t0en,NK,[Press Release] Tillerson: 'This deal (JCPOA) represents the same failed approach of the past that brought us to the current imminent THREAT we face from North Korea. The Trump administration has no intention of passing the buck to a future administration on Iran'.,,DIPLOMACY,DIPLOMACY,,"적으로 규정하는거를 Diplomacy로 해줘야할지 모르겠어 적이나 테러 행위자로 규정을 한다는건 ,,,외교인거 같기도 하고 ㅋㅋ"
+151,9pme8p,RUSSIA,Russia vs NATO...The world war 3 is coming soon???,,NEUTRAL ,NEUTRAL ,,
+152,7vp998,CHINA,Trump said he’d shrink the trade deficit with China. It just hit a record high.,,NEUTRAL ,ECONOMIC,,"관세를 부과하겟다고 한거는 아니지만 관세나 경제 제재를 통한 성과를 이야기 하고 있어서,, 근데 neutral도 될거 같기도 하고"
+153,cr2x8c,NK,North Korea fires more projectiles and says talks with 'impudent' South Korea are over,,THREAT,THREAT,,
+154,ae0ke9,CHINA,Can the Land of a Million Elephants Survive the Belt and Road? - Chinese-funded projects in Laos could hasten the eradication of the elephant population.,,ECONOMIC,ECONOMIC,,환경의 측면에서 humanitarian도 고려
+155,79wmc2,NK,Tunnel collapse may have killed 200 after North Korea nuclear test: reports,,NEUTRAL ,HUMANITARIAN,,터널의 붕괴로 북한 노동자의 사망을 다루고 있어서 고려 필요.
+156,5tyzm2,NK,Is it likely that North Korea's missile test on Sunday was an intelligence gathering exercise aimed at the mar-a-lago meeting with President Trump and PM Shinzo Abe?,[removed],NEUTRAL ,NEUTRAL ,,
+157,bbp3ot,IRAN,"Trump's business connections to IRGC reemerge, a day after he called it a terrorist organisation",,NEUTRAL ,NEUTRAL ,,
+158,eawlqb,NK,North Korea calls Trump a 'heedless and erratic old man',,DIPLOMACY,DIPLOMACY,,
+159,7foknf,RUSSIA,"RUSSIA HAS DEPLOYED THOUSANDS OF TANKS, TROOPS TO UKRAINE, TOP OFFICIAL SAYS",,THREAT,THREAT,,
+160,dcccl3,RUSSIA,Putin jokes that Russia will meddle in 2020 US elections,,NEUTRAL ,NEUTRAL ,,
+161,dyqdq4,CHINA,"Anonymous Hacks China As Chinese Military Moves On Hong Kong, Students Trapped at Polytechnic University - Activist Post",,NEUTRAL ,HUMANITARIAN,,
+162,e9jj6n,CHINA,"Beijing’s policies uniting US interest groups – against China, veteran diplomat Christopher Hill warns",,DIPLOMACY,NEUTRAL ,,
+163,7qbqxx,CHINA,China shuts Marriott's website over Tibet and Taiwan error,,NEUTRAL ,ECONOMIC,,
+164,bspbvl,CHINA,Did China overlook ideological differences? The democratic world is teaming up on the CCP,"I was very skeptical of Trump, that China will come out on top of this trade war, with Europe and Canada being more pro-China. However it doesn't seem like the case. Both US and China are suffering from trade war but I do believe China is suffering more. My Chinese stocks are going down and I sold them all. The problem is China is simply too reliant on foreign markets in order to function effectively.
+
+&#x200B;
+
+Despite the desire for free trade, it seems like the EU and Canada and Australia and being pro-US despite it not benefiting their economies. A good example is the Canadian ban on Huawei, it will help the Canadian tech industry a lot, the security of alliance with US trumps it. Australian politicians are growing more and more worried about China despite it being such a large partner with China.
+
+If you have been watching comments by Steve Bannon, this is purely ideological not diplomatic. Men like Bannon hate the fact China is a command economy and rising. China is not a huge THREAT on American security, but a THREAT on the American identity *of what nation should be* and democracies from Japan to Germany are supporting America on this.
+
+This is not a ""raw raw China bad"" post but it shows a alternative-realist perspective where it is not only about ECONOMICs, but a fight for identity and cultural power. US is at a point where it doesn't need Mid-East oil, it has automation to replace foreign workers and factories, and has a fairly self-sufficient tech industry. The anti-China actions represents a ideological battle than a battle for resources.",NEUTRAL ,NEUTRAL ,,
+165,6xpou6,NK,Sources claim that North Korea has developed a Hydrogen bomb and is capable of attaching it to an ICBM.,[deleted],THREAT,THREAT,,
+166,ecwbk2,RUSSIA,Navy Admiral: Russian Submarine Activity Highest US Has Seen In a Long Time,[deleted],THREAT,THREAT,,
+167,bn8aj6,IRAN,"DONALD TRUMP CAN’T MAKE A DEAL: U.S. TRIES AND FAILS WITH IRAN, NORTH KOREA AND CHINA",,NEUTRAL ,NEUTRAL ,,
+168,dt3dm5,CHINA,"China and the US agree to roll back tariffs in phases, Chinese official says",,DIPLOMACY,ECONOMIC,,
+169,d50vx6,IRAN,Trump’s tough talk on Iran is just bluster – and Iran’s Revolutionary Guards are running rings round him,,NEUTRAL ,NEUTRAL ,,
+170,6ymurq,RUSSIA,Nato accuses Russia of blocking observation of massive war game | World news,,DIPLOMACY,DIPLOMACY,,
+171,7wlsyr,IRAN,"Iran’s Foreign Ministry rejected as “ridiculous” reports that Israel had intercepted an Iranian drone launched from Syria on Saturday, state TV reported",,DIPLOMACY,DIPLOMACY,,
+172,b59ae3,IRAN,"France bans Iran's Mahan Air for flying arms, troops to Syria, elsewhere",,NEUTRAL ,NEUTRAL ,,경제 제재로 봐야하나
+173,a5dgd3,NK,Canadian warship HMCS Calgary witnesses potential violations of North Korea sanctions,,NEUTRAL ,NEUTRAL ,,
+174,6myf0a,RUSSIA,Siemens to press charges after turbines moved from Russia to Crimea,,NEUTRAL ,NEUTRAL ,,
+175,a6p4l0,IRAN,Vahid Sayadi Nasiri died in an Iranian prison after a 60-day hunger strike. He had been given an 8-year sentence for a Facebook post criticizing Supreme Leader Ayatollah Ali Khamenei.,,HUMANITARIAN,HUMANITARIAN,,
+176,dfrqtk,CHINA,U.S. to issue licenses for supply of non-sensitive goods to Huawei: NYT,,ECONOMIC,ECONOMIC,,
+177,7667v1,IRAN,Iran nuclear deal: Trump decertifies Obama-era agreement accusing Tehran of spreading 'destruction and chaos',,DIPLOMACY,DIPLOMACY,,
+178,7pf6g5,NK,South Korea’s Leader Credits Trump for North Korea Talks,,DIPLOMACY,DIPLOMACY,,
+179,e20m70,IRAN,"Iran Is Getting Closer to a Nuclear Bomb, Thanks to Trump",[deleted],THREAT,THREAT,,
+180,5y00dq,IRAN,Trump Organization Struck Deal With Azerbaijani Oligarch Tied to Iran's Revolutionary Guard,,NEUTRAL ,NEUTRAL ,,
+181,anywo7,NK,U.N. grants sanctions exemptions for HUMANITARIAN aid to North Korea,[deleted],ECONOMIC,ECONOMIC,,
+182,6u5ata,RUSSIA,"In Ukraine, a Malware Expert Who Could Blow the Whistle on Russian Hacking",[deleted],NEUTRAL ,NEUTRAL ,,
+183,8lsw1d,NK,Trump cancels Singapore summit with North Korea,[deleted],DIPLOMACY,DIPLOMACY,,
+184,602x0a,CHINA,"Tillerson in Beijing set to talk on North Korea, South China Sea",,DIPLOMACY,DIPLOMACY,,
+185,6hd7he,CHINA,South China sea: US &amp; China return to 'business as usual' over war ship,,DIPLOMACY,DIPLOMACY,,
+186,db6kvn,IRAN,What are the chances of the Trump administration normalizing relations with Iran to ease tensions?,"[https://prospect.org/world/trump-accidentally-triggering-reconciliation-middle-east/](https://prospect.org/world/trump-accidentally-triggering-reconciliation-middle-east/)
+
+>By signaling, albeit inadvertently, that America wisely lacks the  appetite for a war of choice—or even worse, a war on behalf of Saudi  Arabia and the UAE—with Iran, Trump may have opened a window of  opportunity for indigenously driven DIPLOMACY in the region by simply  stepping aside.
+
+[https://nationalinterest.org/blog/middle-east-watch/how-america-has-fought-iran%E2%80%99s-wars-middle-east-81556](https://nationalinterest.org/blog/middle-east-watch/how-america-has-fought-iran%E2%80%99s-wars-middle-east-81556)
+
+>The irony of all this is, in the last thirty years, America has fought  Iran’s wars and mopped up Iran’s enemies, significantly ensuring the  survival of the Mullahs.
+
+[https://www.haaretz.com/middle-east-news/iran/u-s-offered-to-remove-all-sanctions-in-exchange-for-talks-iran-s-rohani-says-1.7915191](https://www.haaretz.com/middle-east-news/iran/u-s-offered-to-remove-all-sanctions-in-exchange-for-talks-iran-s-rohani-says-1.7915191)
+
+>The United States offered to remove all sanctions on Iran in exchange  for talks but Tehran has not yet accepted the offer due to the current  ""toxic atmosphere"", Iranian President Hassan Rohani said on Friday.  
+>  
+>However, U.S. President Donald Trump has since negated Rohani in a  tweet, claiming the Iranians asked him to lift the sanctions in order to  meet, and he refused.
+
+It looks to me like Iran is in a much better condition than the US for diplomatic negotiations. Following the removal of the Iran deal, most major nations have ignored America's sanctions and maintained trade with them, therefore undermining US leverage. If that's the case, could the Trump administration intentionally or unintentionally setting up the stage for Iran to have stronger leverage in future diplomatic talks? Could this administration possibly lead to the opening of diplomatic doors on Iran's part?",DIPLOMACY,NEUTRAL ,,"질문형이라 외교, 중립"
+187,eadqdo,CHINA,"Hong Kong, China stock markets soar after reports of Trump signing off trade deal",,ECONOMIC,ECONOMIC,,
+188,bmnwiz,IRAN,"EU urges Iran to respect nuclear deal, regrets US sanctions",,DIPLOMACY,DIPLOMACY,,
+189,a97w72,IRAN,AP Fact Check: Trump recycles fictions about Iran deal,,NEUTRAL ,NEUTRAL ,,
+190,7cgbdc,NK,"SNL': Michael Che Calls Trump ""Vain and Catty"" Over Kim Jong Un Tweet",,NEUTRAL ,NEUTRAL ,,
+191,6pfpzm,RUSSIA,Baghdad seeking ‘substantial’ Russian military & political presence in Iraq – vice-president — RT News,,DIPLOMACY,DIPLOMACY,,
+192,c0entx,IRAN,U.S. releases video it says shows Iran's military recovering mine,,DIPLOMACY,DIPLOMACY,,
+193,cl2hgj,IRAN,World War 3: Trump on brink of new arms race as Russia and US break nuclear weapon deal,[deleted],NEUTRAL ,NEUTRAL ,,핵무기 조약을 파기 하는건데
+194,7m5ldr,RUSSIA,U.S. Decision to Send Lethal Arms to Ukraine Signals Tougher Stance on Russia,[deleted],NEUTRAL ,THREAT,,무기제공
+195,ahi1wf,RUSSIA,"In a rare move, Mueller’s office denies BuzzFeed report that Trump told Cohen to lie about Moscow project",[deleted],NEUTRAL ,NEUTRAL ,,
+196,c7x12e,IRAN,Iran breaches uranium stockpile limit set by nuclear deal,,THREAT,THREAT,,
+197,c3hp9c,IRAN,U.S. and Iran increased hostility,[removed],THREAT,THREAT,,
+198,dpkmvn,NK,DPRK fires unidentified projectile towards East Sea: S.Korea,,THREAT,THREAT,,
+199,dk0ad9,CHINA,Why Trade Wars Are Inevitable,,ECONOMIC,ECONOMIC,,중립이랑 헷갈림
+200,5uivlf,CHINA,"Climate driven migration key topic for G20 summit: The foreign ministers of the G20 are in Bonn to discuss sustainable development. With uncertainty over the Trump administration’s policies, China is seen as a possible new leader.",[deleted],DIPLOMACY,HUMANITARIAN,,외교랑 기후변화랑 뭐가 중점인지 헷갈림
+201,ebq8i9,CHINA,Taiwan YouTuber loses China business over Tsai interview,[deleted],NEUTRAL ,ECONOMIC,,경제제재랑 중립 중 헷갈림
+202,cfnx98,CHINA,China’s inflated its population numbers to hide the harmful legacy of its family planning policy,[deleted],NEUTRAL ,NEUTRAL ,,
+203,7t1gfb,NK,"North Korea shipped coal to Russia last year which was then delivered to South Korea and Japan in a likely violation of U.N. sanctions, three Western European intelligence sources said.",,NEUTRAL ,ECONOMIC,,sanction 관련된거라
+204,67nw4s,NK,"North Korea’s nukes are a long-term worry, not an immediate crisis. Trump’s belligerence could change that.",,NEUTRAL ,NEUTRAL ,,
+205,7nf4zg,NK,"Kim Jong Un urges mass production of nukes, says North Korea ready for war",[deleted],THREAT,THREAT,,
+206,c6r5vo,NK,Trump offers to meet North Korean leader Kim Jong Un in DMZ,,DIPLOMACY,DIPLOMACY,,
+207,8vapd4,IRAN,"Iran will allow private companies to export crude oil, part of a strategy to counter US sanctions, and is urging fellow OPEC members, including regional rival Saudi Arabia, not to break output agreements",,ECONOMIC,ECONOMIC,,
+208,8iks9i,IRAN,Putin given Israeli PM Netanyahu the green light to hit Iran in Syria.,[deleted],DIPLOMACY,THREAT,,
+209,eejl78,NK,Xi urges progress in North Korea-US talks,,DIPLOMACY,DIPLOMACY,,
+210,bh7w2g,RUSSIA,Mr. Latecomer' Putin shows up ahead of time for summit with Kim | Yonhap News Agency,,DIPLOMACY,DIPLOMACY,,
+211,774scj,IRAN,"""US Sees IRGC as Main Reason behind Its Regional Failure"": An Iranian general says",,NEUTRAL ,NEUTRAL ,,
+212,b66i1f,RUSSIA,Trump’s Call for Russian Hacking Makes Even Less Sense After Mueller ; Many Americans have become numb to the president’s rhetoric. But his infamous plea to the Kremlin is still inexplicable.,,NEUTRAL ,NEUTRAL ,,
+213,c7zy9s,IRAN,EU powers resist calls for Iran sanctions after breach of nuclear deal,,DIPLOMACY,DIPLOMACY,,
+214,b1g3lz,NK,North Korea may suspend nuclear talks with 'gangster-like' U.S.: diplomat,,DIPLOMACY,DIPLOMACY,,
+215,avu7q3,NK,"North Korea’s foreign minister says country seeks only partial sanctions relief, contradicting Trump",[deleted],NEUTRAL ,DIPLOMACY,,
+216,9bsb8a,NK,Japan defence ministry seeks record budget over North Korea THREAT,,NEUTRAL ,THREAT,,군사력 증강
+217,9gnclo,RUSSIA,"Turkey, Russia agree on demilitarized zone in Syria's Idlib",,DIPLOMACY,DIPLOMACY,,
+218,5wdjys,IRAN,Iran Begins Navy Drill off Strait of Hormuz As US Newly Cautious,,THREAT,THREAT,,
+219,7yo0rm,CHINA,"Philippine President Rodrigo Duterte sought on Monday to allay fears about China’s construction of military bases on manmade islands in the South China Sea, saying these were built to defend against America rather than confront neighboring states",,DIPLOMACY,DIPLOMACY,,
+220,5tir5d,NK,North Korea 'conducts missile test',,THREAT,THREAT,,
+221,acnstf,RUSSIA,NASA head rescinds invite to Russian official sanctioned by Washington,,DIPLOMACY,DIPLOMACY,,
+222,dmw2u2,CHINA,BMW CEO says trade war could cost U.S. jobs,,ECONOMIC,ECONOMIC,,
+223,9tm7g3,RUSSIA,US has plan to cyberattack Russia if it interferes in midterms: report,,THREAT,THREAT,,
+224,7h5ul2,RUSSIA,Leaked White House Transition Emails: Russia Threw U.S. Election for Trump,,NEUTRAL ,NEUTRAL ,,
+225,76tb3n,IRAN,President Donald Trump Delivers Statement on IRAN NUCLEAR DEAL- DECERTIFIED THE DEAL???,,DIPLOMACY,DIPLOMACY,,
+226,c3hg9s,RUSSIA,Putin temporarily blocks passenger flights to Georgia,,NEUTRAL ,NEUTRAL ,,항공편 제한을 경제로 볼것인지 중립으로 볼것인지
+227,9eeopu,NK,North Korea Cuts ICBMs Out of Military Parade,,NEUTRAL ,DIPLOMACY,,
+228,ebnvsh,NK,"China, Russia propose lifting of some U.N. sanctions on North Korea",,DIPLOMACY,DIPLOMACY,,
+229,ebnvsh,RUSSIA,"China, Russia propose lifting of some U.N. sanctions on North Korea",,DIPLOMACY,DIPLOMACY,,
+230,dft0lz,IRAN,Iran constructing power plant in Syria’s Latakia,,NEUTRAL ,NEUTRAL ,,경제 재건 도와주는 rhetoric으로 봐야할지
+231,awghcs,NK,Otto Warmbier: Parents of man tortured in North Korea condemn Trump's 'lavish praise' for Kim Jong-un,,NEUTRAL ,NEUTRAL ,,
+232,6gskoc,CHINA,China vs Japan 2017 - Who Would Win - Army / Military Comparison,,NEUTRAL ,NEUTRAL ,,
+233,7spv32,RUSSIA,U.S. Sanctions Would Be ‘ECONOMIC War’ to Head of Russia’s VTB,,ECONOMIC,ECONOMIC,,
+234,884u61,RUSSIA,Ukrainian Naftogaz may request an arrest of shares of Nord Stream I and II,,NEUTRAL ,NEUTRAL ,,
+235,bqxo3s,CHINA,One-third of EU firms hit hard by US-China trade war,,ECONOMIC,ECONOMIC,,
+236,84zsdm,CHINA,Report concludes hefty tariffs on China could cost US economy billions,,ECONOMIC,ECONOMIC,,
+237,6w1y2u,NK,"North Korea has launched what may be another ballistic missile, South Korean military says",[deleted],THREAT,THREAT,,
+238,ck5j33,CHINA,"China to stop issuing visas for mainlanders to travel to Taiwan, as tensions mount",,NEUTRAL ,NEUTRAL ,,
+239,6w4ch4,IRAN,US sanction on Iran leads Apple to remove popular Iranian apps from the App Store,,ECONOMIC,ECONOMIC,,
+240,c3vx2p,NK,North Korea’s Kim Jong Un received an ‘excellent’ letter from Trump: State media,,DIPLOMACY,DIPLOMACY,,
+241,8tgne7,CHINA,"Authorities in the eastern Chinese province of Jiangsu on Friday struggled to contain growing protests by at least 1,000 People's Liberation Army (PLA) veterans enraged at the beating of a fellow veteran earlier this week.",,HUMANITARIAN,HUMANITARIAN,,
+242,dj4gr4,RUSSIA,"It’s curtains for US in Syria. Russia, Iran owe big thanks to Erdogan",,NEUTRAL ,NEUTRAL ,,
+243,6p27e7,CHINA,"As a challenge to China’s ambitious ‘One Belt One Road’ (OBOR) project, India has decided to speed up ‘South Asian Sub-Regional ECONOMIC Cooperation’ (SASEC)",,DIPLOMACY,DIPLOMACY,,어떤걸 경제 어떤걸 외교로 해야할지
+244,e7crwd,CHINA,"Despite the Pressure From the US, Huawei’s Earnings Gets Increased by 24.4 percent",,ECONOMIC,ECONOMIC,,
+245,bxg09p,CHINA,Saudi Arabia’s ballistic missile cooperation with China,,DIPLOMACY,DIPLOMACY,,
+246,8q2o43,NK,"Trump, Kim arrive in Singapore ahead of high-stakes summit | CBC News",[deleted],DIPLOMACY,DIPLOMACY,,
+247,6q5716,IRAN,US hits Iran with more sanctions in response to space launch,[deleted],ECONOMIC,ECONOMIC,,
+248,e0dh0f,CHINA,U.S. 'concerned' China is seeking to sway Taiwan polls,,NEUTRAL ,NEUTRAL ,,
+249,7ntxlb,CHINA,China dismissed a report on a US conservative news website that the Communist Party has a secret plan to provide increased aid and military support to North Korea. “Anyone with common sense can see that the document is fake.”,,NEUTRAL ,NEUTRAL ,,
+250,5uif9y,CHINA,Emoluments in China: Did China successfully try to curry favor with Trump in order to influence “One China” policy?,,NEUTRAL ,NEUTRAL ,,
+251,65h8gs,NK,North Korea defectors launch 'birthday' balloons across DMZ,,NEUTRAL ,NEUTRAL ,,
+252,eb9x74,NK,"US to North Korea: 'We're here, you know how to reach us' Visiting South Korea, US special envoy on North Korea, Stephen Biegun urged the North to return to stalled talks.",,DIPLOMACY,DIPLOMACY,,
+253,9bdgi8,RUSSIA,NATO spokesman: Planned Russia/China war games “demonstrates Russia’s focus on exercising large-scale conflict.”,,DIPLOMACY,THREAT,,군사훈련이지 않나
+254,e4zerq,IRAN,"With Brutal Crackdown, Iran Convulsed by Worst Unrest in 40 Years",,HUMANITARIAN,HUMANITARIAN,,
+255,80hsav,NK,North Korean man hasn't seen his family in 70 years,,HUMANITARIAN,HUMANITARIAN,,
+256,e6a6fb,IRAN,Officials: U.S. Navy seizes suspected Iranian missile parts set for Yemen,,THREAT,THREAT,,
+257,80r3dj,RUSSIA,Trump Still Hasn’t Given the Green Light to Counter Russian Hacking,,NEUTRAL ,NEUTRAL ,,
+258,7lutl3,NK,North Korea says new U.N. sanctions an act of war,,DIPLOMACY,DIPLOMACY,,
+259,7g5sd6,CHINA,"Hillary Clinton, taking a different tone than Trump, hits China on human rights and South China Sea",,DIPLOMACY,DIPLOMACY,,
+260,77dr6p,IRAN,Iran's Ayatollah says Trump is 'foul-mouthed' and 'pretends to be an idiot',,DIPLOMACY,DIPLOMACY,,
+261,c4zwro,CHINA,"Spanish judges 'disgusted' with suspects' claim 'I'm Taiwanese, not Chinese'",[deleted],NEUTRAL ,NEUTRAL ,,
+262,c5707y,IRAN,Iran says new sanctions mean the end of DIPLOMACY,[deleted],DIPLOMACY,DIPLOMACY,,
+263,df2dye,CHINA,"Une faille zero-day repérée sur des smartphones Pixel, Samsung, Huawei et Xiaomi",,NEUTRAL ,NEUTRAL ,,
+264,5u2iin,RUSSIA,Trump Expects Russia to Return Crimea to Ukraine: White House,,DIPLOMACY,DIPLOMACY,,
+265,d03emi,CHINA,African land acquisition - Compete with the Chinese?,"Hi. I have been reading a lot about the chinese land acquisition in Africa, and I am wondering what their end-game is here? 
+
+Which countries are actually safe to buy land in and cultivate?",NEUTRAL ,NEUTRAL ,,아프리카 영토 경쟁 Economic?
+266,dnzqsu,RUSSIA,Russian military undercuts Trump by expressing 'valid doubts about the reality and success' of ISIS raid,[deleted],DIPLOMACY,DIPLOMACY,,
+267,bpe128,IRAN,Iran Says Talks With Trump Possible If U.S. Returns to 2015 Deal,,DIPLOMACY,DIPLOMACY,,
+268,8r7v4d,NK,North Korea reportedly makes a 'major' denuclearization step for Trump,,DIPLOMACY,DIPLOMACY,,
+269,ddgk6s,IRAN,"Iranian hackers targeted US 2020 campaign, says Microsoft",,NEUTRAL ,NEUTRAL ,,선거개입 을 위협으로 봐야하나
+270,96nolk,CHINA,"China Uighurs: One million held in political camps, UN told",,NEUTRAL ,HUMANITARIAN,,위구루 인권?
+271,98tk6o,NK,"No homeless in Pyongyang, says North Korean defector",,NEUTRAL ,NEUTRAL ,,
+272,dc92nt,NK,North Korea May Have Taken Step Toward Submarine-Launched Ballistic Missile - NPR,,THREAT,THREAT,,
+273,7g7z29,NK,North Korea Lunches another ballistic missile,,THREAT,THREAT,,
+274,ehfk3n,IRAN,Pompeo hits out at Iran after deadly US strikes in Iraq and Syria,,THREAT,THREAT,,
+275,8y650c,CHINA,[Video] Xi Jinping's speech to Arab leaders in bid to spread Chinese soft power,,DIPLOMACY,DIPLOMACY,,
+276,a7lnw0,NK,Open Scientific Collaboration May Be Helping North Korea Cheat Nuclear Sanctions,[deleted],NEUTRAL ,NEUTRAL ,,
+277,7gti6x,CHINA,Trump's First Major Trade Fight With China Could Be Over Solar Panels,[deleted],ECONOMIC,ECONOMIC,,
+278,bkfujs,NK,Report: North Korea test fires short range missile,,THREAT,THREAT,,
+279,b6dxjo,NK,Top general warns US may not see a North Korean attack coming,[deleted],THREAT(애매),THREAT,,
+280,7nkv0e,NK,South Korean president welcomes North Korean Olympic participation,,DIPLOMACY,DIPLOMACY,,
+281,6w1sxq,NK,North Korea appears to have fired ballistic missile,,THREAT,THREAT,,
+282,deo2rg,IRAN,Microsoft says Iranian hackers tried to breach a US presidential campaign (Oct 2019),,NEUTRAL ,NEUTRAL ,,선거개입 을 위협으로 봐야하나
+283,dol7jm,NK,Kim Jong Un and North Korea’s Reputations Take Hit After Mt. Kumgang Resort Decision,,NEUTRAL ,NEUTRAL ,,
+284,b8x7m9,RUSSIA,"NATO to Deter Russia in Black Sea With Heightened Surveillance, U.S. Says",,THREAT,THREAT,,
+285,al2g58,RUSSIA,House Democrats aim to hold Russian oligarch linked companies to sanctions deal,,ECONOMIC,ECONOMIC,,
+286,cgiz2w,IRAN,UK working on safe passage in Strait of Hormuz after Iran seizure,,NEUTRAL ,NEUTRAL ,,
+287,7abztv,CHINA,China’s Economy Is Poised to Win the Future,[deleted],ECONOMIC,ECONOMIC,,
+288,7qzk03,CHINA,China says it doesn't need Taiwan's permission to open new air route,,DIPLOMACY,DIPLOMACY,,
+289,5pzxwa,RUSSIA,INSIGHT: How Russia sold its oil jewel — without saying who bought it | Reuters,,ECONOMIC,ECONOMIC,,
+290,dts17e,IRAN,"Pompeo hits Iran on IAEA inspector, amplifies claim of undeclared nuclear materials",,DIPLOMACY,DIPLOMACY,,
+291,6kf547,CHINA,China demands that US cancels arms sale to Taiwan,[deleted],DIPLOMACY,DIPLOMACY,,
+292,acu8vk,CHINA,Taiwan president signals support for UK base in South China Sea,,DIPLOMACY,DIPLOMACY,,
+293,8jj9xl,NK,Satellite images show North Korea dismantling its nuclear test site,,NEUTRAL ,NEUTRAL ,,
+294,efgpsd,IRAN,Iran starts internet shutdown ahead of possible new protests,[deleted],HUMANITARIAN,HUMANITARIAN,,
+295,6mpwxt,CHINA,"China's ambassador to the United States has said reports of trade growth between his country and North Korea, in spite of international efforts to press Pyongyang to give up its nuclear and missile programs, give ""a distorted picture.""",,DIPLOMACY,DIPLOMACY,,Neutral 이랑 헷갈림
+296,bwj5lq,IRAN,"Iran seen as unwavering despite sanctions, US exit from nuclear deal",,NEUTRAL ,NEUTRAL ,,
+297,bcelyx,RUSSIA,"Europe turning to Russia for oil amid US sanctions on Venezuela, Iran",[deleted],ECONOMIC,ECONOMIC,,
+298,8ypxc1,CHINA,Pentagon says China spying on military exercises,,DIPLOMACY,THREAT,,위협을 적시하는것이 뭘까...이건 뭐라고 해야할까
+299,8jotoq,NK,North Korea THREATens to cancel summit with Trump over military drills,,DIPLOMACY,DIPLOMACY,,
+300,bw8vl3,RUSSIA,"Trump tells Syria, Russia to stop bombing rebel-held Idlib",,DIPLOMACY,DIPLOMACY,,
