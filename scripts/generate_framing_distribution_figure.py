@@ -75,14 +75,14 @@ output_dir = Path('/Users/hunjunsin/Desktop/Jun/nk-coercive-diplomacy-reddit/pap
 # Edge framing visualization
 create_grouped_bar_chart(
     edge_data, 
-    'Edge Framing Distribution Across Periods (LLM-classified)',
+    'Edge Framing Distribution Across Periods',
     output_dir / 'fig_framing_distribution.png'
 )
 
 # Community framing visualization  
 create_grouped_bar_chart(
     community_data,
-    'Community Framing Distribution Across Periods (LLM-classified)',
+    'Community Framing Distribution Across Periods',
     output_dir / 'fig_community_framing_distribution.png'
 )
 

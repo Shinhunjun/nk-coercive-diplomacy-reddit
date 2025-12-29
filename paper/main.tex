@@ -1,0 +1,92 @@
+% Main LaTeX file - ICWSM 2025 Paper
+% Based on official AAAI/ICWSM template
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai25}  % DO NOT CHANGE THIS (use submission for anonymous)
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+
+% Additional allowed packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+% \usepackage{stfloats} % Allow figure* at bottom
+
+% Checklist macros
+\newcommand{\answerYes}[1]{\textcolor{blue}{#1}} 
+\newcommand{\answerNo}[1]{\textcolor{teal}{#1}} 
+\newcommand{\answerNA}[1]{\textcolor{gray}{#1}} 
+\newcommand{\answerTODO}[1]{\textcolor{red}{#1}} 
+\usepackage{xcolor} 
+
+% PDF Info
+\pdfinfo{
+/Title (Summit Diplomacy and Social Media Framing)
+/Author (Anonymous Submission)
+/TemplateVersion (2025.1)
+}
+
+\setcounter{secnumdepth}{0} % No section numbers
+
+% Title - Must be in Title Case
+\title{Summit Diplomacy, Framing, and Sentiment: \\
+Causal and Network Analysis of U.S.-North Korea Discourse on Reddit}
+
+% For anonymous submission
+\author{
+    Anonymous Submission
+}
+\affiliations{
+    
+}
+\newif\ifcomment
+\commenttrue
+% \commentfalse
+\ifcomment
+\newcommand{\mohit}[1]{{\bf \textcolor{red}{Mohit: #1}}}
+\newcommand{\jun}[1]{{\bf \textcolor{blue}{Jun: #1}}}
+\else
+\newcommand{\mohit}[1]{}
+\newcommand{\jun}[1]{}
+\fi
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+% Optional: Links to code/data (uncomment for camera-ready)
+% \begin{links}
+%     \link{Code}{https://github.com/...}
+%     \link{Datasets}{https://...}
+% \end{links}
+
+% Main sections
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/method}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% Acknowledgments (uncomment for camera-ready)
+% \section*{Acknowledgments}
+% We thank...
+
+% References
+\bibliography{references}
+
+
+\end{document}
