@@ -69,23 +69,30 @@ def analyze_community_frames(period: str):
         pct = count / len(edges_df) * 100
         print(f"    {frame}: {count} ({pct:.1f}%)")
     
-    # Dominant frame per community (simplified: use community title keywords)
-    threat_keywords = ['military', 'nuclear', 'missile', 'weapon', 'war', 'threat', 'attack']
-    diplo_keywords = ['diplomatic', 'negotiation', 'summit', 'talk', 'agreement', 'peace']
+    # Dominant frame per community based on keyword analysis
+    threat_keywords = ['military', 'nuclear', 'missile', 'weapon', 'war', 'threat', 'attack', 'ballistic', 'strike', 'defense']
+    diplo_keywords = ['diplomatic', 'negotiation', 'summit', 'talk', 'agreement', 'peace', 'dialogue', 'cooperation', 'meeting']
+    econ_keywords = ['sanction', 'economic', 'trade', 'financial', 'bank', 'business', 'market', 'investment']
+    human_keywords = ['humanitarian', 'human rights', 'refugee', 'aid', 'famine', 'prison', 'abuse', 'defector']
     
-    comm_df['frame_label'] = 'NEUTRAL'
-    for idx, row in comm_df.iterrows():
+    def classify_community(row):
         title = str(row.get('title', '')).lower()
         summary = str(row.get('summary', '')).lower()
         text = title + ' ' + summary
         
-        threat_score = sum(1 for kw in threat_keywords if kw in text)
-        diplo_score = sum(1 for kw in diplo_keywords if kw in text)
+        scores = {
+            'THREAT': sum(1 for kw in threat_keywords if kw in text),
+            'DIPLOMACY': sum(1 for kw in diplo_keywords if kw in text),
+            'ECONOMIC': sum(1 for kw in econ_keywords if kw in text),
+            'HUMANITARIAN': sum(1 for kw in human_keywords if kw in text)
+        }
         
-        if threat_score > diplo_score:
-            comm_df.at[idx, 'frame_label'] = 'THREAT'
-        elif diplo_score > threat_score:
-            comm_df.at[idx, 'frame_label'] = 'DIPLOMACY'
+        max_score = max(scores.values())
+        if max_score == 0:
+            return 'NEUTRAL'
+        return max(scores, key=scores.get)
+    
+    comm_df['frame_label'] = comm_df.apply(classify_community, axis=1)
     
     # Community frame distribution
     comm_frame_dist = comm_df['frame_label'].value_counts()
