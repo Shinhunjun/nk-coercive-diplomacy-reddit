@@ -87,7 +87,9 @@ Inter-rater reliability (Cohen's $\kappa$) and LLM-human agreement metrics are r
 %------------------------------------------------------------------------------
 \subsection{Causal Identification}
 
-We estimate the causal impact of summit diplomacy using a Difference-in-Differences (DID) design with North Korea as the treated group and control countries (China, Iran, Russia) as comparisons. This approach follows recent work applying quasi-experimental methods to social media analysis, such as \citet{kumarswamy2025causal}, who used an external platform as a control group to isolate policy effects from confounding offline events. Similarly, we use discourse about other countries as counterfactual comparisons to identify summit-specific effects on North Korea framing.
+We estimate the causal impact of summit diplomacy using a Difference-in-Differences (DID) design with North Korea as the treated group and control countries (China, Iran, Russia) as comparisons. This approach follows recent work applying quasi-experimental methods to social media analysis. Specifically, just as Kumarswamy et al.~\cite{kumarswamy2025} utilized a control platform (Twitter) to isolate Parler's policy effects from concurrent offline events (e.g., the Capitol riot), we leverage multiple control countries to separate the effects of U.S.-North Korea summits from confounding global geopolitical developments.
+
+By using China, Iran, and Russia as counterfactuals, we control for external shocks such as the U.S.-China trade war, JCPOA withdrawal tensions, and the Mueller investigation, respectively. This design ensures that observed changes in North Korea discourse are attributable to summit diplomacy rather than general fluctuations in foreign policy attention or sentiment.
 
 \subsubsection{Difference-in-Differences Specification}
 
