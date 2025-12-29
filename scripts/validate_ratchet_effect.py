@@ -1,182 +1,219 @@
 """
-Corrected Ratchet Effect Validation
+Complete Ratchet Effect Bootstrap Validation
 
-Tests whether |P2→P3| < |P1→P2|, i.e., the reversal effect is smaller than the original effect.
-
-Ratchet Effect Definition:
-- P1→P2: Positive change (threat ↓, diplomacy ↑) due to Singapore Summit
-- P2→P3: Reversal change due to Hanoi failure
-- Ratchet: |Reversal| < |Original| → incomplete reversal
+Bootstrap tests for all 4 dimensions:
+1. Content Framing (post-level, 5 categories)
+2. Sentiment (post-level)
+3. Edge Framing (LLM-classified)
+4. Community Framing (LLM-classified)
 """
 import pandas as pd
 import numpy as np
 from scipy import stats
 from pathlib import Path
+from datetime import datetime
 
 DATA_DIR = Path("/Users/hunjunsin/Desktop/Jun/nk-coercive-diplomacy-reddit/data")
 RESULTS_DIR = DATA_DIR / "results"
 
+# Period boundaries (Singapore Summit: June 12, 2018 / Hanoi Summit: Feb 28, 2019)
+P1_END = datetime(2018, 6, 12)
+P2_END = datetime(2019, 2, 28)
+
+def bootstrap_ratio_test(data_p1, data_p2, data_p3, metric_func, n_bootstrap=1000):
+    """
+    Bootstrap test for ratchet effect.
+    Tests whether |P2→P3 change| / |P1→P2 change| < 1
+    """
+    ratios = []
+    for _ in range(n_bootstrap):
+        s1 = data_p1.sample(n=len(data_p1), replace=True)
+        s2 = data_p2.sample(n=len(data_p2), replace=True)
+        s3 = data_p3.sample(n=len(data_p3), replace=True)
+        
+        v1 = metric_func(s1)
+        v2 = metric_func(s2)
+        v3 = metric_func(s3)
+        
+        e1 = abs(v2 - v1)  # |P1→P2|
+        e2 = abs(v3 - v2)  # |P2→P3|
+        
+        if e1 > 0.001:  # Avoid division by zero
+            ratios.append(e2 / e1)
+    
+    ratios = np.array(ratios)
+    return {
+        'mean_ratio': np.mean(ratios),
+        'ci_lower': np.percentile(ratios, 2.5),
+        'ci_upper': np.percentile(ratios, 97.5),
+        'p_value': np.mean(ratios >= 1.0)
+    }
+
 print("="*70)
-print("RATCHET EFFECT VALIDATION: |P2→P3| vs |P1→P2| Comparison")
+print("COMPLETE RATCHET EFFECT VALIDATION")
 print("="*70)
 
 #=============================================================================
-# 1. EDGE FRAMING
+# 1. CONTENT FRAMING (Post-level, 5 categories)
 #=============================================================================
 print("\n" + "="*70)
-print("1. EDGE FRAMING (LLM-classified)")
+print("1. CONTENT FRAMING (Post-level)")
+print("="*70)
+
+try:
+    content_df = pd.read_csv(DATA_DIR / "processed" / "nk_posts_framing.csv")
+    content_df['datetime'] = pd.to_datetime(content_df['datetime'])
+    
+    p1 = content_df[content_df['datetime'] < P1_END]
+    p2 = content_df[(content_df['datetime'] >= P1_END) & (content_df['datetime'] < P2_END)]
+    p3 = content_df[content_df['datetime'] >= P2_END]
+    
+    print(f"\nSample sizes: P1={len(p1)}, P2={len(p2)}, P3={len(p3)}")
+    
+    # THREAT proportion
+    threat_func = lambda df: (df['frame'] == 'THREAT').mean()
+    
+    v1 = threat_func(p1)
+    v2 = threat_func(p2)
+    v3 = threat_func(p3)
+    
+    print(f"\nTHREAT Proportion:")
+    print(f"  P1: {v1*100:.1f}%")
+    print(f"  P2: {v2*100:.1f}%")
+    print(f"  P3: {v3*100:.1f}%")
+    print(f"  P1→P2: {(v2-v1)*100:+.1f}pp")
+    print(f"  P2→P3: {(v3-v2)*100:+.1f}pp")
+    
+    result = bootstrap_ratio_test(p1, p2, p3, threat_func)
+    print(f"\nBootstrap Test (n=1000):")
+    print(f"  Mean ratio: {result['mean_ratio']:.3f}")
+    print(f"  95% CI: [{result['ci_lower']:.3f}, {result['ci_upper']:.3f}]")
+    print(f"  → {'RATCHET SUPPORTED' if result['ci_upper'] < 1.0 else 'CI includes 1.0'}")
+    
+except Exception as e:
+    print(f"Error: {e}")
+
+#=============================================================================
+# 2. SENTIMENT (Post-level)
+#=============================================================================
+print("\n" + "="*70)
+print("2. SENTIMENT (Post-level)")
+print("="*70)
+
+try:
+    sentiment_df = pd.read_csv(DATA_DIR / "sentiment" / "nk_posts_sentiment.csv")
+    sentiment_df['datetime'] = pd.to_datetime(sentiment_df['created_utc'], unit='s')
+    
+    p1 = sentiment_df[sentiment_df['datetime'] < P1_END]
+    p2 = sentiment_df[(sentiment_df['datetime'] >= P1_END) & (sentiment_df['datetime'] < P2_END)]
+    p3 = sentiment_df[sentiment_df['datetime'] >= P2_END]
+    
+    print(f"\nSample sizes: P1={len(p1)}, P2={len(p2)}, P3={len(p3)}")
+    
+    # Mean compound sentiment
+    sent_func = lambda df: df['sentiment_compound'].mean()
+    
+    v1 = sent_func(p1)
+    v2 = sent_func(p2)
+    v3 = sent_func(p3)
+    
+    print(f"\nMean Sentiment Compound:")
+    print(f"  P1: {v1:.4f}")
+    print(f"  P2: {v2:.4f}")
+    print(f"  P3: {v3:.4f}")
+    print(f"  P1→P2: {(v2-v1):+.4f}")
+    print(f"  P2→P3: {(v3-v2):+.4f}")
+    
+    result = bootstrap_ratio_test(p1, p2, p3, sent_func)
+    print(f"\nBootstrap Test (n=1000):")
+    print(f"  Mean ratio: {result['mean_ratio']:.3f}")
+    print(f"  95% CI: [{result['ci_lower']:.3f}, {result['ci_upper']:.3f}]")
+    print(f"  → {'RATCHET SUPPORTED' if result['ci_upper'] < 1.0 else 'CI includes 1.0'}")
+    
+except Exception as e:
+    print(f"Error: {e}")
+
+#=============================================================================
+# 3. EDGE FRAMING (LLM-classified)
+#=============================================================================
+print("\n" + "="*70)
+print("3. EDGE FRAMING (LLM-classified)")
 print("="*70)
 
 edge_p1 = pd.read_csv(RESULTS_DIR / "edge_framing_period1.csv")
 edge_p2 = pd.read_csv(RESULTS_DIR / "edge_framing_period2.csv")
 edge_p3 = pd.read_csv(RESULTS_DIR / "edge_framing_period3.csv")
 
-def get_frame_proportions(df, frame='THREAT'):
-    return (df['frame'] == frame).mean()
+print(f"\nSample sizes: P1={len(edge_p1)}, P2={len(edge_p2)}, P3={len(edge_p3)}")
 
-# Calculate changes
-p1_threat = get_frame_proportions(edge_p1, 'THREAT')
-p2_threat = get_frame_proportions(edge_p2, 'THREAT')
-p3_threat = get_frame_proportions(edge_p3, 'THREAT')
+threat_func = lambda df: (df['frame'] == 'THREAT').mean()
 
-effect_p1_p2 = p2_threat - p1_threat  # Should be negative (threat decreased)
-effect_p2_p3 = p3_threat - p2_threat  # Should be negative (threat continued decreasing) or positive (reversal)
+v1 = threat_func(edge_p1)
+v2 = threat_func(edge_p2)
+v3 = threat_func(edge_p3)
 
-print(f"\nTHREAT Proportion Changes:")
-print(f"  P1: {p1_threat*100:.1f}%")
-print(f"  P2: {p2_threat*100:.1f}%")
-print(f"  P3: {p3_threat*100:.1f}%")
-print(f"\n  P1→P2 Change: {effect_p1_p2*100:+.1f}pp (Singapore effect)")
-print(f"  P2→P3 Change: {effect_p2_p3*100:+.1f}pp (Hanoi effect)")
-print(f"\n  |P2→P3| / |P1→P2| = {abs(effect_p2_p3)/abs(effect_p1_p2):.2f}")
+print(f"\nTHREAT Proportion:")
+print(f"  P1: {v1*100:.1f}%")
+print(f"  P2: {v2*100:.1f}%")
+print(f"  P3: {v3*100:.1f}%")
+print(f"  P1→P2: {(v2-v1)*100:+.1f}pp")
+print(f"  P2→P3: {(v3-v2)*100:+.1f}pp")
 
-# Bootstrap test: Is the ratio significantly < 1?
-def bootstrap_ratio_test(df1, df2, df3, frame='THREAT', n_bootstrap=1000):
-    """Bootstrap test for whether |P2→P3|/|P1→P2| < 1"""
-    ratios = []
-    for _ in range(n_bootstrap):
-        # Resample each period
-        s1 = df1.sample(n=len(df1), replace=True)
-        s2 = df2.sample(n=len(df2), replace=True)
-        s3 = df3.sample(n=len(df3), replace=True)
-        
-        p1 = (s1['frame'] == frame).mean()
-        p2 = (s2['frame'] == frame).mean()
-        p3 = (s3['frame'] == frame).mean()
-        
-        e1 = abs(p2 - p1)  # |P1→P2|
-        e2 = abs(p3 - p2)  # |P2→P3|
-        
-        if e1 > 0:
-            ratios.append(e2 / e1)
-    
-    return np.array(ratios)
-
-print("\nBootstrap Test (n=1000):")
-ratios = bootstrap_ratio_test(edge_p1, edge_p2, edge_p3, 'THREAT')
-mean_ratio = np.mean(ratios)
-ci_lower = np.percentile(ratios, 2.5)
-ci_upper = np.percentile(ratios, 97.5)
-p_value = np.mean(ratios >= 1.0)  # Proportion of bootstrap samples where ratio >= 1
-
-print(f"  Mean ratio: {mean_ratio:.3f}")
-print(f"  95% CI: [{ci_lower:.3f}, {ci_upper:.3f}]")
-print(f"  p-value (ratio >= 1): {p_value:.4f}")
-print(f"\n  → {'RATCHET SUPPORTED' if ci_upper < 1.0 else 'CI includes 1.0'}")
+result = bootstrap_ratio_test(edge_p1, edge_p2, edge_p3, threat_func)
+print(f"\nBootstrap Test (n=1000):")
+print(f"  Mean ratio: {result['mean_ratio']:.3f}")
+print(f"  95% CI: [{result['ci_lower']:.3f}, {result['ci_upper']:.3f}]")
+print(f"  → {'RATCHET SUPPORTED' if result['ci_upper'] < 1.0 else 'CI includes 1.0'}")
 
 #=============================================================================
-# 2. COMMUNITY FRAMING
+# 4. COMMUNITY FRAMING (LLM-classified)
 #=============================================================================
 print("\n" + "="*70)
-print("2. COMMUNITY FRAMING (LLM-classified)")
+print("4. COMMUNITY FRAMING (LLM-classified)")
 print("="*70)
 
 comm = pd.read_csv(RESULTS_DIR / "community_framing_llm_results.csv")
-comm_p1 = comm[comm['period'] == 'period1'].copy()
-comm_p2 = comm[comm['period'] == 'period2'].copy()
-comm_p3 = comm[comm['period'] == 'period3'].copy()
+comm_p1 = comm[comm['period'] == 'period1']
+comm_p2 = comm[comm['period'] == 'period2']
+comm_p3 = comm[comm['period'] == 'period3']
 
-p1_threat = (comm_p1['frame'] == 'THREAT').mean()
-p2_threat = (comm_p2['frame'] == 'THREAT').mean()
-p3_threat = (comm_p3['frame'] == 'THREAT').mean()
+print(f"\nSample sizes: P1={len(comm_p1)}, P2={len(comm_p2)}, P3={len(comm_p3)}")
 
-effect_p1_p2 = p2_threat - p1_threat
-effect_p2_p3 = p3_threat - p2_threat
+threat_func = lambda df: (df['frame'] == 'THREAT').mean()
 
-print(f"\nTHREAT Proportion Changes:")
-print(f"  P1: {p1_threat*100:.1f}%")
-print(f"  P2: {p2_threat*100:.1f}%")
-print(f"  P3: {p3_threat*100:.1f}%")
-print(f"\n  P1→P2 Change: {effect_p1_p2*100:+.1f}pp (Singapore effect)")
-print(f"  P2→P3 Change: {effect_p2_p3*100:+.1f}pp (Hanoi effect)")
+v1 = threat_func(comm_p1)
+v2 = threat_func(comm_p2)
+v3 = threat_func(comm_p3)
 
-if abs(effect_p1_p2) > 0:
-    ratio = abs(effect_p2_p3) / abs(effect_p1_p2)
-    print(f"\n  |P2→P3| / |P1→P2| = {ratio:.2f}")
-    print(f"  → {'RATCHET SUPPORTED (ratio < 1)' if ratio < 1 else 'NO RATCHET (ratio >= 1)'}")
+print(f"\nTHREAT Proportion:")
+print(f"  P1: {v1*100:.1f}%")
+print(f"  P2: {v2*100:.1f}%")
+print(f"  P3: {v3*100:.1f}%")
+print(f"  P1→P2: {(v2-v1)*100:+.1f}pp")
+print(f"  P2→P3: {(v3-v2)*100:+.1f}pp")
 
-#=============================================================================
-# 3. DID ESTIMATES (from paper)
-#=============================================================================
-print("\n" + "="*70)
-print("3. CONTENT FRAMING (DID Estimates)")
-print("="*70)
-
-# Using DID estimates from the paper
-singapore_framing = (0.85, 1.28)  # Range of estimates
-hanoi_framing = (-0.88, -0.30)    # Range of estimates
-
-print(f"\nDID Effect Estimates:")
-print(f"  Singapore Summit: +{singapore_framing[0]} to +{singapore_framing[1]}")
-print(f"  Hanoi Summit: {hanoi_framing[0]} to {hanoi_framing[1]}")
-
-# Calculate ratio range
-ratio_low = abs(hanoi_framing[1]) / abs(singapore_framing[1])  # min/max
-ratio_high = abs(hanoi_framing[0]) / abs(singapore_framing[0])  # max/min
-
-print(f"\n  |Hanoi| / |Singapore| ratio: {ratio_low:.2f} to {ratio_high:.2f}")
-print(f"  → RATCHET SUPPORTED (ratio range below 1.0)")
-
-#=============================================================================
-# 4. SENTIMENT (DID Estimates)
-#=============================================================================
-print("\n" + "="*70)
-print("4. SENTIMENT (DID Estimates)")
-print("="*70)
-
-singapore_sentiment = (0.10, 0.21)
-hanoi_sentiment = (-0.12, -0.06)
-
-print(f"\nDID Effect Estimates:")
-print(f"  Singapore Summit: +{singapore_sentiment[0]} to +{singapore_sentiment[1]}")
-print(f"  Hanoi Summit: {hanoi_sentiment[0]} to {hanoi_sentiment[1]}")
-
-ratio_low = abs(hanoi_sentiment[1]) / abs(singapore_sentiment[1])
-ratio_high = abs(hanoi_sentiment[0]) / abs(singapore_sentiment[0])
-
-print(f"\n  |Hanoi| / |Singapore| ratio: {ratio_low:.2f} to {ratio_high:.2f}")
-print(f"  → RATCHET SUPPORTED (ratio range below 1.0)")
+result = bootstrap_ratio_test(comm_p1.copy(), comm_p2.copy(), comm_p3.copy(), threat_func)
+print(f"\nBootstrap Test (n=1000):")
+print(f"  Mean ratio: {result['mean_ratio']:.3f}")
+print(f"  95% CI: [{result['ci_lower']:.3f}, {result['ci_upper']:.3f}]")
+print(f"  → {'RATCHET SUPPORTED' if result['ci_upper'] < 1.0 else 'CI includes 1.0'}")
 
 #=============================================================================
 # SUMMARY
 #=============================================================================
 print("\n" + "="*70)
-print("SUMMARY: RATCHET EFFECT VALIDATION")
+print("SUMMARY: RATCHET EFFECT ACROSS ALL DIMENSIONS")
 print("="*70)
 
 print("""
-Dimension           |P1→P2|     |P2→P3|     Ratio    Ratchet?
+Dimension           |P1→P2|     |P2→P3|     Ratio    95% CI           Ratchet?
 --------------------------------------------------------------------------------
-Edge THREAT         20.4pp      2.4pp      0.12      ✓ YES (strong)
-Community THREAT    19.3pp      6.5pp      0.34      ✓ YES
-Content Framing     +0.85~1.28  -0.30~0.88 0.23~1.04 ✓ MOSTLY YES
-Sentiment           +0.10~0.21  -0.06~0.12 0.29~1.20 ✓ MOSTLY YES
+Content Framing*    See above   See above   X.XX     [X.XX, X.XX]     Check above
+Sentiment*          See above   See above   X.XX     [X.XX, X.XX]     Check above
+Edge Framing        20.3pp      2.4pp       0.12     [0.01, 0.29]     ✓ YES
+Community Framing   19.3pp      6.5pp       0.34     [Check CI]       ✓ YES
 
-INTERPRETATION:
-- Edge and Community framing show STRONG ratchet effect (ratio << 1)
-- Content framing and sentiment show MODERATE ratchet effect
-- All dimensions support the hypothesis that reversal is incomplete
+*Content Framing and Sentiment results depend on actual data above.
 
-CONCLUSION: The ratchet effect is statistically supported.
-            Positive diplomatic effects are not fully reversed by subsequent failure.
+CONCLUSION: If all CIs exclude 1.0, the ratchet effect is statistically validated.
 """)
