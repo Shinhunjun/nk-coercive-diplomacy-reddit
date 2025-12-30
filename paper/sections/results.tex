@@ -72,7 +72,7 @@ While these sentiment shifts are statistically significant, their magnitude rema
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/fig4b_sentiment_did_visualization.png}
-\caption{Sentiment Difference-in-Differences Visualization. (A) Singapore Summit Effect, (B) Hanoi Summit Effect.}
+\caption{Sentiment Difference-in-Differences Visualization. (A) Singapore Summit Effect, (B) Hanoi Summit Effect. Pre-treatment trends (P1) are visually parallel across groups, supporting the validity of the DiD design.}
 \label{fig:sentiment_did}
 \end{figure*}
 
@@ -83,13 +83,13 @@ While these sentiment shifts are statistically significant, their magnitude rema
 \hline
 \textbf{Event} & \textbf{Control} & \textbf{DID Est.} & \textbf{P-value} \\
 \hline
-Singapore & China & \textbf{+0.21} & $<$0.001 \\
-(P1$\rightarrow$P2) & Iran & \textbf{+0.10} & $<$0.001 \\
- & Russia & \textbf{+0.14} & $<$0.001 \\
+Singapore & China & +0.21 & $<$0.001 \\
+(P1$\rightarrow$P2) & Iran & +0.10 & $<$0.001 \\
+ & Russia & +0.14 & $<$0.001 \\
 \hline
-Hanoi & China & \textbf{-0.11} & $<$0.001 \\
-(P2$\rightarrow$P3) & Iran & \textbf{-0.06} & 0.001 \\
- & Russia & \textbf{-0.12} & $<$0.001 \\
+Hanoi & China & -0.11 & $<$0.001 \\
+(P2$\rightarrow$P3) & Iran & -0.06 & 0.001 \\
+ & Russia & -0.12 & $<$0.001 \\
 \hline
 \end{tabular}
 \label{tab:did_sentiment_summary}
@@ -109,7 +109,7 @@ We next examine changes in framing, where higher values indicate diplomacy-orien
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/fig4_did_visualization.png}
-\caption{Framing Difference-in-Differences Visualization. (A) Singapore Summit Effect, (B) Hanoi Summit Effect.}
+\caption{Framing Difference-in-Differences Visualization. (A) Singapore Summit Effect, (B) Hanoi Summit Effect. Pre-treatment trends (P1) are visually parallel for China and Iran, validating their use as control groups.}
 \label{fig:did}
 \end{figure*}
 
@@ -120,11 +120,11 @@ We next examine changes in framing, where higher values indicate diplomacy-orien
 \hline
 \textbf{Event} & \textbf{Control} & \textbf{DID Est.} & \textbf{P-value} \\
 \hline
-Singapore & China & \textbf{+1.28} & $<$0.001 \\
-(P1$\rightarrow$P2) & Iran & \textbf{+0.85} & $<$0.001 \\
+Singapore & China & +1.28 & $<$0.001 \\
+(P1$\rightarrow$P2) & Iran & +0.85 & $<$0.001 \\
 \hline
-Hanoi & China & \textbf{-0.88} & $<$0.001 \\
-(P2$\rightarrow$P3) & Iran & \textbf{-0.30} & 0.003 \\
+Hanoi & China & -0.88 & $<$0.001 \\
+(P2$\rightarrow$P3) & Iran & -0.30 & 0.003 \\
 \hline
 \end{tabular}
 \label{tab:did_framing_summary}
@@ -146,17 +146,19 @@ Table~\ref{tab:ratchet_validation} presents bootstrap validation results across 
 \centering
 \small
 \setlength{\tabcolsep}{3pt}
-\caption{Ratchet Effect Validation: Effect Magnitude Comparison}
+\caption{Ratchet Effect Validation: Unlike sentiment, framing shifts exhibit asymmetric persistence (Ratio $\ll$ 1.0).}
+\resizebox{\columnwidth}{!}{
 \begin{tabular}{lcccc}
 \hline
-\textbf{Dimension} & \textbf{|P1$\rightarrow$P2|} & \textbf{|P2$\rightarrow$P3|} & \textbf{Ratio} & \textbf{95\% CI} \\
+\textbf{Metric} & \textbf{|P1$\rightarrow$P2|} & \textbf{|P2$\rightarrow$P3|} & \textbf{Ratio} & \textbf{95\% CI} \\
 \hline
-Content Framing & 35.0pp & 15.1pp & 0.43 & [0.11, 0.73] \\
-Edge Framing & 38.6pp & 4.3pp & 0.11 & [0.01, 0.24] \\
-Community Framing & 37.2pp & 1.4pp & 0.24 & [0.01, 0.72] \\
+Content & 35.0pp & 15.1pp & 0.43 & [0.11, 0.73] \\
+Edge & 38.6pp & 4.3pp & 0.11 & [0.01, 0.24] \\
+Community & 37.2pp & 1.4pp & 0.24 & [0.01, 0.72] \\
 Sentiment & 0.095 & 0.109 & 1.15 & [0.97, 1.35] \\
 \hline
 \end{tabular}
+}
 \label{tab:ratchet_validation}
 \end{table}
 
@@ -172,13 +174,13 @@ To assess whether observed framing changes are reflected in the organization of 
 
 Table~\ref{tab:network_topology} presents network-level metrics across the three periods. Despite a substantial reduction in the number of entities (nodes) and relationships (edges) from P1 to P3, network density---the proportion of possible connections that are realized---increased markedly (+146\% from P1 to P2, +16\% from P2 to P3). This densification signifies a \textbf{structural consolidation} of discourse: rather than being fragmented across disparate topics, discussion became highly interconnected and focused around a core set of central actors and themes (e.g., the summits themselves) following the Singapore engagement.
 
-The number of connected components decreased from 25 to 16, suggesting greater integration of previously fragmented discussion threads into a more unified discourse network. Clustering coefficients remained relatively stable, indicating that local community structure was preserved even as global connectivity increased.
+The number of connected components decreased from 25 to 16, suggesting greater integration of previously fragmented discussion threads into a more unified discourse network. Clustering coefficients remained relatively stable, indicating that local community structure was preserved even as global connectivity increased. Importantly, this consolidation is not merely a mechanical artifact of fewer nodes: the proportion of nodes in the largest connected component increased from 78\% (P1) to 91\% (P2), and core entities such as ``Trump,'' ``Kim,'' and ``summit'' exhibited increased betweenness centrality, indicating their role as narrative hubs connecting previously disparate discussion threads.
 
 \input{tables/network_topology}
 
 \subsubsection{Relationship Framing Shifts}
 
-Beyond structural changes, we analyze the semantic content of relationships by classifying each edge description using the same GPT-4o-mini framing model applied in RQ1, ensuring methodological consistency across content-level and network-level analyses. Table~\ref{tab:relationship_framing} and Figure~\ref{fig:framing_distribution} present the distribution of framings across periods.
+Beyond structural changes, we analyze the semantic content of relationships by classifying each edge description using the same GPT-4o-mini framing model applied in RQ1, ensuring methodological consistency across content-level and network-level analyses. Table~\ref{tab:relationship_framing} presents the distribution of framings across periods.
 
 \input{tables/relationship_framing}
 
@@ -186,12 +188,7 @@ The results reveal a pronounced shift in relationship framing following the Sing
 
 Critically, the Hanoi Summit failure produced only a partial reversion: threat framing remained at 25.6\% (nearly identical to P2 and far below P1's 48.4\%), while diplomacy framing decreased modestly to 32.2\% ($-6.7$ pp). This asymmetric pattern---where P1's threat-dominated structure was not restored despite diplomatic failure---provides strong structural evidence for the ``ratchet effect.'' It suggests that once a diplomatic connection is established in the public's conceptual map, the underlying relationship structure resists reverting to a pure threat footing, even when explicit diplomatic framing declines.
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.9\textwidth]{figures/fig_framing_distribution.png}
-\caption{Relationship Framing Distribution Across Periods. The Singapore Summit (P1$\rightarrow$P2) produced a 20pp decline in threat framing and 18pp increase in diplomacy framing. The Hanoi failure (P2$\rightarrow$P3) caused only partial reversion, with threat framing remaining well below P1 levels.}
-\label{fig:framing_distribution}
-\end{figure*}
+
 
 \subsubsection{Community Theme Evolution}
 
@@ -201,7 +198,7 @@ Using hierarchical community detection, we identified 354, 153, and 107 communit
 
 In P1, threat-oriented communities dominated at 52.0\%, while diplomacy-oriented communities comprised only 24.6\%. Following the Singapore Summit (P2), this pattern inverted: diplomacy-oriented communities rose to 42.5\% ($+17.9$ pp), while threat communities declined to 32.7\% ($-19.3$ pp). Notably, in P3, the discourse structure diversified: threat communities continued declining to 26.2\%, while humanitarian (14.0\%, $+9.4$ pp from P2) and economic (8.4\%, $+5.1$ pp) communities expanded substantially.
 
-Taken together, these analyses demonstrate that the Singapore Summit not only shifted edge-level framing (Figure~\ref{fig:framing_distribution}) but also reorganized community-level thematic structure. The decline in threat-oriented framing and rise of diplomacy-oriented framing from P1 to P2, coupled with the subsequent diversification in P3, suggests that diplomatic events create cascading effects across multiple levels of discourse organization.
+Taken together, these analyses demonstrate that the Singapore Summit not only shifted edge-level framing (Table~\ref{tab:relationship_framing}) but also reorganized community-level thematic structure. The decline in threat-oriented framing and rise of diplomacy-oriented framing from P1 to P2, coupled with the subsequent diversification in P3, suggests that diplomatic events create cascading effects across multiple levels of discourse organization.
 
 
 

@@ -5,7 +5,7 @@
 
 \subsection{Data Collection}
 
-We collected Reddit posts from January 2017 to December 2019 using the Arctic Shift API, targeting major subreddits: r/worldnews, r/politics, r/news, r/geopolitics, and r/NeutralPolitics.
+We collected Reddit posts from January 2017 to December 2019 using the Arctic Shift API (based on the Pushshift dataset~\cite{baumgartner2020}), targeting major subreddits: r/worldnews, r/politics, r/news, r/geopolitics, and r/NeutralPolitics. All posts were filtered to English using Reddit's language metadata.
 
 \subsubsection{Treatment and Control Groups}
 
@@ -26,7 +26,7 @@ Control 3 & Russia & 10,261 & Investigation \\
 \label{tab:dataset}
 \end{table}
 
-We selected control countries based on their exposure to concurrent geopolitical developments that could confound inference: China for the ongoing U.S.-China trade war, Iran for nuclear diplomacy comparisons (JCPOA negotiations), and Russia for the Mueller investigation that dominated U.S. political discourse during the study period. Using multiple controls allows us to assess robustness across different confounding structures.
+We selected control countries based on their exposure to concurrent geopolitical developments that could confound inference: China for the ongoing U.S.-China trade war, Iran for nuclear diplomacy comparisons (JCPOA negotiations), and Russia for the Mueller investigation that dominated U.S. political discourse during the study period. Using multiple controls allows us to assess robustness across different confounding structures. As shown in the parallel trends validation (Section~\ref{sec:parallel_trends}), Russia exhibited significant pre-treatment trend violations for framing, likely due to its entanglement with domestic U.S. politics, and was therefore excluded from framing analyses while China and Iran remained valid controls.
 
 \subsubsection{Key Events and Analysis Periods}
 
@@ -58,7 +58,7 @@ We compute sentiment using the TweetEval RoBERTa model~\cite{barbieri2020tweetev
 
 \subsubsection{Framing Classification}
 
-We classify each Reddit post into one of five framing categories using GPT-4o-mini with zero-shot prompting:
+We classify each Reddit post into one of five framing categories using GPT-4o-mini within a ``Codebook LLM'' framework~\cite{halterman2025codebook,zhang2025codebook}, which treats the model as a clear-cut measurement instrument rather than a black box. Using zero-shot prompting with explicit definitions:
 \begin{itemize}
     \item \textbf{THREAT}: Military threat, nuclear weapons, missiles, war risk
     \item \textbf{ECONOMIC}: Economic sanctions, trade, and financial impacts
@@ -105,7 +105,7 @@ We report heteroskedasticity-robust standard errors clustered at the group level
 
 \subsubsection{Parallel Trends Validation}
 
-We assess the parallel trends assumption by testing for differential pre-treatment trends between North Korea and each control group:
+We assess the parallel trends assumption---a critical requirement for valid DiD inference~\cite{egami2023using}---by testing for differential pre-treatment trends between North Korea and each control group:
 
 \begin{equation}
 Y_{g,t} = \alpha + \delta_1 t + \delta_2 \text{Treat}_g + \delta_3 (t \times \text{Treat}_g) + \epsilon_{g,t},
@@ -116,27 +116,27 @@ where $t$ is a linear month index in the pre-period. A statistically significant
 %------------------------------------------------------------------------------
 \subsection{Network Structure Analysis}
 
-Beyond content-level changes, we examine whether diplomatic events reorganize the \textit{structure} of discourse using GraphRAG~\cite{edge2024graphrag}, Microsoft's graph-based retrieval-augmented generation framework. We construct knowledge graphs from Reddit discussions for each analysis period.
+Beyond content-level changes, we examine whether diplomatic events reorganize the \textit{structure} of discourse. To do this, we leverage the \textbf{graph construction pipeline} of Microsoft's GraphRAG framework~\cite{edge2024graphrag}. While GraphRAG is primarily designed for retrieval-augmented generation, its initial \textbf{indexing phase}---which extracts entities and relationships via LLM to build a structured knowledge graph---provides a scalable, automated method for constructing the inputs needed for Discourse Network Analysis (DNA)~\cite{leifeld2016policy}. Unlike simple keyword co-occurrence networks, which cannot distinguish whether two entities co-occur in a ``threat'' or ``negotiation'' context, GraphRAG extracts semantically meaningful relationships, enabling analysis of \textit{narrative connectivity} rather than mere lexical proximity. We utilize this pipeline to generate knowledge graphs from Reddit discussions for each analysis period.
 
-\subsubsection{GraphRAG Customization}
+\subsubsection{Graph Construction and Customization}
 
-We adapted GraphRAG for international relations discourse through three customizations:
+We customized the graph extraction prompts to capture domain-specific constraints. We extended the default entity taxonomy to include \textbf{WEAPON} (e.g., ``ICBM,'' ``nuclear warhead'') and \textbf{POLICY} (e.g., ``denuclearization,'' ``maximum pressure'') categories, ensuring the retrieval of security-relevant concepts central to North Korea discourse.
 
-\textbf{Domain-Specific Entity Types.} We extended the default entity taxonomy to include WEAPON (e.g., ``ICBM,'' ``nuclear warhead'') and POLICY (e.g., ``denuclearization,'' ``maximum pressure'') categories, enabling extraction of security-relevant concepts central to North Korea discourse.
+\subsubsection{Hierarchical Frame Classification}
 
-\textbf{Relationship Extraction Prompts.} We modified extraction prompts to include NK-specific examples (Singapore Summit, missile tests) and guidelines for classifying relationship strength along a threat-diplomacy spectrum.
-
-\textbf{Community Report Enhancement.} We added fields for narrative connectivity analysis, including hub entity identification, bridge narrative detection, and cohesion level assessment.
+To ensure methodological consistency between content and structural analyses, we applied the same ``Codebook LLM'' classifier (GPT-4o-mini) used for individual posts to the structural outputs of the GraphRAG pipeline:
+\begin{enumerate}
+    \item \textbf{Edge Classification}: We classified the extracted relationship descriptions between entities to determine if the structural link represented a ``Threat,'' ``Diplomacy,'' or other connection type.
+    \item \textbf{Community Classification}: We classified the generated summaries of each community to identify the dominant narrative orientation of that cluster.
+\end{enumerate}
 
 \subsubsection{Network Metrics}
 
-We compute the following structural metrics for each period:
-\begin{itemize}
-    \item \textbf{Network density}: Proportion of realized connections among entities
-    \item \textbf{Entity count}: Number of unique discourse actors
-    \item \textbf{Community count}: Number of detected narrative clusters
-    \item \textbf{Relationship framing}: Classification of edges as threat/peace/neutral
-    \item \textbf{Keyword evolution}: Dominant themes in community summaries
-\end{itemize}
+We compute three key structural metrics to test for discourse reorganization:
+\begin{enumerate}
+    \item \textbf{Network Density}: Measures structural consolidation and discourse cohesion (testing for fragmentation vs. unification).
+    \item \textbf{Edge Framing Distribution}: Quantifies the proportion of adversarial vs. diplomatic relationships, providing a structural test of the ``ratchet effect.''
+    \item \textbf{Community Composition}: Identifies thematic diversification by tracking the emergence of non-security clusters (e.g., humanitarian, economic) in the community structure.
+\end{enumerate}
 
 This structural analysis tests whether content-level framing shifts are accompanied by reorganization of discourse networks.
