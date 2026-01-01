@@ -134,21 +134,21 @@ def create_did_figure(outcome='framing', save_path=None):
             ax.plot(x_pos, [ctrl_p1, ctrl_p2], 's--', color=colors[ctrl], 
                     linewidth=2, markersize=8, label=ctrl, alpha=0.8, zorder=2)
     
-    # Add DID annotations at top-right corner (avoid covering data)
+    # Add DID annotations at left-center area (avoid covering data lines in Panel A)
     for i, ctrl in enumerate(controls):
         if ctrl in did_values['singapore']:
             val = did_values['singapore'][ctrl]
             sign = '+' if val > 0 else ''
-            ax.text(0.98, 0.98 - i*0.07, f'DID ({ctrl}): {sign}{val:.2f}', 
+            ax.text(0.55, 0.98 - i*0.05, f'DiD ({ctrl}): {sign}{val:.2f}', 
                    transform=ax.transAxes, fontsize=9, fontweight='bold',
-                   color=colors[ctrl], verticalalignment='top', horizontalalignment='right',
-                   bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.8))
+                   color=colors[ctrl], verticalalignment='top', horizontalalignment='center',
+                   bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.9))
     
     ax.set_xticks(x_pos)
     ax.set_xticklabels(['P1\n(Pre-Singapore)', 'P2\n(Singapore-Hanoi)'])
     ax.set_ylabel(f'{outcome_title} Score', fontsize=11)
     ax.axvline(0.5, color='gray', linestyle=':', alpha=0.5)
-    ax.grid(True, alpha=0.3)
+    # ax.grid removed for modern style
     
     # Panel B: Hanoi Effect (P2 → P3)
     ax = axes[1]
@@ -175,7 +175,7 @@ def create_did_figure(outcome='framing', save_path=None):
         if ctrl in did_values['hanoi']:
             val = did_values['hanoi'][ctrl]
             sign = '+' if val > 0 else ''
-            ax.text(0.98, 0.98 - i*0.07, f'DID ({ctrl}): {sign}{val:.2f}', 
+            ax.text(0.98, 0.98 - i*0.05, f'DiD ({ctrl}): {sign}{val:.2f}', 
                    transform=ax.transAxes, fontsize=9, fontweight='bold',
                    color=colors[ctrl], verticalalignment='top', horizontalalignment='right',
                    bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.8))
@@ -184,7 +184,7 @@ def create_did_figure(outcome='framing', save_path=None):
     ax.set_xticklabels(['P2\n(Singapore-Hanoi)', 'P3\n(Post-Hanoi)'])
     ax.set_ylabel(f'{outcome_title} Score', fontsize=11)
     ax.axvline(0.5, color='gray', linestyle=':', alpha=0.5)
-    ax.grid(True, alpha=0.3)
+    # ax.grid removed for modern style
     
     # Single legend below the figure (outside graphs)
     handles, labels = axes[0].get_legend_handles_labels()
@@ -213,14 +213,14 @@ def main():
     print("\n1. Generating Figure 4: Framing DID...")
     create_did_figure(
         outcome='framing',
-        save_path=output_dir / 'fig4_did_visualization.png'
+        save_path=output_dir / 'fig4_did_visualization.pdf'
     )
     
     # Figure 4b: Sentiment DID
     print("\n2. Generating Figure 4b: Sentiment DID...")
     create_did_figure(
         outcome='sentiment',
-        save_path=output_dir / 'fig4b_sentiment_did_visualization.png'
+        save_path=output_dir / 'fig4b_sentiment_did_visualization.pdf'
     )
     
     print("\n" + "=" * 70)
