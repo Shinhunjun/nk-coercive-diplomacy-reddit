@@ -1,0 +1,38 @@
+[
+  {
+    "event": "Singapore",
+    "control": "China",
+    "did_estimate": 1.17,
+    "ci_lower": 0.56,
+    "ci_upper": 1.78,
+    "p_value": 0.0027,
+    "significant": "**"
+  },
+  {
+    "event": "Singapore",
+    "control": "Iran",
+    "did_estimate": 0.69,
+    "ci_lower": 0.07,
+    "ci_upper": 1.31,
+    "p_value": 0.0333,
+    "significant": "*"
+  },
+  {
+    "event": "Hanoi",
+    "control": "China",
+    "did_estimate": -0.56,
+    "ci_lower": -1.2,
+    "ci_upper": 0.08,
+    "p_value": 0.0768,
+    "significant": ""
+  },
+  {
+    "event": "Hanoi",
+    "control": "Iran",
+    "did_estimate": -0.16,
+    "ci_lower": -0.83,
+    "ci_upper": 0.51,
+    "p_value": 0.5896,
+    "significant": ""
+  }
+]

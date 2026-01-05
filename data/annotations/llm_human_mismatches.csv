@@ -1,0 +1,114 @@
+﻿post_id,title,human_frame,llm_frame,llm_confidence,notes
+8qxauf,"Trump brushes off Kim's human rights record, saying a lot of others have done 'bad things'",DIPLOMACY,HUMANITARIAN,0.9,평화적 제스쳐? 규탄보단 옹호느낌이라?
+c6tu0a,"Iran may stand down on nuclear threat after Europe, China work to bypass US sanctions",NEUTRAL,DIPLOMACY,0.8,
+9mewxr,"Iran Political Prisoner Hamidreza Amini Issued Long Prison Sentence, Among His Charges Is Two years For “Insulting The Supreme Leader Ali Khamenei.”",NEUTRAL,HUMANITARIAN,0.9,
+b4wgbv,Trump will remove new North Korea-related sanctions because he 'likes' Kim Jong Un,DIPLOMACY,ECONOMIC,0.8,
+6camiw,Trump in Saudi Arabia signs $110B arms deal with Persian Gulf ally,THREAT,ECONOMIC,0.9,무기거래니깐? 거래로 봐야할지 아님 큰 차원에서 threat 봐야할지? 거래의 본질에 군사 rthetoric threat으로 봐야함 
+a0de72,"If Ukraine and Russia go to war, who would join?, should we fear WW3?",NEUTRAL,THREAT,0.85,"이것도 정보전달 중립과 위협 살짝 애매../ 조치의 부재, 질문이라서 neutral"
+e0xl46,Canada warned of fallout on Five Eyes relationship if Huawei allowed on 5G,THREAT,NEUTRAL,0.5,
+dqin3j,China's economy struggles as consumers tighten belts,ECONOMIC,NEUTRAL,0.5,
+7r7rbt,U.S. Strategy Shift in Syria Turns Focus to Iran From ISIS,THREAT,DIPLOMACY,0.8,이것도 전략과 관련되어있으니깐 위협?
+7m0jh2,The rapid development of China ‘s service trade – International Trading Services Company,ECONOMIC,NEUTRAL,0.8,"이것도 큰 범주에서 보면 경제적 위협이긴한데,, 애매하네 일단 좁은 의미로 경제"
+6zt5os,"U.S. will suffer ‘greatest pain’ in wake of latest UN sanctions say North Korea | JoltaNews | Pakistan News - Breaking News - Business News Current Affairs, Politics",THREAT,ECONOMIC,0.9,
+6u80oa,"China military criticises 'wrong' U.S. moves on Taiwan, South China Sea",DIPLOMACY,THREAT,0.85,"이것도 군사적 위협은 아니긴한데,, 비난했으니깐 위협일것 같긴한데 위협의 문제는 군사만 포함하냐 아니면 포괄적 위협이냐가 애매하고 외교는 긍정/부정인지가 애매함"
+7q4rc5,Iran rejects Trump’s demand for changes to Obama-era nuclear deal,DIPLOMACY,THREAT,0.85,61번과 동일사유
+5t8mko,"Trump, Changing Course on Taiwan, Gives China an Upper Hand",NEUTRAL,THREAT,0.8,"이것도 트럼프를 비판하는 내용인데, 중국한테 유리하게 해줬다고 애매하네"
+5v4o90,Kremlin: Russia cannot take Crimea on lease from itself - Russia Beyond the Headlines,DIPLOMACY,NEUTRAL,0.8,
+a7ooir,"'Obama-like mistake': Republicans slam Trump over plan to withdraw troops from Syria, GOP lawmakers say vacuum will empower Russia, Iran and insurgent fighters",NEUTRAL,THREAT,0.85,국내정치치
+d8z3yx,Iraq to join China's Belt and Road project,ECONOMIC,NEUTRAL,0.5,이것도 위협으로 봐야할지 경제로 봐야할지 미국입장에선 이란 중국 협력이 큰 범주에서 위협인데 작은범주에선 그냥 둘이 경제적 협력한거니깐
+8oyfzt,What Does China’s Belt and Road Initiative Mean for US Grand Strategy,THREAT,NEUTRAL,0.8,71번과 동일 애매함. 일단 미국 대전략에 미치는 영향이니깐 이건 위협으로 평가
+c0b03p,"Chinese Cyberattack Hits Telegram, App Used by Hong Kong Protesters",HUMANITARIAN,THREAT,0.85,시위자의 권리
+7aqe61,"Once Formidable, Taiwan's Military Now Overshadowed by China's",NEUTRAL,THREAT,0.9,
+5q0s5f,China-Singapore Commodity and RMB Summit,ECONOMIC,NEUTRAL,0.9,
+6rya5g,North Korea: China urges neighbour to stop missile tests- BBC News,DIPLOMACY,THREAT,0.9,"이것도 애매해, 중국이 북한한테 미사일 시험 그만하라고 한거니깐 전체적인 맥락은 미국한테 긍정적임 근데 이것도 위협이라고 봐야할지? 아니면 그냥 중립으로 해야할지?"
+br4le9,Kushner Received $285M Loan From a Bank Tied To Russia Shortly Before Election:,NEUTRAL,ECONOMIC,0.8,국내 정치 선거 자금.
+d6qyr0,"Trump grants tariff exemptions to plastic straws, dog leashes and more from China - CNBC",ECONOMIC,NEUTRAL,0.5,
+8q1u35,Susan Rice: 'Disgraceful' for Trump to blame Obama for Russia's annexation of Crimea,NEUTRAL,DIPLOMACY,0.7,국내정치
+bv3g2j,"Launched in 2002 and held each year at Singapore's Shangri-La Hotel, the summit is Asia's largest annual defence and security gathering. It seeks to promote bilateral dialogue among sometimes hostile adversaries, and is traditionally attended by delegates from Asia Pacific nations as well as the US.",NEUTRAL,DIPLOMACY,0.9,행사 소개문단이고 조치가 없음.
+6t2ony,"US to designate the IRGC, affiliates as terrorists",DIPLOMACY,THREAT,0.9,"사이버공격, 테러단체 지정, 적으로 규명 이것은 대화인가 물리적 조치는 아니지만 적대 행위로 바야 하는가, -> 테러리스트로 지정 한 행위는 무력적 공격을 가하거나, 신분을 정의함으로써 제재를 가한다."
+7f1h6s,"Syria, Russia & Iran shift to diplomacy, while US and allies push for war | WUC-News",NEUTRAL,DIPLOMACY,0.85,"주가되는 조치가 있다면, 그걸로 framing 동일한 수준으로 상충된다면 neutral"
+74orlj,Qatar holds unmovable U.S. air base in unstoppable conflict with Persian Gulf allies,NEUTRAL,THREAT,0.8,
+85op8q,"The United States, Iran, and the Middle East / Persian Gulf Tango: Past Blunders, Unavoidable Collaboration ← Farazian Focus",NEUTRAL,DIPLOMACY,0.8,"대화의 모먼트인지 아닌지 모르겟음, 하지만 과거에는 분쟁했지만 지금은 협력 한다면 Diplomacy?"
+6jb8vz,Chinese Eat Baby Soup for Sex One Baby Policy Blamed for Killing Babies in China,NEUTRAL,HUMANITARIAN,0.8,
+brm9yz,A 'fool of low IQ': North Korea derides US presidential candidate Joe Biden - CNN,DIPLOMACY,NEUTRAL,0.8,
+8ql6ao,4 winners and 4 losers from the Trump-Kim summit in Singapore,DIPLOMACY,NEUTRAL,0.8,
+7ewn7r,RUSSIA CLAIMS U.S. SUPPORTING 'TERRORISM' INSTEAD OF FIGHTING ISIS IN SYRIA,DIPLOMACY,THREAT,0.8,
+7gfz8u,America Is Not Going to Denuclearize North Korea,DIPLOMACY,THREAT,0.9,
+ea6rev,Schumer: Trump 'sold out' on China trade deal,ECONOMIC,NEUTRAL,0.5,
+a32s2i,NATO allies say Russia is violating nuclear pact,DIPLOMACY,THREAT,0.9,
+5skogf,Iran's Supreme Leader Ayatollah Khamenei says Donald Trump is showing 'the real face of America',DIPLOMACY,NEUTRAL,0.8,
+c6ggnp,"Western liberalism is obsolete, warns Putin, ahead of May meeting",DIPLOMACY,THREAT,0.8,
+6lly73,Trump tells Russia to stop 'destabilising' Ukraine,DIPLOMACY,THREAT,0.85,
+7mbm4f,Propaganda Aiming to Prove Iran Supplied Missiles Backfires (Scott Ritter),NEUTRAL,THREAT,0.9,
+c04v56,Private armies and secret deals: Russia's drive into Africa – podcast,THREAT,DIPLOMACY,0.7,러시아의 군사 작전의 확장 개념인데 대상이 서방국가들이라고 봐야하는걸까
+e3muip,Beijing condemn Italy's PMs for talking with Wong (HK activist),DIPLOMACY,NEUTRAL,0.5,
+c6y034,Turkey's Erdogan says U.S. will not impose sanctions over Russian missile deal,DIPLOMACY,ECONOMIC,0.85,터키의 외교행위자가 두 국가에 대해서 한말이라 애매함.
+b376mz,President Trump Just Sidelined His Own Top North Korea Negotiator,NEUTRAL,DIPLOMACY,0.8,
+66t0en,[Press Release] Tillerson: 'This deal (JCPOA) represents the same failed approach of the past that brought us to the current imminent threat we face from North Korea. The Trump administration has no intention of passing the buck to a future administration on Iran'.,DIPLOMACY,THREAT,0.9,"적으로 규정하는거를 Diplomacy로 해줘야할지 모르겠어 적이나 테러 행위자로 규정을 한다는건 ,,,외교인거 같기도 하고 ㅋㅋ"
+9pme8p,Russia vs NATO...The world war 3 is coming soon???,NEUTRAL,THREAT,0.9,
+7vp998,Trump said he’d shrink the trade deficit with China. It just hit a record high.,NEUTRAL,ECONOMIC,0.9,국내정치.
+ae0ke9,Can the Land of a Million Elephants Survive the Belt and Road? - Chinese-funded projects in Laos could hasten the eradication of the elephant population.,ECONOMIC,HUMANITARIAN,0.85,환경의 측면에서 humanitarian도 고려
+79wmc2,Tunnel collapse may have killed 200 after North Korea nuclear test: reports,HUMANITARIAN,THREAT,0.9,터널의 붕괴로 북한 노동자의 사망을 다루고 있어서 고려 필요.
+5tyzm2,Is it likely that North Korea's missile test on Sunday was an intelligence gathering exercise aimed at the mar-a-lago meeting with President Trump and PM Shinzo Abe?,NEUTRAL,THREAT,0.85,
+bbp3ot,"Trump's business connections to IRGC reemerge, a day after he called it a terrorist organisation",NEUTRAL,ECONOMIC,0.8,
+eawlqb,North Korea calls Trump a 'heedless and erratic old man',DIPLOMACY,THREAT,0.7,
+dcccl3,Putin jokes that Russia will meddle in 2020 US elections,NEUTRAL,THREAT,0.7,
+dyqdq4,"Anonymous Hacks China As Chinese Military Moves On Hong Kong, Students Trapped at Polytechnic University - Activist Post",THREAT,NEUTRAL,0.5,조직대 조직의 영역에서의 공격
+bspbvl,Did China overlook ideological differences? The democratic world is teaming up on the CCP,NEUTRAL,ECONOMIC,0.85,
+bn8aj6,"DONALD TRUMP CAN’T MAKE A DEAL: U.S. TRIES AND FAILS WITH IRAN, NORTH KOREA AND CHINA",NEUTRAL,DIPLOMACY,0.8,
+dt3dm5,"China and the US agree to roll back tariffs in phases, Chinese official says",DIPLOMACY,NEUTRAL,0.5,"더 큰 관점을 무엇으로 둘것인거. 충돌 증감여부가 우선이 되어야 할것 같다. 갈등의 증감여부에서는 diplomacy로 해석 되지만, 키워드 관점에서 봤을때에는 economic의 성향이 강함. 군사적 갈등 및 충돌이 발생할 확률이 증가되는 조치엿나. 그렇지 않은 조치 였나, "
+d50vx6,Trump’s tough talk on Iran is just bluster – and Iran’s Revolutionary Guards are running rings round him,NEUTRAL,THREAT,0.8,
+6ymurq,Nato accuses Russia of blocking observation of massive war game | World news,DIPLOMACY,THREAT,0.85,
+7wlsyr,"Iran’s Foreign Ministry rejected as “ridiculous” reports that Israel had intercepted an Iranian drone launched from Syria on Saturday, state TV reported",DIPLOMACY,NEUTRAL,0.85,
+b59ae3,"France bans Iran's Mahan Air for flying arms, troops to Syria, elsewhere",NEUTRAL,THREAT,0.85,경제 제재로 봐야하나
+a5dgd3,Canadian warship HMCS Calgary witnesses potential violations of North Korea sanctions,NEUTRAL,ECONOMIC,0.85,
+6myf0a,Siemens to press charges after turbines moved from Russia to Crimea,NEUTRAL,ECONOMIC,0.8,
+dfrqtk,U.S. to issue licenses for supply of non-sensitive goods to Huawei: NYT,ECONOMIC,NEUTRAL,0.5,
+7667v1,Iran nuclear deal: Trump decertifies Obama-era agreement accusing Tehran of spreading 'destruction and chaos',DIPLOMACY,THREAT,0.9,
+5y00dq,Trump Organization Struck Deal With Azerbaijani Oligarch Tied to Iran's Revolutionary Guard,NEUTRAL,ECONOMIC,0.8,
+anywo7,U.N. grants sanctions exemptions for humanitarian aid to North Korea,ECONOMIC,HUMANITARIAN,0.9,
+eadqdo,"Hong Kong, China stock markets soar after reports of Trump signing off trade deal",ECONOMIC,NEUTRAL,0.5,
+6pfpzm,Baghdad seeking ‘substantial’ Russian military & political presence in Iraq – vice-president — RT News,DIPLOMACY,THREAT,0.85,
+c0entx,U.S. releases video it says shows Iran's military recovering mine,DIPLOMACY,THREAT,0.9,
+cl2hgj,World War 3: Trump on brink of new arms race as Russia and US break nuclear weapon deal,NEUTRAL,THREAT,0.9,핵무기 조약을 파기 하는건데
+dk0ad9,Why Trade Wars Are Inevitable,ECONOMIC,NEUTRAL,0.5,중립이랑 헷갈림
+5uivlf,"Climate driven migration key topic for G20 summit: The foreign ministers of the G20 are in Bonn to discuss sustainable development. With uncertainty over the Trump administration’s policies, China is seen as a possible new leader.",DIPLOMACY,HUMANITARIAN,0.8,외교랑 기후변화랑 뭐가 중점인지 헷갈림
+ebq8i9,Taiwan YouTuber loses China business over Tsai interview,ECONOMIC,NEUTRAL,0.5,경제제재랑 중립 중 헷갈림
+67nw4s,"North Korea’s nukes are a long-term worry, not an immediate crisis. Trump’s belligerence could change that.",NEUTRAL,THREAT,0.85,
+774scj,"""US Sees IRGC as Main Reason behind Its Regional Failure"": An Iranian general says",NEUTRAL,THREAT,0.8,
+b66i1f,Trump’s Call for Russian Hacking Makes Even Less Sense After Mueller ; Many Americans have become numb to the president’s rhetoric. But his infamous plea to the Kremlin is still inexplicable.,NEUTRAL,THREAT,0.8,
+c7zy9s,EU powers resist calls for Iran sanctions after breach of nuclear deal,DIPLOMACY,ECONOMIC,0.9,
+7yo0rm,"Philippine President Rodrigo Duterte sought on Monday to allay fears about China’s construction of military bases on manmade islands in the South China Sea, saying these were built to defend against America rather than confront neighboring states",DIPLOMACY,THREAT,0.85,
+dmw2u2,BMW CEO says trade war could cost U.S. jobs,ECONOMIC,NEUTRAL,0.5,
+76tb3n,President Donald Trump Delivers Statement on IRAN NUCLEAR DEAL- DECERTIFIED THE DEAL???,DIPLOMACY,THREAT,0.9,
+9eeopu,North Korea Cuts ICBMs Out of Military Parade,DIPLOMACY,NEUTRAL,0.8,"충돌가능성에 기준에서봣을때는 diplomacy, but, neutral도 다른 기준이 적용된다면 가능 그냥 사실 나열일수 도 있음."
+ebnvsh,"China, Russia propose lifting of some U.N. sanctions on North Korea",DIPLOMACY,ECONOMIC,0.8,
+ebnvsh,"China, Russia propose lifting of some U.N. sanctions on North Korea",DIPLOMACY,ECONOMIC,0.8,
+ebnvsh,"China, Russia propose lifting of some U.N. sanctions on North Korea",DIPLOMACY,ECONOMIC,0.8,
+ebnvsh,"China, Russia propose lifting of some U.N. sanctions on North Korea",DIPLOMACY,ECONOMIC,0.8,
+awghcs,Otto Warmbier: Parents of man tortured in North Korea condemn Trump's 'lavish praise' for Kim Jong-un,NEUTRAL,HUMANITARIAN,0.9,
+6gskoc,China vs Japan 2017 - Who Would Win - Army / Military Comparison,NEUTRAL,THREAT,0.85,
+884u61,Ukrainian Naftogaz may request an arrest of shares of Nord Stream I and II,NEUTRAL,ECONOMIC,0.8,
+dj4gr4,"It’s curtains for US in Syria. Russia, Iran owe big thanks to Erdogan",NEUTRAL,DIPLOMACY,0.7,
+6p27e7,"As a challenge to China’s ambitious ‘One Belt One Road’ (OBOR) project, India has decided to speed up ‘South Asian Sub-Regional Economic Cooperation’ (SASEC)",DIPLOMACY,ECONOMIC,0.9,어떤걸 경제 어떤걸 외교로 해야할지
+e7crwd,"Despite the Pressure From the US, Huawei’s Earnings Gets Increased by 24.4 percent",ECONOMIC,NEUTRAL,0.5,
+bxg09p,Saudi Arabia’s ballistic missile cooperation with China,DIPLOMACY,THREAT,0.85,
+5uif9y,Emoluments in China: Did China successfully try to curry favor with Trump in order to influence “One China” policy?,NEUTRAL,ECONOMIC,0.8,
+65h8gs,North Korea defectors launch 'birthday' balloons across DMZ,NEUTRAL,HUMANITARIAN,0.8,
+7lutl3,North Korea says new U.N. sanctions an act of war,DIPLOMACY,THREAT,0.9,
+7g5sd6,"Hillary Clinton, taking a different tone than Trump, hits China on human rights and South China Sea",DIPLOMACY,HUMANITARIAN,0.9,
+77dr6p,Iran's Ayatollah says Trump is 'foul-mouthed' and 'pretends to be an idiot',DIPLOMACY,NEUTRAL,0.8,
+c4zwro,"Spanish judges 'disgusted' with suspects' claim 'I'm Taiwanese, not Chinese'",NEUTRAL,HUMANITARIAN,0.8,
+dnzqsu,Russian military undercuts Trump by expressing 'valid doubts about the reality and success' of ISIS raid,DIPLOMACY,THREAT,0.8,
+ddgk6s,"Iranian hackers targeted US 2020 campaign, says Microsoft",NEUTRAL,THREAT,0.9,선거개입 을 위협으로 봐야하나
+98tk6o,"No homeless in Pyongyang, says North Korean defector",NEUTRAL,HUMANITARIAN,0.8,
+a7lnw0,Open Scientific Collaboration May Be Helping North Korea Cheat Nuclear Sanctions,NEUTRAL,ECONOMIC,0.85,
+deo2rg,Microsoft says Iranian hackers tried to breach a US presidential campaign (Oct 2019),NEUTRAL,THREAT,0.9,선거개입 을 위협으로 봐야하나
+cgiz2w,UK working on safe passage in Strait of Hormuz after Iran seizure,NEUTRAL,DIPLOMACY,0.8,
+7qzk03,China says it doesn't need Taiwan's permission to open new air route,DIPLOMACY,NEUTRAL,0.8,
+dts17e,"Pompeo hits Iran on IAEA inspector, amplifies claim of undeclared nuclear materials",DIPLOMACY,THREAT,0.9,
+6kf547,China demands that US cancels arms sale to Taiwan,DIPLOMACY,THREAT,0.85,
+8jj9xl,Satellite images show North Korea dismantling its nuclear test site,NEUTRAL,THREAT,0.85,
+6mpwxt,"China's ambassador to the United States has said reports of trade growth between his country and North Korea, in spite of international efforts to press Pyongyang to give up its nuclear and missile programs, give ""a distorted picture.""",DIPLOMACY,ECONOMIC,0.8,Neutral 이랑 헷갈림
+bwj5lq,"Iran seen as unwavering despite sanctions, US exit from nuclear deal",NEUTRAL,ECONOMIC,0.9,
+8jotoq,North Korea threatens to cancel summit with Trump over military drills,DIPLOMACY,THREAT,0.9,

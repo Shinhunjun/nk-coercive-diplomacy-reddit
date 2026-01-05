@@ -56,3 +56,10 @@ graphrag/*/logs/
 *.tmp
 *.temp
 *.log
+
+# Large data files
+data/control/*_comments_full.csv
+data/nk/*_comments_full.csv
+data/processed/*_comments_roberta.csv
+data/control/*_comments_*.csv
+

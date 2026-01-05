@@ -88,8 +88,14 @@ def run_did_analysis(treatment_df, control_df, treatment_name, control_name, per
     se_did = np.sqrt(se_t**2 + se_c**2)
     
     # t-statistic and p-value
+    df_val = min(n_t1, n_t2, n_c1, n_c2) - 1
     t_stat = did / se_did if se_did > 0 else 0
-    p_value = 2 * (1 - stats.t.cdf(abs(t_stat), df=min(n_t1, n_t2, n_c1, n_c2) - 1))
+    p_value = 2 * (1 - stats.t.cdf(abs(t_stat), df=df_val))
+    
+    # 95% Confidence Interval
+    t_critical = stats.t.ppf(0.975, df=df_val)
+    ci_lower = did - t_critical * se_did
+    ci_upper = did + t_critical * se_did
     
     # Effect size (Cohen's d)
     pooled_std = np.sqrt((t_p2.var() + c_p2.var()) / 2)
@@ -105,6 +111,8 @@ def run_did_analysis(treatment_df, control_df, treatment_name, control_name, per
         'control_p2_mean': round(c_p2_mean, 4),
         'did_estimate': round(did, 4),
         'se': round(se_did, 4),
+        'ci_lower': round(ci_lower, 4),
+        'ci_upper': round(ci_upper, 4),
         't_stat': round(t_stat, 4),
         'p_value': round(p_value, 4),
         'cohens_d': round(cohens_d, 4),

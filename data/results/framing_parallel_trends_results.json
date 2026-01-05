@@ -1,26 +1,26 @@
 {
   "Iran": {
     "control_group": "Iran",
-    "beta4_treat_time": 0.02666867362263263,
-    "se": 0.025765685599643172,
-    "p_value": 0.3006473602604893,
+    "beta4_treat_time": 0.011618738751712364,
+    "se": 0.029048011340509477,
+    "p_value": 0.6891683272312344,
     "pass": true,
     "n_obs": 28
   },
   "Russia": {
     "control_group": "Russia",
-    "beta4_treat_time": 0.09618845096363161,
-    "se": 0.0333745710887581,
-    "p_value": 0.003950493822145878,
+    "beta4_treat_time": 0.08837380060417227,
+    "se": 0.033611641949655664,
+    "p_value": 0.0085570498209868,
     "pass": false,
     "n_obs": 28
   },
   "China": {
     "control_group": "China",
-    "beta4_treat_time": 0.05576331181385083,
-    "se": 0.03683306147215412,
-    "p_value": 0.13003922100703907,
-    "pass": true,
+    "beta4_treat_time": 0.06722563135648127,
+    "se": 0.0354146908411264,
+    "p_value": 0.05766429304291891,
+    "pass": false,
     "n_obs": 28
   }
 }

@@ -1,8 +1,8 @@
 # Framing Annotation Codebook
 
-**Version:** 1.1 (Theory-Grounded)  
-**Last Updated:** 2024-12-28  
-**Status:** In Progress (Batch 1 완료)
+**Version:** 1.2 (Edge Cases Refined)  
+**Last Updated:** 2025-01-03  
+**Status:** Completed (Pilot + Batch 1)
 
 ---
 
@@ -79,6 +79,96 @@
 - 약한 표현 + 미사일 발사 → **THREAT**
 
 **George (1991)의 핵심 구분:** *"물리적 군사 행동이 발생했는가?"*
+
+---
+
+## 결정 우선순위 (Decision Priority Rules)
+
+### 규칙 1: 갈등 충돌 가능성 기준
+
+> **"군사적 충돌 가능성의 증감 여부로 판단한다."**
+
+| 상황 | 판단 | Frame |
+|------|------|-------|
+| 충돌 가능성이 **증가**하는 조치 | 긴장 고조 | → **THREAT** |
+| 충돌 가능성이 **감소**하는 조치 | 긴장 완화 | → **DIPLOMACY** |
+
+### 규칙 2: 상충 프레임 처리
+
+> **"주요 조치를 기준으로 판단. 동등 시 NEUTRAL."**
+
+- 여러 프레임이 혼재할 때 → **주요(primary) 조치** 기준으로 분류
+- 동등한 수준으로 상충될 때 → **NEUTRAL**
+
+**예시:**
+
+- "Syria, Russia & Iran shift to DIPLOMACY, while US threatens..."
+  - 두 프레임 상충 → **NEUTRAL**
+
+### 규칙 3: 질문형 게시물 처리
+
+> **"질문형 제목은 평서문으로 변환하여 판단한다."**
+
+- "What are the chances of normalizing relations?" → "The chances of normalizing relations..."
+- 변환 후 분류 실행
+
+---
+
+## 엣지 케이스 (Edge Cases)
+
+### 1. 무기 관련 분류
+
+| 상황 | Frame | 근거 |
+|------|-------|------|
+| 무기 판매/제공/배치 | **THREAT** | 군사력 증강 = Kahn의 높은 단계 |
+| 무기 관련 협상/합의 | **DIPLOMACY** | 대화를 통한 조정 |
+
+**예시:**
+
+- "US to give 'regular arms sales' to Taiwan" → **THREAT** (무기 배치)
+- "North Korea, US discuss denuclearization" → **DIPLOMACY** (협상)
+
+### 2. 경제 제재 (Sanctions) 분류
+
+| 상황 | Frame | 근거 |
+|------|-------|------|
+| 제재 부과/강화 | **ECONOMIC** | 경제적 압박 조치 |
+| 제재 해제/완화 협상 | **DIPLOMACY** | 갈등 감소 조치 |
+| 제재 관련 단순 보도 | **NEUTRAL** | 분석/사실 전달 |
+
+**명확화:** 돈 관련 단어가 없어도, **이익 추구를 제한하는 조치 = ECONOMIC**
+
+### 3. 사이버 공격 / 선거 개입
+
+| 상황 | Frame | 근거 |
+|------|-------|------|
+| 해킹 시도/선거 개입 보도 | **NEUTRAL** | 물리적 군사행동 없음 |
+| 사이버 공격 + 군사 행동 동반 | **THREAT** | 군사적 조치 포함 시 |
+
+**예시:**
+
+- "Iranian hackers targeted US 2020 campaign" → **NEUTRAL**
+
+### 4. HUMANITARIAN 범위
+
+| 상황 | Frame | 근거 |
+|------|-------|------|
+| 인권, 시민권, 소수민족 | **HUMANITARIAN** | 개인/집단 권리 |
+| 탈북민, 시위자 등 특정 대상 | **HUMANITARIAN** | 명확한 인도주의 이슈 |
+| 환경 문제 (기후, 오염) | 맥락에 따라 | HUMANITARIAN 가능 |
+
+**예시:**
+
+- "China Uighurs: One million held in political camps" → **HUMANITARIAN**
+- "Tunnel collapse may have killed 200 workers" → **HUMANITARIAN**
+
+### 5. 군사훈련 분류
+
+| 상황 | Frame |
+|------|-------|
+| 독자적 군사훈련 | **THREAT** |
+| 합동 군사훈련 (동맹국) | **THREAT** |
+| 훈련 취소/축소 협상 | **DIPLOMACY** |
 
 ---
 
