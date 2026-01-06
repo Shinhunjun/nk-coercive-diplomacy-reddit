@@ -57,8 +57,8 @@ COLORS = {
     'china': '#4ECDC4',        # China - Teal
     'iran': '#45B7D1',         # Iran - Sky blue
     'russia': '#96CEB4',       # Russia - Sage green
-    'diplomacy': '#4ECDC4',    # Diplomacy frame - Teal
-    'threat': '#FF6B6B',       # Threat frame - Coral
+    'diplomacy': '#2ECC71',    # Diplomacy frame - Green (Singapore Summit success)
+    'threat': '#E74C3C',       # Threat frame - Red (Hanoi Summit failure)
     'neutral': '#95A5A6',      # Neutral - Gray
     'economic': '#F39C12',     # Economic - Orange
     'humanitarian': '#9B59B6', # Humanitarian - Purple
