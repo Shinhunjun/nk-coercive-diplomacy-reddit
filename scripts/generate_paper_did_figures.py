@@ -147,7 +147,7 @@ def create_did_figure(outcome='framing', save_path=None):
     ax.set_xticks(x_pos)
     ax.set_xticklabels(['P1\n(Pre-Singapore)', 'P2\n(Singapore-Hanoi)'])
     ax.set_ylabel(f'{outcome_title} Score', fontsize=11)
-    ax.axvline(0.5, color='gray', linestyle=':', alpha=0.5)
+    ax.axvline(0.5, color='black', linestyle='--', linewidth=2, alpha=0.8, label='_nolegend_')  # Intervention line
     # ax.grid removed for modern style
     
     # Panel B: Hanoi Effect (P2 → P3)
@@ -183,7 +183,7 @@ def create_did_figure(outcome='framing', save_path=None):
     ax.set_xticks(x_pos)
     ax.set_xticklabels(['P2\n(Singapore-Hanoi)', 'P3\n(Post-Hanoi)'])
     ax.set_ylabel(f'{outcome_title} Score', fontsize=11)
-    ax.axvline(0.5, color='gray', linestyle=':', alpha=0.5)
+    ax.axvline(0.5, color='black', linestyle='--', linewidth=2, alpha=0.8, label='_nolegend_')  # Intervention line
     # ax.grid removed for modern style
     
     # Single legend below the figure (outside graphs)

@@ -10,16 +10,18 @@
 
 We first examine whether high-stakes diplomatic events causally reshape the content of online discourse toward North Korea. Figure~\ref{fig:timeline} presents an overview of the study period and key events. While sentiment captures general affective valence (positive vs. negative), it lacks the granularity to distinguish between substantive policy narratives. Our primary focus is therefore on framing, which explicitly measures the rhetorical shift between military threat and diplomatic engagement. Together, these measures allow us to assess both the emotional tone and the narrative substance of the discourse following diplomatic events. For instance, a post titled ``North Korea rejects South Korea Moon's dialogue pledge, says it will never have talks'' exhibits negative sentiment (score: -0.69) due to the explicit refusal, yet is correctly classified as \textit{Diplomacy} (confidence: 0.70). This classification reflects that the refusal is an official position statement delivered through diplomatic channels, rather than rhetoric concerning military deployment or kinetic threats. This divergence highlights why relying solely on sentiment would overlook the continued diplomatic engagement underlying the critical rhetoric.
 
-To explicitly quantify the comparative sensitivity of these measures, Figure~\ref{fig:ratio_comparison} tracks the evolution of sentiment and framing ratios across all three periods. In the transition from P1 to P2 (Summit Diplomacy), the framing ratio (Diplomacy/Threat) surged from 0.43 to 1.31 (+204\%), whereas the sentiment ratio (Positive/Negative) showed a more modest increase from 0.22 to 0.44 (+100\%). Conversely, following the Hanoi Summit failure (P2$\rightarrow$P3), both measures collapsed, with the framing ratio falling back to 0.59. This trajectory confirms that framing offers a more sensitive and structurally distinct signal of diplomatic shifts than sentiment alone.
+To explicitly quantify the comparative sensitivity of these measures, 
+% Figure~\ref{fig:ratio_comparison} tracks the evolution of sentiment and framing ratios across all three periods. 
+In the transition from P1 to P2 (Summit Diplomacy), the framing ratio (Diplomacy/Threat) surged from 0.43 to 1.31 (+204\%), whereas the sentiment ratio (Positive/Negative) showed a more modest increase from 0.22 to 0.44 (+100\%). Conversely, following the Hanoi Summit failure (P2$\rightarrow$P3), both measures collapsed, with the framing ratio falling back to 0.59. This trajectory confirms that framing offers a more sensitive and structurally distinct signal of diplomatic shifts than sentiment alone.
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.85\columnwidth]{figures/fig_ratio_comparison_3p.pdf}
-\caption{Evolution of Discourse Ratios (P1 $\rightarrow$ P2 $\rightarrow$ P3). The Framing Ratio (Diplomacy/Threat) exhibits a much steeper rise and fall compared to the Sentiment Ratio (Positive/Negative), demonstrating greater sensitivity to key diplomatic events. \mohit{We can remove this figure, Jun thoughts?} \jun{Agree, I think we need to save some space}
-% \mohit{Increase the tick size and remove the parallel lines to x axis, any way we can get a new figure? Maybe more colorful? You dont have to have it in a box. Also, save the figures as pdf} \jun{fixed!}
-}
-\label{fig:ratio_comparison}
-\end{figure}
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=0.85\columnwidth]{figures/fig_ratio_comparison_3p.pdf}
+% \caption{Evolution of Discourse Ratios (P1 $\rightarrow$ P2 $\rightarrow$ P3). The Framing Ratio (Diplomacy/Threat) exhibits a much steeper rise and fall compared to the Sentiment Ratio (Positive/Negative), demonstrating greater sensitivity to key diplomatic events. \mohit{We can remove this figure, Jun thoughts?} \jun{Agree, I think we need to save some space}
+% % \mohit{Increase the tick size and remove the parallel lines to x axis, any way we can get a new figure? Maybe more colorful? You dont have to have it in a box. Also, save the figures as pdf} \jun{fixed!}
+% }
+% \label{fig:ratio_comparison}
+% \end{figure}
 
 \subsubsection{Parallel Trends Validation}
 % \mohit{This should go in the method section. I put comments for you}
@@ -29,7 +31,8 @@ As reported in the Method section (Tables~\ref{tab:pt_sentiment} and~\ref{tab:pt
 
 \subsubsection{Impact on Sentiment}
 
-Figure~\ref{fig:sentiment_trends} shows monthly sentiment trends, and Figure~\ref{fig:sentiment_did} visualizes the DID effects. The Singapore Summit (P1$\rightarrow$P2) produced a statistically significant positive shift in sentiment toward North Korea across all control groups (Table~\ref{tab:did_sentiment_summary}), with estimated effects ranging from +0.10 to +0.21 ($p < 0.001$). In contrast, the failure of the Hanoi Summit (P2$\rightarrow$P3) resulted in a significant negative shift in sentiment, ranging from -0.06 to -0.12 ($p < 0.001$). \mohit{I would recommend putting the p value in brackets next to the the DiD est, and the other coloumn should have the confidence intervals, and as a footnote you can have the stars related to the p value, check the Table 1 in in my Parler paper.}
+Figure~\ref{fig:sentiment_trends} shows monthly sentiment trends, and Figure~\ref{fig:sentiment_did} visualizes the DID effects. The Singapore Summit (P1$\rightarrow$P2) produced a statistically significant positive shift in sentiment toward North Korea across all control groups (Table~\ref{tab:did_sentiment_summary}), with estimated effects ranging from +0.10 to +0.21 ($p < 0.001$). In contrast, the failure of the Hanoi Summit (P2$\rightarrow$P3) resulted in a significant negative shift in sentiment, ranging from -0.06 to -0.12 ($p < 0.001$). 
+% \mohit{I would recommend putting the p value in brackets next to the the DiD est, and the other coloumn should have the confidence intervals, and as a footnote you can have the stars related to the p value, check the Table 1 in in my Parler paper.}
 
 \begin{figure*}[t]
 \centering
@@ -44,8 +47,7 @@ While these sentiment shifts are statistically significant, their magnitude rema
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/fig4b_sentiment_did_visualization.pdf}
-\caption{Sentiment Difference-in-Differences Visualization. (A) Singapore Summit Effect, (B) Hanoi Summit Effect. Pre-treatment trends (P1) are visually parallel across groups, supporting the validity of the DiD design. \mohit{WHat is the vertical black line? If it is an intervention, bold the color of the line and say here in the caption what the line is}
-% \mohit{The legend is overlapping in Fig A, fix that} \jun{Fixed!}
+\caption{Sentiment Difference-in-Differences Visualization. (A) Singapore Summit Effect, (B) Hanoi Summit Effect. Pre-treatment trends (P1) are visually parallel across groups, supporting the validity of the DiD design. The bold black dashed line marks the intervention point (summit date).}\n% \\mohit{WHat is the vertical black line? If it is an intervention, bold the color of the line and say here in the caption what the line is} \\jun{Fixed!}\n% \\mohit{The legend is overlapping in Fig A, fix that} \\jun{Fixed!}
 } 
 \label{fig:sentiment_did}
 \end{figure*}
@@ -69,8 +71,8 @@ Hanoi & China & -0.11*** & [-0.14, -0.08] \\
 \end{tabular}
 \label{tab:did_sentiment_summary}
 \end{table}
-\mohit{I would recommend putting the p value in brackets next to the the DiD est, and the other coloumn should have the confidence intervals, and as a footnote you can have the stars related to the p value, check the Table 1 in in my Parler paper.}
-\jun{Fixed: Updated table with 95\% CI, significance stars, and clean period values (transition excluded).}
+% \mohit{I would recommend putting the p value in brackets next to the the DiD est, and the other coloumn should have the confidence intervals, and as a footnote you can have the stars related to the p value, check the Table 1 in in my Parler paper.}
+% \jun{Fixed: Updated table with 95\% CI, significance stars, and clean period values (transition excluded).}
 
 \subsubsection{Impact on Framing}
 
@@ -86,9 +88,7 @@ We next examine changes in framing, where higher values indicate diplomacy-orien
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/fig4_did_visualization.pdf}
-\caption{Framing Difference-in-Differences Visualization. (A) Singapore Summit Effect, (B) Hanoi Summit Effect. Pre-treatment trends (P1) are visually parallel for China and Iran, validating their use as control groups.
-% \mohit{The legend is overlapping in Fig A, fix that}\jun{Fixed: Moved DiD annotations to 3/4 point on x-axis, reduced vertical spacing.}
-}
+\caption{Framing Difference-in-Differences Visualization. (A) Singapore Summit Effect, (B) Hanoi Summit Effect. Pre-treatment trends (P1) are visually parallel for China and Iran, validating their use as control groups. The bold black dashed line marks the intervention point (summit date).}\n% \\mohit{The legend is overlapping in Fig A, fix that}\\jun{Fixed: Moved DiD annotations to 3/4 point on x-axis, reduced vertical spacing.}
 \label{fig:did}
 \end{figure*}
 
@@ -147,6 +147,7 @@ Sentiment & 0.095 & 0.109 & 1.15 & [0.97, 1.35] \\
 \end{table}
 The results strongly support the ratchet hypothesis for framing dimensions. Content framing shows a reversal ratio of 0.39 (95\% CI: [0.15, 0.65]), indicating that the Hanoi failure reversed only 39\% of the Singapore Summit's framing effect. The DiD analysis with control groups shows a similar pattern (50\% reversal for China). Edge-level framing exhibits an even stronger ratchet pattern (ratio = 0.11), and community framing shows similar persistence (ratio = 0.24). Critically, all framing dimensions have 95\% CIs excluding 1.0. In contrast, sentiment shows a ratio of 1.15 (95\% CI including 1.0), indicating that emotional valence fully reverted following diplomatic failure.
 % \mohit{Jun, I have added this Summary textbf, i would recommend putting that for RQ2 and RQ3 also, at the end} \jun{fixed!}
+
 \textbf{Summary: }This divergence between framing and sentiment provides important theoretical insight (RQ1a): while affective responses to diplomacy may be transient, interpretive frames—how North Korea is discussed as a threat versus a negotiation partner—exhibit greater persistence. The ratchet effect (RQ1b) appears to be specific to framing rather than sentiment, suggesting that diplomatic engagement primarily reshapes cognitive interpretive schemas rather than emotional evaluations.
 
 \subsection{Structural Reorganization of Discourse Networks (RQ2)}
@@ -205,7 +206,7 @@ DIPLOMACY & 0.88 & 0.77 & 0.82 & 108 \\
 \textbf{Overall} &  &  & \textbf{Acc. 0.85} &  \\
 \textbf{Macro Avg.} & 0.83 & 0.83 & \textbf{0.83} &  \\
 \hline
-\multicolumn{5}{l}{\footnotesize Cohen's $\kappa$ = 0.79 (Substantial Agreement)} \\
+% \multicolumn{5}{l}{\footnotesize Cohen's $\kappa$ = 0.79 (Substantial Agreement)} \\
 \end{tabular}
 \label{tab:llm_human_metrics}
 \end{table}
