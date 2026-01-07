@@ -16,10 +16,9 @@ sys.path.insert(0, str(project_root / "src"))
 
 from config import DATA_DIR
 
-# DID values from ICWSM_draft.md
 FRAMING_DID = {
-    'singapore': {'China': 1.28, 'Iran': 0.85},
-    'hanoi': {'China': -0.88, 'Iran': -0.30}
+    'singapore': {'China': 1.01, 'Iran': 0.49},  # Russia excluded due to P1→P2 parallel trends violation
+    'hanoi': {'China': -0.50, 'Iran': -0.07, 'Russia': -0.40}  # Russia valid for P2→P3
 }
 
 SENTIMENT_DID = {
@@ -44,6 +43,7 @@ def load_monthly_data(outcome='framing'):
             'NK': DATA_DIR / 'framing' / 'nk_monthly_framing.csv',
             'China': DATA_DIR / 'framing' / 'china_monthly_framing.csv',
             'Iran': DATA_DIR / 'framing' / 'iran_monthly_framing.csv',
+            'Russia': DATA_DIR / 'framing' / 'russia_monthly_framing.csv',
         }
         score_col = 'framing_mean'
     else:  # sentiment
@@ -106,17 +106,18 @@ def create_did_figure(outcome='framing', save_path=None):
     # Create figure with extra space for legend
     fig, axes = plt.subplots(1, 2, figsize=(14, 5))
     
-    # Main title with outcome type
     outcome_title = "Framing" if outcome == 'framing' else "Sentiment"
-    fig.suptitle(f'{outcome_title} Difference-in-Differences Analysis', 
-                 fontsize=16, fontweight='bold', y=1.02)
+    # Removed suptitle per reviewer feedback - title goes in LaTeX caption only
     
-    controls = ['China', 'Iran'] if outcome == 'framing' else ['China', 'Iran', 'Russia']
+    controls = ['China', 'Iran', 'Russia']  # All controls available
+    # For framing Singapore (P1→P2), Russia excluded due to parallel trends violation
+    singapore_controls = ['China', 'Iran'] if outcome == 'framing' else controls
+    hanoi_controls = controls  # All controls valid for P2→P3 analysis
     x_pos = [0, 1]
     
     # Panel A: Singapore Effect (P1 → P2)
     ax = axes[0]
-    ax.set_title('(A) Singapore Summit Effect (P1 → P2)', fontsize=12, fontweight='bold', pad=10)
+    # Title removed - will use LaTeX \subfloat caption instead
     
     # Plot NK
     nk_p1 = get_period_means(data['NK'], score_col, 'P1')
@@ -125,8 +126,8 @@ def create_did_figure(outcome='framing', save_path=None):
     ax.plot(x_pos, [nk_p1, nk_p2], 'o-', color=colors['NK'], linewidth=2.5, 
             markersize=10, label='North Korea', zorder=3)
     
-    # Plot controls
-    for ctrl in controls:
+    # Plot controls (Singapore: exclude Russia for framing)
+    for ctrl in singapore_controls:
         if ctrl in data:
             ctrl_p1 = get_period_means(data[ctrl], score_col, 'P1')
             ctrl_p2 = get_period_means(data[ctrl], score_col, 'P2')
@@ -135,7 +136,7 @@ def create_did_figure(outcome='framing', save_path=None):
                     linewidth=2, markersize=8, label=ctrl, alpha=0.8, zorder=2)
     
     # Add DID annotations at left-center area (avoid covering data lines in Panel A)
-    for i, ctrl in enumerate(controls):
+    for i, ctrl in enumerate(singapore_controls):
         if ctrl in did_values['singapore']:
             val = did_values['singapore'][ctrl]
             sign = '+' if val > 0 else ''
@@ -145,14 +146,15 @@ def create_did_figure(outcome='framing', save_path=None):
                    bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.9))
     
     ax.set_xticks(x_pos)
-    ax.set_xticklabels(['P1\n(Pre-Singapore)', 'P2\n(Singapore-Hanoi)'])
-    ax.set_ylabel(f'{outcome_title} Score', fontsize=11)
+    ax.set_xticklabels(['P1\n(Pre-Singapore)', 'P2\n(Singapore-Hanoi)'], fontsize=12)
+    ax.tick_params(axis='both', labelsize=12)
+    ax.set_ylabel(f'{outcome_title} Score', fontsize=13)
     ax.axvline(0.5, color='black', linestyle='--', linewidth=2, alpha=0.8, label='_nolegend_')  # Intervention line
     # ax.grid removed for modern style
     
     # Panel B: Hanoi Effect (P2 → P3)
     ax = axes[1]
-    ax.set_title('(B) Hanoi Summit Effect (P2 → P3)', fontsize=12, fontweight='bold', pad=10)
+    # Title removed - will use LaTeX \subfloat caption instead
     
     # Plot NK
     nk_p2 = get_period_means(data['NK'], score_col, 'P2')
@@ -161,8 +163,8 @@ def create_did_figure(outcome='framing', save_path=None):
     ax.plot(x_pos, [nk_p2, nk_p3], 'o-', color=colors['NK'], linewidth=2.5, 
             markersize=10, label='North Korea', zorder=3)
     
-    # Plot controls
-    for ctrl in controls:
+    # Plot controls (Hanoi: all controls valid)
+    for ctrl in hanoi_controls:
         if ctrl in data:
             ctrl_p2 = get_period_means(data[ctrl], score_col, 'P2')
             ctrl_p3 = get_period_means(data[ctrl], score_col, 'P3')
@@ -171,7 +173,7 @@ def create_did_figure(outcome='framing', save_path=None):
                     linewidth=2, markersize=8, label=ctrl, alpha=0.8, zorder=2)
     
     # Add DID annotations at top-right corner (avoid covering data)
-    for i, ctrl in enumerate(controls):
+    for i, ctrl in enumerate(hanoi_controls):
         if ctrl in did_values['hanoi']:
             val = did_values['hanoi'][ctrl]
             sign = '+' if val > 0 else ''
@@ -181,8 +183,9 @@ def create_did_figure(outcome='framing', save_path=None):
                    bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.8))
     
     ax.set_xticks(x_pos)
-    ax.set_xticklabels(['P2\n(Singapore-Hanoi)', 'P3\n(Post-Hanoi)'])
-    ax.set_ylabel(f'{outcome_title} Score', fontsize=11)
+    ax.set_xticklabels(['P2\n(Singapore-Hanoi)', 'P3\n(Post-Hanoi)'], fontsize=12)
+    ax.tick_params(axis='both', labelsize=12)
+    # Remove y-axis label for Panel B (same as Panel A) to save space
     ax.axvline(0.5, color='black', linestyle='--', linewidth=2, alpha=0.8, label='_nolegend_')  # Intervention line
     # ax.grid removed for modern style
     
@@ -209,23 +212,131 @@ def main():
     
     output_dir = project_root / 'paper' / 'figures'
     
-    # Figure 4: Framing DID
-    print("\n1. Generating Figure 4: Framing DID...")
+    # Figure 4: Framing DID (combined - for backward compatibility)
+    print("\n1. Generating Figure 4: Framing DID (combined)...")
     create_did_figure(
         outcome='framing',
         save_path=output_dir / 'fig4_did_visualization.pdf'
     )
     
-    # Figure 4b: Sentiment DID
-    print("\n2. Generating Figure 4b: Sentiment DID...")
+    # Figure 4b: Sentiment DID (combined - for backward compatibility)
+    print("\n2. Generating Figure 4b: Sentiment DID (combined)...")
     create_did_figure(
         outcome='sentiment',
         save_path=output_dir / 'fig4b_sentiment_did_visualization.pdf'
     )
     
+    # Generate individual subfigures for LaTeX \subfloat usage
+    print("\n3. Generating individual subfigures for LaTeX...")
+    create_individual_subfigures(output_dir)
+    
     print("\n" + "=" * 70)
     print("Done!")
     print("=" * 70)
+
+
+def create_individual_subfigures(output_dir):
+    """
+    Create individual subfigure PDFs for LaTeX subfloat usage.
+    This generates separate A and B panels for both Framing and Sentiment DiD.
+    """
+    for outcome in ['framing', 'sentiment']:
+        data, score_col = load_monthly_data(outcome)
+        if 'NK' not in data:
+            print(f"Error: NK data not found for {outcome}")
+            continue
+        
+        did_values = FRAMING_DID if outcome == 'framing' else SENTIMENT_DID
+        # For framing: Singapore uses China/Iran only (Russia excluded due to PT violation)
+        # Hanoi uses all three (Russia valid for P2→P3)
+        all_controls = ['China', 'Iran', 'Russia']
+        singapore_controls = ['China', 'Iran'] if outcome == 'framing' else all_controls
+        hanoi_controls = all_controls
+        
+        colors = {
+            'NK': '#E63946',
+            'China': '#457B9D',
+            'Iran': '#2A9D8F',
+            'Russia': '#9B59B6'
+        }
+        
+        outcome_title = "Framing" if outcome == 'framing' else "Sentiment"
+        prefix = 'fig4' if outcome == 'framing' else 'fig4b'
+        x_pos = [0, 1]
+        
+        # Panel A: Singapore Effect
+        fig_a, ax = plt.subplots(figsize=(6, 5))
+        
+        nk_p1 = get_period_means(data['NK'], score_col, 'P1')
+        nk_p2 = get_period_means(data['NK'], score_col, 'P2')
+        ax.plot(x_pos, [nk_p1, nk_p2], 'o-', color=colors['NK'], linewidth=2.5, 
+                markersize=10, label='North Korea', zorder=3)
+        
+        for ctrl in singapore_controls:
+            if ctrl in data:
+                ctrl_p1 = get_period_means(data[ctrl], score_col, 'P1')
+                ctrl_p2 = get_period_means(data[ctrl], score_col, 'P2')
+                ax.plot(x_pos, [ctrl_p1, ctrl_p2], 's--', color=colors[ctrl], 
+                        linewidth=2, markersize=8, label=ctrl, alpha=0.8, zorder=2)
+        
+        for i, ctrl in enumerate(singapore_controls):
+            if ctrl in did_values['singapore']:
+                val = did_values['singapore'][ctrl]
+                sign = '+' if val > 0 else ''
+                ax.text(0.55, 0.98 - i*0.06, f'DiD ({ctrl}): {sign}{val:.2f}', 
+                       transform=ax.transAxes, fontsize=10, fontweight='bold',
+                       color=colors[ctrl], verticalalignment='top', horizontalalignment='center',
+                       bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.9))
+        
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels(['P1\n(Pre-Singapore)', 'P2\n(Singapore-Hanoi)'], fontsize=13)
+        ax.tick_params(axis='both', labelsize=13)
+        ax.set_ylabel(f'{outcome_title} Score', fontsize=14)
+        ax.axvline(0.5, color='black', linestyle='--', linewidth=2, alpha=0.8)
+        ax.legend(loc='lower right', fontsize=10)
+        
+        plt.tight_layout()
+        save_a = output_dir / f'{prefix}_a_singapore.pdf'
+        plt.savefig(save_a, dpi=300, bbox_inches='tight', facecolor='white')
+        print(f"  ✓ Saved: {save_a}")
+        plt.close()
+        
+        # Panel B: Hanoi Effect
+        fig_b, ax = plt.subplots(figsize=(6, 5))
+        
+        nk_p2 = get_period_means(data['NK'], score_col, 'P2')
+        nk_p3 = get_period_means(data['NK'], score_col, 'P3')
+        ax.plot(x_pos, [nk_p2, nk_p3], 'o-', color=colors['NK'], linewidth=2.5, 
+                markersize=10, label='North Korea', zorder=3)
+        
+        for ctrl in hanoi_controls:
+            if ctrl in data:
+                ctrl_p2 = get_period_means(data[ctrl], score_col, 'P2')
+                ctrl_p3 = get_period_means(data[ctrl], score_col, 'P3')
+                ax.plot(x_pos, [ctrl_p2, ctrl_p3], 's--', color=colors[ctrl], 
+                        linewidth=2, markersize=8, label=ctrl, alpha=0.8, zorder=2)
+        
+        for i, ctrl in enumerate(hanoi_controls):
+            if ctrl in did_values['hanoi']:
+                val = did_values['hanoi'][ctrl]
+                sign = '+' if val > 0 else ''
+                ax.text(0.98, 0.98 - i*0.06, f'DiD ({ctrl}): {sign}{val:.2f}', 
+                       transform=ax.transAxes, fontsize=10, fontweight='bold',
+                       color=colors[ctrl], verticalalignment='top', horizontalalignment='right',
+                       bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.8))
+        
+        ax.set_xticks(x_pos)
+        ax.set_xticklabels(['P2\n(Singapore-Hanoi)', 'P3\n(Post-Hanoi)'], fontsize=13)
+        ax.tick_params(axis='both', labelsize=13)
+        # No y-label for Panel B (same as Panel A)
+        ax.axvline(0.5, color='black', linestyle='--', linewidth=2, alpha=0.8)
+        ax.legend(loc='lower right', fontsize=10)
+        
+        plt.tight_layout()
+        save_b = output_dir / f'{prefix}_b_hanoi.pdf'
+        plt.savefig(save_b, dpi=300, bbox_inches='tight', facecolor='white')
+        print(f"  ✓ Saved: {save_b}")
+        plt.close()
 
 
 if __name__ == "__main__":
