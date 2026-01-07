@@ -1,11 +1,8 @@
 \section{Method}
-
 \subsection{Data Collection}
-
 We collected Reddit posts from January 2017 to June 2019 using the Arctic Shift API~\cite{arcticshift2024}, targeting eight major subreddits: r/worldnews, r/politics, r/news, r/geopolitics, r/korea, r/northkorea, r/AskAnAmerican, and r/NeutralPolitics. All posts were filtered to English using Reddit's language metadata. In total, we collected 29,688 posts across all groups: 10,448 posts for North Korea (treatment), 5,921 for China, 4,749 for Iran, and 8,570 for Russia (control groups).
 % \mohit{Add more info. Say how much you collected, the total number of posts that were collected and the commenst etc. }
 % \jun{Fixed: Added total post count (29,688), breakdown by group, and full subreddit list.}
-
 % \mohit{Make them as textbf as subsubsections}
 % \jun{Fixed: Changed to textbf inline headings.}
 
@@ -39,7 +36,6 @@ We selected control countries based on their exposure to concurrent high-stakes 
 % \jun{Fixed: Added citations for China (Lai 2019), Iran (BBC 2018), Russia (Mueller 2019).}
 % \mohit{Jun given that both the parallel Trends test results for sentiment and Framing are valid, how about we put the table in appendix and just say in the text here that all p values were valid and Tables 2 and 3 are in Appendix? Thoughts? This will free up space for us}
 % \jun{Agreed! Moved tables to Appendix (Tables~\ref{tab:app_pt_sentiment} and~\ref{tab:app_pt_framing}). Note: Russia P1→P2 framing is now Invalid (p=0.01) with revised prompt.}
-
 Using multiple controls allows us to assess robustness across different confounding structures. However, the validity of a DiD design rests on the parallel trends assumption: treated and control groups must exhibit similar trends in the outcome variable prior to the intervention. We verified this assumption for all groups (see Appendix Tables~\ref{tab:app_pt_sentiment} and~\ref{tab:app_pt_framing}). For sentiment, all three control groups satisfied parallel trends ($p > 0.05$ for all comparisons). For framing, China and Iran satisfied parallel trends, while Russia exhibited a significant violation for P1$\rightarrow$P2 ($p = 0.01$), likely reflecting the Mueller investigation's confounding effect on threat-oriented discourse. Consequently, we exclude Russia from framing analyses for the Singapore Summit effect and retain China and Iran as primary counterfactuals.
 % \mohit{I would put the tables here so that it is easier for anyone to verify. A question might come why Russia was removed, even when the sentiment was valid, you should do more motivation and in the tables, rather than okay coloumn, change the name maybe based on Trends, and Valid and not Valid. Also, say here that if the value goes below 0.05, the results are voilated. so people know }
 % \jun{Fixed: Moved tables here, changed OK column to Trends (Valid/Invalid).}
@@ -51,7 +47,6 @@ Using multiple controls allows us to assess robustness across different confound
     \item \textbf{P3} (2019.03--2019.12): Post-Hanoi
     \item \textit{Excluded}: 2018.03--05, 2019.02 (Transition periods)
 \end{itemize}
-
 % Key diplomatic events include the Singapore Summit (2018-06-12), which marked peak diplomatic engagement, and the Hanoi Summit (2019-02-27), which ended without agreement.  
 % \mohit{I would change Figure 1. It is taking a lot of space and is very sparse, maybe have like a line diagram? Check Fig 2 of this paper: https://dl.acm.org/doi/pdf/10.1145/3555639} \jun{Fixed!}
 
@@ -66,7 +61,6 @@ Using multiple controls allows us to assess robustness across different confound
 
 %------------------------------------------------------------------------------
 \subsection{Outcome Measurement}
-
 To answer our research questions, we measure two complementary dimensions of discourse: \textit{sentiment} (emotional valence) and \textit{framing} (how North Korea is narratively positioned). 
 % \mohit{Say here to answer our Research questions} \jun{Fixed: Connected measurement to RQs.}
 
@@ -83,7 +77,6 @@ which treats the model as a clear-cut measurement instrument rather than a black
     \item \textbf{HUMANITARIAN}: Human rights, refugees, civilian welfare
     \item \textbf{DIPLOMACY}: Negotiation, dialogue, summits, peace initiatives
 \end{itemize}
-
 The prompt provides category definitions and requires a single label output; the model also returns a confidence score.
 % \mohit{I would recommend putting the prompt with detailed information in the Appendix}
 % \jun{Fixed: Added full prompt details to Appendix B.}
@@ -91,7 +84,6 @@ Detailed prompt instructions and category definitions are provided in Appendix~\
 
 \textbf{Human Annotation Benchmark: } To validate our LLM-based classification in a domain-sensitive setting, we constructed a gold-standard human annotation benchmark. Two military officers with expertise in North Korean affairs independently labeled 500 stratified samples (4 countries $\times$ 3 periods $\times$ 5 frames). We provide detailed information in the Results section.
 % The inter-coder reliability, measured by the Cohen's Kappa score ($\kappa$), was 0.75, indicating substantial agreement. LLM-human agreement achieved Cohen's $\kappa$ = 0.79 (substantial agreement) with 85.0\% accuracy, as detailed in the 
-
 % We followed an iterative codebook refinement approach:
 % \begin{enumerate}
 %     \item \textbf{Pilot Round}: 100 posts labeled independently with reliability assessment
@@ -99,31 +91,25 @@ Detailed prompt instructions and category definitions are provided in Appendix~\
 %     \item \textbf{Disagreement Resolution}: Structured discussion to produce consensus labels
 % \end{enumerate} 
 % \mohit{We dont need the codebook refinement approach. Blinded it }
-
 % Inter-rater reliability (Cohen's $\kappa$) and LLM-human agreement metrics are reported in the Results section.
 
 %------------------------------------------------------------------------------
 \subsection{Causal Identification}
-
 We estimate the causal impact of summit diplomacy using a Difference-in-Differences (DiD) design with North Korea as the treated group and control countries (China, Iran, Russia) as comparisons. 
 % This approach follows recent work applying quasi-experimental methods to social media analysis~\cite{kumarswamy2025,horta2023deplatforming}
 We chose the DiD method over Interrupted Time Series (ITS) analysis because DiD is widely recognized in the econometrics and causal inference community for handling quasi-experimental interventions~\cite{berger2020tarp,yang2022effects}. 
 % Specifically, just as Kumarswamy et al.~\cite{kumarswamy2025} utilized a control platform (Twitter) to isolate Parler's policy effects from concurrent offline events (e.g., the Capitol riot), we leverage multiple control countries to separate the effects of U.S.-North Korea summits from confounding global geopolitical developments.
-
 By using China, Iran, and Russia as counterfactuals, we control for external shocks such as the U.S.-China trade war, JCPOA withdrawal tensions, and the Mueller investigation, respectively. This design ensures that observed changes in North Korea discourse are attributable to summit diplomacy rather than general fluctuations in foreign policy attention or sentiment.
 
 \textbf{Difference-in-Differences Specification:} Our main specification uses two-way fixed effects:
-
 \begin{equation}
 Y_{g,t} = \alpha_g + \gamma_t + \beta \big(\text{Treat}_g \times \text{Post}_t\big) + \epsilon_{g,t},
 \end{equation}
-
 where $Y_{g,t}$ is the monthly average sentiment (or framing) for group $g$ in month $t$, 
 $\alpha_g$ and $\gamma_t$ denote group and month fixed effects, and $\beta$ captures the DID estimate of the summit effect. We report heteroskedasticity-robust standard errors clustered at the group level. We explicitly verified the parallel trends assumption, confirming no significant pre-treatment deviations for any control group.
 
 %------------------------------------------------------------------------------
 \subsection{Network Structure Analysis}
-
 Beyond content-level changes, we examine whether diplomatic events reorganize the \textit{structure} of discourse. We adopt a \textbf{GraphRAG-inspired indexing pipeline}~\cite{edge2024graphrag}, leveraging its entity and relationship extraction capabilities to construct structured knowledge graphs. Recent advances have demonstrated that Large Language Models (LLMs) can effectively extract structured knowledge from unstructured text across complex domains, often outperforming traditional information extraction methods~\cite{Anuyah2025CoDeKG,Yang2025SepsisKG}. This approach has proven particularly valuable for analyzing political discourse, where LLMs can identify key actors, events, and their relationships from noisy media content~\cite{Arslan2024PoliticalRAG,Fadda2025LLM_KG_Viewpoints}. While GraphRAG is primarily designed for retrieval-augmented generation, we utilize only its initial \textbf{indexing phase} (which extracts entities and relationships via LLM to build a structured knowledge graph) as a scalable, automated method for constructing the inputs needed for Discourse Network Analysis (DNA)~\cite{leifeld2016policy}. This methodology aligns with recent frameworks that use LLM-constructed graphs to capture complex multi-level relationships and unification of fragmented evidence~\cite{Feng2025BioRAG,Ling2026LLM_KG_Review}.
 % \jun{Fixed: Added motivation for GraphRAG with newer papers (2024-2026) on LLM-based KG construction.}
 Unlike simple keyword co-occurrence networks, which cannot distinguish whether two entities co-occur in a ``threat'' or ``negotiation'' context, this approach extracts semantically meaningful relationships, enabling analysis of \textit{narrative connectivity} rather than mere lexical proximity. We utilize this pipeline to generate knowledge graphs from Reddit discussions for each analysis period.
@@ -142,5 +128,4 @@ Unlike simple keyword co-occurrence networks, which cannot distinguish whether t
     \item \textbf{Edge Framing Distribution}: Quantifies the proportion of adversarial vs. diplomatic relationships, providing a structural test of the ``ratchet effect.''
     \item \textbf{Community Composition}: Identifies thematic diversification by tracking the emergence of non-security clusters (e.g., humanitarian, economic) in the community structure.
 \end{enumerate}
-
 This structural analysis tests whether content-level framing shifts are accompanied by reorganization of discourse networks.

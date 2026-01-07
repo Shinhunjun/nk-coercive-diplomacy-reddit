@@ -1,5 +1,4 @@
 \section{Introduction}
-
 % \mohit{Add a citation}
 % \jun{Fixed: Added Baum (2015) and Entman (2004)}
 Public opinion toward foreign adversaries is shaped not only by objective events but also by how those events are discussed and interpreted in public discourse~\cite{baum2015war,entman2004projections}.
@@ -7,7 +6,6 @@ Public opinion toward foreign adversaries is shaped not only by objective events
 % \jun{Fixed: Added Washington Post (2018) and Straits Times (2018)}straitstimes2018summit
 In particular, high-stakes diplomatic summits function as salient narrative moments, drawing widespread attention and prompting shifts in how adversary states are evaluated, debated, and framed online~\cite{wapo2018historic}.
 Understanding whether such events produce lasting changes in public discourse or are merely short-lived emotional reactions remains an open empirical question.
-
 % \mohit{add citations, put a couple of papers.}
 % \jun{Fixed: Added Kertzer and  Zeitzoff (2017) and Tomz et al. (2020)}
 Prior research on public opinion and foreign policy has largely focused on survey-based measures of approval or sentiment, often emphasizing immediate affective responses to international crises~\cite{kertzer2017bottom, tomz2020public}.
@@ -16,11 +14,9 @@ While these approaches capture important emotional dynamics, they provide limite
 Focusing exclusively on sentiment risks overlooking these broader discourse dynamics.
 Recent work in computational social science has begun addressing this gap by applying quasi-experimental designs to social media data, enabling stronger causal inference about the effects of political events~\cite{kumarswamy2025,horta2023deplatforming,trujillo2022make,chandrasekharan2017you}. We extend this methodological advance to the domain of international relations. 
 % However, much of this literature still treats discourse as a collection of independent texts, rather than as an interconnected system of narratives. Moreover, existing studies often conflate emotional tone with substantive framing, limiting our ability to distinguish transient reactions from more persistent narrative shifts.
-
 In this study, we argue that evaluating the public impact of diplomacy requires examining both \textit{content} and \textit{structure} in online discourse. We distinguish between two complementary dimensions: (1) content-level change, reflected in sentiment and framing, and (2) structural change, reflected in how narratives are interconnected within discourse networks. Sentiment captures affective valence, whereas framing captures how an adversary is positioned (such as a military threat or a negotiation partner) within public narratives. These dimensions need not evolve in tandem, and disentangling them is crucial for understanding the broader consequences of diplomatic engagement.
 % \mohit{Limit the use of ---}
 % \jun{Fixed: replaced --- with parentheses}
-
 % \mohit{add newspaper citations}
 % \jun{Fixed: Added White House Joint Statement (2018) and Guardian (2019)}
 We examine these dynamics through the case of U.S.-North Korea summit diplomacy between 2017 and 2019. The Singapore Summit marked an unprecedented moment of diplomatic engagement between the two countries, while the subsequent Hanoi Summit ended without agreement.
@@ -28,10 +24,8 @@ We examine these dynamics through the case of U.S.-North Korea summit diplomacy 
 Together, these events provide a natural contrast between diplomatic success and failure, allowing us to examine not only immediate shifts in discourse but also whether earlier narrative changes persist following subsequent setbacks. To the best of our knowledge, this is the first study to apply causal inference methods to analyze how diplomatic events reshape both content-level framing and structural organization of online discourse toward an adversary nation.
 % \mohit{If there has been no work on this, i would recommend framing it by saying, to the best of our knowledge, this is the first work or no other work etc..}
 % \jun{Fixed: Added To the best of our knowledge statement}
-
 % \mohit{Put the research questions here: Say something like, in particular we investigate the following research questions. You don't need to have a subsection for it, just put them in the text }
 % \jun{Fixed: Integrated RQs into text flow, removed subsection, added RQ1a}
-
 In particular, we investigate the following research questions:
 \begin{itemize}
     \item \textbf{RQ1a (Content Change)}: How do high-stakes diplomatic summits causally affect sentiment and framing toward North Korea in online discourse?
@@ -39,7 +33,6 @@ In particular, we investigate the following research questions:
     \item \textbf{RQ2 (Structural Reorganization)}: How do these diplomatic events restructure the organization of online discourse, as reflected in changes to discourse networks and narrative connectivity?
     \item \textbf{RQ3 (Methodological Validity)}: To what extent can LLM-based framing classification align with human expert judgments in geopolitical discourse analysis?
 \end{itemize}
-
 We collected Reddit discussions mentioning North Korea and control countries (China, Iran, Russia) from January 2017 to June 2019 via the Arctic Shift API~\cite{arcticshift2024}, yielding 10,659 posts for North Korea and comparable volumes for control groups. To measure the causal impact of summit diplomacy, we employ the Difference-in-Differences (DiD) regression analysis, which is arguably one of the strongest and most widely used quasi-experimental methods in causal inference~\cite{abadie2005semiparametric, fredriksson2019impact,kumarswamy2025,roth2023s,horta2023deplatforming}. This design allows us to isolate the effects of diplomatic events from concurrent geopolitical developments by comparing treated (North Korea) and control groups before and after each summit.
 % \mohit{I remember it as Arctic Shift, say Artic shift and cite it, ypu can cite the arcticshift api git link}
 % \jun{Fixed: Changed to Arctic Shift API with citation.}
@@ -48,17 +41,12 @@ We collected Reddit discussions mentioning North Korea and control countries (Ch
 To measure discourse at scale, we use a validated Codebook LLM framework
 % ~\cite{zhang2025codebook,gilardi2023} 
 for framing classification and integrate it with graph-based network analysis~\cite{edge2024graphrag} to capture structural reorganization in narrative connectivity.
-
 By integrating content-level and structural analyses, this study contributes to computational social science in three key ways:
 \begin{enumerate}
     \item \textbf{Causal Evidence:} We provide causal evidence that diplomatic summits significantly reshape framing toward a foreign adversary, with effects that differ markedly from transient sentiment responses.
     \item \textbf{Asymmetric Persistence:} We show that framing changes are only partially reversed after diplomatic failure, whereas sentiment fully reverts (a pattern we term asymmetric persistence).
     \item \textbf{Methodological Framework:} We demonstrate how combining causal inference with LLM-based measurement and discourse network analysis advances the study of event-driven opinion dynamics.
 \end{enumerate}
-
 Our key findings include: (1) framing shifted significantly from threat-oriented to diplomacy-oriented following the Singapore Summit (DiD coefficient = $-$0.52, $p < 0.001$), while sentiment effects were transient; (2) after the Hanoi failure, only 43\% of the framing gains reverted (95\% CI [0.11, 0.73]), demonstrating asymmetric persistence; and (3) structural analysis revealed that threat-oriented edges decreased from 48\% to 28\% while diplomacy-oriented communities nearly doubled (25\% to 43\%).
 % \mohit{You can put some key results like saying that casual evidence with values. Again see my parler paper }
 % \jun{Fixed: Added key results with DiD coefficient, reversal ratio with CI, and structural changes.}
-
-
-
