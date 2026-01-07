@@ -19,6 +19,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{subfig} % For subfloat figures
 % \usepackage{stfloats} % Allow figure* at bottom
 
 % Checklist macros
@@ -91,106 +93,111 @@ Asymmetric Persistence in Online Framing of North Korea}
 \bibliography{references}
 
 \section{Ethics Checklist}
-\mohit{Need to fill this}
 \begin{enumerate}
 
 \item For most authors...
 \begin{enumerate}
     \item  Would answering this research question advance science without violating social contracts, such as violating privacy norms, perpetuating unfair profiling, exacerbating the socio-economic divide, or implying disrespect to societies or cultures?
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes}
   \item Do your main claims in the abstract and introduction accurately reflect the paper's contributions and scope?
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes}
    \item Do you clarify how the proposed methodological approach is appropriate for the claims made? 
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes}
    \item Do you clarify what are possible artifacts in the data used, given population-specific distributions?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   \item Did you describe the limitations of your work?
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes}
   \item Did you discuss any potential negative societal impacts of your work?
-    \answerTODO{Answer}
+    \textcolor{blue} {No, because we ideate on positive inference from our findings. }
       \item Did you discuss any potential misuse of your work?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
     \item Did you describe steps taken to prevent or mitigate potential negative outcomes of the research, such as data and model documentation, data anonymization, responsible release, access control, and the reproducibility of findings?
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes}
   \item Have you read the ethics review guidelines and ensured that your paper conforms to them?
-    \answerTODO{Answer}
+   \textcolor{blue} {Yes}
 \end{enumerate}
 
-\item Additionally, if your study involves hypotheses testing...
+\item Additionally, if your study involves hypotheses testing... \textcolor{green} {NA. Our study does not involve hypotheses testing.}
+
 \begin{enumerate}
   \item Did you clearly state the assumptions underlying all theoretical results?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   \item Have you provided justifications for all theoretical results?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   \item Did you discuss competing hypotheses or theories that might challenge or complement your theoretical results?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   \item Have you considered alternative mechanisms or explanations that might account for the same outcomes observed in your study?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   \item Did you address potential biases or limitations in your theoretical framework?
-    \answerTODO{Answer}
+   \textcolor{green} {NA}
   \item Have you related your theoretical results to the existing literature in social science?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   \item Did you discuss the implications of your theoretical results for policy, practice, or further research in the social science domain?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
 \end{enumerate}
 
-\item Additionally, if you are including theoretical proofs...
+\item Additionally, if you are including theoretical proofs... \textcolor{green} {NA. Our study does not include theoretical proofs.}
+
 \begin{enumerate}
   \item Did you state the full set of assumptions of all theoretical results?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
 	\item Did you include complete proofs of all theoretical results?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
 \end{enumerate}
+
 
 \item Additionally, if you ran machine learning experiments...
 \begin{enumerate}
   \item Did you include the code, data, and instructions needed to reproduce the main experimental results (either in the supplemental material or as a URL)?
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes. We include code and anonymized data via an anonymous repository link. \url{https://anonymous.4open.science/r/Asymmetric-Persistence-in-Online-Framing-of-North-Korea-F0F7}.}
   \item Did you specify all the training details (e.g., data splits, hyperparameters, how they were chosen)?
-    \answerTODO{Answer}
+    \textcolor{green} {NA. We use a pre-trained LLM (GPT-4o-mini) in a zero-shot setting.}
      \item Did you report error bars (e.g., with respect to the random seed after running experiments multiple times)?
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes. We report 95\% confidence intervals for all DiD estimates.}
 	\item Did you include the total amount of compute and the type of resources used (e.g., type of GPUs, internal cluster, or cloud provider)?
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes. We specify the use of OpenAI API (GPT-4o-mini) services.}
      \item Do you justify how the proposed evaluation is sufficient and appropriate to the claims made? 
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes. We validate our LLM classification against human expert annotations.}
      \item Do you discuss what is ``the cost`` of misclassification and fault (in)tolerance?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   
 \end{enumerate}
 
 \item Additionally, if you are using existing assets (e.g., code, data, models) or curating/releasing new assets, \textbf{without compromising anonymity}...
 \begin{enumerate}
   \item If your work uses existing assets, did you cite the creators?
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes}
   \item Did you mention the license of the assets?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   \item Did you include any new assets in the supplemental material or as a URL?
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes. We include an anonymous GitHub link to the dataset in this submission. \url{https://anonymous.4open.science/r/Asymmetric-Persistence-in-Online-Framing-of-North-Korea-F0F7}.}
   \item Did you discuss whether and how consent was obtained from people whose data you're using/curating?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   \item Did you discuss whether the data you are using/curating contains personally identifiable information or offensive content?
-    \answerTODO{Answer}
+    \textcolor{blue} {Yes}
 \item If you are curating or releasing new datasets, did you discuss how you intend to make your datasets FAIR (see \citet{fair})?
-\answerTODO{Answer}
-\item If you are curating or releasing new datasets, did you create a Datasheet for the Dataset (see \citet{gebru2021datasheets})? 
-\answerTODO{Answer}
+\textcolor{blue} {Yes, we are committed to abide by FAIR principles when sharing our dataset upon paper acceptance.}
+\item If you are curating or releasing new datasets, did you create a Datasheet for the Dataset? 
+\textcolor{blue} {Yes, we commit to creating a Datasheet when sharing our dataset upon paper acceptance.}
 \end{enumerate}
 
-\item Additionally, if you used crowdsourcing or conducted research with human subjects, \textbf{without compromising anonymity}...
+\item Additionally, if you used crowdsourcing or conducted research with human subjects, \textbf{without compromising anonymity}... \textcolor{green} {NA. Our study does not involve research with human subjects/participants.}
+
 \begin{enumerate}
   \item Did you include the full text of instructions given to participants and screenshots?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   \item Did you describe any potential participant risks, with mentions of Institutional Review Board (IRB) approvals?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
   \item Did you include the estimated hourly wage paid to participants and the total amount spent on participant compensation?
-    \answerTODO{Answer}
+    \textcolor{green} {NA}
    \item Did you discuss how data is stored, shared, and deidentified?
-   \answerTODO{Answer}
+   \textcolor{green} {NA}
 \end{enumerate}
 
 \end{enumerate}
 
 
+
+\input{sections/appendix}
 
 \end{document}

@@ -1,0 +1,148 @@
+%==============================================================================
+% APPENDIX
+%==============================================================================
+\newpage
+\appendix
+\section*{Appendix}
+\section{LLM Classification Prompt}
+\label{app:llm_prompt}
+
+The classification was performed using GPT-4o-mini with the following system and user prompts.
+
+\subsection*{System Prompt}
+\begin{quote}
+You are a political science researcher analyzing media framing of international relations. Apply the Critical Classification Rules FIRST before classifying.
+\end{quote}
+
+\subsection*{User Prompt}
+You are an international relations researcher. Classify the following Reddit post into ONE of 5 framing categories.
+
+\subsubsection*{Critical Classification Rules (Apply First!)}
+These rules resolve ambiguities and edge cases.
+
+\begin{enumerate}
+    \item \textbf{No Action = NEUTRAL}: If the post is a question, hypothesis, speculation, or factual report without explicit government action, classify as NEUTRAL.
+    \item \textbf{Verbal vs. Physical Actions}: If a state is \textbf{only verbally criticizing or warning} another state (not taking physical/military action), classify as DIPLOMACY, not THREAT.
+    \item \textbf{Individual Harm = HUMANITARIAN}: If the harm is to \textbf{specific individuals} (protesters, defectors, refugees, civilians), classify as HUMANITARIAN, not THREAT.
+    \item \textbf{Conflicting Frames = NEUTRAL}: When DIPLOMACY and THREAT (or other frames) are equally present and competing, classify as NEUTRAL.
+    \item \textbf{Domestic Politics = NEUTRAL}: Commentary on domestic political issues, even if mentioning foreign countries, is NEUTRAL.
+\end{enumerate}
+
+\subsubsection*{Classification Criteria}
+
+\paragraph{1. THREAT (Military Tension/Conflict)}
+Physical military actions that increase conflict possibility.
+\begin{itemize}
+    \item \textbf{Include}: Military actions (missile launches, nuclear tests, military exercises, shows of force), arms buildup, military threats with NO dialogue possibility (ultimatums), cyberattacks on military/government infrastructure.
+    \item \textbf{Exclude (classify as DIPLOMACY instead)}: Verbal warnings with possibility of dialogue remaining, one state verbally criticizing another's actions, requests to stop military activities.
+\end{itemize}
+
+\paragraph{2. DIPLOMACY (Diplomatic Interaction)}
+Relationship adjustment through dialogue, negotiation, or verbal pressure.
+\begin{itemize}
+    \item \textbf{Include}: Summit meetings, diplomatic negotiations, bilateral/multilateral talks, agreements, attempts to improve/normalize relations, sanctions relief, verbal criticism/warnings between states, diplomatic pressure.
+    \item \textbf{Note}: Even if a summit fails, focus on the summit itself $\rightarrow$ DIPLOMACY.
+\end{itemize}
+
+\paragraph{3. ECONOMIC (Economic Measures)}
+Pressure or cooperation through economic means.
+\begin{itemize}
+    \item \textbf{Include}: Imposition/strengthening of economic sanctions, sanctions evasion activities, trade measures (tariffs), economic cooperation/investment.
+    \item \textbf{Exclude}: Arms deals $\rightarrow$ THREAT, if main focus is diplomatic action $\rightarrow$ DIPLOMACY.
+\end{itemize}
+
+\paragraph{4. HUMANITARIAN (Humanitarian Issues)}
+Human rights and individual/civilian harm.
+\begin{itemize}
+    \item \textbf{Include}: Human rights violations, refugee issues, humanitarian assistance/aid, war crimes, harm to individuals (protesters, defectors, refugees, civilians), cyberattacks targeting civilians.
+\end{itemize}
+
+\paragraph{5. NEUTRAL (Neutral Information)}
+Cases not fitting specific frames.
+\begin{itemize}
+    \item \textbf{Include}: Simple factual reporting, analysis, domestic politics, questions/hypotheticals, description without explicit government action, when multiple frames are equally present.
+\end{itemize}
+
+\section{Parallel Trends Validation}
+\label{app:parallel_trends}
+
+Tables~\ref{tab:app_pt_sentiment} and~\ref{tab:app_pt_framing} present the full parallel trends test results for sentiment and framing outcomes, respectively. For sentiment, all three control groups satisfied parallel trends across both comparisons ($p > 0.05$). For framing, China and Iran satisfied parallel trends in all comparisons, while Russia exhibited a significant violation for P1$\rightarrow$P2 ($p = 0.01$), likely due to the Mueller investigation's confounding effect on threat-oriented discourse during this period. Consequently, Russia is excluded from framing analyses for the Singapore Summit effect.
+
+\begin{table}[h]
+\centering
+\caption{Parallel Trends Test Results (Sentiment)}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Comparison} & \textbf{Control} & \textbf{P-value} & \textbf{Trends} \\
+\midrule
+P1$\rightarrow$P2 & China & 0.99 & Valid \\
+P1$\rightarrow$P2 & Iran & 0.73 & Valid \\
+P1$\rightarrow$P2 & Russia & 0.14 & Valid \\
+\addlinespace
+P2$\rightarrow$P3 & China & 0.71 & Valid \\
+P2$\rightarrow$P3 & Iran & 0.64 & Valid \\
+P2$\rightarrow$P3 & Russia & 0.81 & Valid \\
+\bottomrule
+\end{tabular}
+\label{tab:app_pt_sentiment}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Parallel Trends Test Results (Framing)}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Comparison} & \textbf{Control} & \textbf{P-value} & \textbf{Trends} \\
+\midrule
+P1$\rightarrow$P2 & China & 0.06 & Valid \\
+P1$\rightarrow$P2 & Iran & 0.69 & Valid \\
+P1$\rightarrow$P2 & Russia & 0.01 & Invalid \\
+\addlinespace
+P2$\rightarrow$P3 & China & 0.40 & Valid \\
+P2$\rightarrow$P3 & Iran & 0.76 & Valid \\
+P2$\rightarrow$P3 & Russia & 0.30 & Valid \\
+\bottomrule
+\end{tabular}
+\label{tab:app_pt_framing}
+\end{table}
+
+\section{Error Analysis Examples}
+\label{app:error_analysis}
+
+Table~\ref{tab:app_error_examples} provides qualitative examples of classification disagreements between human annotators and the LLM. The analysis highlights two primary sources of error: (1) Over-application of the ``factual reporting = NEUTRAL'' heuristic to diplomatic events, and (2) Over-sensitivity of the ``individual harm = HUMANITARIAN'' rule to keywords like ``protesters'' or ``defectors'' even when the primary framing is not humanitarian.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Examples of Human-LLM Classification Disagreements}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{4.8cm} c c >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Post Title} & \textbf{Human} & \textbf{LLM} & \textbf{LLM Reasoning (Summary)} \\
+\midrule
+\multicolumn{4}{l}{\textit{Type 1: Factual Reporting vs. Diplomatic Action}} \\
+\addlinespace[0.3em]
+Trump calls off planned Singapore summit & DIP & NEU & Classified as a ``factual report'' about an event cancellation without explicit government action. \\
+\addlinespace[0.5em]
+Kim Jong Un received an `excellent' letter from Trump & DIP & NEU & Viewed as a report about a letter rather than a significant diplomatic interaction. \\
+\addlinespace[0.5em]
+Tillerson in Beijing set to talk on North Korea & DIP & NEU & Interpreted as a report on travel plans rather than a substantive diplomatic engagement. \\
+\addlinespace[0.5em]
+North Korea cuts ICBMs out of military parade & DIP & NEU & Failed to recognize the parade modification as a deliberate diplomatic signal of de-escalation. \\
+\addlinespace[0.5em]
+South Korea's Leader Credits Trump for North Korea Talks & DIP & NEU & Characterized as a neutral report on a leader's statement rather than an act of diplomatic recognition. \\
+\midrule
+\multicolumn{4}{l}{\textit{Type 2: Keyword Sensitivity (Individual Harm)}} \\
+\addlinespace[0.3em]
+Anonymous Hacks China... Students Trapped & THR & HUM & Focus on ``Students trapped'' outweighed the military/cyber threat context. \\
+\addlinespace[0.5em]
+Russia delivered 12.1 metric tons aid to Syria & DIP & HUM & Interpreted ``aid delivery'' as a humanitarian act rather than a state-led diplomatic move. \\
+\addlinespace[0.5em]
+Facebook Blocks \$200K Donation To Iran Quake Victims Because Sanctions & NEU & HUM & Focus on ``Quake Victims'' overrode the primary context of corporate compliance with sanctions. \\
+\addlinespace[0.5em]
+North Korea defectors launch 'birthday' balloons across DMZ & NEU & HUM & The keyword ``defectors'' triggered a Humanitarian classification despite the political nature of the act. \\
+\addlinespace[0.5em]
+Otto Warmbier: Parents of man tortured in North Korea condemn Trump & NEU & HUM & The mention of ``tortured'' led to a Humanitarian label, missing the domestic political reaction frame. \\
+\bottomrule
+\end{tabularx}
+\label{tab:app_error_examples}
+\end{table*}

@@ -4,15 +4,18 @@
 % \jun{Fixed: Added Baum (2015) and Entman (2004)}
 Public opinion toward foreign adversaries is shaped not only by objective events but also by how those events are discussed and interpreted in public discourse~\cite{baum2015war,entman2004projections}.
 % \mohit{You can add here a citation from maybe a newspaper or something like that}
-% \jun{Fixed: Added Washington Post (2018) and Straits Times (2018)}
-In particular, high-stakes diplomatic summits function as salient narrative moments, drawing widespread attention and prompting shifts in how adversary states are evaluated, debated, and framed online~\cite{wapo2018historic, straitstimes2018summit}.
+% \jun{Fixed: Added Washington Post (2018) and Straits Times (2018)}straitstimes2018summit
+In particular, high-stakes diplomatic summits function as salient narrative moments, drawing widespread attention and prompting shifts in how adversary states are evaluated, debated, and framed online~\cite{wapo2018historic}.
 Understanding whether such events produce lasting changes in public discourse or are merely short-lived emotional reactions remains an open empirical question.
 
 % \mohit{add citations, put a couple of papers.}
 % \jun{Fixed: Added Kertzer and  Zeitzoff (2017) and Tomz et al. (2020)}
 Prior research on public opinion and foreign policy has largely focused on survey-based measures of approval or sentiment, often emphasizing immediate affective responses to international crises~\cite{kertzer2017bottom, tomz2020public}.
-While these approaches capture important emotional dynamics, they provide limited insight into how \textit{interpretive narratives} evolve over time, especially in participatory online environments. Online discourse is not only emotional but also relational and structural: narratives are connected, reinforced, and contested through repeated interaction among actors, concepts, and events. Focusing exclusively on sentiment risks overlooking these broader discourse dynamics.
-Recent work in computational social science has begun addressing this gap by applying quasi-experimental designs to social media data, enabling stronger causal inference about the effects of political events~\cite{kumarswamy2025,horta2023deplatforming,trujillo2022make,chandrasekharan2017you}. We extend this methodological advance to the domain of international relations. However, much of this literature still treats discourse as a collection of independent texts, rather than as an interconnected system of narratives. Moreover, existing studies often conflate emotional tone with substantive framing, limiting our ability to distinguish transient reactions from more persistent narrative shifts.
+While these approaches capture important emotional dynamics, they provide limited insight into how \textit{interpretive narratives} evolve over time, especially in participatory online environments. Online discourse is not only emotional but also relational and structural.
+% : narratives are connected, reinforced, and contested through repeated interaction among actors, concepts, and events. 
+Focusing exclusively on sentiment risks overlooking these broader discourse dynamics.
+Recent work in computational social science has begun addressing this gap by applying quasi-experimental designs to social media data, enabling stronger causal inference about the effects of political events~\cite{kumarswamy2025,horta2023deplatforming,trujillo2022make,chandrasekharan2017you}. We extend this methodological advance to the domain of international relations. 
+% However, much of this literature still treats discourse as a collection of independent texts, rather than as an interconnected system of narratives. Moreover, existing studies often conflate emotional tone with substantive framing, limiting our ability to distinguish transient reactions from more persistent narrative shifts.
 
 In this study, we argue that evaluating the public impact of diplomacy requires examining both \textit{content} and \textit{structure} in online discourse. We distinguish between two complementary dimensions: (1) content-level change, reflected in sentiment and framing, and (2) structural change, reflected in how narratives are interconnected within discourse networks. Sentiment captures affective valence, whereas framing captures how an adversary is positioned (such as a military threat or a negotiation partner) within public narratives. These dimensions need not evolve in tandem, and disentangling them is crucial for understanding the broader consequences of diplomatic engagement.
 % \mohit{Limit the use of ---}
@@ -20,7 +23,8 @@ In this study, we argue that evaluating the public impact of diplomacy requires 
 
 % \mohit{add newspaper citations}
 % \jun{Fixed: Added White House Joint Statement (2018) and Guardian (2019)}
-We examine these dynamics through the case of U.S.-North Korea summit diplomacy between 2018 and 2019. The Singapore Summit marked an unprecedented moment of diplomatic engagement between the two countries, while the subsequent Hanoi Summit ended without agreement~\cite{whitehouse2018joint, guardian2019hanoi}.
+We examine these dynamics through the case of U.S.-North Korea summit diplomacy between 2017 and 2019. The Singapore Summit marked an unprecedented moment of diplomatic engagement between the two countries, while the subsequent Hanoi Summit ended without agreement.
+% ~\cite{whitehouse2018joint, guardian2019hanoi}.
 Together, these events provide a natural contrast between diplomatic success and failure, allowing us to examine not only immediate shifts in discourse but also whether earlier narrative changes persist following subsequent setbacks. To the best of our knowledge, this is the first study to apply causal inference methods to analyze how diplomatic events reshape both content-level framing and structural organization of online discourse toward an adversary nation.
 % \mohit{If there has been no work on this, i would recommend framing it by saying, to the best of our knowledge, this is the first work or no other work etc..}
 % \jun{Fixed: Added To the best of our knowledge statement}
@@ -37,11 +41,13 @@ In particular, we investigate the following research questions:
 \end{itemize}
 
 We collected Reddit discussions mentioning North Korea and control countries (China, Iran, Russia) from January 2017 to June 2019 via the Arctic Shift API~\cite{arcticshift2024}, yielding 10,659 posts for North Korea and comparable volumes for control groups. To measure the causal impact of summit diplomacy, we employ the Difference-in-Differences (DiD) regression analysis, which is arguably one of the strongest and most widely used quasi-experimental methods in causal inference~\cite{abadie2005semiparametric, fredriksson2019impact,kumarswamy2025,roth2023s,horta2023deplatforming}. This design allows us to isolate the effects of diplomatic events from concurrent geopolitical developments by comparing treated (North Korea) and control groups before and after each summit.
-\mohit{I remember it as Arctic Shift, say Artic shift and cite it, ypu can cite the arcticshift api git link}
-\jun{Fixed: Changed to Arctic Shift API with citation.}
+% \mohit{I remember it as Arctic Shift, say Artic shift and cite it, ypu can cite the arcticshift api git link}
+% \jun{Fixed: Changed to Arctic Shift API with citation.}
 % \mohit{Give a short idea about the data collection, like we collected data from this to this via this and in total we collected this much data. Addidionally, add citations for DiD, use my parler paper to see how i frammed it}
 % \jun{Fixed: Added data collection summary with source, timeframe, and volume. Added DiD citations per Mohit's Parler paper framing (Abadie 2005, Fredriksson 2019, etc.).}
-To measure discourse at scale, we use a validated Codebook LLM framework~\cite{zhang2025codebook,gilardi2023} for framing classification and integrate it with graph-based network analysis~\cite{edge2024graphrag} to capture structural reorganization in narrative connectivity.
+To measure discourse at scale, we use a validated Codebook LLM framework
+% ~\cite{zhang2025codebook,gilardi2023} 
+for framing classification and integrate it with graph-based network analysis~\cite{edge2024graphrag} to capture structural reorganization in narrative connectivity.
 
 By integrating content-level and structural analyses, this study contributes to computational social science in three key ways:
 \begin{enumerate}

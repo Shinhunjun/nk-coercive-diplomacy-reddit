@@ -2,13 +2,15 @@
 % RESULTS
 %==============================================================================
 \section{Results}
-
+\label{res}
 % Timeline figure at the beginning
 
 
 \subsection{Content Changes in Online Discourse (RQ1a)}
 
-We first examine whether high-stakes diplomatic events causally reshape the content of online discourse toward North Korea. Figure~\ref{fig:timeline} presents an overview of the study period and key events. While sentiment captures general affective valence (positive vs. negative), it lacks the granularity to distinguish between substantive policy narratives. Our primary focus is therefore on framing, which explicitly measures the rhetorical shift between military threat and diplomatic engagement. Together, these measures allow us to assess both the emotional tone and the narrative substance of the discourse following diplomatic events. For instance, a post titled ``North Korea rejects South Korea Moon's dialogue pledge, says it will never have talks'' exhibits negative sentiment (score: -0.69) due to the explicit refusal, yet is correctly classified as \textit{Diplomacy} (confidence: 0.70). This classification reflects that the refusal is an official position statement delivered through diplomatic channels, rather than rhetoric concerning military deployment or kinetic threats. This divergence highlights why relying solely on sentiment would overlook the continued diplomatic engagement underlying the critical rhetoric.
+We first examine whether high-stakes diplomatic events causally reshape the content of online discourse toward North Korea. 
+% Figure~\ref{fig:timeline} presents an overview of the study period and key events. 
+While sentiment captures general affective valence (positive vs. negative), it lacks the granularity to distinguish between substantive policy narratives. Our primary focus is therefore on framing, which explicitly measures the rhetorical shift between military threat and diplomatic engagement. Together, these measures allow us to assess both the emotional tone and the narrative substance of the discourse following diplomatic events. For instance, a post titled ``North Korea rejects South Korea Moon's dialogue pledge, says it will never have talks'' exhibits negative sentiment (score: -0.69) due to the explicit refusal, yet is correctly classified as \textit{Diplomacy} (confidence: 0.70). This classification reflects that the refusal is an official position statement delivered through diplomatic channels, rather than rhetoric concerning military deployment or kinetic threats. This divergence highlights why relying solely on sentiment would overlook the continued diplomatic engagement underlying the critical rhetoric.
 
 To explicitly quantify the comparative sensitivity of these measures, 
 % Figure~\ref{fig:ratio_comparison} tracks the evolution of sentiment and framing ratios across all three periods. 
@@ -23,15 +25,13 @@ In the transition from P1 to P2 (Summit Diplomacy), the framing ratio (Diplomacy
 % \label{fig:ratio_comparison}
 % \end{figure}
 
-\subsubsection{Parallel Trends Validation}
-% \mohit{This should go in the method section. I put comments for you}
-% \jun{Fixed: Moved tables to Method section.}
+% \subsubsection{Parallel Trends Validation}
+% % \mohit{This should go in the method section. I put comments for you}
+% % \jun{Fixed: Moved tables to Method section.}
 
-As reported in the Method section (Tables~\ref{tab:pt_sentiment} and~\ref{tab:pt_framing}), all three control groups (China, Iran, Russia) satisfy the parallel trends assumption for both sentiment and framing, so we include all three in our analysis.
+% As reported in the Method section (Tables~\ref{tab:pt_sentiment} and~\ref{tab:pt_framing}), all three control groups (China, Iran, Russia) satisfy the parallel trends assumption for both sentiment and framing, so we include all three in our analysis.
 
-\subsubsection{Impact on Sentiment}
-
-Figure~\ref{fig:sentiment_trends} shows monthly sentiment trends, and Figure~\ref{fig:sentiment_did} visualizes the DID effects. The Singapore Summit (P1$\rightarrow$P2) produced a statistically significant positive shift in sentiment toward North Korea across all control groups (Table~\ref{tab:did_sentiment_summary}), with estimated effects ranging from +0.10 to +0.21 ($p < 0.001$). In contrast, the failure of the Hanoi Summit (P2$\rightarrow$P3) resulted in a significant negative shift in sentiment, ranging from -0.06 to -0.12 ($p < 0.001$). 
+\textbf{Impact on Sentiment: } Figure~\ref{fig:sentiment_trends} shows monthly sentiment trends, and Figure~\ref{fig:sentiment_did} visualizes the DiD effects. The Singapore Summit (P1$\rightarrow$P2) produced a statistically significant positive shift in sentiment toward North Korea across all control groups (Table~\ref{tab:did_sentiment_summary}), with estimated effects ranging from +0.10 to +0.21 ($p < 0.001$). In contrast, the failure of the Hanoi Summit (P2$\rightarrow$P3) resulted in a significant negative shift in sentiment, ranging from -0.06 to -0.12 ($p < 0.001$). 
 % \mohit{I would recommend putting the p value in brackets next to the the DiD est, and the other coloumn should have the confidence intervals, and as a footnote you can have the stars related to the p value, check the Table 1 in in my Parler paper.}
 
 \begin{figure*}[t]
@@ -46,15 +46,19 @@ While these sentiment shifts are statistically significant, their magnitude rema
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/fig4b_sentiment_did_visualization.pdf}
-\caption{Sentiment Difference-in-Differences Visualization. (A) Singapore Summit Effect, (B) Hanoi Summit Effect. Pre-treatment trends (P1) are visually parallel across groups, supporting the validity of the DiD design. The bold black dashed line marks the intervention point (summit date).}\n% \\mohit{WHat is the vertical black line? If it is an intervention, bold the color of the line and say here in the caption what the line is} \\jun{Fixed!}\n% \\mohit{The legend is overlapping in Fig A, fix that} \\jun{Fixed!}
-} 
+    \subfloat[Singapore Summit Effect (P1 \textrightarrow\ P2)]{\includegraphics[width=0.28\textwidth]{figures/fig4b_a_singapore.pdf}\label{fig:sentiment_did_a}}
+    % \hfill
+    \subfloat[Hanoi Summit Effect (P2 \textrightarrow\ P3)]{\includegraphics[width=0.28\textwidth]{figures/fig4b_b_hanoi.pdf}\label{fig:sentiment_did_b}}
+\caption{Sentiment Difference-in-Differences Visualization. Pre-treatment trends (P1) are visually parallel across groups, supporting the validity of the DiD design. The bold black dashed line marks the intervention point (summit date).}
+%\mohit{Fix the figure as i mentioned on the slack}
+% \mohit{WHat is the vertical black line? If it is an intervention, bold the color of the line and say here in the caption what the line is} \jun{Fixed!}
+% \mohit{The legend is overlapping in Fig A, fix that} \jun{Fixed!}
 \label{fig:sentiment_did}
 \end{figure*}
 
 \begin{table}[t]
 \centering
-\caption{Sentiment Difference-in-Differences Results}
+\caption{Sentiment Difference-in-Differences Results }
 \begin{tabular}{llcc}
 \hline
 \textbf{Event} & \textbf{Control} & \textbf{DiD Est.} & \textbf{95\% CI} \\
@@ -74,9 +78,9 @@ Hanoi & China & -0.11*** & [-0.14, -0.08] \\
 % \mohit{I would recommend putting the p value in brackets next to the the DiD est, and the other coloumn should have the confidence intervals, and as a footnote you can have the stars related to the p value, check the Table 1 in in my Parler paper.}
 % \jun{Fixed: Updated table with 95\% CI, significance stars, and clean period values (transition excluded).}
 
-\subsubsection{Impact on Framing}
-
-We next examine changes in framing, where higher values indicate diplomacy-oriented narratives and lower values indicate threat-oriented narratives. As noted in the parallel trends validation, Russia is excluded from this analysis due to pre-trend violations, leaving China and Iran as valid control groups. Figure~\ref{fig:framing_trends} shows monthly framing trends, and Figure~\ref{fig:did} visualizes the DID effects.
+\textbf{Impact on Framing:} We next examine changes in framing, where higher values indicate diplomacy-oriented narratives and lower values indicate threat-oriented narratives. 
+% As noted in the parallel trends validation, Russia is excluded from this analysis due to pre-trend violations, leaving China and Iran as valid control groups. 
+Figure~\ref{fig:framing_trends} shows monthly framing trends, and Figure~\ref{fig:did} visualizes the DiD effects.
 
 \begin{figure*}[t]
 \centering
@@ -87,8 +91,11 @@ We next examine changes in framing, where higher values indicate diplomacy-orien
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/fig4_did_visualization.pdf}
-\caption{Framing Difference-in-Differences Visualization. (A) Singapore Summit Effect, (B) Hanoi Summit Effect. Pre-treatment trends (P1) are visually parallel for China and Iran, validating their use as control groups. The bold black dashed line marks the intervention point (summit date).}\n% \\mohit{The legend is overlapping in Fig A, fix that}\\jun{Fixed: Moved DiD annotations to 3/4 point on x-axis, reduced vertical spacing.}
+    \subfloat[Singapore Summit Effect (P1 \textrightarrow\ P2)]{\includegraphics[width=0.28\textwidth]{figures/fig4_a_singapore.pdf}\label{fig:did_a}}
+    % \hfill
+    \subfloat[Hanoi Summit Effect (P2 \textrightarrow\ P3)]{\includegraphics[width=0.28\textwidth]{figures/fig4_b_hanoi.pdf}\label{fig:did_b}}
+\caption{Framing Difference-in-Differences Visualization. Pre-treatment trends are visually parallel for China and Iran, validating their use as control groups. Russia is excluded from (A) due to parallel trends violation (p=0.01) but included in (B) where parallel trends are satisfied. The bold black dashed line marks the intervention point (summit date).}
+% \mohit{The legend is overlapping in Fig A, fix that} \jun{Fixed: Moved DiD annotations to 3/4 point on x-axis, reduced vertical spacing.}
 \label{fig:did}
 \end{figure*}
 
@@ -101,18 +108,18 @@ We next examine changes in framing, where higher values indicate diplomacy-orien
 \hline
 Singapore & China & +1.01*** & [0.50, 1.52] \\
 (P1$\rightarrow$P2) & Iran & +0.49 & [-0.14, 1.11] \\
-& Russia & +0.72** & [0.18, 1.27] \\
 \hline
 Hanoi & China & -0.50* & [-1.00, -0.01] \\
 (P2$\rightarrow$P3) & Iran & -0.07 & [-0.72, 0.57] \\
 & Russia & -0.40 & [-0.90, 0.09] \\
 \hline
 \multicolumn{4}{l}{\footnotesize * $p<0.05$, ** $p<0.01$, *** $p<0.001$} \\
+\multicolumn{4}{l}{\footnotesize Russia excluded from P1$\rightarrow$P2 due to parallel trends violation.} \\
 \end{tabular}
 \label{tab:did_framing_summary}
 \end{table}
 
-The Singapore Summit led to a pronounced shift toward diplomacy-oriented framing (Table~\ref{tab:did_framing_summary}), with DID estimates of +0.72 to +1.01 across control groups. Following the collapse of the Hanoi Summit, framing shifted back toward threat-oriented narratives, with the China control group showing a statistically significant reversal ($-0.50$, $p = 0.048$). Notably, the magnitude of framing shifts substantially exceeds that of sentiment changes, indicating that diplomatic events more strongly reshape how North Korea is framed than how it is emotionally evaluated in online discourse.
+The Singapore Summit led to a pronounced shift toward diplomacy-oriented framing (Table~\ref{tab:did_framing_summary}), with DiD estimates of +0.49 to +1.01 across valid control groups. Following the collapse of the Hanoi Summit, framing shifted back toward threat-oriented narratives, with the China control group showing a statistically significant reversal ($-0.50$, $p = 0.048$). Notably, the magnitude of framing shifts substantially exceeds that of sentiment changes, indicating that diplomatic events more strongly reshape how North Korea is framed than how it is emotionally evaluated in online discourse.
 
 To verify that these findings are not artifacts of the diplomacy scale construction (THREAT = $-2$, DIPLOMACY = $+2$), we conducted a robustness check using binary outcome indicators. When analyzing the proportion of THREAT-framed posts directly, DiD estimates show significant decreases following the Singapore Summit across all control groups ($-26.9$ pp with China, $p = 0.004$; $-17.0$ pp with Iran, $p = 0.073$; $-29.1$ pp with Russia, $p = 0.001$). Conversely, DIPLOMACY proportions increased significantly with China ($+21.0$ pp, $p < 0.001$). These binary analyses confirm that the main findings are robust to outcome scaling choices. Notably, diplomatic summits primarily reduced threat framing rather than proportionally increasing diplomacy framing, suggesting that the rhetorical shift was characterized more by de-escalation than by active endorsement of diplomatic engagement. % TODO: Find reference for de-escalation vs endorsement framing distinction
 
@@ -126,6 +133,7 @@ To verify that these findings are not artifacts of the diplomacy scale construct
 To test whether diplomatic effects exhibit asymmetric persistence (the ratchet effect hypothesis), we compare the magnitude of framing shifts following the Singapore Summit ($|P1 \rightarrow P2|$) against subsequent reversals following the Hanoi failure ($|P2 \rightarrow P3|$). If the ratchet hypothesis holds, the reversal effect should be significantly smaller than the original effect.
 
 Table~\ref{tab:ratchet_validation} presents bootstrap validation results across multiple dimensions. For framing dimensions, we use a combined score (DIPLOMACY\% $-$ THREAT\%) to capture the overall shift from threat-dominant to diplomacy-dominant discourse. Ratios significantly below 1.0 indicate incomplete reversal.
+
 \begin{table}[t]
 \centering
 \small
@@ -146,6 +154,7 @@ Sentiment & 0.095 & 0.109 & 1.15 & [0.97, 1.35] \\
 }
 \label{tab:ratchet_validation}
 \end{table}
+
 The results strongly support the ratchet hypothesis for framing dimensions. Content framing shows a reversal ratio of 0.39 (95\% CI: [0.15, 0.65]), indicating that the Hanoi failure reversed only 39\% of the Singapore Summit's framing effect. The DiD analysis with control groups shows a similar pattern (50\% reversal for China). Edge-level framing exhibits an even stronger ratchet pattern (ratio = 0.11), and community framing shows similar persistence (ratio = 0.24). Critically, all framing dimensions have 95\% CIs excluding 1.0. In contrast, sentiment shows a ratio of 1.15 (95\% CI including 1.0), indicating that emotional valence fully reverted following diplomatic failure.
 % \mohit{Jun, I have added this Summary textbf, i would recommend putting that for RQ2 and RQ3 also, at the end} \jun{fixed!}
 
@@ -155,23 +164,20 @@ The results strongly support the ratchet hypothesis for framing dimensions. Cont
 
 To assess whether observed framing changes are reflected in the organization of discourse itself, we analyze discourse networks constructed from Reddit discussions across the three diplomatic phases. Using a graph-based indexing approach~\cite{edge2024graphrag}, we extract entities and relationships from 10,659 documents, constructing knowledge graphs that capture how actors, events, and concepts are interconnected in public discourse.
 
-\textbf{Network Topology Changes:} Table~\ref{tab:network_topology} presents network-level metrics across the three periods. Despite a substantial reduction in the number of entities (nodes) and relationships (edges) from P1 to P3, network density (the proportion of possible connections that are realized) increased markedly (+146\% from P1 to P2, +16\% from P2 to P3). This densification signifies a \textbf{structural consolidation} of discourse: rather than being fragmented across disparate topics, discussion became highly interconnected and focused around a core set of central actors and themes (e.g., the summits themselves) following the Singapore engagement.
+\textbf{Network Topology Changes:} Table~\ref{tab:network_topology} presents network-level metrics across the three periods. Despite a substantial reduction in the number of entities (nodes) and relationships (edges) from P1 to P3, network density (the proportion of possible connections that are realized) increased markedly (+146\% from P1 to P2, +16\% from P2 to P3). This densification signifies a \textit{structural consolidation} of discourse: rather than being fragmented across disparate topics, discussion became highly interconnected and focused around a core set of central actors and themes (e.g., the summits themselves) following the Singapore engagement.
 
 The number of connected components decreased from 25 to 16, suggesting greater integration of previously fragmented discussion threads into a more unified discourse network. Clustering coefficients remained relatively stable, indicating that local community structure was preserved even as global connectivity increased. Importantly, this consolidation is not merely a mechanical artifact of fewer nodes: the proportion of nodes in the largest connected component increased from 78\% (P1) to 91\% (P2), and core entities such as ``Trump,'' ``Kim,'' and ``summit'' exhibited increased betweenness centrality, indicating their role as narrative hubs connecting previously disparate discussion threads.
 
 \input{tables/network_topology}
 
-\subsubsection{Relationship Framing Shifts}
-
+\textbf{Relationship Framing Shifts: }
 Beyond structural changes, we analyze the semantic content of relationships by classifying each edge description using the same GPT-4o-mini framing model applied in RQ1, ensuring methodological consistency across content-level and network-level analyses. Table~\ref{tab:relationship_framing} presents the distribution of framings across periods.
-
 \input{tables/relationship_framing}
-
 The results reveal a pronounced shift in relationship framing following the Singapore Summit. In P1, threat-oriented relationships dominated at 48.4\%, with diplomacy-oriented relationships comprising only 20.6\%. Following the summit (P2), this pattern inverted: threat framing dropped to 28.0\% ($-20.4$ pp), while diplomacy framing nearly doubled to 38.9\% ($+18.3$ pp). Critically, the Hanoi Summit failure produced only a partial reversion: threat framing remained at 25.6\% (nearly identical to P2 and far below P1's 48.4\%), while diplomacy framing decreased modestly to 32.2\% ($-6.7$ pp). This asymmetric pattern (where P1's threat-dominated structure was not restored despite diplomatic failure) provides strong structural evidence for the ``ratchet effect.'' It suggests that once a diplomatic connection is established in the public's conceptual map, the underlying relationship structure resists reverting to a pure threat footing, even when explicit diplomatic framing declines.
 
 
 
-\subsubsection{Community Theme Evolution}
+\textbf{Community Theme Evolution: }
 Using hierarchical community detection, we identified 354, 153, and 107 communities in P1, P2, and P3, respectively. To quantify the thematic orientation of each community, we classified community titles and summaries using the same GPT-4o-mini framing model applied for edge classification, ensuring methodological consistency across all network analyses. Table~\ref{tab:community_frame_orientation} presents the distribution of community orientations across periods.
 
 \input{tables/community_frame_orientation}
@@ -185,9 +191,11 @@ In P1, threat-oriented communities dominated at 52.0\%, while diplomacy-oriented
 
 To evaluate whether LLM-based framing classification can approximate expert human judgment in geopolitical discourse analysis, we constructed a gold-standard benchmark of 500 Reddit posts using stratified sampling across countries (North Korea, China, Iran, Russia), time periods (P1--P3), and frames (THREAT, ECONOMIC, NEUTRAL, HUMANITARIAN, DIPLOMACY). Two domain experts (military officers with expertise in North Korea and international security) independently annotated all samples following an iterative codebook refinement process.
 
-\textbf{Inter-Rater Reliability:} We first assess annotation reliability on the independently produced labels prior to consensus. Overall agreement between annotators was 81.8\%, with Cohen's $\kappa$ = 0.75, indicating substantial agreement under conventional interpretations (Landis \& Koch, 1977). Reliability was consistent across all frame categories, ranging from 79.6\% (DIPLOMACY) to 83.9\% (HUMANITARIAN), suggesting that the codebook definitions enabled uniform annotation quality across diverse framing contexts.
+\textbf{Inter-Rater Reliability:} We first assess annotation reliability on the independently produced labels prior to consensus. Overall agreement between annotators was 81.8\%, with Cohen's $\kappa$ = 0.75, indicating substantial agreement.
+% under conventional interpretations (Landis \& Koch, 1977). 
+Reliability was consistent across all frame categories, ranging from 79.6\% (DIPLOMACY) to 83.9\% (HUMANITARIAN), suggesting that the codebook definitions enabled uniform annotation quality across diverse framing contexts.
 
-\textbf{LLM--Human Agreement:} Using the final consensus labels as ground truth, we compare LLM predictions against the benchmark annotations. Overall accuracy was 85.0\%, with Cohen's $\kappa$ = 0.79, indicating substantial agreement. Performance varied by frame category: the model achieved strong performance on all frames (F1 $\geq$ 0.75), with highest performance on THREAT (F1 = 0.88) and NEUTRAL (F1 = 0.88). We report the full per-class precision/recall/F1 in Table~\ref{tab:llm_human_metrics}.
+\textbf{LLM--Human Agreement:} Using the final consensus labels as ground truth, we compare LLM predictions against the benchmark annotations. Overall accuracy was 85.0\%, with Cohen's $\kappa$ = 0.79, indicating substantial agreement. Performance varied by frame category: the model achieved strong performance on all frames (F1 $\geq$ 0.75), with the highest performance on THREAT (F1 = 0.88) and NEUTRAL (F1 = 0.88). We report the full per-class precision/recall/F1 in Table~\ref{tab:llm_human_metrics}.
 
 \begin{table}[t]
 \centering
@@ -213,7 +221,7 @@ DIPLOMACY & 0.88 & 0.77 & 0.82 & 108 \\
 \end{table}
 
 
-\textbf{Error Analysis and Implications:} Qualitative inspection of disagreements suggests that most LLM errors arise in edge cases where multiple frames co-occur, and the primary emphasis is ambiguous. Specifically, the LLM over-applied the ``factual reporting = NEUTRAL'' heuristic to diplomatic event coverage (17 cases), classifying summits and negotiations as neutral when human annotators labeled them as DIPLOMACY. Similarly, the ``individual harm = HUMANITARIAN'' rule was triggered by posts merely mentioning individuals (8 cases), even when the overall framing was neutral. Importantly, these errors are unlikely to systematically favor one diplomatic phase over another because the benchmark was stratified across periods and countries, with error rates ranging from 11.6\% (Iran) to 18.0\% (North Korea).
+\textbf{Error Analysis and Implications:} Qualitative inspection of disagreements suggests that most LLM errors arise in edge cases where multiple frames co-occur, and the primary emphasis is ambiguous. Specifically, the LLM over-applied the ``factual reporting = NEUTRAL'' heuristic to diplomatic event coverage (17 cases), classifying summits and negotiations as neutral when human annotators labeled them as DIPLOMACY. Similarly, the ``individual harm = HUMANITARIAN'' rule was triggered by posts merely mentioning individuals (8 cases), even when the overall framing was neutral. Importantly, these errors are unlikely to systematically favor one diplomatic phase over another because the benchmark was stratified across periods and countries, with error rates ranging from 11.6\% (Iran) to 18.0\% (North Korea). We provide detailed qualitative examples of these classification disagreements in Appendix~\ref{app:error_analysis}.
 
 \textbf{Summary: }Taken together, these results support the validity of using LLM-based framing classification for large-scale causal analysis, while motivating targeted robustness checks (e.g., re-estimating DiD effects on high-confidence predictions or excluding the most ambiguous categories).
 
