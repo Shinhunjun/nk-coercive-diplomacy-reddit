@@ -40,9 +40,9 @@ While these sentiment shifts are statistically significant, sentiment alone cann
 
 \begin{figure*}[t]
 \centering
-    \subfloat[Singapore Summit Effect (P1 \textrightarrow\ P2)]{\includegraphics[width=0.28\textwidth]{figures/fig4b_a_singapore.pdf}\label{fig:sentiment_did_a}}
+    \subfloat[Singapore Summit Effect (P1 \textrightarrow\ P2)]{\includegraphics[width=0.38\textwidth]{figures/fig4b_a_singapore.pdf}\label{fig:sentiment_did_a}}
     % \hfill
-    \subfloat[Hanoi Summit Effect (P2 \textrightarrow\ P3)]{\includegraphics[width=0.28\textwidth]{figures/fig4b_b_hanoi.pdf}\label{fig:sentiment_did_b}}
+    \subfloat[Hanoi Summit Effect (P2 \textrightarrow\ P3)]{\includegraphics[width=0.38\textwidth]{figures/fig4b_b_hanoi.pdf}\label{fig:sentiment_did_b}}
 \caption{Sentiment Difference-in-Differences Visualization. Pre-treatment trends (P1) are visually parallel across groups, supporting the validity of the DiD design. The bold black dashed line marks the intervention point (summit date).}
 %\mohit{Fix the figure as i mentioned on the slack}
 % \mohit{WHat is the vertical black line? If it is an intervention, bold the color of the line and say here in the caption what the line is} \jun{Fixed!}
@@ -85,9 +85,9 @@ Figure~\ref{fig:framing_trends} shows monthly framing trends, and Figure~\ref{fi
 
 \begin{figure*}[t]
 \centering
-    \subfloat[Singapore Summit Effect (P1 \textrightarrow\ P2)]{\includegraphics[width=0.28\textwidth]{figures/fig4_a_singapore.pdf}\label{fig:did_a}}
+    \subfloat[Singapore Summit Effect (P1 \textrightarrow\ P2)]{\includegraphics[width=0.38\textwidth]{figures/fig4_a_singapore.pdf}\label{fig:did_a}}
     % \hfill
-    \subfloat[Hanoi Summit Effect (P2 \textrightarrow\ P3)]{\includegraphics[width=0.28\textwidth]{figures/fig4_b_hanoi.pdf}\label{fig:did_b}}
+    \subfloat[Hanoi Summit Effect (P2 \textrightarrow\ P3)]{\includegraphics[width=0.38\textwidth]{figures/fig4_b_hanoi.pdf}\label{fig:did_b}}
 \caption{Framing Difference-in-Differences Visualization. Pre-treatment trends are visually parallel for China and Iran, validating their use as control groups. Russia is excluded from (A) due to parallel trends violation (p=0.01) but included in (B) where parallel trends are satisfied. The bold black dashed line marks the intervention point (summit date).}
 % \mohit{The legend is overlapping in Fig A, fix that} \jun{Fixed: Moved DiD annotations to 3/4 point on x-axis, reduced vertical spacing.}
 \label{fig:did}
@@ -153,8 +153,7 @@ The DiD analysis provides additional statistical evidence for this asymmetry. Du
 \subsection{Structural Reorganization of Discourse Networks (RQ2)}
 To assess whether observed framing changes are reflected in the organization of discourse itself, we analyze discourse networks constructed from Reddit discussions across the three diplomatic phases. Using a graph-based indexing approach~\cite{edge2024graphrag}, we extract entities and relationships from 10,659 documents, constructing knowledge graphs that capture how actors, events, and concepts are interconnected in public discourse.
 
-\textbf{Network Topology Changes:} Table~\ref{tab:network_topology} presents network-level metrics across the three periods. Despite a substantial reduction in the number of entities (nodes) and relationships (edges) from P1 to P3, network density (the proportion of possible connections that are realized) increased markedly (+146\% from P1 to P2, +16\% from P2 to P3). This densification signifies a \textit{structural consolidation} of discourse: rather than being fragmented across disparate topics, discussion became highly interconnected and focused around a core set of central actors and themes (e.g., the summits themselves) following the Singapore engagement.
-The number of connected components decreased from 25 to 16, suggesting greater integration of previously fragmented discussion threads into a more unified discourse network. Clustering coefficients remained relatively stable, indicating that local community structure was preserved even as global connectivity increased. Importantly, this consolidation is not merely a mechanical artifact of fewer nodes: the proportion of nodes in the largest connected component increased from 78\% (P1) to 91\% (P2), and core entities such as ``Trump,'' ``Kim,'' and ``summit'' exhibited increased betweenness centrality, indicating their role as narrative hubs connecting previously disparate discussion threads.
+\textbf{Network Topology Changes:} Table~\ref{tab:network_topology} presents network-level metrics across the three periods. Despite substantial reductions in nodes and edges from P1 to P3, network density increased markedly (+146\% from P1 to P2), signifying \textit{structural consolidation}: discussion became highly interconnected around core actors (e.g., ``Trump,'' ``Kim,'' ``summit''). The proportion of nodes in the largest connected component increased from 78\% (P1) to 91\% (P2), indicating that diplomatic engagement integrated previously fragmented discourse threads.
 
 \input{tables/network_topology}
 
