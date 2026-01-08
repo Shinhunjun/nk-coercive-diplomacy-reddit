@@ -158,18 +158,16 @@ To assess whether observed framing changes are reflected in the organization of 
 \input{tables/network_topology}
 
 \textbf{Relationship Framing Shifts: }
-Beyond structural changes, we analyze the semantic content of relationships by classifying each edge description using the same GPT-4o-mini framing model applied in RQ1, ensuring methodological consistency across content-level and network-level analyses. Table~\ref{tab:relationship_framing} presents the distribution of framings across periods.
+Table~\ref{tab:relationship_framing} reveals a pronounced structural inversion. In P1, threat-oriented relationships dominated (48.4\%), but following Singapore (P2), threat framing dropped to 28.0\% ($-20.4$ pp) while diplomacy framing nearly doubled ($+18.3$ pp). 
 \input{tables/relationship_framing}
-The results reveal a pronounced shift in relationship framing following the Singapore Summit. In P1, threat-oriented relationships dominated at 48.4\%, with diplomacy-oriented relationships comprising only 20.6\%. Following the summit (P2), this pattern inverted: threat framing dropped to 28.0\% ($-20.4$ pp), while diplomacy framing nearly doubled to 38.9\% ($+18.3$ pp). Critically, the Hanoi Summit failure produced only a partial reversion: threat framing remained at 25.6\% (nearly identical to P2 and far below P1's 48.4\%), while diplomacy framing decreased modestly to 32.2\% ($-6.7$ pp). This asymmetric pattern (where P1's threat-dominated structure was not restored despite diplomatic failure) provides strong structural evidence for the ``ratchet effect.'' It suggests that once a diplomatic connection is established in the public's conceptual map, the underlying relationship structure resists reverting to a pure threat footing, even when explicit diplomatic framing declines.
+Critically, the Hanoi failure (P3) triggered only partial reversion: threat framing remained low (25.6\%) and diplomacy framing decreased modestly ($-6.7$ pp). This asymmetric pattern suggests that once diplomatic connections are established in the public's conceptual map, the underlying relationship structure resists reverting to a pure threat footing.
 
 \textbf{Community Theme Evolution: }
-Using hierarchical community detection, we identified 354, 153, and 107 communities in P1, P2, and P3, respectively. To quantify the thematic orientation of each community, we classified community titles and summaries using the same GPT-4o-mini framing model applied for edge classification, ensuring methodological consistency across all network analyses. Table~\ref{tab:community_frame_orientation} presents the distribution of community orientations across periods.
-
+Community structures mirrored edge-level shifts (Table~\ref{tab:community_frame_orientation}). In P2, diplomacy-oriented communities surged ($+17.9$ pp) while threat communities declined ($-19.3$ pp).
 \input{tables/community_frame_orientation}
+In P3, rather than reverting to threat dominance, the discourse structure diversified: threat communities continued declining (26.2\%), while humanitarian ($+9.4$ pp) and economic ($+5.1$ pp) communities expanded, suggesting a broadening of the discursive agenda.
 
-In P1, threat-oriented communities dominated at 52.0\%, while diplomacy-oriented communities comprised only 24.6\%. Following the Singapore Summit (P2), this pattern inverted: diplomacy-oriented communities rose to 42.5\% ($+17.9$ pp), while threat communities declined to 32.7\% ($-19.3$ pp). Notably, in P3, the discourse structure diversified: threat communities continued declining to 26.2\%, while humanitarian (14.0\%, $+9.4$ pp from P2) and economic (8.4\%, $+5.1$ pp) communities expanded substantially.
-
-\textbf{Summary: }These analyses demonstrate that the Singapore Summit not only shifted edge-level framing (Table~\ref{tab:relationship_framing}) but also reorganized community-level thematic structure. The decline in threat-oriented framing and rise of diplomacy-oriented framing from P1 to P2, coupled with the subsequent diversification in P3, suggests that diplomatic events create cascading effects across multiple levels of discourse organization.
+% Summary removed for space
 
 \subsection{Validation of LLM-Based Framing (RQ3)}
 To evaluate whether LLM-based framing classification can approximate expert human judgment in geopolitical discourse analysis, we constructed a gold-standard benchmark of 500 Reddit posts using stratified sampling across countries (North Korea, China, Iran, Russia), time periods (P1--P3), and frames (THREAT, ECONOMIC, NEUTRAL, HUMANITARIAN, DIPLOMACY). Two domain experts (military officers with expertise in North Korea and international security) independently annotated all samples following an iterative codebook refinement process.
