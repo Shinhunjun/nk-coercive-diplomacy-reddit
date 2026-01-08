@@ -146,3 +146,30 @@ Otto Warmbier: Parents of man tortured in North Korea condemn Trump & NEU & HUM 
 \end{tabularx}
 \label{tab:app_error_examples}
 \end{table*}
+
+\section{Robustness Check: Alternative Framing Scale}
+\label{app:robustness}
+
+To verify that our main findings are not artifacts of the framing scale construction, we conducted a robustness check using an alternative specification that treats ECONOMIC framing as partially coercive (ECONOMIC = $-1$) rather than neutral (ECONOMIC = $0$). This alternative reflects the view that economic sanctions represent a form of coercive diplomacy.
+
+\begin{table}[h]
+\centering
+\caption{DiD Estimates: Original vs. Alternative Framing Scale}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Event} & \textbf{Control} & \textbf{Original} & \textbf{Alternative} \\
+ & & (ECON=0) & (ECON=$-1$) \\
+\midrule
+Singapore & China & +0.34** & +0.37** \\
+(P1$\rightarrow$P2) & Iran & +0.39 & +0.77** \\
+\midrule
+Hanoi & China & -0.34 & -0.23 \\
+(P2$\rightarrow$P3) & Iran & -0.23 & -0.22 \\
+ & Russia & -0.35 & -0.36 \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize * $p<0.05$, ** $p<0.01$, *** $p<0.001$} \\
+\end{tabular}
+\label{tab:app_robustness}
+\end{table}
+
+The alternative specification produces similar directional effects across all comparisons, with several estimates becoming stronger under the alternative scaling. Notably, the Singapore/Iran effect becomes statistically significant under the alternative specification (+0.39 $\rightarrow$ +0.77**). These results suggest that our main specification (ECONOMIC = 0) provides a \textit{conservative} estimate of the diplomatic framing shift, and that our substantive conclusions are robust to alternative operationalizations of the framing scale.
