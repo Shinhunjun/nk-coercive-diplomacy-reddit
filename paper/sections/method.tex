@@ -67,17 +67,7 @@ To answer our research questions, we measure two complementary dimensions of dis
 \textbf{Sentiment Analysis: } We compute sentiment using the TweetEval RoBERTa model~\cite{barbieri2020tweeteval}, a widely adopted benchmark for social media sentiment analysis. This model was trained on Twitter data, making it particularly suitable for analyzing informal, user-generated content on platforms like Reddit, which shares similar linguistic characteristics with Twitter posts. The model maps text to a continuous score from -1 (negative) to +1 (positive), capturing the \textit{emotional valence} of discourse. 
 % \mohit{Here say why we choose this? Is this a very popular sentiment analysis, if yes, then cite the papers.} \jun{Fixed: Added justification for TweetEval choice.}
 
-\textbf{Framing Classification: } We classify each Reddit post into one of five framing categories using GPT-4o-mini (API version: July 2024, temperature = 0, seed = 42 for reproducibility) within a ``Codebook LLM'' framework
-% ~\cite{halterman2025codebook,zhang2025codebook}, 
-which treats the model as a clear-cut measurement instrument rather than a black box. Using zero-shot prompting with explicit definitions:
-\begin{itemize}
-    \item \textbf{THREAT}: Military threat, nuclear weapons, missiles, war risk
-    \item \textbf{ECONOMIC}: Economic sanctions, trade, and financial impacts
-    \item \textbf{NEUTRAL}: Descriptive reporting without clear evaluative framing
-    \item \textbf{HUMANITARIAN}: Human rights, refugees, civilian welfare
-    \item \textbf{DIPLOMACY}: Negotiation, dialogue, summits, peace initiatives
-\end{itemize}
-The prompt provides category definitions and requires a single label output; the model also returns a confidence score.
+\textbf{Framing Classification: } We classify each Reddit post into one of five framing categories (THREAT, ECONOMIC, NEUTRAL, HUMANITARIAN, DIPLOMACY) using GPT-4o-mini (API version: July 2024, temperature = 0, seed = 42 for reproducibility) within a ``Codebook LLM'' framework, which treats the model as a clear-cut measurement instrument rather than a black box. The prompt provides category definitions and requires a single label output; the model also returns a confidence score.
 % \mohit{I would recommend putting the prompt with detailed information in the Appendix}
 % \jun{Fixed: Added full prompt details to Appendix B.}
 Detailed prompt instructions and category definitions are provided in Appendix~\ref{app:llm_prompt}. To ensure classification quality, we retained only predictions with confidence $\geq 0.90$, yielding 27,863 posts (94\% of the original sample). For DiD analysis, we convert categorical framing to a continuous \textit{diplomacy scale}: THREAT = $-2$, DIPLOMACY = $+2$, and NEUTRAL/ECONOMIC/HUMANITARIAN = $0$. This scale captures the primary distinction between military threat framing and diplomatic engagement framing, allowing direct quantification of how discourse shifts between adversarial and cooperative orientations. While economic sanctions can function as coercive instruments in international relations, we treat ECONOMIC framing as neutral in our primary specification because our theoretical focus is on the rhetorical distinction between \textit{military threats} and \textit{diplomatic dialogue}---the two poles most directly affected by summit diplomacy. A robustness check treating ECONOMIC as partially coercive (ECONOMIC = $-1$) yields similar or stronger results, suggesting our main specification is conservative (see Appendix~\ref{app:robustness}). We aggregate individual post scores to monthly averages, yielding a continuous outcome variable for each country-month observation.
