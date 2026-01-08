@@ -67,7 +67,7 @@ To answer our research questions, we measure two complementary dimensions of dis
 \textbf{Sentiment Analysis: } We compute sentiment using the TweetEval RoBERTa model~\cite{barbieri2020tweeteval}, a widely adopted benchmark for social media sentiment analysis. This model was trained on Twitter data, making it particularly suitable for analyzing informal, user-generated content on platforms like Reddit, which shares similar linguistic characteristics with Twitter posts. The model maps text to a continuous score from -1 (negative) to +1 (positive), capturing the \textit{emotional valence} of discourse. 
 % \mohit{Here say why we choose this? Is this a very popular sentiment analysis, if yes, then cite the papers.} \jun{Fixed: Added justification for TweetEval choice.}
 
-\textbf{Framing Classification: } We classify each Reddit post into one of five framing categories using GPT-4o-mini within a ``Codebook LLM'' framework
+\textbf{Framing Classification: } We classify each Reddit post into one of five framing categories using GPT-4o-mini (API version: July 2024, temperature = 0, seed = 42 for reproducibility) within a ``Codebook LLM'' framework
 % ~\cite{halterman2025codebook,zhang2025codebook}, 
 which treats the model as a clear-cut measurement instrument rather than a black box. Using zero-shot prompting with explicit definitions:
 \begin{itemize}
