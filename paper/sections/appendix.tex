@@ -1,7 +1,7 @@
 %==============================================================================
 % APPENDIX
 %==============================================================================
-\newpage
+% \newpage
 \appendix
 \section*{Appendix}
 \section{LLM Classification Prompt}
@@ -111,7 +111,34 @@ P2$\rightarrow$P3 & Russia & 0.30 & Valid \\
 
 Table~\ref{tab:app_error_examples} provides qualitative examples of classification disagreements between human annotators and the LLM. The analysis highlights two primary sources of error: (1) Over-application of the ``factual reporting = NEUTRAL'' heuristic to diplomatic events, and (2) Over-sensitivity of the ``individual harm = HUMANITARIAN'' rule to keywords like ``protesters'' or ``defectors'' even when the primary framing is not humanitarian.
 
-\begin{table*}[t]
+
+\section{Robustness Check: Alternative Framing Scale}
+\label{app:robustness}
+
+To verify that our main findings are not artifacts of the framing scale construction, we conducted a robustness check using an alternative specification that treats ECONOMIC framing as partially coercive (ECONOMIC = $-1$) rather than neutral (ECONOMIC = $0$). This alternative reflects the view that economic sanctions represent a form of coercive diplomacy.
+\begin{table}[h!]
+\centering
+\caption{DiD Estimates: Original vs. Alternative Framing Scale}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Event} & \textbf{Control} & \textbf{Original} & \textbf{Alternative} \\
+ & & (ECON=0) & (ECON=$-1$) \\
+\midrule
+Singapore & China & +0.34** & +0.37** \\
+(P1$\rightarrow$P2) & Iran & +0.39 & +0.77** \\
+\midrule
+Hanoi & China & -0.34 & -0.23 \\
+(P2$\rightarrow$P3) & Iran & -0.23 & -0.22 \\
+ & Russia & -0.35 & -0.36 \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize * $p<0.05$, ** $p<0.01$, *** $p<0.001$} \\
+\end{tabular}
+\label{tab:app_robustness}
+\end{table}
+
+The alternative specification produces similar directional effects across all comparisons, with several estimates becoming stronger under the alternative scaling. Notably, the Singapore/Iran effect becomes statistically significant under the alternative specification (+0.39 $\rightarrow$ +0.77**). These results suggest that our main specification (ECONOMIC = 0) provides a \textit{conservative} estimate of the diplomatic framing shift, and that our substantive conclusions are robust to alternative operationalizations of the framing scale.
+
+\begin{table*}[h]
 \centering
 \small
 \caption{Examples of Human-LLM Classification Disagreements}
@@ -147,29 +174,23 @@ Otto Warmbier: Parents of man tortured in North Korea condemn Trump & NEU & HUM 
 \label{tab:app_error_examples}
 \end{table*}
 
-\section{Robustness Check: Alternative Framing Scale}
-\label{app:robustness}
+\section{Cross-LLM Validation}
+\label{app:cross_llm}
 
-To verify that our main findings are not artifacts of the framing scale construction, we conducted a robustness check using an alternative specification that treats ECONOMIC framing as partially coercive (ECONOMIC = $-1$) rather than neutral (ECONOMIC = $0$). This alternative reflects the view that economic sanctions represent a form of coercive diplomacy.
+To ensure that our framing classifications are not driven by systematic biases specific to the GPT model family, we validated our primary classifier (GPT-4o-mini) against alternative Large Language Models from a different architecture (Meta Llama 3) using a stratified random sample of 500 posts. We employed the same prompt instructions across two models: \textit{Llama 3.3 70B} (a state-of-the-art open model) and \textit{Llama 3.1 8B} (a smaller, efficient model).
 
-\begin{table}[h]
+Table~\ref{tab:cross_llm} presents the agreement metrics. The primary Llama 3.3 70B model achieved 81.5\% overall agreement with GPT-4o-mini, yielding a Cohen's $\kappa$ of 0.711, which indicates ``substantial agreement''~\cite{landis1977measurement}. This high level of cross-model consistency, particularly between models from different developers and architectures, provides strong evidence that our classification results reflect objective discourse patterns rather than model-specific artifacts.
+
+\begin{table}[h!]
 \centering
-\caption{DiD Estimates: Original vs. Alternative Framing Scale}
+\caption{Cross-LLM Validation Results ($N=500$)}
 \begin{tabular}{llcc}
 \toprule
-\textbf{Event} & \textbf{Control} & \textbf{Original} & \textbf{Alternative} \\
- & & (ECON=0) & (ECON=$-1$) \\
+\textbf{Model Family} & \textbf{Model Version} & \textbf{Agreement (\%)} & \textbf{Cohen's $\kappa$} \\
 \midrule
-Singapore & China & +0.34** & +0.37** \\
-(P1$\rightarrow$P2) & Iran & +0.39 & +0.77** \\
-\midrule
-Hanoi & China & -0.34 & -0.23 \\
-(P2$\rightarrow$P3) & Iran & -0.23 & -0.22 \\
- & Russia & -0.35 & -0.36 \\
+Meta Llama & Llama 3.3 70B & 81.5\% & 0.711 \\
+Meta Llama & Llama 3.1 8B & 75.3\% & 0.616 \\
 \bottomrule
-\multicolumn{4}{l}{\footnotesize * $p<0.05$, ** $p<0.01$, *** $p<0.001$} \\
 \end{tabular}
-\label{tab:app_robustness}
+\label{tab:cross_llm}
 \end{table}
-
-The alternative specification produces similar directional effects across all comparisons, with several estimates becoming stronger under the alternative scaling. Notably, the Singapore/Iran effect becomes statistically significant under the alternative specification (+0.39 $\rightarrow$ +0.77**). These results suggest that our main specification (ECONOMIC = 0) provides a \textit{conservative} estimate of the diplomatic framing shift, and that our substantive conclusions are robust to alternative operationalizations of the framing scale.
