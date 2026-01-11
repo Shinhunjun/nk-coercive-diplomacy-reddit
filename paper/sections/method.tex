@@ -7,8 +7,8 @@ We collected Reddit posts from January 2017 to June 2019 using the Arctic Shift 
 % \jun{Fixed: Changed to textbf inline headings.}
 To ensure comprehensive coverage of the discourse, we employed a keyword-based retrieval strategy. We queried the API for posts containing country-specific keywords (e.g., ``North Korea'', ``China'', ``Iran'', ``Russia'') to construct our treatment and control groups.
 
-\textbf{Audience Response Data.} While our primary causal analysis focuses on posts ($N=29,688$), we also collected the full comment trees for the top-5 most upvoted root comments from each post. We analyze these audience responses ($N=255,391$) to capture highly visible, socially reinforced reactions and the subsequent discussions they trigger, representing the most influential layer of discourse.
-\textbf{Treatment and Control Groups.}
+\textbf{Audience Response Data:} While our primary causal analysis focuses on posts ($N=29,688$), we also collected the full comment trees for the top-5 most upvoted root comments from each post. We analyze these audience responses ($N=255,391$) to capture highly visible, socially reinforced reactions and the subsequent discussions they trigger, representing the most influential layer of discourse.
+\textbf{Treatment and Control Groups:}
 To isolate the causal impact of summit diplomacy, it is essential to control for concurrent geopolitical developments that could confound inference. Relying solely on longitudinal observations of the treatment group (North Korea) risks misinterpreting broader fluctuations in Reddit users' foreign policy sentiment as specific effects of the summits. 
 % As noted in prior work~\cite{kumarswamy2025}, external ``offline'' events often drive significant spikes in online activity across all topics, necessitating a control group to distinguish treatment effects from general temporal trends.
 % \mohit{I would recommend saying why we needed control group. Say that just making observations could lead to wrong results, hence we decided to have control groups, You have the text, you need to motivate it. Check Section 3 in my parler paper, where i motivate it, you just motivate it and then have the rest you have.}
@@ -98,7 +98,7 @@ Y_{g,t} = \alpha_g + \gamma_t + \beta \big(\text{Treat}_g \times \text{Post}_t\b
 where $Y_{g,t}$ is the monthly average sentiment (or framing) for group $g$ in month $t$, 
 $\alpha_g$ and $\gamma_t$ denote group and month fixed effects, and $\beta$ captures the DID estimate of the summit effect. We report heteroskedasticity-robust standard errors clustered at the group level. We explicitly verified the parallel trends assumption, as detailed in the Data Collection subsection above.
 
-\textbf{Causal Scope.} We emphasize that our causal identifiction strategy is defined strictly at the post level, where the unit of analysis is the agenda-setting initial post. We do not redefine comments as independent causal units for DiD estimation, given their nested dependency on the parent post. Instead, comment-level analyses are used to assess the propagation and external validity of the post-level effects.
+\textbf{Causal Scope:} We emphasize that our causal identifiction strategy is defined strictly at the post level, where the unit of analysis is the agenda-setting initial post. We do not redefine comments as independent causal units for DiD estimation, given their nested dependency on the parent post. Instead, comment-level analyses are used to assess the propagation and external validity of the post-level effects.
 
 %------------------------------------------------------------------------------
 \subsection{Network Structure Analysis}
