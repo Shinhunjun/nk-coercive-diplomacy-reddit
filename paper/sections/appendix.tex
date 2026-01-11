@@ -152,7 +152,6 @@ The alternative specification produces similar directional effects across all co
 \toprule
 \textbf{Model Family} & \textbf{Model Version} & \textbf{Agreement (\%)} & \textbf{Cohen's $\kappa$} \\
 \midrule
-OpenAI & GPT-4o & 80.4\% & 0.72 \\
 Meta Llama & Llama 3.3 70B & 81.5\% & 0.71 \\
 Meta Llama & Llama 3.1 8B & 75.3\% & 0.62 \\
 \bottomrule
@@ -164,7 +163,7 @@ Meta Llama & Llama 3.1 8B & 75.3\% & 0.62 \\
 
 To ensure that our framing classifications are robust across different LLM families and model sizes, we validated our primary classifier (GPT-4o-mini) against multiple alternative models. GPT-4o-mini was selected as the primary classifier based on its strong agreement with human gold labels (85.0\% accuracy, Cohen's $\kappa$ = 0.79, $N=400$). We then tested cross-model consistency by comparing other LLMs against GPT-4o-mini predictions on a stratified sample of 500 posts.
 
-Table~\ref{tab:cross_llm} presents the agreement metrics. GPT-4o achieved 80.4\% agreement with GPT-4o-mini ($\kappa$ = 0.72). Among the Meta Llama models, Llama 3.3 70B achieved 81.5\% agreement ($\kappa$ = 0.71), indicating ``substantial agreement''. This high cross-family consistency, particularly between models from different developers and architectures, provides strong evidence that our classification results reflect objective discourse patterns rather than model-specific artifacts.
+Table~\ref{tab:cross_llm} presents the agreement metrics. Among the Meta Llama models, Llama 3.3 70B achieved 81.5\% agreement ($\kappa$ = 0.71), indicating ``substantial agreement''. This high cross-family consistency, particularly between models from different developers and architectures (OpenAI vs. Meta), provides strong evidence that our classification results reflect objective discourse patterns rather than model-specific artifacts.
 
 \subsection{Qualitative Error Analysis}
 Table~\ref{tab:app_error_examples} provides qualitative examples of classification disagreements between human annotators and the LLM. The analysis highlights two primary sources of error: (1) Over-application of the ``factual reporting = NEUTRAL'' heuristic to diplomatic events, and (2) Over-sensitivity of the ``individual harm = HUMANITARIAN'' rule to keywords like ``protesters'' or ``defectors'' even when the primary framing is not humanitarian.
