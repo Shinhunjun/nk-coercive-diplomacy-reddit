@@ -71,6 +71,7 @@ Tables~\ref{tab:app_pt_sentiment} and~\ref{tab:app_pt_framing} present the full 
 \begin{table}[h]
 \centering
 \caption{Parallel Trends Test Results (Sentiment)}
+\resizebox{\linewidth}{!}{
 \begin{tabular}{llcc}
 \toprule
 \textbf{Comparison} & \textbf{Control} & \textbf{P-value} & \textbf{Trends} \\
@@ -84,12 +85,14 @@ P2$\rightarrow$P3 & Iran & 0.64 & Valid \\
 P2$\rightarrow$P3 & Russia & 0.81 & Valid \\
 \bottomrule
 \end{tabular}
+}
 \label{tab:app_pt_sentiment}
 \end{table}
 
 \begin{table}[h]
 \centering
 \caption{Parallel Trends Test Results (Framing)}
+\resizebox{\linewidth}{!}{
 \begin{tabular}{llcc}
 \toprule
 \textbf{Comparison} & \textbf{Control} & \textbf{P-value} & \textbf{Trends} \\
@@ -103,13 +106,9 @@ P2$\rightarrow$P3 & Iran & 0.76 & Valid \\
 P2$\rightarrow$P3 & Russia & 0.30 & Valid \\
 \bottomrule
 \end{tabular}
+}
 \label{tab:app_pt_framing}
 \end{table}
-
-\section{Error Analysis Examples}
-\label{app:error_analysis}
-
-Table~\ref{tab:app_error_examples} provides qualitative examples of classification disagreements between human annotators and the LLM. The analysis highlights two primary sources of error: (1) Over-application of the ``factual reporting = NEUTRAL'' heuristic to diplomatic events, and (2) Over-sensitivity of the ``individual harm = HUMANITARIAN'' rule to keywords like ``protesters'' or ``defectors'' even when the primary framing is not humanitarian.
 
 
 \section{Robustness Check: Alternative Framing Scale}
@@ -119,6 +118,7 @@ To verify that our main findings are not artifacts of the framing scale construc
 \begin{table}[h!]
 \centering
 \caption{DiD Estimates: Original vs. Alternative Framing Scale}
+\resizebox{\linewidth}{!}{
 \begin{tabular}{llcc}
 \toprule
 \textbf{Event} & \textbf{Control} & \textbf{Original} & \textbf{Alternative} \\
@@ -133,10 +133,41 @@ Hanoi & China & -0.34 & -0.23 \\
 \bottomrule
 \multicolumn{4}{l}{\footnotesize * $p<0.05$, ** $p<0.01$, *** $p<0.001$} \\
 \end{tabular}
+}
 \label{tab:app_robustness}
 \end{table}
 
 The alternative specification produces similar directional effects across all comparisons, with several estimates becoming stronger under the alternative scaling. Notably, the Singapore/Iran effect becomes statistically significant under the alternative specification (+0.39 $\rightarrow$ +0.77**). These results suggest that our main specification (ECONOMIC = 0) provides a \textit{conservative} estimate of the diplomatic framing shift, and that our substantive conclusions are robust to alternative operationalizations of the framing scale.
+
+
+
+\section{Cross-LLM Validation}
+\label{app:cross_llm}
+
+\begin{table}[h!]
+\centering
+\caption{Cross-LLM Validation: Agreement with GPT-4o-mini ($N=500$)}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{llcc}
+\toprule
+\textbf{Model Family} & \textbf{Model Version} & \textbf{Agreement (\%)} & \textbf{Cohen's $\kappa$} \\
+\midrule
+OpenAI & GPT-4o & 80.4\% & 0.72 \\
+Meta Llama & Llama 3.3 70B & 81.5\% & 0.71 \\
+Meta Llama & Llama 3.1 8B & 75.3\% & 0.62 \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize Primary: GPT-4o-mini (85.0\% accuracy vs. human labels, $\kappa$=0.79)} \\
+\end{tabular}
+}
+\label{tab:cross_llm}
+\end{table}
+
+To ensure that our framing classifications are robust across different LLM families and model sizes, we validated our primary classifier (GPT-4o-mini) against multiple alternative models. GPT-4o-mini was selected as the primary classifier based on its strong agreement with human gold labels (85.0\% accuracy, Cohen's $\kappa$ = 0.79, $N=400$). We then tested cross-model consistency by comparing other LLMs against GPT-4o-mini predictions on a stratified sample of 500 posts.
+
+Table~\ref{tab:cross_llm} presents the agreement metrics. GPT-4o achieved 80.4\% agreement with GPT-4o-mini ($\kappa$ = 0.72). Among the Meta Llama models, Llama 3.3 70B achieved 81.5\% agreement ($\kappa$ = 0.71), indicating ``substantial agreement''. This high cross-family consistency, particularly between models from different developers and architectures, provides strong evidence that our classification results reflect objective discourse patterns rather than model-specific artifacts.
+
+\subsection{Qualitative Error Analysis}
+Table~\ref{tab:app_error_examples} provides qualitative examples of classification disagreements between human annotators and the LLM. The analysis highlights two primary sources of error: (1) Over-application of the ``factual reporting = NEUTRAL'' heuristic to diplomatic events, and (2) Over-sensitivity of the ``individual harm = HUMANITARIAN'' rule to keywords like ``protesters'' or ``defectors'' even when the primary framing is not humanitarian.
 
 \begin{table*}[h]
 \centering
@@ -174,23 +205,77 @@ Otto Warmbier: Parents of man tortured in North Korea condemn Trump & NEU & HUM 
 \label{tab:app_error_examples}
 \end{table*}
 
-\section{Cross-LLM Validation}
-\label{app:cross_llm}
+\section{Temporal Trend Visualizations}
+\label{app:trend_figures}
 
-To ensure that our framing classifications are not driven by systematic biases specific to the GPT model family, we validated our primary classifier (GPT-4o-mini) against alternative Large Language Models from a different architecture (Meta Llama 3) using a stratified random sample of 500 posts. We employed the same prompt instructions across two models: \textit{Llama 3.3 70B} (a state-of-the-art open model) and \textit{Llama 3.1 8B} (a smaller, efficient model).
+Figures~\ref{fig:app_sentiment_trends} and~\ref{fig:app_framing_trends} present the monthly time-series trends of sentiment and framing scores across all countries in our study. These visualizations provide additional context for the Difference-in-Differences analyses presented in the main text, allowing visual inspection of pre-treatment parallel trends and post-treatment divergence.
 
-Table~\ref{tab:cross_llm} presents the agreement metrics. The primary Llama 3.3 70B model achieved 81.5\% overall agreement with GPT-4o-mini, yielding a Cohen's $\kappa$ of 0.711, which indicates ``substantial agreement''~\cite{landis1977measurement}. This high level of cross-model consistency, particularly between models from different developers and architectures, provides strong evidence that our classification results reflect objective discourse patterns rather than model-specific artifacts.
-
-\begin{table}[h!]
+\begin{figure*}[h!]
 \centering
-\caption{Cross-LLM Validation Results ($N=500$)}
-\begin{tabular}{llcc}
+\includegraphics[width=0.8\textwidth]{figures/fig6_sentiment_trends.pdf}
+\caption{Monthly Sentiment Score Trends: NK vs. Control Groups. Vertical dashed lines mark key diplomatic events: the green line indicates the Singapore Summit (June 2018), and the red line indicates the Hanoi Summit (February 2019).}
+\label{fig:app_sentiment_trends}
+\end{figure*}
+
+\begin{figure*}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/fig2_framing_trends.pdf}
+\caption{Monthly Framing Score Trends: NK vs. Control Groups. Vertical dashed lines mark key diplomatic events: the green line indicates the Singapore Summit (June 2018), and the red line indicates the Hanoi Summit (February 2019).}
+\label{fig:app_framing_trends}
+\end{figure*}
+
+\section{Extended Audience Response Analysis}
+\label{app:audience_response}
+
+This appendix provides detailed statistics and results from the supplementary analysis of audience responses (comments), which serves to validate the propagation of framing effects beyond agenda-setting posts.
+
+\subsection{Data Summary}
+We collected the top-5 comments (by score) for every post in the North Korea treatment group. Table~\ref{tab:app_comment_counts} summarizes the comment volume across the three analysis periods. Focusing on top-ranked comments ensures we capture the most visible and socially reinforced reactions in the Thread.
+
+\begin{table}[h]
+\centering
+\caption{Comment Dataset Overview (North Korea)}
+\begin{tabular}{lrrc}
 \toprule
-\textbf{Model Family} & \textbf{Model Version} & \textbf{Agreement (\%)} & \textbf{Cohen's $\kappa$} \\
+\textbf{Period} & \textbf{Posts} & \textbf{Comments} & \textbf{Avg. Score} \\
 \midrule
-Meta Llama & Llama 3.3 70B & 81.5\% & 0.711 \\
-Meta Llama & Llama 3.1 8B & 75.3\% & 0.616 \\
+P1 (Pre-Summit) & 4,521 & 13,196 & 142.5 \\
+P2 (Summit) & 1,029 & 3,140 & 215.3 \\
+P3 (Post-Hanoi) & 2,646 & 7,641 & 189.1 \\
+\midrule
+\textbf{Total} & \textbf{8,196} & \textbf{24,051} & \\
 \bottomrule
 \end{tabular}
-\label{tab:cross_llm}
+\label{tab:app_comment_counts}
+\end{table}
+
+\subsection{Sentiment Analysis of Comments}
+We applied the same difference-in-differences design to comment sentiment scores (RoBERTa). Consistent with post-level determination, underlying sentiment improved significantly during the summit period (P1$\rightarrow$P2: $+0.054$, $p<0.001$). Following the Hanoi failure, sentiment in comments showed no significant reversal (P2$\rightarrow$P3: $-0.003$, $p=0.82$), suggesting that while positive affect was generated, it plateaued rather than reversed. However, as noted in the main text, sentiment measures failed to capture the structural "hostile engagement" dynamics observed in framing analysis.
+
+\subsection{Framing and Discourse Structure}
+Table~\ref{tab:app_comment_framing} details the distribution of framing within comment-derived knowledge graphs. The analysis reveals a persistent structural shift:
+\begin{itemize}
+    \item \textbf{Community Level}: Threat-oriented communities (clusters of discussion focused on war/conflict) effectively vanished during the Summit period (0.0\%) and barely re-emerged in the Post-Hanoi period (2.9\%), compared to a baseline of 7.2\%.
+    \item \textbf{Edge Level}: Relationships characterized by diplomacy doubed in P2 and continued to grow in P3 (13.3\%), creating a structural "ratchet" where the network retained its diplomatic connectivity even as events turned negative.
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\caption{Comment-Level Framing Distribution: Communities and Edges}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Frame} & \textbf{P1} & \textbf{P2} & \textbf{P3} \\
+\midrule
+\multicolumn{4}{l}{\textit{Community-Level (n=363, 103, 205)}} \\
+THREAT & 7.2\% & \textbf{0.0\%} & 2.9\% \\
+DIPLOMACY & 6.3\% & \textbf{10.7\%} & 9.8\% \\
+NEUTRAL & 82.6\% & 87.4\% & 82.0\% \\
+\midrule
+\multicolumn{4}{l}{\textit{Edge-Level (n=4,684, 1,307, 2,517)}} \\
+THREAT & 11.2\% & \textbf{5.4\%} & 6.0\% \\
+DIPLOMACY & 5.3\% & 10.3\% & \textbf{13.3\%} \\
+NEUTRAL & 74.8\% & 80.0\% & 74.2\% \\
+\bottomrule
+\end{tabular}
+\label{tab:app_comment_framing}
 \end{table}

@@ -1,0 +1,501 @@
+post_id,title,gpt4o_mini,GPT-4o_frame,GPT-4o_conf,Llama 3.3 70B_frame,Llama 3.3 70B_conf,Llama 3.1 8B_frame,Llama 3.1 8B_conf
+bkhtr4,North Korea launches Short-range missiles,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+co5wtp,Trump says he agrees with dictator Kim Jong-un over US-South Korea war games: 'Never been a fan',DIPLOMACY,DIPLOMACY,0.8,THREAT,0.8,DIPLOMACY,0.8
+egogbm,Japanese broadcaster NHK mistakenly issues North Korea missile alert,NEUTRAL,THREAT,0.8,THREAT,0.9,THREAT,0.9
+ddcymd,What’s next for North Korea?,DIPLOMACY,NEUTRAL,0.7,NEUTRAL,0.8,THREAT,0.8
+agf559,Why do movies about the Korean War and Vietnam War always feature Marines?,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,,
+7g7kf1,Why are we not collecting North Korea's Missiles?,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+8k7lmz,Trump's warning to Kim Jong-un: make a deal or suffer same fate as Gaddafi,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+705mkx,N Korea 'fires missile from Pyongyang',THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+7g7hx7,North Korea Fires New Ballistic Missile Into East Sea,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+cs5v7a,Pyongyang: Dance is fun for citizens-NorthKorea 北朝鮮 踊る市民たち(平壌の世界139),NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+6ld385,"Via former DPRK military officer, this is DPRK intentions: nuke+missile development > peace treaty > US forces out from Korea > unify Korea on NK terms.",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8vfssy,North Korea Expands Key Missile-Manufacturing Plant,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+dc3iw3,North Korea may have tested submarine-launched ballistic missile: South Korea,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+67b7k7,Why North Korea wants nuclear weapons,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+79tdwf,"China, South Korea Agree to Shelve Thaad Missile Shield Spat",DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.9
+8ax58d,China and South Korea at odds over first step in nuclear crisis talks,DIPLOMACY,DIPLOMACY,0.85,THREAT,0.8,DIPLOMACY,0.8
+8821ce,Is Kim Jong-Un an underrated geopolitical wunderkind?,THREAT,NEUTRAL,0.7,NEUTRAL,0.8,DIPLOMACY,0.8
+660f4f,Koreans criticize Abe for remarks on refugee crisis on peninsula,HUMANITARIAN,HUMANITARIAN,0.8,HUMANITARIAN,0.8,DIPLOMACY,0.8
+9wgj82,North and South Korea withdraw troops from 22 front-line guard posts as part of September's agreement to reduce tensions,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.8
+7igxi5,This is how nuclear war with North Korea would unfold,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+7kgvlb,Is this how NK has the finances to build a full fledged Missile program? -North Korea using Bitcoins to build missiles?,ECONOMIC,THREAT,0.8,ECONOMIC,0.8,ECONOMIC,0.8
+9gnitg,Two Koreas hold high-stakes summit with nuclear talks in jeopardy,THREAT,DIPLOMACY,0.9,DIPLOMACY,0.8,DIPLOMACY,0.8
+a16gf3,[Editorial] Learn from Taiwan (South Korea's anti-nuclear energy policy),NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,DIPLOMACY,0.8
+7143lz,"North Korea: Bengaluru FC's Erik Paartalu on missile launches, lost baggage and Kim Jong-un memes. An Indian Football team's experience in North Korea",NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+8php0u,The Korean Peninsula: Three Dangerous Scenarios,THREAT,THREAT,0.85,THREAT,0.9,THREAT,0.8
+766kwp,"South Korea, China extend currency deal despite missile row",ECONOMIC,ECONOMIC,0.85,ECONOMIC,0.8,NEUTRAL,0.8
+7ijhv6,Seoul Slams China Daily Article Promoting War on Korean Peninsula,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+6yguxz,Firsthand details on how the US had undermined the nuclear deal with North Korea,DIPLOMACY,DIPLOMACY,0.8,THREAT,0.8,THREAT,0.8
+agga4j,Why is Thailand willing to deport North Korean defectors to South Korea?,HUMANITARIAN,DIPLOMACY,0.8,NEUTRAL,0.8,DIPLOMACY,0.8
+889ffe,Two minutes to midnight: did the US miss its chance to stop North Korea’s nuclear programme?,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+6cg6ba,North Korea fires ballistic missile: Seoul,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+6lakxf,Would you oppose any direct military strike on North Korea?,THREAT,THREAT,0.8,DIPLOMACY,0.8,THREAT,0.8
+6xzw8v,On Another Korean War,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8dy0zf,Has your opinion on trump changed at all in light of North Korea's promise to end nuclear testing and close down a major nuclear site?,DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.8
+crdt5f,[Question] Movies set in DPRK?,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,1.0
+8j8lml,North Korea vows to dismantle nuclear test site within weeks; Trump applauds move,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.8,DIPLOMACY,0.8
+9kpe0y,"North Korea is believed to have up to 60 nuclear weapons, South Korea says",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+cvkv16,Entering the DPRK for the first time // Mansudae Korea,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+9u2qf7,"What will you do when the Reds retain control of Congress and Trump declares martial law and a military invasion of Mexico, China and North Korea?",THREAT,THREAT,0.9,THREAT,0.9,,
+dcjxzm,The nuclear proposal US plans to offer North Korea at talks,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.8,DIPLOMACY,0.8
+8j109g,North Korea to publicly dismantle nuclear test site on May 23-25,NEUTRAL,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.8
+7bjg08,[Discussion] Has the threats made to North Korea made them back off from testing missiles or detonating a nuclear weapon?,THREAT,THREAT,0.85,THREAT,0.9,THREAT,0.8
+6spnk1,What role can we expect the UN to play in a possible 2nd Korean War? Is it possible that a new collation would be developed under a new UN Command?,THREAT,THREAT,0.8,THREAT,0.8,,
+cl1klh,North Korea fires second ballistic missile in a week.,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+bquqka,Are these fishing boats? (dprk watching),NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,THREAT,0.8
+8fpcwf,How Can North Korea's Kim Jong Un promises no more nuclear or missile tests?,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.8
+6mmg84,Can Trump Prevent a Nuclear War With North Korea?,THREAT,THREAT,0.85,THREAT,0.8,DIPLOMACY,0.8
+76ennb,What are you going to do if North Korea was going to nuke the US?,THREAT,THREAT,0.9,THREAT,0.9,,
+6seus9,"North Korea now making missile-ready nuclear weapons, U.S. analysts say",THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+6x0s32,'' North Korea links latest missile launch to Japan’s annexation of Korea over a century ago. Even some South Koreans will like that.'',THREAT,THREAT,0.7,THREAT,0.8,THREAT,0.8
+8vnodw,Do you fear Trump will get us into a nuclear war with North Korea?,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+9kyp86,[ARTICLE] Tackling climate change could bring North and South Korea closer and help stabilise the region,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+9ckmle,Foxbats Over Pyongyang; Why North Korea’s Often Overlooked MiG-25 Interceptors Are Potentially its Air Force’s Most Lethal Asset,THREAT,THREAT,0.8,THREAT,0.9,THREAT,0.8
+688rza,Australia wants to avoid a Korean war at all costs – and with good reason,DIPLOMACY,THREAT,0.8,THREAT,0.8,THREAT,0.8
+8g4v4q,What is the actual state of the DPRK?,HUMANITARIAN,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+9v1x5k,China building 113 coal power plants near to Korean Peninsula,NEUTRAL,THREAT,0.7,ECONOMIC,0.8,ECONOMIC,0.8
+deszoo,"North Korea's nuclear negotiator warns of ""terrible events""",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+75pfwb,United States and South Korean bombers hold drills over Korean Peninsula.,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+dwlwwk,Trump hikes price tag for US forces in Korea almost 500% as Seoul questions alliance,ECONOMIC,ECONOMIC,0.85,ECONOMIC,0.9,ECONOMIC,0.8
+64a37t,U.S. moves Navy strike group towards the Korean Peninsula - BNO News,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+dz629b,"Hey. I am now 25 years old. My name is Myung Hee. I am from South Korea. In 2015, I was kidnapped and taken to North Korea. I lived in North Korea for 3 years as a girlfriend of Kim Jong-un. A year ago, I managed to escape from there and return home. I will be happy to answer your questions.",HUMANITARIAN,HUMANITARIAN,0.9,HUMANITARIAN,0.9,,
+6s24ct,China says dialogue vital to tackle Korean peninsula crisis,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.9
+89bxf3,Two minutes to midnight: did the US miss its chance to stop North Korea’s nuclear programme?,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+au6jbb,North Korea's surprise new nuclear envoy key to Trump-Kim talks,DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.8
+7dz0to,Russia’s alternative vision for Asia: accommodating a nuclear North Korea?,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+bswieu,Bolton says N. Korea missile tests violated UN resolutions,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8fqiqg,North Korea Destroys Tower at Nuclear Site (2008),THREAT,THREAT,0.8,DIPLOMACY,0.8,THREAT,0.9
+8n0ii4,"North Korea Nuclear Disarmament Could Take 15 Years, Expert Warns",THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+7cqs13,"North Korea complained to the United Nations on Monday about joint military exercises by the United State and South Korea, describing it as “the worst ever situation” because U.S. nuclear war equipment had been deployed ready to strike.",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+6xa9ur,Hungry North Korean soldiers 'ordered to steal corn because war is imminent',THREAT,THREAT,0.85,THREAT,0.9,THREAT,0.8
+8yevnk,Were the Four Commanderies of the Chinese Han dynasty actually on the Korean peninsula?,NEUTRAL,NEUTRAL,0.9,NEUTRAL,0.8,,
+c8h3l1,Trump’s Visit to North Korea is an Alarming Message to China,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+di6xd8,Two Koreas play out goalless draw in empty Pyongyang stadium,NEUTRAL,NEUTRAL,0.9,NEUTRAL,0.9,NEUTRAL,0.9
+cqaek4,South Korea marks 'comfort women' memorial day,HUMANITARIAN,HUMANITARIAN,0.8,HUMANITARIAN,0.9,HUMANITARIAN,0.9
+8d3b0g,CIA boss Mike Pompeo has reportedly held secret meeting with North Korea's Kim Jong-un,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.8,DIPLOMACY,0.8
+9qi8zs,What do you think would happen if North Korea kidnapped the pope?,THREAT,THREAT,0.9,THREAT,0.9,,
+cbm8w0,Son of South Korea’s former foreign minister defects to North Korea,NEUTRAL,NEUTRAL,0.8,THREAT,0.8,THREAT,0.8
+7nwh0q,If there was a Second Korean war..How would certain countries fare afterwards? And some questions.,THREAT,,,THREAT,0.8,,
+acl321,A looming threat to the US-South Korea alliance,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+bkfujs,Report: North Korea test fires short range missile,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+7a9m4l,"A high-ranking North Korean defector told a congressional hearing Wednesday that a pre-emptive U.S. military strike on the country would trigger automatic retaliation, with the North unleashing artillery and short-range missile fire on South Korea.",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+crfaad,"North Korea,Japan,China and a lack of understanding of what makes them tick.",NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+72v1zd,How can the U.S. demand that North Korea gives up on its nuclear program if they themselves have nuclear weapons?,DIPLOMACY,DIPLOMACY,0.7,THREAT,0.8,THREAT,0.8
+9lnm6o,Pyongyang has the largest stadium in the world,NEUTRAL,NEUTRAL,0.9,NEUTRAL,1.0,NEUTRAL,1.0
+7icwqk,North Korea Ready to Give up Nuclear Weapons if US Guarantees Security,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.8
+8m9wcx,Sitting US president recognized the DPRK as a state,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.9,DIPLOMACY,0.8
+dnghlq,How would you feel about visiting North Korea?,NEUTRAL,NEUTRAL,0.7,HUMANITARIAN,0.8,,
+8gmevj,Video: Kim Jong-Un's New Strategy Explained,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,DIPLOMACY,0.8
+6qbkeb,North Korea Nuclear EMP Attack: An Existential Threat (x-post from /r/strategicstudies),THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+8ie8i5,"Pyongyang, Disneyland! Calling it now!!!",HUMANITARIAN,NEUTRAL,0.6,DIPLOMACY,0.8,DIPLOMACY,0.8
+dz4082,China signs defence agreement with South Korea as US angers Seoul with demand for $5bn troop payment,DIPLOMACY,THREAT,0.8,THREAT,0.8,THREAT,0.8
+68nhdm,"Americans of r/askanamerican, what do you think of comparisons between the US and North Korea?",NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,DIPLOMACY,0.8
+e7sj29,Words in Korean used to describe the whole peninsula?,NEUTRAL,NEUTRAL,0.8,NEUTRAL,1.0,THREAT,0.8
+7g8dcp,Trump on North Korean missile launch 'We will take care North korea vs s...,THREAT,THREAT,0.85,THREAT,0.9,THREAT,0.8
+a3z0mw,Moon Jae-in has discussion with top aides after apparent positive reception from Pyongyang involving Mim Jong Un visiting Seoul.,DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.9,DIPLOMACY,0.8
+dil8y6,Why was there a lot of opposition to the Vietnam and Iraq/Afghanistan wars but almost none for the Korean War?,NEUTRAL,NEUTRAL,0.9,THREAT,0.8,,
+a9z4fi,North Korea launched no missiles in 2018. But that isn’t necessarily due to Trump.,NEUTRAL,THREAT,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+83emk4,"Touching scene from North Korean war film ""Identity"" (1981)",NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,NEUTRAL,1.0
+dhrz0q,A basic guide to the current affairs in the Korean peninsula,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+5zca7k,"[Question]If the chips fell and the US and DPRK exchanged nuclear fire, which (if any) countries would be obliged to join?",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+70ypxj,"[Question] is it safe to assume if north korea was attacked they would use nukes,chemical weapons,ballistic missiles and artillery against south Korea",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+cplg57,"LKP Says ""[South Korea] Needs to Construct Nuclear Weapons Facilities in Secrecy,"" in a Nuclear Armament Debate",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+9xb3qx,Insight: North Korea's Current Missile Arsenal,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+cgz55d,Kim Jong-un Inspects New Submarine That Could Increase Range of Missiles,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+78p82i,Idea for contest to promote more accurate image of DPRK,HUMANITARIAN,DIPLOMACY,0.7,HUMANITARIAN,0.8,DIPLOMACY,0.8
+94wrse,What's a good reason to visit North Korea as a US citizen?,HUMANITARIAN,NEUTRAL,0.7,HUMANITARIAN,0.8,DIPLOMACY,0.8
+8s5u4g,North Korea’s Kim Jong-un in China for two-day trip ‘to brief Xi Jinping on Donald Trump summit’,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.8,DIPLOMACY,0.8
+ce135t,How Kim Jong Un Smuggled Armored Mercedes Limos Into North Korea,THREAT,ECONOMIC,0.8,THREAT,0.8,THREAT,0.8
+6l55rp,"N. Korea Fires Missile Into Sea of Japan, reports of upcoming 'major' announcement",THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+8w7tdb,U.S. softens North Korea approach as Pompeo prepares for more nuclear talks,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.8,DIPLOMACY,0.8
+dlv9an,Kim Jong-un orders razing of South's 'unpleasant' Mount Kumgang buildings,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+ar0ycy,How common are veterans from WWII from your personal experience? Korean War? Vietnam? Gulf War? Iraq? Afghanistan?,NEUTRAL,,,NEUTRAL,0.8,,
+b06smf,"ISS photo of North Korea in 2014 that illustrates just how little electricity the country could afford at night, compared to China (left) and S. Korea (right). Pyongyang is the largest area of light inside the red.",HUMANITARIAN,HUMANITARIAN,0.8,HUMANITARIAN,0.8,HUMANITARIAN,0.8
+c9b59h,South Korea threatens retaliation over Japan export controls,THREAT,ECONOMIC,0.8,THREAT,0.9,THREAT,0.8
+8hxv4f,I think Trump is withdrawing from the deal so he can open up room for a similar one with the DPRK,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+azxils,U.S. Envoy on North Korea Says 'Diplomacy Still Very Much Alive' With Pyongyang,DIPLOMACY,DIPLOMACY,0.95,DIPLOMACY,0.9,DIPLOMACY,1.0
+9b4mg3,Why are Americans banned from traveling to Cuba but not Iran or North Korea?,NEUTRAL,NEUTRAL,0.8,ECONOMIC,0.8,DIPLOMACY,0.8
+81i7xv,Why I support the DPRK,NEUTRAL,NEUTRAL,0.6,THREAT,0.8,,
+66m6ui,"If the United States attempted to take out North Korea's nuclear capabilities right now, how quickly would it be done? Could it even be done?",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+8k4wab,Kim Jong-un's warning shot to the US - BBC,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+ck2w0l,North Korea in second missile launch in a week,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8fre42,옥류관/Ok Ryu Gwan: Authentic Pyongyang Naengmyun/Cold buckwheat noodles! Hope I can visit someday!,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,1.0
+753mqc,North Korea again threatens the US with nuclear missiles.,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+6fust8,Escalation is not deterrence on the Korean Peninsula,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+8wj3oo,"North Korea has increased nuclear production at secret sites, say U.S. officials",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+5tlz23,North Korea’s missile launch,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+c85otx,"Historically, which countries have agreed to denuclearize after acquiring the domestic ability to produce nuclear weapons? Is this a reasonable goal for US policy towards North Korea?",DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,,
+cl6j4z,South Korea to retaliate over Japan's 'white list' removal,ECONOMIC,ECONOMIC,0.8,THREAT,0.8,THREAT,0.8
+e00flb,"⏰ 360° Timelapse: North Korean Nightlife | Pyongyang, North Korea 🇰🇵",NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,1.0
+7u8mxm,"North Korea closing in on critical long-range ballistic missile requirements, says top U.S. general",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+87peo5,How does Kim tell North Korea he's giving up nuclear weapons?,DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.8
+cr1yb1,"North Korea is 'brainwashing' children as young as 4 for future service in Kim Jong Un's massive military, a refugee says",HUMANITARIAN,THREAT,0.8,THREAT,0.8,HUMANITARIAN,0.8
+7g0r87,Japan detects radio signals pointing to possible North Korea missile test,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+8bxn1m,North Korea skips mention of nuclear weapons at Supreme People's Assembly,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+b5nhlb,Brief recap of the confusing week in ROK-DPRK relations,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+adq373,North korean leader Kim Jong Un Visits China again,DIPLOMACY,DIPLOMACY,0.7,NEUTRAL,0.8,DIPLOMACY,0.8
+7d6hqh,North Korea's Nuclear Test Site Is A Post-Apocalyptic Wasteland,THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+egwg2e,[Question] New Years Eve in Pyongyang?,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,1.0
+7vjtye,"In announcement to all Koreans, Pyongyang calls for unification and end to U.S. military exercises | The Japan Times",DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+bz810b,Nuclear Parts Makers in Korea are going bankrupt,ECONOMIC,ECONOMIC,0.8,ECONOMIC,0.8,ECONOMIC,0.8
+707aae,North Korea Missile Launch Worries Japan: EurAsian Times,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8bmuvu,"[Discussion] ""Kim said denuclearizing the peninsula is teachings from the ancestors."" ~ Chung Eui-Yong, South Korean National Security Office chief",DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+87pe8t,North Korea to 'De-Nuclearize',DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.8,DIPLOMACY,0.8
+a1vgeq,The Beginning of the End of the Korean War,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+8qkkab,"What does the ""complete denuclearization of the Korean Peninsula"" mean for South Korea?",THREAT,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+cpjzg5,How North Korea Robbed $1 Billion From Bangladesh?,ECONOMIC,ECONOMIC,0.8,ECONOMIC,0.8,ECONOMIC,0.8
+7diw87,N Korea aggressively developing ballistic missile submarine: Report,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+7mv8l6,2017 in Review: A Critical Year for the Korean Peninsula,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+8dyzxz,Why North Korea’s nuclear and missile test freeze is both good and bad,THREAT,THREAT,0.7,THREAT,0.8,DIPLOMACY,0.8
+6h67bi,"DPRK produced map of the Korean peninsula, 1986",NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,DIPLOMACY,0.8
+91t2f2,North Korea dismantling key missile test facility,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+b04bcr,"N. Korea could be 'hedging,' not cheating, with missile activities: Moon's adviser",THREAT,THREAT,0.7,DIPLOMACY,0.8,DIPLOMACY,0.8
+7uqjxg,US is pushing the whole world towards 'nuclear war' North Korea tells UN,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+6ynsta,Does North Korea's latest nuclear development make them any more of a threat?,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+91zei7,How do you think talks with North Korea are going?,DIPLOMACY,DIPLOMACY,0.7,DIPLOMACY,0.8,DIPLOMACY,0.8
+dc5v99,"North Korea Tested Submarine-Launched Ballistic Missile, Says South Korea",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+65o0zu,My thoughts on North Korea's nuclear ambitions and the limits of US and Chinese influence,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+639oz7,Japan Should Acquire Nuclear Weapons to Deter China and North Korea,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+av1aj7,Kim Jong-un Arrives In Vietnam Ahead Of US-DPRK Summit,NEUTRAL,DIPLOMACY,0.9,NEUTRAL,0.8,DIPLOMACY,0.9
+6wrezk,North Korea launches MISSILE ATTACK towards Japan,THREAT,THREAT,0.95,THREAT,1.0,THREAT,1.0
+683qa7,"Trump vows to fix or scrap South Korea trade deal, wants missile system payment",ECONOMIC,ECONOMIC,0.8,ECONOMIC,0.9,THREAT,0.8
+atva9d,"DPRK learning from Vietnam -- might be a reconciliation lesson there for ROK, too.",DIPLOMACY,DIPLOMACY,0.7,DIPLOMACY,0.8,DIPLOMACY,0.8
+cwx6nc,Japan-South Korea relations: Where did it all go wrong?,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,THREAT,0.8
+a6syj7,[Editorial] Peace and Human Rights on the Korean Peninsula Should Begin with Discussions on Amending or Annulling the National Security Act,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+a7mkvf,Open Scientific Collaboration May Be Helping North Korea Cheat Nuclear Sanctions,ECONOMIC,THREAT,0.85,THREAT,0.8,THREAT,0.8
+9g6nre,"(2nd LD) S. Korea, U.S. nuclear envoys meet ahead of inter-Korean summit",DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.9
+7k23qv,North Korea warns: U.S. naval blockade ‘big step’ towards nuclear war,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+5p0x40,"North Korea may be readying missile test, timing unclear: US officials",THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+7k23zo,Chinese President Xi says war cannot be allowed on Korean peninsula,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.9
+957gc9,"What the West gets wrong about North Korea's motives, and why some South Koreans admire the North",NEUTRAL,NEUTRAL,0.7,HUMANITARIAN,0.8,HUMANITARIAN,0.8
+e83u00,"If, by some miracle, that South Korea & North Korea reunified, then later formed a trade bloc & military alliance with Japan and Taiwan, what would it be like?",ECONOMIC,DIPLOMACY,0.7,ECONOMIC,0.8,DIPLOMACY,0.8
+9glg2h,"North and South Korea Push to End Korean War, but U.S. Remains Wary",DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.8
+aeg0vu,South Korea starts seizing JPN assets in violation of the 1965 SK JPN treaty.,NEUTRAL,ECONOMIC,0.8,THREAT,0.8,THREAT,0.8
+e6nqmv,Inter-Korean Relations: How North Korea Is Conditioning South Korea for Its Own Strategic Benefit,THREAT,THREAT,0.7,THREAT,0.8,THREAT,0.8
+70ji6h,How Russia quietly undercuts sanctions intended to stop North Korea's nuclear program,ECONOMIC,ECONOMIC,0.9,THREAT,0.8,ECONOMIC,0.8
+68ihv9,"South Korea needs to negotiate with Trump, and change the outdated status of the US-ROK alliance",DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.8
+6a4u0j,South Korea Is More Worried About Donald Trump Than Kim Jong Un,THREAT,THREAT,0.7,THREAT,0.8,DIPLOMACY,0.8
+cmimbh,[Press Statement] No luck to US-SK indulging in anti-DPRK war drill,THREAT,THREAT,0.85,THREAT,0.9,THREAT,0.8
+7tozu5,North Korea's Nuclear Deterrent,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+6q4j4f,N Korea 'fires missile into sea off Japan',THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+6y88vu,What the Media isn’t Telling You About North Korea’s Missile Tests,THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+8kbz3f,North Korea did not respond to Seoul's proposed list of journalists would cover closure of nuclear site despite North Korea's earlier invitation.,NEUTRAL,DIPLOMACY,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+8fnxlm,North Korea's state media plays down Kim's nuclear pledge,NEUTRAL,THREAT,0.8,THREAT,0.8,DIPLOMACY,0.8
+7k7tms,We Will Be The Most Powerful And Fearful Nuclear Power : North Korea Warns the US,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+bemtax,Can someone transcribe this DPRK film title for me using the Korean alphabet? I would be enormously grateful,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.9,,
+7gcroq,"[Question] Would the missile launch and response from South Korea be considered as the countries launching missiles ""at each other""?",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+aqu589,"Shopping in Pyongyang, and Other Adventures in North Korean Capitalism",NEUTRAL,ECONOMIC,0.8,ECONOMIC,0.8,NEUTRAL,0.8
+akbwve,"North Korea may suggest shutdown of Yongbyon nuclear complex, international inspections: Foreign Minister Kang",DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.9,DIPLOMACY,0.8
+8esxe6,KIM JONG-UN’S SUMMITS: IS HE PLAYING THE TRUMP CARD?,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+7in8au,"North Korea, Iran. Is nuclear worth the price?",THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+7wxx7y,"Without a word, only flashing smiles, Kim Jong-un's sister outflanked Vice President Mike Pence in diplomacy",DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.8
+9l1v81,How Seoul Tacitly Endorses Pyongyang’s Brutality,HUMANITARIAN,HUMANITARIAN,0.85,HUMANITARIAN,0.8,THREAT,0.8
+6bbo70,"During the 2011 Libyan Civil War of the Arab Spring, North Korean guest workers were left stranded after witnessing what it's like to rebel against a regime. How are they now?",HUMANITARIAN,HUMANITARIAN,0.8,HUMANITARIAN,0.8,NEUTRAL,0.8
+dvabsz,North Korea’s food crisis worsens,HUMANITARIAN,HUMANITARIAN,0.9,HUMANITARIAN,0.8,HUMANITARIAN,0.9
+6bfckw,"During the 2011 Libyan Civil War of the Arab Spring, North Korean guest workers were left stranded after witnessing what it's like to rebel against a regime. How are they now? [Question]",HUMANITARIAN,HUMANITARIAN,0.8,HUMANITARIAN,0.8,NEUTRAL,0.8
+706ptv,"North Korea Fires Missile Over Japan, Residents Urged To Take Shelter www.worldnews.easybranches.com",THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+5tug0p,North Korea Responds To Trump By Successfully Launching New Ballistic Missile,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+7qr9vm,"North Korea says Donald Trump nuclear button tweet the 'spasm of a lunatic': 'He is making a bluff only to be diagnosed as a psychopath,' says commentary.",THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+8la6sx,So just how concerned should I actually be of north korea?,NEUTRAL,THREAT,0.7,THREAT,0.8,THREAT,0.9
+8du18d,"North Korea says it will stop nuclear tests, abolish test site",DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.8
+7o9nj9,"What do experts estimate is the possibility of a US-North Korea conflict, and if one breaks out, that nuclear weapons will be used on the United States?",THREAT,THREAT,0.9,THREAT,0.8,,
+92kvl6,What are your thoughts on North Korea’s nuclear weapons program?,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+disaa7,Does the Pyongyang tram run on a schedule or do they just show up whenever?,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.9,NEUTRAL,0.8
+6zfwd2,"North Korea management, a strategic error?",NEUTRAL,NEUTRAL,0.7,THREAT,0.8,THREAT,0.8
+7nn4b1,Chinese troops conduct landing drill on Korean Peninsula - From Chinese media,THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+7rymho,North Korea is not building nuclear weapons to destroy the US or unify Korea — the real reasons are much more surprising,THREAT,THREAT,0.7,THREAT,0.8,DIPLOMACY,0.8
+c9qlwg,What do you think of Japan's recent export restrictions on South Korea?,ECONOMIC,ECONOMIC,0.85,ECONOMIC,0.9,ECONOMIC,0.8
+acl2vo,A looming threat to the US-South Korea alliance,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+81gm4s,what is religion like in the DPRK?,NEUTRAL,NEUTRAL,0.9,NEUTRAL,0.8,HUMANITARIAN,0.8
+ctvz3q,South Korea Says It Will Scrap Intelligence-Sharing Deal With Japan,DIPLOMACY,THREAT,0.7,THREAT,0.8,THREAT,0.8
+72an40,This Is What’s Really Behind North Korea’s Nuclear Provocations,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+cyjv6l,Kim Jong Un is the ancient of days prophesied by Daniel.,NEUTRAL,NEUTRAL,0.7,THREAT,0.8,THREAT,0.0
+9sxdaq,"Photo gallery: From KFC-style fast food, Wi-Fi service, and solar powered street cleaners in Pyongyang, changes in North Korea continue for residents",NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+76uzsq,"North Korea: Where can its missiles reach? (Australia-centric article, but interesting nevertheless)",THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+7vhmml,White House National Security Council senior director for Asian affairs Matthew Pottinger was reported as saying in a recent closed-door meeting with US experts on Korean Peninsula issues that a limited strike on the North “might help in the midterm elections.”,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+cz3h79,Who will win in a naval and air war between South Korea and Japan?,THREAT,THREAT,0.8,THREAT,0.9,,
+5mwvv7,Missiles of North Korea,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+5qxka6,"From the perspective of the US Constitution: What in the constitution allows for a ban on nationals from countries like North Korea from entering the US, yet doesn't allow for the ban done in the Executive Order made by Trump?",NEUTRAL,NEUTRAL,0.8,,,,
+8r1mpp,North Korea Issue is Not De-Nuclearization But De-Colonization | Black Agenda Report,DIPLOMACY,DIPLOMACY,0.7,THREAT,0.8,HUMANITARIAN,0.8
+b4r34k,Historical: Korean War Map from the George C. Marshall Museum and Library,NEUTRAL,NEUTRAL,0.9,NEUTRAL,0.8,NEUTRAL,1.0
+bkfygb,North Korea fires short-range missile: Yonhap News Agency,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+ci1hul,(News Focus) New ballistic missile poses fresh security challenges to Sorth Korea and beyond: experts | Yonhap News Agency,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+7ndu1i,Where can I find Kim Jong-Un's New Years Speech?,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,,
+8kee64,What keeps North Korea from printing US dollars?,NEUTRAL,NEUTRAL,0.8,ECONOMIC,0.8,ECONOMIC,0.8
+bw6fnm,North Korea's former top nuclear envoy seen with Kim Jong Un on Sunday,THREAT,NEUTRAL,0.8,NEUTRAL,0.8,DIPLOMACY,0.8
+724hga,North Korea foreign minister warns of ‘pre-emptive action’ as U.S. bombers fly off Korean Peninsula,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.8
+7m5wm8,From Korean War to Sino-American War: Four Potential Scenarios,THREAT,THREAT,0.8,THREAT,0.9,THREAT,0.8
+8jiph8,"North Korea expanding ballistic missile submarine (SSB) infrastructure and workforce, aims to deploy operational SSB by next year - DailyNK",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+af8vpz,North Korea’s Yongbyon Nuclear Facilities: Well Maintained but Showing Limited Operations,NEUTRAL,THREAT,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+8v6r0u,"U.S. intelligence officials, citing newly obtained evidence, have concluded that North Korea does not intend to fully surrender its nuclear stockpile, and instead is considering ways to conceal the number of weapons it has and secret production facilities, according to U.S. officials.",THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+8u9ybk,North Korea making 'rapid' upgrades to nuclear reactor despite summit pledges,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+7tuf68,What if the DPRK won the Korean War or if ROK won Korean war?,NEUTRAL,NEUTRAL,0.8,THREAT,0.8,,
+cjsuo5,"Why asian countries like China, Japan, and South Korea fail to create true disruptive innovation?",NEUTRAL,NEUTRAL,0.8,ECONOMIC,0.8,,
+af6bcj,"US-Korea alliance in doubt? Trump, Moon and a fight over the bill. In US-Korea ties, a perfect storm for Kim Jong-un",ECONOMIC,ECONOMIC,0.7,THREAT,0.8,THREAT,0.8
+9wd9a4,"Satellite images indicate North Korea is deceiving Trump, continuing nuclear program",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+9dzd5d,Trump wanted to take a $10 billion missile defense system out of South Korea and “put it in Portland”,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+8wj0uu,"The Grand People's Study House, Pyongyang- A trip to the most bizarre Library in the world",NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+868f9k,China’s role in resolving North Korea nuclear row can’t be sidestepped,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+cuval5,Japan didn't have details about recent North Korea missile and asked South Korea for intel,THREAT,THREAT,0.8,NEUTRAL,0.8,THREAT,0.8
+e9v5mn,How Much Is the US-South Korea Alliance Worth?,ECONOMIC,NEUTRAL,0.7,NEUTRAL,0.8,ECONOMIC,0.8
+8m1q7f,Pyongyang ‘greatly regrets’ Trump’s cancellation,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+eafnpq,"DPRK popular song ""We Will Go to Mt Paektu""",NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+bxie9o,North Korea’s Nuclear Bomb Is Much Bigger than Previously Thought,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+7ghytl,What's your opinion about potential military action against North Korea?,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+8ahwmo,"DPRK, ROK hold talks on establishing telephone hotline between leaders",DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,1.0
+d71g5e,Phuong DPRK channel removed,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,1.0
+chgu1a,"North Korea fires projectiles into sea, South says",THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+6r29t1,How big of a threat do you think North Korea is to the US? Probability of War?,THREAT,THREAT,0.9,THREAT,0.8,,
+91zgyq,What will happen when Trump realizes he got played by North Korea?,NEUTRAL,THREAT,0.7,THREAT,0.8,THREAT,0.8
+686xj4,'We don't want a unified Korean Peninsula': Hillary Clinton,DIPLOMACY,THREAT,0.7,THREAT,0.8,THREAT,0.8
+cdydjy,North Korea says nuclear talks at risk if U.S.-South Korea exercises go ahead,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+71ruxn,What happens to the missiles that North Korea launches ot the sea?,NEUTRAL,THREAT,0.8,NEUTRAL,0.8,THREAT,0.8
+6trj5k,"Missile alarm: US satellites observe North Korea moving missiles into position, Mattis warns of high alert",THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+8bmt8m,"""Kim said denuclearizing the peninsula is teachings from the ancestors."" ~ Chung Eui-Yong, South Korean National Security Office chief",DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.8
+8faazw,Koreas make nuclear pledge after summit,THREAT,DIPLOMACY,0.9,DIPLOMACY,0.8,DIPLOMACY,0.8
+60plh2,North Korean state-controlled website war propaganda video,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+6cvrrg,What Would the Second Korean War Look Like?,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+bgpvoz,"How greed and corruption blew up South Korea’s nuclear industry. South Korea became the most reactor-dense country in the world. Less than a decade after Barakah broke ground, Korea is dismantling its nuclear industry, shutting down older reactors and scrapping plans for new ones.",NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,ECONOMIC,0.8
+7qjlna,[Discussion] What's within missile range of North Korea? (map),THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+beedq2,I don't understand North Korea at all.,NEUTRAL,NEUTRAL,0.7,NEUTRAL,1.0,NEUTRAL,0.8
+83ggyx,"I told President Trump that, in our meeting, North Korean leader Kim Jong-un said he is committed to denuclearisation. Kim pledged that North Korea will refrain from any further nuclear or missile tests… And he expressed his eagerness to meet President Trump as soon as possible.",DIPLOMACY,DIPLOMACY,0.95,DIPLOMACY,0.9,DIPLOMACY,0.9
+cl46v9,"North Korea missile tests could be effort to divide US, Japan and South",THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+8beb9i,Facing reality in the US-Saudi nuclear agreement: South Korea,DIPLOMACY,DIPLOMACY,0.7,THREAT,0.8,NEUTRAL,0.8
+b97n3v,Is Pyongyang trying to divide Washington and Seoul?,THREAT,THREAT,0.7,THREAT,0.8,THREAT,0.8
+7uyjte,Abe to ask Moon for evac support in case of emergency on Korean Peninsula,THREAT,THREAT,0.8,THREAT,0.8,DIPLOMACY,0.8
+cmsysw,Anyone know what kind of interests the DPRK will have in South Africa?,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,ECONOMIC,0.8
+dzgg67,What do you think about the South Korea-China defense agreement?,NEUTRAL,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+9h4764,North Korea still taking baby steps with Kim's missile site offer,THREAT,THREAT,0.7,THREAT,0.8,DIPLOMACY,0.8
+8qj4t7,Trump agrees to end military exercises with South Korea. Reactions?,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+7grhsz,Six Minutes to Counterattack: South Korea Shows Plan to Strike Back at North’s Missiles,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+cnxrq6,Trump sours on South Korea as he downplays North Korea missile tests,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+68t1bo,North Korea accused the United States on Tuesday of pushing the Korean peninsula to the brink of nuclear war after a pair of strategic U.S. bombers flew training drills with the South Korean and Japanese air forces in another show of strength.,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+8dlgb6,North Korea’s nuclear reactor puts 100 million people in ‘mortal danger’ amid fears of Asian Chernobyl,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+6lzupj,North Korea's ICBM: A New Missile and a New Era /title title North Korea’s ICBM: A New Missile and a New Era,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+9mf8sn,Japan opposes withdrawal of U.S. troops from Korean Peninsula in potential denuclearization deal: Abe,DIPLOMACY,THREAT,0.8,THREAT,0.8,THREAT,0.8
+e2wu95,"North Korea test-launches two “short-range projectiles,” South Korea says: Projectiles presumed to have been launched from super-large Multiple Launch Rocket System",THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+agce2q,USFJ describes North Korea as 'declared nuclear state' in one of its promotional videos,THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+7gbezo,N Korea says new missile can hit entire US,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+880enu,"South Korea reviewing plan to make 5,000ton nuclear submarine",THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+7o1h69,"North Korea accidentally hit one of its own cities with a missile, report says",THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+6z1eay,How has North Korea managed to develop missiles which could reach the U.S.?,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+8l0taq,Enormous LED light wall added to side of Pyongyang’s Ryugyong Hotel,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+8b5mqy,China's huge dust storm on its way to the Korean peninsula and will completely cover country by tomorrow - warning to stay indoors,NEUTRAL,NEUTRAL,0.9,NEUTRAL,0.8,NEUTRAL,1.0
+6sih3a,Are you worried now about the possible armed conflict with North Korea?,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+83guey,Will Trump's planned meeting with Kim Jong Un mean that normalization of relations between Washington and Pyongyang can occur?,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.8,DIPLOMACY,0.8
+8tkcno,"""Give peace to Korea and the Korean peninsula."" President Moon's visit to Moscow's Cathedral of Christ",DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.9
+8jcu0z,"US pressures North Korea to ship nuclear weapons overseas before sanctions lifted, according to reports",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8l8hy6,"Has there ever been anything in history that has left the country in shock and disbelief, as much as, say, if South Korea bombed the NK/US summit, killing both Trump and Kim?",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8h2aoa,Seoul tells activists to “immediately” stop sending anti-DPRK leaflets to North | NK News,DIPLOMACY,THREAT,0.7,DIPLOMACY,0.8,DIPLOMACY,0.8
+9wlidz,"All Hype and No Substance - the recent report from CSIS about ""discovering"" North Korea's missile bases",THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+79vc0o,Collapse at North Korea nuclear test site 'leaves 200 dead',THREAT,THREAT,0.85,HUMANITARIAN,0.8,THREAT,0.9
+8v79a9,"North Korea working to conceal key aspects of its nuclear program, U.S. officials say",THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+8ls1bc,North Korea blows up tunnels at Punggye-ri nuclear test site,THREAT,THREAT,0.8,NEUTRAL,0.8,NEUTRAL,1.0
+8nfym5,Pyongyang's Crude: Three Reasons Why North Korea Doesn't Fear US Oil Embargo,ECONOMIC,ECONOMIC,0.85,ECONOMIC,0.9,ECONOMIC,0.8
+bqz7af,평양에서온 미국의사 An American Doctor From North Korea | 6-time-visit to Pyongyang,NEUTRAL,NEUTRAL,0.7,HUMANITARIAN,0.8,DIPLOMACY,0.8
+6wtamm,North Korea - Being Rudely Awoken By A North Korean Missile,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8t910e,"Everyday life outside of Pyongyang, rural North Korea, exclusively in photos",NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+7tas5t,Did you know the terms “Jurchens” and “Heishui” as used in Chinese historical terminology originally refered to distinct groups of peoples living within the modern boundaries of the Korean peninsula after the fall of Balhae?,NEUTRAL,NEUTRAL,0.9,NEUTRAL,0.9,NEUTRAL,1.0
+c6qqyp,Can someone tell me why people think North Korea is harmless?,THREAT,THREAT,0.7,THREAT,0.8,HUMANITARIAN,0.8
+9pzcwg,Doubts arise over South Korea’s ‘Sea Bow’ missile interception ability,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+e877yc,"Seeing the way the world is today, with 2020 hindsight, so you think n the US should have intervened militarily to prevent North Korea from getting nukes?",THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+aq1k0n,"North Korea Keeps Stockpiling Materials to Make Nuclear Weapons, Report Finds",THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+62bma1,How serious of a threat is North Korea's nuclear capability to the security of the United States?,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+6y32b6,"(strawpoll) when do you think war on the korean peninsula will out, if it ever happens?",THREAT,THREAT,0.8,THREAT,0.8,,
+7727rm,After North Korea saying that nuclear war could break out at any second couldn't we just shoot it down since its quite a long way from north Korea to the west coast us,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+8uxg83,"North Korea has increased nuclear production at secret sites, say U.S. officials",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+cgsbof,First Russian-Chinese air patrol in Asia-Pacific draws shots from South Korea,THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+9gr4be,Thoughts on the Korean War?,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,THREAT,0.8
+bq6036,On the 39 Anniversary of the Gwangju Uprising Korean-American Jonathan Suhr ( Staffer for retired Senator Mike Gravel) Reflects on American Imperialism on the Korean Peninsula,DIPLOMACY,NEUTRAL,0.7,THREAT,0.8,HUMANITARIAN,0.8
+a8edos,US to help South Korea get flu drugs to North despite stalled nuclear talks,HUMANITARIAN,HUMANITARIAN,0.85,HUMANITARIAN,0.8,DIPLOMACY,0.8
+8c83ml,Why is CNN trying to spin this strike into a north korea thing?,NEUTRAL,NEUTRAL,0.7,THREAT,0.8,THREAT,0.8
+8lox1x,"North Korea warns of nuclear showdown, calls Pence 'political dummy'",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+ccitjl,U.S. House passes amendment calling for formal end to Korean War,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.8
+8qnpwe,Are you scared about North Korea still?,THREAT,THREAT,0.7,THREAT,0.8,THREAT,0.8
+6b0aij,Timeline of how North Korea went about it starting from the Korean War..,NEUTRAL,NEUTRAL,0.9,NEUTRAL,0.8,,
+8c6db0,War with North Korea | Missile Test | World News,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+ebb39x,Interfering Harris denounced in South Korea,NEUTRAL,NEUTRAL,0.7,THREAT,0.8,THREAT,0.8
+e8m9s2,U.N. Security Council to meet over North Korea on Wednesday at U.S. request,DIPLOMACY,THREAT,0.8,THREAT,0.8,THREAT,0.8
+78e1wc,Is this a plausible solution to DPRK crisis?,DIPLOMACY,NEUTRAL,0.7,DIPLOMACY,0.8,DIPLOMACY,0.8
+e3onp3,Japan missteps on announcing North Korea's rocket launcher as a ballistic missile demonstrating its need for GSOMIA to continue,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+7j0017,Hmmm... Most Interesting Images show North Korea’s '‘submarine ballistic missile programme’',THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.9
+7z1w7g,"If the two Koreas unify, what happens to the North Korean nuclear weapons?",THREAT,THREAT,0.8,THREAT,0.8,DIPLOMACY,0.8
+737v3k,Your president says that North Korea fears South Korean military without the US alliance to back it up - do you agree?,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+75hix9,Question for /r/Korea: Has the RoK government ever commented on plans they've drawn up for s collapse of the DPRK?,HUMANITARIAN,THREAT,0.8,NEUTRAL,0.8,THREAT,0.8
+8e0bio,Pyongyang calling: North and South Korean leaders get hotline as stage set for summit,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.9
+8u9yaq,North Korea is 'upgrading its nuclear facility' despite denuclearisation pledge,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+7i3qte,71 Republic Person of the Year: Kim Jong Un,NEUTRAL,NEUTRAL,0.7,THREAT,0.8,THREAT,0.8
+7tiy6v,Dangerous Virus Spreads Across Korean Peninsula,THREAT,NEUTRAL,0.8,THREAT,0.8,THREAT,0.8
+96wfzv,"North, South Korea agree on third summit to be held in Pyongyang",DIPLOMACY,DIPLOMACY,0.95,DIPLOMACY,0.9,DIPLOMACY,1.0
+dxnbdd,"U.S., South Korea postpone military drills to bolster peace effort with North Korea",DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.9
+778ppy,Tactics against the North or Tactics for Naught? South Korea Embroiled in Debate over Tactical Nuclear Weapons Deployment,THREAT,THREAT,0.85,THREAT,0.9,THREAT,0.8
+93avlg,"North Korea 'working on new missiles', US officials say",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8fef4k,North Korea’s Punggye-ri Nuclear Test Site: Unusual Activity Observed | 38 North: Informed Analysis of North Korea,THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+6cvqq4,The Day After the Second Korean War,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+6mhbap,NEWS Why can't North Korea have nuclear bombs but USA can?,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+65560r,North Korea's 'big event'? The opening of a new street in Pyongyang,NEUTRAL,NEUTRAL,0.9,NEUTRAL,0.8,NEUTRAL,0.9
+d1lski,When will Pompeo have talks with DPRK?,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.8
+79pr0k,[question] what has south korea done to deter north korea from detonating a nuclear bomb in one of the many tunnels under south korea?,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+7096lu,BBC Interview about the North Korea Missile Launch over Japan,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8l6p0q,Is the Korean Peninsula Doomed For War If US/NK Summit Falls Through,THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+bu5aq4,Trump Undercuts John Bolton on North Korea and Iran,DIPLOMACY,DIPLOMACY,0.7,DIPLOMACY,0.8,DIPLOMACY,0.8
+8a1b7n,Kono gets short shrift over call about N. Korea's nuclear plans | The Asahi Shimbun,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+6gjpo8,[North Korea and the Art of the Deal: Making Kim Jong Un an Offer He Can't Refuse](http://www.sbeconomic.com/single-post/2017/05/23/North-Korea-and-the-Art-of-the-Deal)(http://www.sbeconomic.com/single-post/2017/05/23/North-Korea-and-the-Art-of-the-Deal),DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+6l6r8m,Are any of you genuinely concerned that you might get conscripted to fight in a war against North Korea? or is it all just hot air?,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+84b96a,North Korea's Kim Jong Un Building Monuments to His Favorite Missiles Ahead of Meeting With Trump,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+6kjgk9,North Korean view of how US started the Korean war,NEUTRAL,THREAT,0.8,THREAT,0.8,THREAT,0.8
+8fojxl,N Korea nuclear test site 'to close in May',THREAT,DIPLOMACY,0.8,DIPLOMACY,0.8,NEUTRAL,0.8
+8hqh81,North Korean Nationalism: Lessons from Pyongyang,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+9csdnr,"Scientist Who Developed North Korea's Missiles, Nuclear Weapons Dies",THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+8wo02y,Arirang - [Road to Peace] Broadcasts from NK - Pyongyang Hardliners,DIPLOMACY,THREAT,0.7,THREAT,0.8,THREAT,0.8
+9sgwdi,[serious] Koreas ways in nuclear energy,NEUTRAL,THREAT,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+99kifd,"What country besides Iran, Venezuela, Belarus, Cuba, and North Korea do we have an utterly horrid relationship with?",NEUTRAL,THREAT,0.8,THREAT,0.8,THREAT,0.8
+7szemx,Reunification of the Korean peninsula,DIPLOMACY,DIPLOMACY,0.7,DIPLOMACY,0.8,DIPLOMACY,0.8
+8lua26,What do you think about Trump's decision to cancel the north Korea summit?,DIPLOMACY,DIPLOMACY,0.8,THREAT,0.8,THREAT,0.8
+5qxfkb,"From the perspective of the US Constitution: What in the constitution allows for a ban on nationals from countries like North Korea from entering the US, yet doesn't allow for the ban done in the Executive Order made by Trump? Please note that I do not support the recent executive order BTW.",NEUTRAL,NEUTRAL,0.8,,,,
+7itnnn,Documentary shown to visitors of the Victorious War Museum in Pyongyang about who started the Korean War (in English),NEUTRAL,NEUTRAL,0.7,THREAT,0.8,THREAT,0.8
+8lrsbp,North Korea 'destroys' nuclear test site as world's media watches | The Guardian,THREAT,THREAT,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+6qgtej,"Senior military officers from Democratic People's Republic of Korea #DPRK observe #InternationalArmyGames in Moscow region, Russia",NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,DIPLOMACY,0.8
+6n7qqt,Are you afraid of North Korea?,THREAT,THREAT,0.7,THREAT,0.8,THREAT,0.8
+8factj,"Here's the full English text of the ""Panmunjom Declaration for Peace, Prosperity and Unification of the Korean Peninsula""",NEUTRAL,DIPLOMACY,0.95,DIPLOMACY,0.9,DIPLOMACY,1.0
+8ib3wa,"North Korea, South Korea plan ‪Pyongyang railway",NEUTRAL,DIPLOMACY,0.8,ECONOMIC,0.8,DIPLOMACY,0.9
+7jg270,US Intelligence Community Claims North Korea Transferred Three Nuclear Warheads To Iran,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+8gjaym,Kim Jong-Un's New Strategy: Explained,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,DIPLOMACY,0.8
+8vmo5w,"North Korea working to conceal key aspects of its nuclear program, U.S. officials say",THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+ddlj9d,'Bad news for everyone': Why North Korea's new round of missile tests is concerning,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+7dz3jj,[Question] Russia’s alternative vision for Asia: accommodating a nuclear North Korea?,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+bmjc0v,North Korea launches 'two short-range missiles',THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+7aojqo,"North Korea called on Friday for a halt to what it called ""brutal sanctions,"" saying the measures--imposed after its latest nuclear test--constituted genocide. ""Today the U.S.-led racket of brutal sanctions and pressure against the DPRK constitutes contemporary human rights violation and genocide.""",HUMANITARIAN,HUMANITARIAN,0.9,HUMANITARIAN,0.9,HUMANITARIAN,0.8
+cptwd6,Accept Reality: North Korea Will Remain a Nuclear State,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+75phec,United States and South Korean bombers hold drills over Korean Peninsula.,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+btudnd,Is Trump's dismissal of worry over North Korea's continued missile activities basically correct?,THREAT,THREAT,0.8,THREAT,0.8,NEUTRAL,0.8
+6xilgq,"Do you support nuking North Korea, or do you think other methods of victory should be used!",THREAT,THREAT,0.9,THREAT,0.9,,
+disfnd,[Question] Does the Pyongyang tram and trains run on a schedule?,NEUTRAL,NEUTRAL,0.9,NEUTRAL,1.0,NEUTRAL,1.0
+c9cgc7,How Pyongyang is working to divide Trump from his advisors - and why - Mansudae Korea,DIPLOMACY,THREAT,0.7,THREAT,0.8,DIPLOMACY,0.8
+6to66b,Korean-Canadian Pastor returned to Canada after being detained in DPRK,HUMANITARIAN,HUMANITARIAN,0.8,NEUTRAL,0.8,DIPLOMACY,0.8
+agp7er,"North Korean top envoy expected in US, as South Korea no longer calls Pyongyang an 'enemy'",DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.8
+8v07fo,"North Korea has increased nuclear production at secret sites, say U.S. officials",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+77g3vz,What does China's Congress think of Kim Jong-un?,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+9h8xal,North Korea Agrees to Permanently Dismantle Nuclear Complex If U.S. Takes Corresponding Steps,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.9
+7fxh8n,"[News] North Korea Says Only U.S Should Be Afraid Of Its Nuclear Weapons, Other Nations Are Safe",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+8er7s6,"North Korea extending Pyongyang metro system, sources say",NEUTRAL,NEUTRAL,0.85,NEUTRAL,0.8,NEUTRAL,1.0
+5tjjb2,"Trump administration to weigh options, press China on North Korea missile test: official",THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+8d4xj4,"U.S President on Twitter - Mike Pompeo met with Kim Jong Un in North Korea last week. Meeting went very smoothly and a good relationship was formed. Details of Summit are being worked out now. Denuclearization will be a great thing for World, but also for North Korea!",DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.8
+7068te,"North Korea launches missile over Japanese airspace, U.S. confirms",THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+9u2oqx,"What will you do when the Reds retain control of Congress and Trump declares martial law and a military invasion of Mexico, China and North Korea",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+7wccwd,[Discussion] Why is reunification of the Korean peninsula necessary?,HUMANITARIAN,NEUTRAL,0.7,NEUTRAL,0.8,DIPLOMACY,0.8
+6j14j1,Anyone interested knowing how Moon Jae-in manipulates and tries to undermine South Korea - US alliance should read this article,THREAT,THREAT,0.7,THREAT,0.8,THREAT,0.8
+8j2e06,[Question] How is the North Korean news agency reporting on the easing tension between US-NK and on the peninsula in general?,THREAT,DIPLOMACY,0.85,NEUTRAL,0.8,DIPLOMACY,0.8
+8r6y3a,What do you think of Trump's sudden admiration for Kim Jong Un and when he saluted a North Korean soldier?,DIPLOMACY,DIPLOMACY,0.8,THREAT,0.8,DIPLOMACY,0.8
+9yfarg,"What was the ""theme song"" of the Korean War? (On the flip-side, ""Fortunate Son"" was the theme song of the Vietnam War.)",NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,,
+75plg7,North Korean hackers stole South Korean and U.S. war plans,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+9hkec3,U.S. dismisses North Korea's conditional offer to dismantle nuclear site,THREAT,DIPLOMACY,0.8,THREAT,0.8,THREAT,0.8
+717hd9,"[Discussion] Korean nationalists strongly oppose a war, but perhaps a military action is better for the people.",THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+btoi0v,"A coffee shop in Pyongyang, North Korea.",NEUTRAL,NEUTRAL,0.9,NEUTRAL,0.8,NEUTRAL,0.9
+8gbrcd,"So, do you really think that North Korea will dismantle all nuclear weapons at some point in the future?",THREAT,DIPLOMACY,0.7,DIPLOMACY,0.8,DIPLOMACY,0.7
+8qa7w7,This is a 12 minutes long analysis of the trade-off surrounding the issue of Korean reunification and why it's so hard for the status quo in the Korean peninsula to change.,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+74ruyt,North Korea preparing long-range missile test: RIA cites Russian lawmaker,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+dbe2aq,Bolton undercuts Trump and says North Korea has no desire to give up its nukes,THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+8wto7b,"North Korea says talks with Pompeo 'regrettable,' accuses US of unilateral nuclear demands",DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,THREAT,0.8
+acl2wg,10 Issues to Watch for on the Korean Peninsula in 2019,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,THREAT,0.8
+cl1a1h,Hypothetical War between South Korea and Japan,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+6ymc8j,South Korea deploys missile system as US strengthens North Korea trade threat,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+e6hdu1,"North Korea missile launch history. It includes full flight tests of ballistic and cruise missiles, both successful and unsuccessful, and nuclear tests. It does not include partial tests of missile subsystems such as static engine firings or cold-launch ejection system tests.",THREAT,THREAT,0.9,NEUTRAL,0.9,THREAT,0.9
+8og5k5,Vladimir Putin has invited Kim Jong-un to join a global forum to be held in Vladivostok in September,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+aqasq6,Tug of war: how Korean conflict turned into a tourist attraction,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+abpeaw,DPRK Citizens- What is the marshall really like?,NEUTRAL,NEUTRAL,0.7,HUMANITARIAN,0.8,HUMANITARIAN,0.8
+939083,U.S. spy agencies: North Korea is working on new missiles,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8f76ii,"China, Russia and Japan seek seats at the table with Kim Jong-un, Moon Jae-in and Donald Trump",DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.8
+8ltqj8,"Why isn't the Russian-Ukraine conflict more prominent in the American conscious? I mean, we're covering North Korea and U.S. summit and fearing WW3 from that if all goes wrong.",NEUTRAL,THREAT,0.7,THREAT,0.8,,
+5rm393,At what point do we need to worry about the Korea-US alliance?,DIPLOMACY,THREAT,0.7,THREAT,0.8,THREAT,0.8
+cy630n,Cabinet Vice Premier Ri Ryong-nam to Head DPRK Delegation at Vladivostok Economic Forum 2019,ECONOMIC,ECONOMIC,0.9,ECONOMIC,0.9,ECONOMIC,1.0
+6xxa6j,Do Not Accept North Korea as a Nuclear Armed Power,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+9i87a8,"Pyongyang promises complete denuclearization, calling nuclear weapons ""unnecessary""",DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.9
+7tukdb,Did we just accept a nuclear north korea?,THREAT,THREAT,0.85,THREAT,0.9,THREAT,0.8
+94l71e,"Possibility of North Korea shipping Nuclear Weapons and Ballistic Missiles to Countries such as Yemen, Syria and Iran?",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+73lo7a,North Korea seen moving missiles from development center (x-post from r/WarUpdates),THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.8
+7nb0kx,"Nuclear war between US, North Korea ‘closer than ever’",THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+ai4nwe,Burger King Chicken Nuggets Look Like Korean Peninsula,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.9,HUMANITARIAN,0.8
+8kzh0u,"North Korea charges $10,000 per reporter to cover Punggye-ri nuclear site blowup",THREAT,THREAT,0.7,ECONOMIC,0.8,ECONOMIC,0.8
+cgyxis,"You are a 22 year old American drafted to war. You have to pick between being deployed to either Iran, North Korea, Venezuela, or Libia. Which one do you pick and why?",THREAT,THREAT,0.8,,,,
+8d31v8,"Pyongyang in state of calmness, impact of sanctions seems tiny",NEUTRAL,ECONOMIC,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+9eewzk,Kim Jong Un tells Chinese envoy North Korea is upholding U.S. nuclear deal,DIPLOMACY,DIPLOMACY,0.85,DIPLOMACY,0.8,DIPLOMACY,0.8
+9xo8qo,Kim Jong-Un To Test New 'Cutting-Edge' Weapon,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+e0eby9,(Hypothetical) Kim Jong Un requests annexation of DPRK into South Korea. Reunification.,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.8
+8fu775,Ending US occupation of South Korea: What Does 'Denuclearization' Mean in the Negotiations for an End to the Korean War?,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.9
+dcpgj6,North Korea tests submarine-capable missile fired from sea,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+e5wtmh,Kim Jong-un Unveils Newly Developed ‘Utopia’ Town,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,HUMANITARIAN,0.8
+9mtrjd,DPRK Citizens - Experience with the marshall?,NEUTRAL,HUMANITARIAN,0.7,NEUTRAL,0.8,HUMANITARIAN,0.8
+8ma1q8,The US recognized the DPRK as a state,DIPLOMACY,NEUTRAL,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+91znva,"In your opinion, what do you think will result in the talks with North Korea?",DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+dy4aal,"If the US didn’t have any military overseas, do you think Europe can stand against Russia & Japan, Taiwan, and South Korea can stand against China by themselves?",THREAT,THREAT,0.8,THREAT,0.9,THREAT,0.8
+aixflf,Opinion: What I Learned Leading America's 1st Nuclear Inspection In North Korea . News,THREAT,DIPLOMACY,0.8,DIPLOMACY,0.8,THREAT,0.8
+bekzs3,North Korea calls for Pompeo to be dropped from talks; tests tactical weapon,THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+am3s8w,Establishing an Acceptable Relationship with a Nuclear North Korea,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+6y2g27,BREAKING: US Military Launches Retaliatory Strike Against North Korea After Live Nuclear Missile Hits Seoul,THREAT,THREAT,0.95,THREAT,1.0,THREAT,0.9
+74rzks,North Korea preparing long-range missile test: RIA cites Russian lawmaker,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8fvep5,Pyongyang's state-controlled media give extensive coverage to summit,NEUTRAL,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.9
+bs1l5r,Moon lauds Bush’s visit as strong Korea-US alliance,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.9
+71mnva,How Russia Sees A Nuclear North Korea,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+ctegz4,"Japan, South Korea agree on need for dialogue to repair frayed ties",DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.9
+6ha9gy,Can Mongolia Help Resolve Tensions on the Korean Peninsula?,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+6xlzwr,Why DPRK will N-E-V-E-R stop its nuclear arms program,THREAT,THREAT,0.9,THREAT,0.9,,
+7h5bp1,[Question] North Korea Missile Launch Alerts?,NEUTRAL,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8facnr,"Here's the full English text of the ""Panmunjom Declaration for Peace, Prosperity and Unification of the Korean Peninsula"":",NEUTRAL,DIPLOMACY,0.95,DIPLOMACY,0.9,DIPLOMACY,1.0
+94c3bi,Prediction: End Outcome of Korean Peninsula Crisis of 2017-2019,DIPLOMACY,NEUTRAL,0.7,DIPLOMACY,0.8,DIPLOMACY,0.8
+dewf6n,Does North Korea have a missile defense system?,NEUTRAL,NEUTRAL,0.9,NEUTRAL,0.8,THREAT,0.8
+al9xim,The case for Russian engagement in the Korean peninsula,THREAT,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+65zq8e,The unpredictable Kim Jong-un and the risk of a first strike in a Korean War,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8fadf6,BREAKING: North and South Korea will sign a peace treaty to formally end the Korean War this year,DIPLOMACY,DIPLOMACY,0.95,DIPLOMACY,0.9,DIPLOMACY,1.0
+6wnocb,North Korea Fires Missile Over Japan,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+dwixsz,Trump hikes price tag for US forces in Korea almost 500% as Seoul questions alliance,ECONOMIC,ECONOMIC,0.85,ECONOMIC,0.9,ECONOMIC,0.8
+8qu5pw,Trump Says North Korea Is No Longer a Nuclear Threat,THREAT,THREAT,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+8u7b06,"Satellite images show construction work still ongoing at North Korea's only nuclear reactor, say 38 North",THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+7izoti,Hmmm Interesting Images show North Korea's ''submarine ballistic missile programme'',THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.9
+87xotj,The US-DPRK Summit: Assessing Chinese Anxieties | 38 North,DIPLOMACY,DIPLOMACY,0.8,THREAT,0.8,DIPLOMACY,0.8
+8tfqcn,"Pyongyang media call for S. Korea to scrap N. Korean human rights act, foundation",HUMANITARIAN,HUMANITARIAN,0.85,THREAT,0.8,THREAT,0.8
+bejx1i,Can someone transcribe this DPRK film title for me using the Korean alphabet? I would be enormously grateful.,NEUTRAL,,,NEUTRAL,0.9,,
+8p44u4,"North Korea demolished missile testing facility last month, report says",NEUTRAL,THREAT,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+cieeqt,[6 photos] DPRK marks day of war victory,NEUTRAL,NEUTRAL,0.7,THREAT,0.8,THREAT,0.8
+c7dctk,"If the Korean Peninsula unites into one nation, who cedes power?",NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+5lq8ol,"The War Nerd interviews Tim Shorrock, author of ""Spies For Hire"" and NatSec blogger for The Nation, on the history of the Korean peninsula",NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,DIPLOMACY,0.8
+89zoo5,Anthem of North Korea DPRK Video (RareVersion),NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+7ui99c,"USA can destroy ‘most’ of N. Korea’s nuclear missile infrastructure, top general says",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+82fd1v,North Korea Says It Is Open to Talks With U.S. About Abandoning Nuclear Weapons,DIPLOMACY,DIPLOMACY,0.9,DIPLOMACY,0.9,DIPLOMACY,0.9
+7k219p,China’s navy begins live-fire drill off Korean peninsula,THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+cgdwls,How Kim Jong-un Smuggled Luxury Mercedes to North Korea - Video,NEUTRAL,ECONOMIC,0.7,ECONOMIC,0.8,ECONOMIC,0.8
+beky1a,North Korea: Satellite images suggest movement at nuclear site,THREAT,THREAT,0.85,THREAT,0.8,THREAT,0.8
+ehmogi,Kim Jong Un calls for measures to protect North Korea,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+8uxjch,"North Korea has increased nuclear production at secret sites, say U.S. officials",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+92kns9,"Do you think the United States and North Korea will ever normalize relations, remain in the status quo, or ultimately go to war?",DIPLOMACY,DIPLOMACY,0.6,DIPLOMACY,0.7,,
+e4qug7,Is a Korean Confederation the best option for peace in the Korean Peninsula?,DIPLOMACY,DIPLOMACY,0.8,DIPLOMACY,0.8,DIPLOMACY,0.8
+9hlad0,Reactions when watching NK performance in Pyongyang,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,HUMANITARIAN,0.8
+6yep88,Reports: North Korea may be preparing new long-range missile test,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8dz4bt,Why North Korea’s nuclear and missile test freeze is both good and bad,THREAT,THREAT,0.7,THREAT,0.8,DIPLOMACY,0.8
+6v0xo9,Is the US-South Korea alliance at a crossroads?,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,DIPLOMACY,0.8
+8khhjt,So could this Commercial by Zain(arab telephone company) soften North Korea for Peaceful Korean Peninsula?,DIPLOMACY,DIPLOMACY,0.7,DIPLOMACY,0.8,DIPLOMACY,0.8
+chem1j,North Korea fired unidentified missile in wonson region,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+cxle1y,"In light of HK's extradition bill protests, doesn't anyone know that ever since HK's handover in 1997, DPRK refugees found there have been extradited back to North Korea this whole time? Can someone find sources backing this in order to report it to /r/TodayILearned? [Question] [Discussion]",HUMANITARIAN,HUMANITARIAN,0.8,HUMANITARIAN,0.8,HUMANITARIAN,0.8
+dx8qi2,How do you feel that the US is demanding South Korea and Japan to pay for US military presence there?,THREAT,ECONOMIC,0.8,ECONOMIC,0.8,ECONOMIC,0.8
+6lfq2j,"With North Korea successfully testing a ICBM proving capable of hitting Alaska, are Americans becoming more fearful?",THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+e7nn54,North Korea's U.N. envoy says denuclearization off negotiating table with United States,DIPLOMACY,THREAT,0.9,THREAT,0.8,THREAT,0.8
+6yx42d,What North Korea thinks about Trump — according to the man who interprets his tweets for Kim Jong Un,NEUTRAL,NEUTRAL,0.7,DIPLOMACY,0.8,DIPLOMACY,0.8
+7v5nej,Military Balance on the Korean peninsula,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+8ubmux,"""Satellite imagery suggests ‘rapid’ upgrades at North Korea nuclear site"" states the Washington Post. Are you surprised, angered, upset?",THREAT,THREAT,0.9,THREAT,0.8,THREAT,0.9
+7d46dh,North Korea 'sentences Trump to death' for insulting Kim Jong-un,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+b9deyl,North Korea supposedly funding its nuclear program with cryptocurrency,THREAT,THREAT,0.8,THREAT,0.8,ECONOMIC,0.8
+787dny,North Korea on Monday blasted “Japanese reactionaries” for working to “pave the groundwork for a reinvasion of the Korean peninsula” after Sunday’s Lower House election that saw Prime Minister Shinzo Abe’s ruling bloc secure a sweeping victory.,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.8
+6cdl5c,"North Korea’s deputy U.N. ambassador Kim In Ryong: ""Whenever something strange happens it is the stereotype way of the United States and the hostile forces that kick off noisy anti-Democratic People's Republic of Korea (DPRK) campaign deliberately linking with DPRK""",THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+7g7oo2,North Korea Launches Intercontinental Ballistic Missile,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+6wmouu,North Korea fires missile over Japan,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+7h1fwx,"North Korea's New Missile Could Reach Washington, Seoul Says",THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+8nth8c,Who controls the DPRK? A brief history of North Korea conspiracy theories. | NK News,NEUTRAL,NEUTRAL,0.8,NEUTRAL,0.8,NEUTRAL,0.8
+7m17oj,North Korea is trying to fit its missiles with anthrax,THREAT,THREAT,0.95,THREAT,0.9,THREAT,0.9
+6xicdb,Why DPRK Will N-E-V-E-R Stop Its Nuclear Arms Program,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+8n6og8,"If reunification of the Korean peninsula appeared likely, how possible is it China would invade and occupy northeast DPNK in an attempt to achieve direct access to the Sea of Japan. Does China have a historic claim?",THREAT,THREAT,0.8,THREAT,0.8,,
+9hlbak,NK performance in Pyongyang and SK's reactions,NEUTRAL,NEUTRAL,0.7,NEUTRAL,0.8,THREAT,0.8
+aa2mpp,North Korea launched no missiles in 2018. But that isn’t necessarily due to Trump.,NEUTRAL,THREAT,0.7,NEUTRAL,0.8,NEUTRAL,0.8
+8gkcv8,North Korea starts pulling cables from tunnels at nuclear test site,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8
+6wpcot,What are the geopolitical implications of North Korea sending a missile over Japan?,THREAT,THREAT,0.9,THREAT,0.9,THREAT,0.9
+7pcaps,Has North Korea accomplished its goal of becoming a nuclear power? Meaning that sanctions will eventually be lifted because there is nothing that the outside world can do to intervene.,THREAT,THREAT,0.8,THREAT,0.8,THREAT,0.8

@@ -10,12 +10,12 @@ This report presents detailed network analysis results for RQ2: "How do diplomat
 
 | Metric | P1 (Pre-Singapore) | P2 (Singapore-Hanoi) | P3 (Post-Hanoi) | P1→P2 Δ | P2→P3 Δ |
 |--------|-------------------|---------------------|-----------------|---------|---------|
-| Nodes | 2,656 | 1,043 | 879 | -1,613 | -164 |
-| Edges | 4,552 | 1,726 | 1,429 | -2,826 | -297 |
-| Density | 0.0013 | 0.0032 | 0.0037 | +0.0019 | +0.0005 |
-| Avg Degree | 3.4277 | 3.3097 | 3.2514 | -0.1180 | -0.0583 |
-| Clustering | 0.2149 | 0.1980 | 0.2098 | -0.0169 | +0.0118 |
-| Components | 25 | 23 | 16 | -2 | -7 |
+| Nodes | 2,735 | 787 | 1,429 | -1,948 | +642 |
+| Edges | 4,421 | 1,218 | 2,383 | -3,203 | +1,165 |
+| Density | 0.0012 | 0.0039 | 0.0023 | +0.0028 | -0.0016 |
+| Avg Degree | 3.2329 | 3.0953 | 3.3352 | -0.1376 | +0.2399 |
+| Clustering | 0.1864 | 0.1944 | 0.2070 | +0.0080 | +0.0126 |
+| Components | 73 | 26 | 37 | -47 | +11 |
 
 ---
 
@@ -25,31 +25,31 @@ This report presents detailed network analysis results for RQ2: "How do diplomat
 
 | Rank | P1 (Pre-Singapore) | P2 (Singapore-Hanoi) | P3 (Post-Hanoi) |
 |------|-------------------|---------------------|-----------------|
-| 1 | NORTH KOREA (0.540) | NORTH KOREA (0.429) | NORTH KOREA (0.468) |
-| 2 | TRUMP (0.127) | TRUMP (0.159) | TRUMP (0.167) |
-| 3 | SOUTH KOREA (0.114) | SOUTH KOREA (0.114) | KIM JONG UN (0.138) |
-| 4 | KIM JONG UN (0.074) | KIM JONG UN (0.103) | DONALD TRUMP (0.132) |
-| 5 | DONALD TRUMP (0.073) | DONALD TRUMP (0.081) | KIM JONG-UN (0.095) |
-| 6 | UNITED STATES (0.055) | US (0.052) | SOUTH KOREA (0.083) |
-| 7 | KIM JONG-UN (0.052) | SINGAPORE SUMMIT (0.050) | US (0.041) |
-| 8 | CHINA (0.046) | DENUCLEARIZATION (0.049) | TRUMP ADMINISTRATION (0.041) |
-| 9 | US (0.043) | KIM JONG-UN (0.048) | UNITED STATES (0.039) |
-| 10 | DPRK (0.032) | UNITED STATES (0.044) | CHINA (0.033) |
+| 1 | NORTH KOREA (0.419) | NORTH KOREA (0.433) | NORTH KOREA (0.404) |
+| 2 | TRUMP (0.140) | TRUMP (0.201) | TRUMP (0.239) |
+| 3 | SOUTH KOREA (0.088) | SOUTH KOREA (0.123) | KIM JONG UN (0.095) |
+| 4 | KIM JONG UN (0.060) | KIM JONG UN (0.073) | DONALD TRUMP (0.090) |
+| 5 | US (0.060) | UNITED STATES (0.051) | SOUTH KOREA (0.071) |
+| 6 | UNITED STATES (0.050) | US (0.050) | KIM JONG-UN (0.053) |
+| 7 | DONALD TRUMP (0.047) | CHINA (0.045) | UNITED STATES (0.050) |
+| 8 | CHINA (0.045) | DONALD TRUMP (0.045) | CHINA (0.036) |
+| 9 | USA (0.039) | USA (0.043) | KIM (0.033) |
+| 10 | DPRK (0.037) | DENUCLEARIZATION (0.042) | RUSSIA (0.032) |
 
 ### 2.2 PageRank (Top 10 per Period)
 
 | Rank | P1 (Pre-Singapore) | P2 (Singapore-Hanoi) | P3 (Post-Hanoi) |
 |------|-------------------|---------------------|-----------------|
-| 1 | NORTH KOREA (0.2534) | NORTH KOREA (0.1887) | NORTH KOREA (0.2014) |
-| 2 | SOUTH KOREA (0.0489) | TRUMP (0.0602) | KIM JONG UN (0.0691) |
-| 3 | TRUMP (0.0427) | KIM JONG UN (0.0488) | TRUMP (0.0615) |
-| 4 | KIM JONG UN (0.0312) | SOUTH KOREA (0.0393) | DONALD TRUMP (0.0404) |
-| 5 | DONALD TRUMP (0.0210) | DONALD TRUMP (0.0282) | SOUTH KOREA (0.0317) |
-| 6 | UNITED STATES (0.0191) | DENUCLEARIZATION (0.0215) | KIM JONG-UN (0.0299) |
-| 7 | CHINA (0.0181) | KIM JONG-UN (0.0199) | UNITED STATES (0.0146) |
-| 8 | KIM JONG-UN (0.0175) | SINGAPORE SUMMIT (0.0172) | SANCTIONS (0.0105) |
-| 9 | US (0.0131) | US (0.0145) | CHINA (0.0100) |
-| 10 | RUSSIA (0.0117) | UNITED STATES (0.0141) | TRUMP ADMINISTRATION (0.0099) |
+| 1 | NORTH KOREA (0.2028) | NORTH KOREA (0.1928) | NORTH KOREA (0.1783) |
+| 2 | TRUMP (0.0501) | TRUMP (0.0702) | TRUMP (0.0851) |
+| 3 | SOUTH KOREA (0.0395) | SOUTH KOREA (0.0484) | KIM JONG UN (0.0441) |
+| 4 | KIM JONG UN (0.0247) | KIM JONG UN (0.0339) | DONALD TRUMP (0.0277) |
+| 5 | CHINA (0.0198) | DENUCLEARIZATION (0.0162) | SOUTH KOREA (0.0271) |
+| 6 | US (0.0172) | UNITED STATES (0.0157) | KIM JONG-UN (0.0192) |
+| 7 | UNITED STATES (0.0166) | CHINA (0.0156) | UNITED STATES (0.0142) |
+| 8 | RUSSIA (0.0140) | DONALD TRUMP (0.0136) | KIM (0.0137) |
+| 9 | DONALD TRUMP (0.0123) | US (0.0136) | CHINA (0.0130) |
+| 10 | DPRK (0.0101) | KIM JONG-UN (0.0129) | RUSSIA (0.0091) |
 
 ---
 
@@ -57,29 +57,29 @@ This report presents detailed network analysis results for RQ2: "How do diplomat
 
 | Type | P1 Count | P1 % | P2 Count | P2 % | P3 Count | P3 % |
 |------|----------|------|----------|------|----------|------|
-| ANIMAL | 0 | 0.0% | 1 | 0.1% | 0 | 0.0% |
-| CITY | 10 | 0.4% | 3 | 0.3% | 5 | 0.5% |
-| COUNTRY | 149 | 5.3% | 94 | 8.4% | 40 | 4.3% |
-| CULTURAL EVENT | 0 | 0.0% | 1 | 0.1% | 0 | 0.0% |
-| CULTURAL ITEM | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
-| CULTURAL PHENOMENON | 2 | 0.1% | 0 | 0.0% | 0 | 0.0% |
-| CURRENCY | 0 | 0.0% | 1 | 0.1% | 0 | 0.0% |
-| DOCUMENT | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
-| ETHNIC GROUP | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
-| EVENT | 654 | 23.2% | 230 | 20.6% | 224 | 24.0% |
-| FOOD | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
-| GEO | 62 | 2.2% | 22 | 2.0% | 23 | 2.5% |
-| LOCATION | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
-| MILITARY | 3 | 0.1% | 0 | 0.0% | 0 | 0.0% |
-| MILITARY ASSET | 3 | 0.1% | 0 | 0.0% | 0 | 0.0% |
-| MOVIE | 0 | 0.0% | 1 | 0.1% | 0 | 0.0% |
-| MYTHICAL CREATURE | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
-| ORGANIZATION | 419 | 14.8% | 184 | 16.5% | 151 | 16.1% |
-| PERSON | 457 | 16.2% | 172 | 15.4% | 169 | 18.1% |
-| POLICY | 546 | 19.3% | 217 | 19.4% | 157 | 16.8% |
+| ANIMAL | 1 | 0.0% | 1 | 0.1% | 0 | 0.0% |
+| AWARD | 2 | 0.1% | 0 | 0.0% | 0 | 0.0% |
+| CITY | 21 | 0.7% | 6 | 0.7% | 2 | 0.1% |
+| COUNTRY | 171 | 5.8% | 85 | 10.2% | 103 | 6.7% |
+| CULTURAL PHENOMENON | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
+| CULTURE | 1 | 0.0% | 1 | 0.1% | 0 | 0.0% |
+| CURRENCY | 2 | 0.1% | 1 | 0.1% | 2 | 0.1% |
+| DRUG | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
+| EVENT | 545 | 18.6% | 193 | 23.1% | 303 | 19.6% |
+| FOOD | 2 | 0.1% | 1 | 0.1% | 0 | 0.0% |
+| GEO | 42 | 1.4% | 11 | 1.3% | 34 | 2.2% |
+| LOCATION | 1 | 0.0% | 0 | 0.0% | 2 | 0.1% |
+| MILITARY | 3 | 0.1% | 1 | 0.1% | 0 | 0.0% |
+| MILITARY BASE | 0 | 0.0% | 0 | 0.0% | 1 | 0.1% |
+| MILITARY VESSEL | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
+| NATION | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
+| ORGANIZATION | 439 | 15.0% | 120 | 14.4% | 243 | 15.7% |
+| PERSON | 502 | 17.2% | 146 | 17.5% | 274 | 17.7% |
+| POLICY | 622 | 21.3% | 160 | 19.2% | 302 | 19.5% |
 | REGION | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% |
-| STATE | 0 | 0.0% | 1 | 0.1% | 0 | 0.0% |
-| WEAPON | 264 | 9.4% | 79 | 7.1% | 75 | 8.0% |
+| SATELLITE | 0 | 0.0% | 0 | 0.0% | 3 | 0.2% |
+| TECHNOLOGY | 0 | 0.0% | 1 | 0.1% | 0 | 0.0% |
+| WEAPON | 293 | 10.0% | 52 | 6.2% | 120 | 7.8% |
 
 ---
 
@@ -87,9 +87,9 @@ This report presents detailed network analysis results for RQ2: "How do diplomat
 
 | Frame | P1 % | P2 % | P3 % | P1→P2 Δ | P2→P3 Δ |
 |-------|------|------|------|---------|---------|
-| **Threat** | 61.5% | 42.4% | 40.9% | **-19.0%** | **-1.5%** |
-| **Peace** | 7.8% | 24.7% | 18.6% | **+16.9%** | **-6.1%** |
-| **Neutral** | 30.8% | 32.9% | 40.5% | **+2.1%** | **+7.7%** |
+| **Threat** | 55.6% | 50.3% | 41.0% | **-5.3%** | **-9.4%** |
+| **Peace** | 6.4% | 15.5% | 12.1% | **+9.1%** | **-3.5%** |
+| **Neutral** | 38.0% | 34.1% | 47.0% | **-3.9%** | **+12.8%** |
 
 ---
 
@@ -97,13 +97,13 @@ This report presents detailed network analysis results for RQ2: "How do diplomat
 
 | Relationship | P1 Weight | P2 Weight | P3 Weight | Trend |
 |--------------|-----------|-----------|-----------|-------|
-| NORTH KOREA ↔ TRUMP | 2419 | 706 | 582 | ↓ Declining |
-| NORTH KOREA ↔ KIM JONG UN | 2393 | 783 | 915 | Variable |
-| NORTH KOREA ↔ SOUTH KOREA | 3421 | 661 | 689 | Variable |
-| NORTH KOREA ↔ DENUCLEARIZATION | 280 | 532 | 150 | ∩ Peak at P2 |
-| NORTH KOREA ↔ UNITED STATES | 1428 | 247 | 301 | Variable |
-| KIM JONG UN ↔ TRUMP | 427 | 412 | 494 | Variable |
-| KIM JONG UN ↔ DONALD TRUMP | 408 | 359 | 396 | Variable |
+| NORTH KOREA ↔ TRUMP | 1954 | 555 | 1049 | Variable |
+| NORTH KOREA ↔ KIM JONG UN | 1458 | 446 | 1000 | Variable |
+| NORTH KOREA ↔ SOUTH KOREA | 2524 | 569 | 850 | Variable |
+| NORTH KOREA ↔ DENUCLEARIZATION | 190 | 285 | 180 | ∩ Peak at P2 |
+| NORTH KOREA ↔ UNITED STATES | 959 | 203 | 339 | Variable |
+| KIM JONG UN ↔ TRUMP | 329 | 185 | 432 | Variable |
+| KIM JONG UN ↔ DONALD TRUMP | 231 | 125 | 394 | Variable |
 
 ---
 
@@ -111,15 +111,15 @@ This report presents detailed network analysis results for RQ2: "How do diplomat
 
 | Metric | P1 | P2 | P3 |
 |--------|-----|-----|-----|
-| Communities | 354 | 153 | 107 |
+| Communities | 363 | 103 | 205 |
 
 ### Community Theme Distribution
 
 | Theme | P1 Count | P2 Count | P3 Count |
 |-------|----------|----------|----------|
-| Threat | 108 | 40 | 22 |
-| Diplomacy | 21 | 25 | 7 |
-| Mixed | 225 | 88 | 78 |
+| Threat | 105 | 22 | 34 |
+| Diplomacy | 12 | 11 | 14 |
+| Mixed | 246 | 70 | 157 |
 | Other | 0 | 0 | 0 |
 
 ---

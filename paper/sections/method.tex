@@ -5,7 +5,9 @@ We collected Reddit posts from January 2017 to June 2019 using the Arctic Shift 
 % \jun{Fixed: Added total post count (29,688), breakdown by group, and full subreddit list.}
 % \mohit{Make them as textbf as subsubsections}
 % \jun{Fixed: Changed to textbf inline headings.}
+To ensure comprehensive coverage of the discourse, we employed a \textit{Recursive Keyword Expansion} strategy. We initially queried for core terms (e.g., ``North Korea'', ``Kim Jong Un''), identified the top 100 co-occurring terms within the retrieved documents for each period, and recursively re-queried the API. This approach ensures the capture of period-specific slang and sub-topics (e.g., ``Fire and Fury'' in P1, ``Summit'' in P2) that static keyword lists might miss.
 
+\textbf{Audience Response Data.} While our primary causal analysis focuses on posts ($N=10,659$), we also collected the top-5 comments (by score) from each post to examine determining propagation effects. We focus on these top-ranked comments ($N=24,051$) to capture highly visible audience responses that are socially reinforced and most likely to shape collective interpretation. We exclude the long tail of low-engagement replies to maintain a focus on high-visibility discourse.
 \textbf{Treatment and Control Groups.}
 To isolate the causal impact of summit diplomacy, it is essential to control for concurrent geopolitical developments that could confound inference. Relying solely on longitudinal observations of the treatment group (North Korea) risks misinterpreting broader fluctuations in Reddit users' foreign policy sentiment as specific effects of the summits. 
 % As noted in prior work~\cite{kumarswamy2025}, external ``offline'' events often drive significant spikes in online activity across all topics, necessitating a control group to distinguish treatment effects from general temporal trends.
@@ -95,6 +97,8 @@ Y_{g,t} = \alpha_g + \gamma_t + \beta \big(\text{Treat}_g \times \text{Post}_t\b
 \end{equation}
 where $Y_{g,t}$ is the monthly average sentiment (or framing) for group $g$ in month $t$, 
 $\alpha_g$ and $\gamma_t$ denote group and month fixed effects, and $\beta$ captures the DID estimate of the summit effect. We report heteroskedasticity-robust standard errors clustered at the group level. We explicitly verified the parallel trends assumption, as detailed in the Data Collection subsection above.
+
+\textbf{Causal Scope.} We emphasize that our causal identifiction strategy is defined strictly at the post level, where the unit of analysis is the agenda-setting initial post. We do not redefine comments as independent causal units for DiD estimation, given their nested dependency on the parent post. Instead, comment-level analyses are used to assess the propagation and external validity of the post-level effects.
 
 %------------------------------------------------------------------------------
 \subsection{Network Structure Analysis}

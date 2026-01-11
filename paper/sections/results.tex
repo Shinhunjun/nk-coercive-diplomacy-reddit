@@ -25,16 +25,16 @@ In the transition to P2 (Summit Diplomacy), the framing ratio (Diplomacy/Threat)
 % % \jun{Fixed: Moved tables to Method section.}
 % As reported in the Method section (Tables~\ref{tab:pt_sentiment} and~\ref{tab:pt_framing}), all three control groups (China, Iran, Russia) satisfy the parallel trends assumption for both sentiment and framing, so we include all three in our analysis.
 
-\textbf{Impact on Sentiment: } Figure~\ref{fig:sentiment_trends} shows monthly sentiment trends, and Figure~\ref{fig:sentiment_did} visualizes the DiD effects. The Singapore Summit (P1$\rightarrow$P2) produced a statistically significant positive shift in sentiment toward North Korea across all control groups (Table~\ref{tab:did_sentiment_summary}), with estimated effects ranging from +0.10 to +0.21 ($p < 0.001$). In contrast, the failure of the Hanoi Summit (P2$\rightarrow$P3) resulted in a significant negative shift in sentiment, ranging from -0.06 to -0.12 ($p < 0.001$). 
+\textbf{Impact on Sentiment: } Figure~\ref{fig:sentiment_did} visualizes the DiD effects. The Singapore Summit (P1$\rightarrow$P2) produced a statistically significant positive shift in sentiment toward North Korea across all control groups (Table~\ref{tab:did_sentiment_summary}), with estimated effects ranging from +0.10 to +0.21 ($p < 0.001$). In contrast, the failure of the Hanoi Summit (P2$\rightarrow$P3) resulted in a significant negative shift in sentiment, ranging from -0.06 to -0.12 ($p < 0.001$). 
 % \mohit{I would recommend putting the p value in brackets next to the the DiD est, and the other coloumn should have the confidence intervals, and as a footnote you can have the stars related to the p value, check the Table 1 in in my Parler paper.}
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/fig6_sentiment_trends.pdf}
-\caption{Monthly Sentiment Score Trends: NK vs. Control Groups. Vertical dashed lines mark key diplomatic events: the green line indicates the Singapore Summit (June 2018), and the red line indicates the Hanoi Summit (February 2019).}
-% \mohit{Add what the green and red vertical lines are, so add it in the caption of the figure} \jun{Fixed!}
-\label{fig:sentiment_trends}
-\end{figure*}
+% \begin{figure*}[t]
+% \centering
+% \includegraphics[width=0.8\textwidth]{figures/fig6_sentiment_trends.pdf}
+% \caption{Monthly Sentiment Score Trends: NK vs. Control Groups. Vertical dashed lines mark key diplomatic events: the green line indicates the Singapore Summit (June 2018), and the red line indicates the Hanoi Summit (February 2019).}
+% % \mohit{Add what the green and red vertical lines are, so add it in the caption of the figure} \jun{Fixed!}
+% \label{fig:sentiment_trends}
+% \end{figure*}
 
 While these sentiment shifts are statistically significant, sentiment alone cannot reliably distinguish between threat-oriented and diplomacy-oriented discourse. Both exhibit predominantly negative valence with substantial overlap in their distributions (THREAT: $M = -0.27$, $SD = 0.27$; DIPLOMACY: $M = -0.08$, $SD = 0.34$). Consequently, an improvement in sentiment may reflect either a genuine shift toward diplomatic framing or merely a softening of tone within the same rhetorical frame. This limitation underscores why framing analysis is essential to capture substantive rhetorical changes.
 
@@ -74,14 +74,14 @@ Hanoi & China & -0.11*** & [-0.14, -0.08] \\
 
 \textbf{Impact on Framing:} We next examine changes in framing, where higher values indicate diplomacy-oriented narratives and lower values indicate threat-oriented narratives. 
 % As noted in the parallel trends validation, Russia is excluded from this analysis due to pre-trend violations, leaving China and Iran as valid control groups. 
-Figure~\ref{fig:framing_trends} shows monthly framing trends, and Figure~\ref{fig:did} visualizes the DiD effects.
+Figure~\ref{fig:did} visualizes the DiD effects.
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/fig2_framing_trends.pdf}
-\caption{Monthly Framing Score Trends: NK vs. Control Groups. Vertical dashed lines mark key diplomatic events: the green line indicates the Singapore Summit (June 2018), and the red line indicates the Hanoi Summit (February 2019).}
-\label{fig:framing_trends}
-\end{figure*}
+% \begin{figure*}[t]
+% \centering
+% \includegraphics[width=0.8\textwidth]{figures/fig2_framing_trends.pdf}
+% \caption{Monthly Framing Score Trends: NK vs. Control Groups. Vertical dashed lines mark key diplomatic events: the green line indicates the Singapore Summit (June 2018), and the red line indicates the Hanoi Summit (February 2019).}
+% \label{fig:framing_trends}
+% \end{figure*}
 
 \begin{figure*}[t]
 \centering
@@ -204,3 +204,8 @@ DIPLOMACY & 0.88 & 0.77 & 0.82 & 108 \\
 \textbf{Error Analysis and Implications:} Qualitative inspection of disagreements suggests that most LLM errors arise in edge cases where multiple frames co-occur, and the primary emphasis is ambiguous. Specifically, the LLM over-applied the ``factual reporting = NEUTRAL'' heuristic to diplomatic event coverage (17 cases), classifying summits and negotiations as neutral when human annotators labeled them as DIPLOMACY. Similarly, the ``individual harm = HUMANITARIAN'' rule was triggered by posts merely mentioning individuals (8 cases), even when the overall framing was neutral. Importantly, these errors are unlikely to systematically favor one diplomatic phase over another because the benchmark was stratified across periods and countries, with error rates ranging from 11.6\% (Iran) to 18.0\% (North Korea). We provide detailed qualitative examples of these classification disagreements in Appendix~\ref{app:error_analysis}.
 
 \textbf{Summary: }Taken together, these results support the validity of using LLM-based framing classification for large-scale causal analysis, while motivating targeted robustness checks (e.g., re-estimating DiD effects on high-confidence predictions or excluding the most ambiguous categories).
+
+\subsection{Audience Response Analysis (RQ3)}
+\label{subsec:audience_response}
+
+Analyses of highly visible audience responses reveal patterns consistent with post-level findings. Supplementary sentiment analysis on top-ranked comments ($N=24,051$) shows that affective valence improves during the summit period without a full reversal, mirroring the post-level pattern. More importantly, framing analysis exhibits the same \textit{asymmetric persistence} observed in posts: threat-oriented discourse collapsed during the summit and did not fully return to pre-summit levels even after the Hanoi failure. Structurally, graph-based analysis of comments confirms that the discourse network reorganized from pure confrontation to a mixed form of ``hostile engagement,'' where diplomatic connections persisted alongside re-emerging threats. These findings indicate that the framing shifts triggered by summit diplomacy propagate beyond agenda-setting posts to participatory audience discourse. Full results, including sentiment DiD, framing distributions, and graph-based metrics for comments, are reported in Appendix~\ref{app:audience_response}.

@@ -1,0 +1,5 @@
+Model,N,Accuracy,Kappa
+GPT-4o-mini,501,79.2%,0.712
+Llama 3.3 70B,501,75.6%,0.667
+Llama 3.1 8B,501,67.3%,0.566
+GPT-4o,501,75.6%,0.656

@@ -63,3 +63,12 @@ data/nk/*_comments_full.csv
 data/processed/*_comments_roberta.csv
 data/control/*_comments_*.csv
 
+
+# Large GraphRAG files
+graphrag/*/output/
+graphrag/*/input/
+graphrag_comments/*/output/
+graphrag_comments/*/input/
+
+# Processed intermediate data
+data/processed/

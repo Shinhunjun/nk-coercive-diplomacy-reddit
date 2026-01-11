@@ -72,7 +72,7 @@ class PeriodCommentsCollector:
         params = {
             "link_id": link_id,
             "limit": min(max_comments, 100),  # API max is 100
-            "sort": "top"  # Get top comments by score
+            "sort": "desc"  # Get comments sorted by score descending (highest first)
         }
 
         for attempt in range(self.max_retries):
@@ -117,12 +117,17 @@ class PeriodCommentsCollector:
             base, ext = os.path.splitext(output_path)
             output_path = f"{base}_{target_period}{ext}"
 
+        processed_post_ids = set()
+
         # Load existing if resuming
         if output_path and os.path.exists(output_path):
             existing = pd.read_csv(output_path)
             seen_ids = set(existing['id'].astype(str))
+            if 'parent_post_id' in existing.columns:
+                processed_post_ids = set(existing['parent_post_id'].astype(str))
+            
             all_comments = existing.to_dict('records')
-            print(f"🔄 Resuming {target_period}: {len(seen_ids)} comments already collected")
+            print(f"🔄 Resuming {target_period}: Found {len(all_comments)} comments from {len(processed_post_ids)} posts")
 
         # Filter posts to study period
         posts_df = posts_df.copy()
@@ -135,18 +140,32 @@ class PeriodCommentsCollector:
             posts_in_period = posts_df[posts_df['period'] == target_period]
 
         print(f"📊 Posts in {target_period}: {len(posts_in_period)}")
+        
+        if len(processed_post_ids) > 0:
+            remaining_posts = [p for _, p in posts_in_period.iterrows() if str(p.get("id")) not in processed_post_ids]
+            print(f"   Skipping {len(processed_post_ids)} already collected posts. Remaining: {len(remaining_posts)}")
+        else:
+            remaining_posts = None # indicator to use full list
+
         print(f"   P1: {len(posts_in_period[posts_in_period['period'] == 'P1'])}")
         print(f"   P2: {len(posts_in_period[posts_in_period['period'] == 'P2'])}")
         print(f"   P3: {len(posts_in_period[posts_in_period['period'] == 'P3'])}")
 
         pbar = tqdm(total=len(posts_in_period), desc="Collecting Comments")
+        # Update pbar for already processed
+        pbar.update(len(processed_post_ids))
+        
         batch_count = 0
 
         for _, post in posts_in_period.iterrows():
             post_id = post.get("id")
             if pd.isna(post_id):
-                pbar.update(1)
                 continue
+            
+            # FAST RESUME: Skip if already processed
+            if str(post_id) in processed_post_ids:
+                continue
+
 
             # Get comments
             comments = self.get_comments_for_post(post_id, max_comments=comments_per_post)
