@@ -232,8 +232,60 @@ Iran (Control 3) & 40,572 \\
 \label{tab:app_comment_counts}
 \end{table}
 
+\subsection{Parallel Trends Verification}
+To validate the DiD design for audience responses, we verified the parallel trends assumption for both sentiment and framing (Tables~\ref{tab:app_comment_pt_sentiment} and~\ref{tab:app_comment_pt_framing}). Unlike the post-level analysis where Russia violated parallel trends for framing, the audience response data satisfied the parallel trends assumption across \textit{all} control groups (Russia $p=0.615$), allowing us to include all three countries in the analysis.
+
+\begin{table}[h]
+\centering
+\caption{Comment Parallel Trends Results (Sentiment)}
+\begin{tabular}{llcl}
+\toprule
+\textbf{Control} & \textbf{Period} & \textbf{P-value} & \textbf{Verdict} \\
+\midrule
+China & P1 (Pre-Summit) & 0.51 & Valid \\
+Iran & P1 (Pre-Summit) & 0.20 & Valid \\
+Russia & P1 (Pre-Summit) & 0.61 & Valid \\
+\bottomrule
+\end{tabular}
+\label{tab:app_comment_pt_sentiment}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Comment Parallel Trends Results (Framing)}
+\begin{tabular}{llcl}
+\toprule
+\textbf{Control} & \textbf{Period} & \textbf{P-value} & \textbf{Verdict} \\
+\midrule
+China & P1 (Pre-Summit) & 0.57 & Valid \\
+Iran & P1 (Pre-Summit) & 0.34 & Valid \\
+Russia & P1 (Pre-Summit) & 0.62 & Valid \\
+\bottomrule
+\end{tabular}
+\label{tab:app_comment_pt_framing}
+\end{table}
+
 \subsection{Sentiment DiD Analysis Results}
-We applied the same diff-in-diff design to comment sentiment scores. Consistent with post-level determination, underlying sentiment improved significantly during the summit period (P1$\rightarrow$P2: $+0.054$, $p<0.001$). Following the Hanoi failure, sentiment in comments showed no significant reversal (P2$\rightarrow$P3: $-0.003$, $p=0.82$), suggesting that while positive affect was generated, it plateaued rather than reversed.
+Table~\ref{tab:app_comment_sentiment_did} presents the Difference-in-Differences results for comment sentiment. Consistent with post-level findings, underlying sentiment improved significantly during the summit period (P1$\rightarrow$P2). Following the Hanoi failure, sentiment showed ambiguous results: while it declined against Russia, it was sustained against China and Iran, showing partial ratchet effects even in sentiment.
+
+\begin{table}[h]
+\centering
+\caption{Comment Sentiment DiD Results}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Event} & \textbf{Control} & \textbf{DiD Est.} & \textbf{P-Value} \\
+\midrule
+Singapore & China & +0.044 & 0.015 \\
+(P1$\rightarrow$P2) & Iran & +0.042 & 0.065 \\
+ & Russia & +0.053 & 0.002 \\
+\midrule
+Hanoi & China & -0.049 & 0.447 \\
+(P2$\rightarrow$P3) & Iran & -0.000 & 0.996 \\
+ & Russia & -0.029 & 0.023 \\
+\bottomrule
+\end{tabular}
+\label{tab:app_comment_sentiment_did}
+\end{table}
 
 \subsection{Framing DiD Analysis Results}
 Table~\ref{tab:app_comment_framing_did} presents the Difference-in-Differences results for audience reframing. The results confirm the ``Ratchet Effect'' hypothesis: 
