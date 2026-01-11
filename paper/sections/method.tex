@@ -5,9 +5,9 @@ We collected Reddit posts from January 2017 to June 2019 using the Arctic Shift 
 % \jun{Fixed: Added total post count (29,688), breakdown by group, and full subreddit list.}
 % \mohit{Make them as textbf as subsubsections}
 % \jun{Fixed: Changed to textbf inline headings.}
-To ensure comprehensive coverage of the discourse, we employed a \textit{Recursive Keyword Expansion} strategy. We initially queried for core terms (e.g., ``North Korea'', ``Kim Jong Un''), identified the top 100 co-occurring terms within the retrieved documents for each period, and recursively re-queried the API. This approach ensures the capture of period-specific slang and sub-topics (e.g., ``Fire and Fury'' in P1, ``Summit'' in P2) that static keyword lists might miss.
+To ensure comprehensive coverage of the discourse, we employed a keyword-based retrieval strategy. We queried the API for posts containing country-specific keywords (e.g., ``North Korea'', ``China'', ``Iran'', ``Russia'') to construct our treatment and control groups.
 
-\textbf{Audience Response Data.} While our primary causal analysis focuses on posts ($N=10,659$), we also collected the top-5 comments (by score) from each post to examine determining propagation effects. We focus on these top-ranked comments ($N=24,051$) to capture highly visible audience responses that are socially reinforced and most likely to shape collective interpretation. We exclude the long tail of low-engagement replies to maintain a focus on high-visibility discourse.
+\textbf{Audience Response Data.} While our primary causal analysis focuses on posts ($N=29,688$), we also collected the full comment trees for the top-5 most upvoted root comments from each post. We analyze these audience responses ($N=255,391$) to capture highly visible, socially reinforced reactions and the subsequent discussions they trigger, representing the most influential layer of discourse.
 \textbf{Treatment and Control Groups.}
 To isolate the causal impact of summit diplomacy, it is essential to control for concurrent geopolitical developments that could confound inference. Relying solely on longitudinal observations of the treatment group (North Korea) risks misinterpreting broader fluctuations in Reddit users' foreign policy sentiment as specific effects of the summits. 
 % As noted in prior work~\cite{kumarswamy2025}, external ``offline'' events often drive significant spikes in online activity across all topics, necessitating a control group to distinguish treatment effects from general temporal trends.
@@ -18,16 +18,16 @@ To isolate the causal impact of summit diplomacy, it is essential to control for
 \centering
 \setlength{\tabcolsep}{3pt}
 \caption{Dataset Overview}
-\begin{tabular}{llrl}
+\begin{tabular}{llrrl}
 \hline
-\textbf{Group} & \textbf{Topic} & \textbf{N} & \textbf{Role} \\
+\textbf{Group} & \textbf{Topic} & \textbf{Posts} & \textbf{Comments} & \textbf{Role} \\
 \hline
-Treatment & N. Korea & 10,448 & Primary \\
-Control 1 & China & 5,921 & Trade confounder \\
-Control 2 & Iran & 4,749 & Nuclear comparison \\
-Control 3 & Russia & 8,570 & Investigation \\
+Treatment & N. Korea & 10,448 & 70,879 & Primary \\
+Control 1 & China & 5,921 & 62,057 & Trade confounder \\
+Control 2 & Iran & 4,749 & 40,572 & Nuclear comparison \\
+Control 3 & Russia & 8,570 & 81,883 & Investigation \\
 \hline
-\textbf{Total} & & \textbf{29,688} & \\
+\textbf{Total} & & \textbf{29,688} & \textbf{255,391} & \\
 \hline
 \end{tabular}
 \label{tab:dataset}
