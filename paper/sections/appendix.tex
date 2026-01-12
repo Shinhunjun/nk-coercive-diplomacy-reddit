@@ -70,7 +70,7 @@ Tables~\ref{tab:app_pt_sentiment} and~\ref{tab:app_pt_framing} present the full 
 
 \begin{table}[h]
 \centering
-\caption{Parallel Trends Test Results (Post Sentiment)}
+\caption{Post Parallel Test Results (Sentiment)}
 \small
 \begin{tabular}{llcc}
 \toprule
@@ -90,7 +90,7 @@ P2$\rightarrow$P3 & Russia & 0.81 & Valid \\
 
 \begin{table}[h]
 \centering
-\caption{Parallel Trends Test Results (Post Framing)}
+\caption{Post Parallel Test Results (Framing)}
 \small
 \begin{tabular}{llcc}
 \toprule
@@ -168,7 +168,7 @@ To validate the DiD design for audience responses, we verified the parallel tren
 
 \begin{table}[h]
 \centering
-\caption{Comment Parallel Trends Results (Sentiment)}
+\caption{Comment Parallel Test Results (Sentiment)}
 \begin{tabular}{llcl}
 \toprule
 \textbf{Comparison} & \textbf{Control} & \textbf{P-value} & \textbf{Verdict} \\
@@ -187,7 +187,7 @@ P2$\rightarrow$P3 & Russia & 0.40 & Valid \\
 
 \begin{table}[h]
 \centering
-\caption{Comment Parallel Trends Results (Framing)}
+\caption{Comment Parallel Test Results (Framing)}
 \begin{tabular}{llcl}
 \toprule
 \textbf{Comparison} & \textbf{Control} & \textbf{P-value} & \textbf{Verdict} \\
@@ -209,19 +209,20 @@ Table~\ref{tab:app_comment_sentiment_did} presents the Difference-in-Differences
 
 \begin{table}[h]
 \centering
-\caption{Comment Sentiment DiD Results}
+\caption{Comment Sentiment Difference-in-Differences Results}
 \begin{tabular}{llcc}
 \toprule
-\textbf{Event} & \textbf{Control} & \textbf{DiD Est.} & \textbf{P-Value} \\
+\textbf{Event} & \textbf{Control} & \textbf{DiD Est.} & \textbf{95\% CI} \\
 \midrule
-Singapore & China & +0.044 & 0.015 \\
-(P1$\rightarrow$P2) & Iran & +0.042 & 0.065 \\
- & Russia & +0.053 & 0.002 \\
+Singapore & China & +0.04* & [0.01, 0.08] \\
+(P1$\rightarrow$P2) & Iran & +0.04 & [-0.00, 0.09] \\
+ & Russia & +0.05** & [0.02, 0.09] \\
 \midrule
-Hanoi & China & -0.049 & 0.447 \\
-(P2$\rightarrow$P3) & Iran & -0.000 & 0.996 \\
- & Russia & -0.029 & 0.023 \\
+Hanoi & China & -0.05 & [-0.18, 0.08] \\
+(P2$\rightarrow$P3) & Iran & -0.00 & [-0.04, 0.04] \\
+ & Russia & -0.03* & [-0.05, -0.00] \\
 \bottomrule
+\multicolumn{4}{l}{\footnotesize *$p<0.05$, **$p<0.01$, ***$p<0.001$} \\
 \end{tabular}
 \label{tab:app_comment_sentiment_did}
 \end{table}
@@ -235,20 +236,20 @@ Table~\ref{tab:app_comment_framing_did} presents the Difference-in-Differences r
 
 \begin{table}[h]
 \centering
-\caption{Comment Framing DiD Results: Evidence of the Ratchet Effect}
-\begin{tabular}{llc}
+\caption{Comment Framing Difference-in-Differences Results}
+\begin{tabular}{llcc}
 \toprule
-\textbf{Event} & \textbf{Control} & \textbf{DiD Est.} \\
+\textbf{Event} & \textbf{Control} & \textbf{DiD Est.} & \textbf{95\% CI} \\
 \midrule
-Singapore & China & +0.480** \\
-(P1$\rightarrow$P2) & Iran & +0.436* \\
- & Russia & +0.318 \\
+Singapore & China & +0.48** & [0.14, 0.82] \\
+(P1$\rightarrow$P2) & Iran & +0.44* & [0.06, 0.82] \\
+ & Russia & +0.32 & [-0.03, 0.67] \\
 \midrule
-Hanoi & China & -0.150 \\
-(P2$\rightarrow$P3) & Iran & +0.067 \\
- & Russia & -0.184 \\
+Hanoi & China & -0.15 & [-0.63, 0.33] \\
+(P2$\rightarrow$P3) & Iran & +0.07 & [-0.54, 0.67] \\
+ & Russia & -0.18 & [-0.49, 0.12] \\
 \bottomrule
-\multicolumn{3}{l}{\footnotesize * $p<0.05$, ** $p<0.01$} \\
+\multicolumn{4}{l}{\footnotesize *$p<0.05$, **$p<0.01$, ***$p<0.001$} \\
 \end{tabular}
 \label{tab:app_comment_framing_did}
 \end{table}
