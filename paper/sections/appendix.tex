@@ -137,73 +137,6 @@ Hanoi & China & -0.34 & -0.23 \\
 
 The alternative specification produces similar directional effects across all comparisons, with several estimates becoming stronger under the alternative scaling. Notably, the Singapore/Iran effect becomes statistically significant under the alternative specification (+0.39 $\rightarrow$ +0.77**). These results suggest that our main specification (ECONOMIC = 0) provides a \textit{conservative} estimate of the diplomatic framing shift, and that our substantive conclusions are robust to alternative operationalizations of the framing scale.
 
-
-
-\section{Cross-LLM Validation}
-\label{app:cross_llm}
-
-\begin{table}[h!]
-\centering
-\caption{Cross-LLM Validation: Agreement with GPT-4o-mini ($N=500$)}
-\resizebox{\linewidth}{!}{
-\begin{tabular}{llcc}
-\toprule
-\textbf{Model Family} & \textbf{Model Version} & \textbf{Agreement (\%)} & \textbf{Cohen's $\kappa$} \\
-\midrule
-Meta Llama & Llama 3.3 70B & 81.5\% & 0.71 \\
-Meta Llama & Llama 3.1 8B & 75.3\% & 0.62 \\
-\bottomrule
-\multicolumn{4}{l}{\footnotesize Primary: GPT-4o-mini (85.0\% accuracy vs. human labels, $\kappa$=0.79)} \\
-\end{tabular}
-}
-\label{tab:cross_llm}
-\end{table}
-
-To ensure that our framing classifications are robust across different LLM families and model sizes, we validated our primary classifier (GPT-4o-mini) against multiple alternative models. GPT-4o-mini was selected as the primary classifier based on its strong agreement with human gold labels (85.0\% accuracy, Cohen's $\kappa$ = 0.79, $N=400$). We then tested cross-model consistency by comparing other LLMs against GPT-4o-mini predictions on a stratified sample of 500 posts.
-
-Table~\ref{tab:cross_llm} presents the agreement metrics. Among the Meta Llama models, Llama 3.3 70B achieved 81.5\% agreement ($\kappa$ = 0.71), indicating ``substantial agreement''. This high cross-family consistency, particularly between models from different developers and architectures (OpenAI vs. Meta), provides strong evidence that our classification results reflect objective discourse patterns rather than model-specific artifacts.
-
-\subsection{Qualitative Error Analysis}
-Table~\ref{tab:app_error_examples} provides qualitative examples of classification disagreements between human annotators and the LLM. The analysis highlights two primary sources of error: (1) Over-application of the ``factual reporting = NEUTRAL'' heuristic to diplomatic events, and (2) Over-sensitivity of the ``individual harm = HUMANITARIAN'' rule to keywords like ``protesters'' or ``defectors'' even when the primary framing is not humanitarian.
-
-\begin{table*}[h]
-\centering
-\small
-\caption{Examples of Human-LLM Classification Disagreements}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{4.8cm} c c >{\raggedright\arraybackslash}X}
-\toprule
-\textbf{Post Title} & \textbf{Human} & \textbf{LLM} & \textbf{LLM Reasoning (Summary)} \\
-\midrule
-\multicolumn{4}{l}{\textit{Type 1: Factual Reporting vs. Diplomatic Action}} \\
-\addlinespace[0.3em]
-Trump calls off planned Singapore summit & DIP & NEU & Classified as a ``factual report'' about an event cancellation without explicit government action. \\
-\addlinespace[0.5em]
-Kim Jong Un received an `excellent' letter from Trump & DIP & NEU & Viewed as a report about a letter rather than a significant diplomatic interaction. \\
-\addlinespace[0.5em]
-Tillerson in Beijing set to talk on North Korea & DIP & NEU & Interpreted as a report on travel plans rather than a substantive diplomatic engagement. \\
-\addlinespace[0.5em]
-North Korea cuts ICBMs out of military parade & DIP & NEU & Failed to recognize the parade modification as a deliberate diplomatic signal of de-escalation. \\
-\addlinespace[0.5em]
-South Korea's Leader Credits Trump for North Korea Talks & DIP & NEU & Characterized as a neutral report on a leader's statement rather than an act of diplomatic recognition. \\
-\midrule
-\multicolumn{4}{l}{\textit{Type 2: Keyword Sensitivity (Individual Harm)}} \\
-\addlinespace[0.3em]
-Anonymous Hacks China... Students Trapped & THR & HUM & Focus on ``Students trapped'' outweighed the military/cyber threat context. \\
-\addlinespace[0.5em]
-Russia delivered 12.1 metric tons aid to Syria & DIP & HUM & Interpreted ``aid delivery'' as a humanitarian act rather than a state-led diplomatic move. \\
-\addlinespace[0.5em]
-Facebook Blocks \$200K Donation To Iran Quake Victims Because Sanctions & NEU & HUM & Focus on ``Quake Victims'' overrode the primary context of corporate compliance with sanctions. \\
-\addlinespace[0.5em]
-North Korea defectors launch 'birthday' balloons across DMZ & NEU & HUM & The keyword ``defectors'' triggered a Humanitarian classification despite the political nature of the act. \\
-\addlinespace[0.5em]
-Otto Warmbier: Parents of man tortured in North Korea condemn Trump & NEU & HUM & The mention of ``tortured'' led to a Humanitarian label, missing the domestic political reaction frame. \\
-\bottomrule
-\end{tabularx}
-\label{tab:app_error_examples}
-\end{table*}
-
-
-
 \section{Extended Audience Response Analysis}
 \label{app:audience_response}
 
@@ -349,6 +282,70 @@ NEUTRAL & 45.1\% & 58.3\% & 48.5\% \\
 \end{tabular}
 \label{tab:app_comment_structure}
 \end{table}
+
+
+\section{Cross-LLM Validation}
+\label{app:cross_llm}
+
+\begin{table}[h!]
+\centering
+\caption{Cross-LLM Validation: Agreement with GPT-4o-mini ($N=500$)}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{llcc}
+\toprule
+\textbf{Model Family} & \textbf{Model Version} & \textbf{Agreement (\%)} & \textbf{Cohen's $\kappa$} \\
+\midrule
+Meta Llama & Llama 3.3 70B & 81.5\% & 0.71 \\
+Meta Llama & Llama 3.1 8B & 75.3\% & 0.62 \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize Primary: GPT-4o-mini (85.0\% accuracy vs. human labels, $\kappa$=0.79)} \\
+\end{tabular}
+}
+\label{tab:cross_llm}
+\end{table}
+
+To ensure that our framing classifications are robust across different LLM families and model sizes, we validated our primary classifier (GPT-4o-mini) against multiple alternative models. GPT-4o-mini was selected as the primary classifier based on its strong agreement with human gold labels (85.0\% accuracy, Cohen's $\kappa$ = 0.79, $N=400$). We then tested cross-model consistency by comparing other LLMs against GPT-4o-mini predictions on a stratified sample of 500 posts.
+
+Table~\ref{tab:cross_llm} presents the agreement metrics. Among the Meta Llama models, Llama 3.3 70B achieved 81.5\% agreement ($\kappa$ = 0.71), indicating ``substantial agreement''. This high cross-family consistency, particularly between models from different developers and architectures (OpenAI vs. Meta), provides strong evidence that our classification results reflect objective discourse patterns rather than model-specific artifacts.
+
+\subsection{Qualitative Error Analysis}
+Table~\ref{tab:app_error_examples} provides qualitative examples of classification disagreements between human annotators and the LLM. The analysis highlights two primary sources of error: (1) Over-application of the ``factual reporting = NEUTRAL'' heuristic to diplomatic events, and (2) Over-sensitivity of the ``individual harm = HUMANITARIAN'' rule to keywords like ``protesters'' or ``defectors'' even when the primary framing is not humanitarian.
+
+\begin{table*}[h]
+\centering
+\small
+\caption{Examples of Human-LLM Classification Disagreements}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{4.8cm} c c >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Post Title} & \textbf{Human} & \textbf{LLM} & \textbf{LLM Reasoning (Summary)} \\
+\midrule
+\multicolumn{4}{l}{\textit{Type 1: Factual Reporting vs. Diplomatic Action}} \\
+\addlinespace[0.3em]
+Trump calls off planned Singapore summit & DIP & NEU & Classified as a ``factual report'' about an event cancellation without explicit government action. \\
+\addlinespace[0.5em]
+Kim Jong Un received an `excellent' letter from Trump & DIP & NEU & Viewed as a report about a letter rather than a significant diplomatic interaction. \\
+\addlinespace[0.5em]
+Tillerson in Beijing set to talk on North Korea & DIP & NEU & Interpreted as a report on travel plans rather than a substantive diplomatic engagement. \\
+\addlinespace[0.5em]
+North Korea cuts ICBMs out of military parade & DIP & NEU & Failed to recognize the parade modification as a deliberate diplomatic signal of de-escalation. \\
+\addlinespace[0.5em]
+South Korea's Leader Credits Trump for North Korea Talks & DIP & NEU & Characterized as a neutral report on a leader's statement rather than an act of diplomatic recognition. \\
+\midrule
+\multicolumn{4}{l}{\textit{Type 2: Keyword Sensitivity (Individual Harm)}} \\
+\addlinespace[0.3em]
+Anonymous Hacks China... Students Trapped & THR & HUM & Focus on ``Students trapped'' outweighed the military/cyber threat context. \\
+\addlinespace[0.5em]
+Russia delivered 12.1 metric tons aid to Syria & DIP & HUM & Interpreted ``aid delivery'' as a humanitarian act rather than a state-led diplomatic move. \\
+\addlinespace[0.5em]
+Facebook Blocks \$200K Donation To Iran Quake Victims Because Sanctions & NEU & HUM & Focus on ``Quake Victims'' overrode the primary context of corporate compliance with sanctions. \\
+\addlinespace[0.5em]
+North Korea defectors launch 'birthday' balloons across DMZ & NEU & HUM & The keyword ``defectors'' triggered a Humanitarian classification despite the political nature of the act. \\
+\addlinespace[0.5em]
+Otto Warmbier: Parents of man tortured in North Korea condemn Trump & NEU & HUM & The mention of ``tortured'' led to a Humanitarian label, missing the domestic political reaction frame. \\
+\bottomrule
+\end{tabularx}
+\label{tab:app_error_examples}
+\end{table*}
 
 \clearpage
 \section{Temporal Trend Visualizations}
