@@ -172,15 +172,57 @@ In P3, rather than reverting to threat dominance, the discourse structure divers
 \subsection{Audience Response Analysis (RQ3)}
 \label{subsec:audience_response}
 
-We next examine whether the post-level effects identified in RQ1 and RQ2 are reflected in highly visible audience responses. Our goal is not to redefine comments as independent causal units, but to assess whether framing shifts induced by diplomatic events propagate beyond agenda-setting posts into participatory discourse.
+We next examine whether the post-level effects identified in RQ1 and RQ2
+are reflected in highly visible audience responses.
+Our goal is not to treat comments as independent causal units,
+but to assess whether framing shifts associated with diplomatic events
+extend beyond agenda-setting posts into participatory discourse.
 
-\textbf{Content-Level Audience Responses.} We first analyze sentiment and framing patterns in audience comments. Supplementary Difference-in-Differences (DiD) analyses on highly visible comments ($N=255{,}391$; Table~\ref{tab:dataset}) reveal sentiment improvements during the Singapore Summit period (Table~\ref{tab:app_comment_sentiment_did}). Notably, unlike post-level sentiment, audience sentiment does not fully revert following the Hanoi failure, exhibiting a weak form of asymmetric persistence.
+\textbf{Content-Level Audience Responses.}
+We first analyze sentiment and framing patterns in audience comments.
+Supplementary Difference-in-Differences (DiD) analyses on highly visible comments
+($N=255{,}391$; Table~\ref{tab:dataset}) reveal significant sentiment improvements
+during the Singapore Summit period
+(Table~\ref{tab:app_comment_sentiment_did}).
+Following the Hanoi failure, however, audience sentiment largely reverts
+toward pre-summit levels, mirroring the transient pattern observed at the post level.
+This contrast underscores a key distinction between affective responses
+and narrative framing in audience discourse.
 
-In contrast, framing patterns in comments closely mirror post-level dynamics. Threat-oriented discourse collapses during the summit period and does not statistically revert to pre-summit levels following the diplomatic failure (Table~\ref{tab:app_comment_framing_did}). This asymmetric persistence in framing, coupled with the transience of sentiment, is consistent with the ratchet-like pattern observed at the post level.
+In contrast, framing patterns in comments closely mirror post-level dynamics.
+Threat-oriented discourse collapses during the summit period
+and does not statistically revert to pre-summit levels following the diplomatic failure
+(Table~\ref{tab:app_comment_framing_did}).
+The persistence of diplomacy-oriented framing in comments,
+alongside the transience of sentiment,
+reinforces the asymmetric pattern observed at the post level
+and suggests continuity in how diplomatic engagement reshapes narrative orientation.
 
-\textbf{Structural-Level Audience Responses.} We next assess whether these content-level patterns are reflected in the structure of audience discourse networks. Graph-based analyses of comment networks indicate that the post-Hanoi period is characterized not by a return to pure confrontation, but by a mixed configuration of persistent diplomatic connections alongside re-emerging threats. Specifically, diplomacy-oriented edges remain elevated relative to pre-summit levels, while humanitarian and sanctions-related themes expand, suggesting a shift toward what may be described as \emph{hostile engagement} rather than full reversion.
+\textbf{Structural-Level Audience Responses.}
+We next assess whether these content-level patterns are reflected
+in the structure of audience discourse networks.
+Graph-based analyses of comment networks indicate that the post-Hanoi period
+is characterized not by a return to purely confrontational structures,
+but by a mixed configuration in which diplomatic connections remain salient
+alongside re-emerging threats.
+In particular, diplomacy-oriented edges remain elevated relative to pre-summit baselines,
+while humanitarian and sanctions-related themes expand.
+Together, these patterns point to a reconfiguration of audience discourse
+toward sustained, if contested, engagement rather than full reversion.
 
-\textbf{Summary.} Taken together, audience-level analyses reinforce the post-level conclusions in two ways. First, framing shifts triggered by summit diplomacy are preserved in audience interpretations, indicating that these effects are not confined to agenda-setting posts. Second, structural patterns in comment networks mirror the reorganization observed at the post level, supporting a system-level interpretation of discourse change. Importantly, these findings do not constitute independent causal estimates; rather, they provide convergent evidence that post-level effects propagate into participatory discourse. Full results, including sentiment and framing DiD tables and graph-based metrics, are reported in Appendix~\ref{app:audience_response}.
+\textbf{Summary.}
+Taken together, audience-level analyses reinforce the post-level conclusions
+in two ways.
+First, framing shifts associated with summit diplomacy are preserved
+in highly visible audience interpretations, indicating that these effects
+are not confined to agenda-setting posts.
+Second, structural patterns in comment networks parallel the reorganization
+observed at the post level, supporting a system-level interpretation
+of discourse change.
+Importantly, these results do not constitute independent causal estimates;
+rather, they provide convergent evidence that post-level effects
+are reflected in participatory
+
 
 \subsection{Validation of LLM-Based Framing (RQ4)}
 To evaluate whether LLM-based framing classification can approximate expert human judgment in geopolitical discourse analysis, we constructed a gold-standard benchmark of 500 Reddit posts using stratified sampling across countries (North Korea, China, Iran, Russia), time periods (P1--P3), and frames (THREAT, ECONOMIC, NEUTRAL, HUMANITARIAN, DIPLOMACY). Two domain experts (military officers with expertise in North Korea and international security) independently annotated all samples following an iterative codebook refinement process.

@@ -297,14 +297,14 @@ def generate_latex_tables(analysis: dict) -> None:
 \end{table}
 """
     
-    with open(TABLES_DIR / 'graphrag_network_metrics.tex', 'w') as f:
+    with open(TABLES_DIR / 'graphrag_network_metrics_comments.tex', 'w') as f:
         f.write(table1)
     
     # Table 2: Relationship Framing
     table2 = r"""\begin{table}[t]
 \centering
-\caption{Relationship Framing Distribution}
-\label{tab:relationship_framing}
+\caption{Relationship Framing Distribution (Comments)}
+\label{tab:relationship_framing_comments}
 \begin{tabular}{lccc}
 \hline
 \textbf{Frame Type} & \textbf{P1 (\%)} & \textbf{P2 (\%)} & \textbf{P3 (\%)} \\
@@ -323,7 +323,7 @@ def generate_latex_tables(analysis: dict) -> None:
 \end{table}
 """
     
-    with open(TABLES_DIR / 'graphrag_relationship_framing.tex', 'w') as f:
+    with open(TABLES_DIR / 'graphrag_relationship_framing_comments.tex', 'w') as f:
         f.write(table2)
     
     print(f"✓ Generated LaTeX tables in {TABLES_DIR}")
@@ -331,11 +331,11 @@ def generate_latex_tables(analysis: dict) -> None:
 
 def generate_markdown_report(analysis: dict) -> str:
     """Generate comprehensive markdown report."""
-    report = """# GraphRAG Comprehensive Network Analysis Report
+    report = """# GraphRAG Comment Network Analysis Report
 
 ## Executive Summary
 
-This report presents detailed network analysis results for RQ2: "How do diplomatic events restructure the organization of online discourse?"
+This report presents detailed network analysis results for Comments (Recursive), mirroring the methodology used for Posts.
 
 ---
 
@@ -586,14 +586,14 @@ def main():
     analysis['key_dyads'] = analyze_key_dyads(all_data)
     
     # Save JSON
-    json_path = RESULTS_DIR / 'graphrag_comprehensive_analysis.json'
+    json_path = RESULTS_DIR / 'graphrag_comments_analysis.json'
     with open(json_path, 'w') as f:
         json.dump(analysis, f, indent=2, default=str)
     print(f"\n✓ Saved JSON: {json_path}")
     
     # Generate markdown report
     report = generate_markdown_report(analysis)
-    report_path = RESULTS_DIR / 'GRAPHRAG_COMPREHENSIVE_REPORT.md'
+    report_path = RESULTS_DIR / 'GRAPHRAG_COMMENTS_REPORT.md'
     with open(report_path, 'w') as f:
         f.write(report)
     print(f"✓ Saved report: {report_path}")
@@ -603,7 +603,7 @@ def main():
     
     # Summary
     print("\n" + "=" * 70)
-    print("ANALYSIS COMPLETE")
+    print("COMMENT ANALYSIS COMPLETE")
     print("=" * 70)
     
     print("\nKey Results:")
