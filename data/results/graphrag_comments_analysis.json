@@ -1,0 +1,999 @@
+{
+  "network_metrics": {
+    "period1": {
+      "n_nodes": 2735,
+      "n_edges": 4421,
+      "density": 0.001182482357047619,
+      "avg_degree": 3.2329067641681903,
+      "max_degree": 1146,
+      "min_degree": 1,
+      "std_degree": 24.764400928395435,
+      "avg_clustering": 0.18638996764448393,
+      "n_components": 73,
+      "largest_component_size": 2547,
+      "largest_component_pct": 93.12614259597807,
+      "avg_path_length": 3.102261305215291,
+      "diameter": 11
+    },
+    "period2": {
+      "n_nodes": 787,
+      "n_edges": 1218,
+      "density": 0.003938038934207591,
+      "avg_degree": 3.0952986022871665,
+      "max_degree": 340,
+      "min_degree": 1,
+      "std_degree": 14.396978920564276,
+      "avg_clustering": 0.19435275941937674,
+      "n_components": 26,
+      "largest_component_size": 723,
+      "largest_component_pct": 91.86785260482846,
+      "avg_path_length": 2.9315141971548218,
+      "diameter": 7
+    },
+    "period3": {
+      "n_nodes": 1429,
+      "n_edges": 2383,
+      "density": 0.0023355738376526257,
+      "avg_degree": 3.3351994401679494,
+      "max_degree": 577,
+      "min_degree": 1,
+      "std_degree": 19.049279385692717,
+      "avg_clustering": 0.2069769777564224,
+      "n_components": 37,
+      "largest_component_size": 1340,
+      "largest_component_pct": 93.77186843946816,
+      "avg_path_length": 3.000813705928907,
+      "diameter": 8
+    }
+  },
+  "centrality": {
+    "period1": {
+      "degree_top": [
+        [
+          "NORTH KOREA",
+          0.41916605705925386
+        ],
+        [
+          "TRUMP",
+          0.1397220190197513
+        ],
+        [
+          "SOUTH KOREA",
+          0.08814923189465984
+        ],
+        [
+          "KIM JONG UN",
+          0.06035113386978786
+        ],
+        [
+          "US",
+          0.059619604974396494
+        ],
+        [
+          "UNITED STATES",
+          0.04974396488661302
+        ],
+        [
+          "DONALD TRUMP",
+          0.047183613752743235
+        ],
+        [
+          "CHINA",
+          0.04462326261887345
+        ],
+        [
+          "USA",
+          0.03913679590343819
+        ],
+        [
+          "DPRK",
+          0.03730797366495977
+        ]
+      ],
+      "betweenness_top": [
+        [
+          "NORTH KOREA",
+          0.5357418668590418
+        ],
+        [
+          "TRUMP",
+          0.17894374463778498
+        ],
+        [
+          "SOUTH KOREA",
+          0.07830143388261727
+        ],
+        [
+          "CHINA",
+          0.06492366827999169
+        ],
+        [
+          "KIM JONG UN",
+          0.06299246245972707
+        ],
+        [
+          "USA",
+          0.057495283926654206
+        ],
+        [
+          "US",
+          0.043617408798528434
+        ],
+        [
+          "UNITED STATES",
+          0.04327624054272437
+        ],
+        [
+          "DPRK",
+          0.03726108114904092
+        ],
+        [
+          "RUSSIA",
+          0.031645944905382674
+        ]
+      ],
+      "pagerank_top": [
+        [
+          "NORTH KOREA",
+          0.20282088638789303
+        ],
+        [
+          "TRUMP",
+          0.050138821198413466
+        ],
+        [
+          "SOUTH KOREA",
+          0.03946926452916698
+        ],
+        [
+          "KIM JONG UN",
+          0.024664973546501448
+        ],
+        [
+          "CHINA",
+          0.019788701551375187
+        ],
+        [
+          "US",
+          0.017152888186579902
+        ],
+        [
+          "UNITED STATES",
+          0.016604739453043554
+        ],
+        [
+          "RUSSIA",
+          0.01403472749649988
+        ],
+        [
+          "DONALD TRUMP",
+          0.012334189529163585
+        ],
+        [
+          "DPRK",
+          0.01010437469029344
+        ]
+      ],
+      "eigenvector_top": [
+        [
+          "NORTH KOREA",
+          0.6085866764303152
+        ],
+        [
+          "TRUMP",
+          0.1804916625341618
+        ],
+        [
+          "SOUTH KOREA",
+          0.1553890821910421
+        ],
+        [
+          "KIM JONG UN",
+          0.11832375829022197
+        ],
+        [
+          "US",
+          0.11450309590834366
+        ],
+        [
+          "UNITED STATES",
+          0.1060811595080325
+        ],
+        [
+          "CHINA",
+          0.09892712087447793
+        ],
+        [
+          "DONALD TRUMP",
+          0.09768464070717946
+        ],
+        [
+          "DPRK",
+          0.09713502898221323
+        ],
+        [
+          "USA",
+          0.09501293837351535
+        ]
+      ]
+    },
+    "period2": {
+      "degree_top": [
+        [
+          "NORTH KOREA",
+          0.4325699745547074
+        ],
+        [
+          "TRUMP",
+          0.20101781170483463
+        ],
+        [
+          "SOUTH KOREA",
+          0.12340966921119594
+        ],
+        [
+          "KIM JONG UN",
+          0.07251908396946566
+        ],
+        [
+          "UNITED STATES",
+          0.050890585241730284
+        ],
+        [
+          "US",
+          0.04961832061068703
+        ],
+        [
+          "CHINA",
+          0.044529262086514
+        ],
+        [
+          "DONALD TRUMP",
+          0.044529262086514
+        ],
+        [
+          "USA",
+          0.04325699745547074
+        ],
+        [
+          "DENUCLEARIZATION",
+          0.04198473282442748
+        ]
+      ],
+      "betweenness_top": [
+        [
+          "NORTH KOREA",
+          0.5013926854079059
+        ],
+        [
+          "TRUMP",
+          0.23032204551754204
+        ],
+        [
+          "SOUTH KOREA",
+          0.08733482812242631
+        ],
+        [
+          "UNITED STATES",
+          0.05550625476377434
+        ],
+        [
+          "KIM JONG UN",
+          0.046318504687670896
+        ],
+        [
+          "USA",
+          0.04523002284556082
+        ],
+        [
+          "DENUCLEARIZATION",
+          0.040937108776619116
+        ],
+        [
+          "US",
+          0.039732624330715685
+        ],
+        [
+          "KOREA",
+          0.03281322446689443
+        ],
+        [
+          "CHINA",
+          0.03217650613259627
+        ]
+      ],
+      "pagerank_top": [
+        [
+          "NORTH KOREA",
+          0.19276033489800345
+        ],
+        [
+          "TRUMP",
+          0.07015559970937063
+        ],
+        [
+          "SOUTH KOREA",
+          0.04840862588797676
+        ],
+        [
+          "KIM JONG UN",
+          0.033899302624866394
+        ],
+        [
+          "DENUCLEARIZATION",
+          0.016209203165298884
+        ],
+        [
+          "UNITED STATES",
+          0.015733771813488517
+        ],
+        [
+          "CHINA",
+          0.015636706075607788
+        ],
+        [
+          "DONALD TRUMP",
+          0.013582025558316791
+        ],
+        [
+          "US",
+          0.013573187299435132
+        ],
+        [
+          "KIM JONG-UN",
+          0.012882182859946238
+        ]
+      ],
+      "eigenvector_top": [
+        [
+          "NORTH KOREA",
+          0.5630699824438609
+        ],
+        [
+          "TRUMP",
+          0.26485820632386997
+        ],
+        [
+          "SOUTH KOREA",
+          0.20818429269309335
+        ],
+        [
+          "KIM JONG UN",
+          0.1611995816377844
+        ],
+        [
+          "DENUCLEARIZATION",
+          0.13657143228639534
+        ],
+        [
+          "UNITED STATES",
+          0.12978113513850323
+        ],
+        [
+          "CHINA",
+          0.1217621406228899
+        ],
+        [
+          "US",
+          0.11743075611536638
+        ],
+        [
+          "RUSSIA",
+          0.10965160663649037
+        ],
+        [
+          "DONALD TRUMP",
+          0.10736809678468048
+        ]
+      ]
+    },
+    "period3": {
+      "degree_top": [
+        [
+          "NORTH KOREA",
+          0.40406162464985995
+        ],
+        [
+          "TRUMP",
+          0.23879551820728293
+        ],
+        [
+          "KIM JONG UN",
+          0.09453781512605042
+        ],
+        [
+          "DONALD TRUMP",
+          0.09033613445378151
+        ],
+        [
+          "SOUTH KOREA",
+          0.07142857142857142
+        ],
+        [
+          "KIM JONG-UN",
+          0.052521008403361345
+        ],
+        [
+          "UNITED STATES",
+          0.05042016806722689
+        ],
+        [
+          "CHINA",
+          0.036414565826330535
+        ],
+        [
+          "KIM",
+          0.032913165266106444
+        ],
+        [
+          "RUSSIA",
+          0.03221288515406163
+        ]
+      ],
+      "betweenness_top": [
+        [
+          "NORTH KOREA",
+          0.48707993314342934
+        ],
+        [
+          "TRUMP",
+          0.3788482633297136
+        ],
+        [
+          "KIM JONG UN",
+          0.08233313052879537
+        ],
+        [
+          "DONALD TRUMP",
+          0.07531043590224656
+        ],
+        [
+          "SOUTH KOREA",
+          0.06157941592503891
+        ],
+        [
+          "UNITED STATES",
+          0.049641283140181736
+        ],
+        [
+          "KIM JONG-UN",
+          0.04250175922372352
+        ],
+        [
+          "JAPAN",
+          0.02525848450185293
+        ],
+        [
+          "N. KOREA",
+          0.021397377856238412
+        ],
+        [
+          "US",
+          0.02045687078823013
+        ]
+      ],
+      "pagerank_top": [
+        [
+          "NORTH KOREA",
+          0.17830209037178757
+        ],
+        [
+          "TRUMP",
+          0.0850569427428218
+        ],
+        [
+          "KIM JONG UN",
+          0.044147574942595046
+        ],
+        [
+          "DONALD TRUMP",
+          0.027699151466284717
+        ],
+        [
+          "SOUTH KOREA",
+          0.02710683685267151
+        ],
+        [
+          "KIM JONG-UN",
+          0.019238448170134894
+        ],
+        [
+          "UNITED STATES",
+          0.014198989919095196
+        ],
+        [
+          "KIM",
+          0.013737075756328664
+        ],
+        [
+          "CHINA",
+          0.012994293776437835
+        ],
+        [
+          "RUSSIA",
+          0.009149116267018973
+        ]
+      ],
+      "eigenvector_top": [
+        [
+          "NORTH KOREA",
+          0.5520076289454353
+        ],
+        [
+          "TRUMP",
+          0.2882728839900778
+        ],
+        [
+          "KIM JONG UN",
+          0.17029041583847565
+        ],
+        [
+          "DONALD TRUMP",
+          0.16513312297928198
+        ],
+        [
+          "SOUTH KOREA",
+          0.1508238098898177
+        ],
+        [
+          "UNITED STATES",
+          0.11535338769593202
+        ],
+        [
+          "KIM JONG-UN",
+          0.11197193042299178
+        ],
+        [
+          "CHINA",
+          0.10837351727944629
+        ],
+        [
+          "KIM",
+          0.09963340234795015
+        ],
+        [
+          "SANCTIONS",
+          0.09523838167856623
+        ]
+      ]
+    }
+  },
+  "entity_types": {
+    "period1": {
+      "counts": {
+        "POLICY": 622,
+        "EVENT": 545,
+        "PERSON": 502,
+        "ORGANIZATION": 439,
+        "WEAPON": 293,
+        "": 275,
+        "COUNTRY": 171,
+        "GEO": 42,
+        "CITY": 21,
+        "MILITARY": 3,
+        "FOOD": 2,
+        "AWARD": 2,
+        "CURRENCY": 2,
+        "NATION": 1,
+        "REGION": 1,
+        "CULTURE": 1,
+        "MILITARY VESSEL": 1,
+        "ANIMAL": 1,
+        "CULTURAL PHENOMENON": 1,
+        "DRUG": 1,
+        "LOCATION": 1
+      },
+      "percentages": {
+        "POLICY": 21.250427058421593,
+        "EVENT": 18.619747181414418,
+        "PERSON": 17.150666211137683,
+        "ORGANIZATION": 14.998291766313631,
+        "WEAPON": 10.010249402118209,
+        "": 9.395285275025623,
+        "COUNTRY": 5.842159207379569,
+        "GEO": 1.434916296549368,
+        "CITY": 0.717458148274684,
+        "MILITARY": 0.10249402118209772,
+        "FOOD": 0.0683293474547318,
+        "AWARD": 0.0683293474547318,
+        "CURRENCY": 0.0683293474547318,
+        "NATION": 0.0341646737273659,
+        "REGION": 0.0341646737273659,
+        "CULTURE": 0.0341646737273659,
+        "MILITARY VESSEL": 0.0341646737273659,
+        "ANIMAL": 0.0341646737273659,
+        "CULTURAL PHENOMENON": 0.0341646737273659,
+        "DRUG": 0.0341646737273659,
+        "LOCATION": 0.0341646737273659
+      },
+      "total": 2927
+    },
+    "period2": {
+      "counts": {
+        "EVENT": 193,
+        "POLICY": 160,
+        "PERSON": 146,
+        "ORGANIZATION": 120,
+        "COUNTRY": 85,
+        "": 56,
+        "WEAPON": 52,
+        "GEO": 11,
+        "CITY": 6,
+        "MILITARY": 1,
+        "CURRENCY": 1,
+        "FOOD": 1,
+        "CULTURE": 1,
+        "TECHNOLOGY": 1,
+        "ANIMAL": 1
+      },
+      "percentages": {
+        "EVENT": 23.11377245508982,
+        "POLICY": 19.16167664670659,
+        "PERSON": 17.485029940119762,
+        "ORGANIZATION": 14.37125748502994,
+        "COUNTRY": 10.179640718562874,
+        "": 6.706586826347305,
+        "WEAPON": 6.227544910179641,
+        "GEO": 1.3173652694610778,
+        "CITY": 0.718562874251497,
+        "MILITARY": 0.11976047904191617,
+        "CURRENCY": 0.11976047904191617,
+        "FOOD": 0.11976047904191617,
+        "CULTURE": 0.11976047904191617,
+        "TECHNOLOGY": 0.11976047904191617,
+        "ANIMAL": 0.11976047904191617
+      },
+      "total": 835
+    },
+    "period3": {
+      "counts": {
+        "EVENT": 303,
+        "POLICY": 302,
+        "PERSON": 274,
+        "ORGANIZATION": 243,
+        "": 156,
+        "WEAPON": 120,
+        "COUNTRY": 103,
+        "GEO": 34,
+        "SATELLITE": 3,
+        "LOCATION": 2,
+        "CITY": 2,
+        "CURRENCY": 2,
+        "MILITARY BASE": 1
+      },
+      "percentages": {
+        "EVENT": 19.611650485436893,
+        "POLICY": 19.54692556634304,
+        "PERSON": 17.734627831715212,
+        "ORGANIZATION": 15.728155339805824,
+        "": 10.097087378640776,
+        "WEAPON": 7.766990291262135,
+        "COUNTRY": 6.666666666666667,
+        "GEO": 2.2006472491909386,
+        "SATELLITE": 0.1941747572815534,
+        "LOCATION": 0.12944983818770225,
+        "CITY": 0.12944983818770225,
+        "CURRENCY": 0.12944983818770225,
+        "MILITARY BASE": 0.06472491909385113
+      },
+      "total": 1545
+    }
+  },
+  "relationships": {
+    "period1": {
+      "type_counts": {
+        "threat": 2606,
+        "neutral": 1779,
+        "peace": 299
+      },
+      "type_pct": {
+        "threat": 55.636208368915455,
+        "neutral": 37.9803586678053,
+        "peace": 6.383432963279248
+      },
+      "top_weighted": [
+        {
+          "source": "NORTH KOREA",
+          "target": "SOUTH KOREA",
+          "weight": 2159.0,
+          "description": "North Korea and South Korea are two neighboring countries on the Korean Peninsula, marked by a long ..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "CHINA",
+          "weight": 1311.0,
+          "description": "China and North Korea share a historically complex and multifaceted relationship characterized by si..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "TRUMP",
+          "weight": 1203.0,
+          "description": "During his presidency, Donald Trump engaged in a complex and often contentious relationship with Nor..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "KIM JONG UN",
+          "weight": 1000.0,
+          "description": "Kim Jong Un serves as the Supreme Leader of North Korea, holding the ultimate authority over the cou..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "UNITED STATES",
+          "weight": 806.0,
+          "description": "North Korea and the United States are both recognized as nuclear powers, and their relationship is c..."
+        },
+        {
+          "source": "TRUMP",
+          "target": "NORTH KOREA",
+          "weight": 751.0,
+          "description": "During his presidency, Donald Trump engaged in extensive diplomatic discussions and negotiations wit..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "RUSSIA",
+          "weight": 733.0,
+          "description": "North Korea and Russia share a complex and multifaceted relationship that significantly impacts glob..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "US",
+          "weight": 637.0,
+          "description": "North Korea and the United States share a long-standing and contentious relationship primarily cente..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "NUCLEAR WEAPONS",
+          "weight": 614.0,
+          "description": "North Korea has developed and actively maintains a nuclear weapons program that is central to its mi..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "KIM JONG-UN",
+          "weight": 532.0,
+          "description": "Kim Jong-un is the Supreme Leader of North Korea, playing a pivotal role in shaping the country's po..."
+        }
+      ],
+      "avg_weight": 11.610375747224595,
+      "max_weight": 2159.0,
+      "total": 4684
+    },
+    "period2": {
+      "type_counts": {
+        "threat": 658,
+        "neutral": 446,
+        "peace": 203
+      },
+      "type_pct": {
+        "threat": 50.34429992348891,
+        "neutral": 34.123947972456,
+        "peace": 15.531752104055089
+      },
+      "top_weighted": [
+        {
+          "source": "NORTH KOREA",
+          "target": "SOUTH KOREA",
+          "weight": 477.0,
+          "description": "North Korea and South Korea share a complex and contentious relationship characterized by a long his..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "TRUMP",
+          "weight": 358.0,
+          "description": "During his presidency, Donald Trump engaged in extensive diplomatic efforts and negotiations with No..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "KIM JONG UN",
+          "weight": 337.0,
+          "description": "Kim Jong Un is the Supreme Leader of North Korea, a position that grants him comprehensive control o..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "DENUCLEARIZATION",
+          "weight": 285.0,
+          "description": "Denuclearization efforts are intricately linked to North Korea's nuclear program and the internation..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "NUCLEAR WEAPONS",
+          "weight": 201.0,
+          "description": "North Korea has developed and actively produces nuclear weapons as a central component of its milita..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "CHINA",
+          "weight": 199.0,
+          "description": "North Korea and China share a complex and historically significant relationship characterized by mut..."
+        },
+        {
+          "source": "TRUMP",
+          "target": "NORTH KOREA",
+          "weight": 197.0,
+          "description": "During his presidency, Donald Trump engaged in extensive negotiations and diplomatic discussions wit..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "UNITED STATES",
+          "weight": 195.0,
+          "description": "North Korea and the United States share a complex and contentious relationship primarily centered ar..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "SANCTIONS",
+          "weight": 147.0,
+          "description": "North Korea is currently engaged in negotiations regarding its denuclearization, with a significant ..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "KOREAN WAR",
+          "weight": 146.0,
+          "description": "North Korea was a primary actor in the Korean War, which began in 1950 when it invaded South Korea. ..."
+        }
+      ],
+      "avg_weight": 10.26778882938026,
+      "max_weight": 477.0,
+      "total": 1307
+    },
+    "period3": {
+      "type_counts": {
+        "neutral": 1182,
+        "threat": 1031,
+        "peace": 304
+      },
+      "type_pct": {
+        "neutral": 46.96066746126341,
+        "threat": 40.96146205800556,
+        "peace": 12.077870480731029
+      },
+      "top_weighted": [
+        {
+          "source": "NORTH KOREA",
+          "target": "SOUTH KOREA",
+          "weight": 771.0,
+          "description": "North Korea and South Korea are neighboring countries on the Korean Peninsula with a complex and adv..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "KIM JONG UN",
+          "weight": 546.0,
+          "description": "Kim Jong Un serves as the Supreme Leader of North Korea, holding the highest authority over the stat..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "TRUMP",
+          "weight": 529.0,
+          "description": "During Donald Trump's presidency, significant diplomatic efforts were made to address the challenges..."
+        },
+        {
+          "source": "TRUMP",
+          "target": "NORTH KOREA",
+          "weight": 520.0,
+          "description": "During Donald Trump's presidency, significant interactions and negotiations with North Korea charact..."
+        },
+        {
+          "source": "KIM JONG UN",
+          "target": "NORTH KOREA",
+          "weight": 454.0,
+          "description": "Kim Jong Un is the Supreme Leader of North Korea, directly governing the country and influencing its..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "CHINA",
+          "weight": 443.0,
+          "description": "China and North Korea share a complex and multifaceted relationship characterized by deep economic t..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "SANCTIONS",
+          "weight": 353.0,
+          "description": "North Korea is a country that has faced extensive sanctions imposed by the United States and the int..."
+        },
+        {
+          "source": "TRUMP",
+          "target": "KIM JONG UN",
+          "weight": 328.0,
+          "description": "Donald Trump and Kim Jong Un are the primary leaders involved in negotiations concerning North Korea..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "UNITED STATES",
+          "weight": 308.0,
+          "description": "North Korea and the United States are currently engaged in complex negotiations concerning North Kor..."
+        },
+        {
+          "source": "NORTH KOREA",
+          "target": "KIM JONG-UN",
+          "weight": 296.0,
+          "description": "Kim Jong-un is the Supreme Leader of North Korea, holding ultimate authority over the country's gove..."
+        }
+      ],
+      "avg_weight": 10.516090584028605,
+      "max_weight": 771.0,
+      "total": 2517
+    }
+  },
+  "communities": {
+    "period1": {
+      "n_communities": 363,
+      "theme_distribution": {
+        "mixed": 246,
+        "threat": 105,
+        "diplomacy": 12
+      },
+      "top_titles": [
+        "North Korea: Kim Jong-un and Key Entities",
+        "Kim Il-Sung and the Korean Confederation",
+        "North Korea: A Threatening Military Community",
+        "Punggye-ri Nuclear Test Site and Satellite Imagery Analysis",
+        "CIA and Early Warning Systems"
+      ]
+    },
+    "period2": {
+      "n_communities": 103,
+      "theme_distribution": {
+        "mixed": 70,
+        "threat": 22,
+        "diplomacy": 11
+      },
+      "top_titles": [
+        "Donald Trump and U.S.-North Korea Relations",
+        "White House and Political Prisoners",
+        "South Korea and US Troops: A Strategic Alliance",
+        "Korean Peace Treaty and the Korean War",
+        "North Korea: Leadership and Nuclear Ambitions"
+      ]
+    },
+    "period3": {
+      "n_communities": 205,
+      "theme_distribution": {
+        "mixed": 157,
+        "threat": 34,
+        "diplomacy": 14
+      },
+      "top_titles": [
+        "North Korea: A Community of Military Ambitions and International Tensions",
+        "John Bolton and Whistleblower Dynamics",
+        "North Korea: A Complex Geopolitical Entity",
+        "North Korea's Peace Treaty and Armistice Dynamics",
+        "North Korea's Missile Program and JCS Monitoring"
+      ]
+    }
+  },
+  "key_dyads": {
+    "NORTH KOREA \u2194 TRUMP": {
+      "period1": 1954.0,
+      "period2": 555.0,
+      "period3": 1049.0
+    },
+    "NORTH KOREA \u2194 KIM JONG UN": {
+      "period1": 1458.0,
+      "period2": 446.0,
+      "period3": 1000.0
+    },
+    "NORTH KOREA \u2194 SOUTH KOREA": {
+      "period1": 2524.0,
+      "period2": 569.0,
+      "period3": 850.0
+    },
+    "NORTH KOREA \u2194 DENUCLEARIZATION": {
+      "period1": 190.0,
+      "period2": 285.0,
+      "period3": 180.0
+    },
+    "NORTH KOREA \u2194 UNITED STATES": {
+      "period1": 959.0,
+      "period2": 203.0,
+      "period3": 339.0
+    },
+    "KIM JONG UN \u2194 TRUMP": {
+      "period1": 329.0,
+      "period2": 185.0,
+      "period3": 432.0
+    },
+    "KIM JONG UN \u2194 DONALD TRUMP": {
+      "period1": 231.0,
+      "period2": 125.0,
+      "period3": 394.0
+    }
+  }
+}
