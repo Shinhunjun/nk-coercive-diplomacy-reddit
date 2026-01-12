@@ -291,6 +291,7 @@ To ensure that our framing classifications are robust across different LLM famil
 Table~\ref{tab:cross_llm} presents the agreement metrics. Among the Meta Llama models, Llama 3.3 70B achieved 81.5\% agreement ($\kappa$ = 0.71), indicating ``substantial agreement''. This high cross-family consistency, particularly between models from different developers and architectures (OpenAI vs. Meta), provides strong evidence that our classification results reflect objective discourse patterns rather than model-specific artifacts.
 
 \subsection{Qualitative Error Analysis}
+\label{app:error_analysis}
 Table~\ref{tab:app_error_examples} provides qualitative examples of classification disagreements between human annotators and the LLM. The analysis highlights two primary sources of error: (1) Over-application of the ``factual reporting = NEUTRAL'' heuristic to diplomatic events, and (2) Over-sensitivity of the ``individual harm = HUMANITARIAN'' rule to keywords like ``protesters'' or ``defectors'' even when the primary framing is not humanitarian.
 
 \begin{table*}[h]
