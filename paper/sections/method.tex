@@ -30,7 +30,7 @@ Control 3 & Russia & 8,570 & 81,883 \\
 \label{tab:dataset}
 \end{table}
 % ~\cite{lai2019uschina}~\cite{bbc2018jcpoa}\cite{mueller2019report}
-We selected control countries based on their exposure to concurrent high-stakes geopolitical developments, ensuring they were subject to similar levels of public scrutiny but not the specific summit diplomacy intervention. Specifically: (1) China was selected due to the ongoing U.S.--China trade war, which significantly shaped public opinion on Reddit during the study period; (2) Iran was included as a comparison case for nuclear diplomacy following the U.S. withdrawal from the Joint Comprehensive Plan of Action (JCPOA); and (3) Russia was initially considered due to its prominence in U.S. political discourse amid the Mueller investigation into Russian election interference.
+We selected control countries exposed to contemporaneous high-salience geopolitical events but not subject to U.S.--North Korea summit diplomacy: China (trade conflict), Iran (post-JCPOA tensions), and Russia (U.S. election interference).
 % \mohit{Add citations to these}
 % \jun{Fixed: Added citations for China (Lai 2019), Iran (BBC 2018), Russia (Mueller 2019).}
 % \mohit{Jun given that both the parallel Trends test results for sentiment and Framing are valid, how about we put the table in appendix and just say in the text here that all p values were valid and Tables 2 and 3 are in Appendix? Thoughts? This will free up space for us}
@@ -63,7 +63,7 @@ Using multiple controls allows us to assess robustness across different confound
 To answer our research questions, we measure two complementary dimensions of discourse: \textit{sentiment} (emotional valence) and \textit{framing} (how North Korea is narratively positioned). 
 % \mohit{Say here to answer our Research questions} \jun{Fixed: Connected measurement to RQs.}
 
-\textbf{Sentiment Analysis: } We compute sentiment using the TweetEval RoBERTa model~\cite{barbieri2020tweeteval}, a widely adopted benchmark for social media sentiment analysis. This model was trained on Twitter data, making it particularly suitable for analyzing informal, user-generated content on platforms like Reddit, which shares similar linguistic characteristics with Twitter posts. The model maps text to a continuous score from -1 (negative) to +1 (positive), capturing the \textit{emotional valence} of discourse. 
+\textbf{Sentiment Analysis: } We use the TweetEval RoBERTa model~\cite{barbieri2020tweeteval}, a widely adopted benchmark for social media sentiment analysis, producing continuous scores from -1 (negative) to +1 (positive). 
 % \mohit{Here say why we choose this? Is this a very popular sentiment analysis, if yes, then cite the papers.} \jun{Fixed: Added justification for TweetEval choice.}
 
 \textbf{Framing Classification: } We classify each Reddit post into one of five framing categories (THREAT, ECONOMIC, NEUTRAL, HUMANITARIAN, DIPLOMACY) using GPT-4o-mini (API version: July 2024, temperature = 0, seed = 42 for reproducibility) within a ``Codebook LLM'' framework, which treats the model as a clear-cut measurement instrument rather than a black box. The prompt provides category definitions and requires a single label output; the model also returns a confidence score.
