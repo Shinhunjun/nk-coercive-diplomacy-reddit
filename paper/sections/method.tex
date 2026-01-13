@@ -96,7 +96,14 @@ Y_{g,t} = \alpha_g + \gamma_t + \beta \big(\text{Treat}_g \times \text{Post}_t\b
 where $Y_{g,t}$ is the monthly average sentiment (or framing) for group $g$ in month $t$, 
 $\alpha_g$ and $\gamma_t$ denote group and month fixed effects, and $\beta$ captures the DID estimate of the summit effect. We report heteroskedasticity-robust standard errors clustered at the group level. We explicitly verified the parallel trends assumption, as detailed in the Data Collection subsection above.
 
-\textbf{Causal Scope:} Our causal identification strategy is defined at the post level, where the unit of analysis is the agenda-setting initial post. Comment-level analyses are used to assess whether post-level effects are reflected in highly visible audience discourse, providing external validity rather than independent causal identification.
+\textbf{Causal Scope:}
+Our primary causal identification is defined at the post level, where the unit of
+analysis is the agenda-setting initial post.
+We additionally estimate Difference-in-Differences models at the comment level
+to assess whether post-level effects extend to highly visible audience responses.
+These comment-level estimates are interpreted as supporting evidence of propagation
+and external validity, rather than as independent causal identification.
+
 
 %------------------------------------------------------------------------------
 \subsection{Network Structure Analysis}
