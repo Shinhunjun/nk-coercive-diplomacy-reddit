@@ -7,9 +7,6 @@
 \textbf{Analytical Role of Comments:} We treat audience comments differently across analytical stages. In content-level analyses, comments are used to assess whether post-level effects are reflected in highly visible, socially reinforced audience interpretations. Accordingly, comment-level analyses do not constitute independent causal estimates. In contrast, in network analyses, comments are examined separately to capture interactional and participatory discourse structures that are distinct from agenda-setting posts.
 
 \textbf{Treatment and Control Groups:} To isolate the causal impact of summit diplomacy, it is essential to control for concurrent geopolitical developments that could confound inference. Relying solely on longitudinal observations of the treatment group (North Korea) risks misinterpreting broader fluctuations in Reddit users' foreign policy sentiment as specific effects of the summits.
-% As noted in prior work~\cite{kumarswamy2025}, external ``offline'' events often drive significant spikes in online activity across all topics, necessitating a control group to distinguish treatment effects from general temporal trends.
-% \mohit{I would recommend saying why we needed control group. Say that just making observations could lead to wrong results, hence we decided to have control groups, You have the text, you need to motivate it. Check Section 3 in my parler paper, where i motivate it, you just motivate it and then have the rest you have.}
-% \jun{Fixed: Added motivation for why control groups are needed per Mohit's Parler paper Section 3.}
 
 \begin{table}[t]
 \centering
@@ -29,15 +26,8 @@ Control 3 & Russia & 8,570 & 81,883 \\
 \end{tabular}
 \label{tab:dataset}
 \end{table}
-% ~\cite{lai2019uschina}~\cite{bbc2018jcpoa}\cite{mueller2019report}
 We selected control countries exposed to contemporaneous high-salience geopolitical events but not subject to U.S.--North Korea summit diplomacy: China (trade conflict), Iran (post-JCPOA tensions), and Russia (U.S. election interference).
-% \mohit{Add citations to these}
-% \jun{Fixed: Added citations for China (Lai 2019), Iran (BBC 2018), Russia (Mueller 2019).}
-% \mohit{Jun given that both the parallel Trends test results for sentiment and Framing are valid, how about we put the table in appendix and just say in the text here that all p values were valid and Tables 2 and 3 are in Appendix? Thoughts? This will free up space for us}
-% \jun{Agreed! Moved tables to Appendix (Tables~\ref{tab:app_pt_sentiment} and~\ref{tab:app_pt_framing}). Note: Russia P1→P2 framing is now Invalid (p=0.01) with revised prompt.}
 Using multiple controls allows us to assess robustness across different confounding structures. However, the validity of a DiD design rests on the parallel trends assumption: treated and control groups must exhibit similar trends in the outcome variable prior to the intervention. We verified this assumption for all groups (see Appendix Tables~\ref{tab:app_pt_sentiment} and~\ref{tab:app_pt_framing}). For sentiment, all three control groups satisfied parallel trends ($p > 0.05$ for all comparisons). For framing, China and Iran satisfied parallel trends, while Russia exhibited a significant violation for P1$\rightarrow$P2 ($p = 0.01$), likely reflecting differential political attention to Russia during the pre-treatment period. When parallel trends assumptions are violated, including such controls can bias DiD estimates rather than strengthen identification. Accordingly, we adopt a conservative strategy and exclude Russia from framing analyses where violations are detected. Consequently, we exclude Russia from framing analyses for the Singapore Summit effect and retain China and Iran as primary counterfactuals.
-% \mohit{I would put the tables here so that it is easier for anyone to verify. A question might come why Russia was removed, even when the sentiment was valid, you should do more motivation and in the tables, rather than okay coloumn, change the name maybe based on Trends, and Valid and not Valid. Also, say here that if the value goes below 0.05, the results are voilated. so people know }
-% \jun{Fixed: Moved tables here, changed OK column to Trends (Valid/Invalid).}
 
 \textbf{Key Events and Analysis Periods:} To avoid anticipation effects, we define three analysis periods excluding transition months and Figure~\ref{fig:timeline} visually summarizes these periods and events:
 \begin{itemize}
@@ -46,43 +36,24 @@ Using multiple controls allows us to assess robustness across different confound
     \item \textbf{P3} (2019.03--2019.12): Post-Hanoi
     \item \textit{Excluded}: 2018.03--05, 2019.02 (Transition periods)
 \end{itemize}
-% Key diplomatic events include the Singapore Summit (2018-06-12), which marked peak diplomatic engagement, and the Hanoi Summit (2019-02-27), which ended without agreement.  
-% \mohit{I would change Figure 1. It is taking a lot of space and is very sparse, maybe have like a line diagram? Check Fig 2 of this paper: https://dl.acm.org/doi/pdf/10.1145/3555639} \jun{Fixed!}
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/fig1_timeline_v2.pdf}
 \caption{Research Timeline and Key Events. Dashed brackets indicate analysis periods: P1 (Pre-Announcement), P2 (Singapore-Hanoi), P3 (Post-Hanoi). Transition periods are excluded from analysis to avoid anticipation effects.}
-% \mohit{I would change Figure 1. It is taking a lot of space and is very sparse, maybe have like a line diagram? Check Fig 2 of this paper: https://dl.acm.org/doi/pdf/10.1145/3555639}
-% \jun{Fixed: Replaced with compact line-diagram style timeline. Will further refine using design tools (e.g., Illustrator/Figma) to match the referenced paper's figure style.}
 \label{fig:timeline}
 \end{figure*}
 
-%------------------------------------------------------------------------------
 \subsection{Outcome Measurement}
 To answer our research questions, we measure two complementary dimensions of discourse: \textit{sentiment} (emotional valence) and \textit{framing} (how North Korea is narratively positioned). 
-% \mohit{Say here to answer our Research questions} \jun{Fixed: Connected measurement to RQs.}
 
 \textbf{Sentiment Analysis: } We use the TweetEval RoBERTa model~\cite{barbieri2020tweeteval}, a widely adopted benchmark for social media sentiment analysis, producing continuous scores from -1 (negative) to +1 (positive). 
-% \mohit{Here say why we choose this? Is this a very popular sentiment analysis, if yes, then cite the papers.} \jun{Fixed: Added justification for TweetEval choice.}
 
 \textbf{Framing Classification: } We classify each Reddit post into one of five framing categories (THREAT, ECONOMIC, NEUTRAL, HUMANITARIAN, DIPLOMACY) using GPT-4o-mini (API version: July 2024, temperature = 0, seed = 42 for reproducibility) within a ``Codebook LLM'' framework, which treats the model as a clear-cut measurement instrument rather than a black box. The prompt provides category definitions and requires a single label output; the model also returns a confidence score.
-% \mohit{I would recommend putting the prompt with detailed information in the Appendix}
-% \jun{Fixed: Added full prompt details to Appendix B.}
 Detailed prompt instructions and category definitions are provided in Appendix~\ref{app:llm_prompt}. To ensure classification quality, we retained only predictions with confidence $\geq 0.90$, yielding 27,863 posts (94\% of the original sample). For DiD analysis, we convert categorical framing to a continuous \textit{diplomacy scale}: THREAT = $-2$, DIPLOMACY = $+2$, and NEUTRAL/ECONOMIC/HUMANITARIAN = $0$. This scale captures the primary distinction between military threat framing and diplomatic engagement framing, allowing direct quantification of how discourse shifts between adversarial and cooperative orientations. While economic sanctions can function as coercive instruments in international relations, we treat ECONOMIC framing as neutral in our primary specification because our theoretical focus is on the rhetorical distinction between \textit{military threats} and \textit{diplomatic dialogue}---the two poles most directly affected by summit diplomacy. A robustness check treating ECONOMIC as partially coercive (ECONOMIC = $-1$) yields similar or stronger results, suggesting our main specification is conservative (see Appendix~\ref{app:robustness}). We aggregate individual post scores to monthly averages, yielding a continuous outcome variable for each country-month observation. This operationalization follows prior work emphasizing the distinction between affective tone and substantive narrative positioning.
 
 \textbf{Human Annotation Benchmark: } To validate our LLM-based classification in a domain-sensitive setting, we constructed a gold-standard human annotation benchmark. Two military officers with expertise in North Korean affairs independently labeled 500 stratified samples (4 countries $\times$ 3 periods $\times$ 5 frames). We provide detailed information in the Results section.
-% The inter-coder reliability, measured by the Cohen's Kappa score ($\kappa$), was 0.75, indicating substantial agreement. LLM-human agreement achieved Cohen's $\kappa$ = 0.79 (substantial agreement) with 85.0\% accuracy, as detailed in the 
-% We followed an iterative codebook refinement approach:
-% \begin{enumerate}
-%     \item \textbf{Pilot Round}: 100 posts labeled independently with reliability assessment
-%     \item \textbf{Main Annotation}: Remaining posts labeled in batches with periodic checks
-%     \item \textbf{Disagreement Resolution}: Structured discussion to produce consensus labels
-% \end{enumerate} 
-% \mohit{We dont need the codebook refinement approach. Blinded it }
-% Inter-rater reliability (Cohen's $\kappa$) and LLM-human agreement metrics are reported in the Results section.
 
-%------------------------------------------------------------------------------
 \subsection{Causal Identification}
 We estimate the causal impact of summit diplomacy using a Difference-in-Differences (DiD) design,
 a widely used quasi-experimental approach for evaluating the effects of discrete political events
@@ -104,11 +75,8 @@ to assess whether post-level effects extend to highly visible audience responses
 These comment-level estimates are interpreted as supporting evidence of propagation
 and external validity, rather than as independent causal identification.
 
-
-%------------------------------------------------------------------------------
 \subsection{Network Structure Analysis}
 Beyond content-level changes, we examine whether diplomatic events reorganize the \textit{structure} of discourse. We adopt a \textbf{GraphRAG-inspired indexing pipeline}~\cite{edge2024graphrag}, leveraging its entity and relationship extraction capabilities to construct structured knowledge graphs. Recent advances have demonstrated that Large Language Models (LLMs) can effectively extract structured knowledge from unstructured text across complex domains, often outperforming traditional information extraction methods~\cite{Anuyah2025CoDeKG,Yang2025SepsisKG}. This approach has proven particularly valuable for analyzing political discourse, where LLMs can identify key actors, events, and their relationships from noisy media content~\cite{Arslan2024PoliticalRAG,Fadda2025LLM_KG_Viewpoints}. While GraphRAG is primarily designed for retrieval-augmented generation, we utilize only its initial \textbf{indexing phase} (which extracts entities and relationships via LLM to build a structured knowledge graph) as a scalable, automated method for constructing the inputs needed for Discourse Network Analysis (DNA)~\cite{leifeld2016policy}. This methodology aligns with recent frameworks that use LLM-constructed graphs to capture complex multi-level relationships and unification of fragmented evidence~\cite{Feng2025BioRAG,Ling2026LLM_KG_Review}.
-% \jun{Fixed: Added motivation for GraphRAG with newer papers (2024-2026) on LLM-based KG construction.}
 Unlike simple keyword co-occurrence networks, which cannot distinguish whether two entities co-occur in a ``threat'' or ``negotiation'' context, this approach extracts semantically meaningful relationships, enabling analysis of \textit{narrative connectivity} rather than mere lexical proximity. We utilize this pipeline to generate knowledge graphs from Reddit discussions for each analysis period.
 
 \textbf{Graph Construction and Customization: }We customized the graph extraction prompts to capture domain-specific constraints. We extended the default entity taxonomy to include \textbf{WEAPON} (e.g., ``ICBM,'' ``nuclear warhead'') and \textbf{POLICY} (e.g., ``denuclearization,'' ``maximum pressure'') categories, ensuring the retrieval of security-relevant concepts central to North Korea discourse.
