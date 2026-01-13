@@ -211,6 +211,29 @@ Sentiment & 0.046 & 0.074 & 1.63 & [0.06, 8.85] \\
 \label{tab:app_comment_ratchet_validation}
 \end{table}
 
+\subsection{Sentiment DiD Analysis Results}
+Table~\ref{tab:app_comment_sentiment_did} presents the Difference-in-Differences results for comment sentiment.
+
+\begin{table}[h]
+\centering
+\caption{Comment Sentiment Difference-in-Differences Results}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Event} & \textbf{Control} & \textbf{DiD Est.} & \textbf{95\% CI} \\
+\midrule
+Singapore & China & +0.04* & [0.01, 0.08] \\
+(P1$\rightarrow$P2) & Iran & +0.04 & [-0.00, 0.09] \\
+ & Russia & +0.05** & [0.02, 0.09] \\
+\midrule
+Hanoi & China & -0.05 & [-0.18, 0.08] \\
+(P2$\rightarrow$P3) & Iran & -0.00 & [-0.04, 0.04] \\
+ & Russia & -0.03* & [-0.05, -0.00] \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize *$p<0.05$, **$p<0.01$, ***$p<0.001$} \\
+\end{tabular}
+\label{tab:app_comment_sentiment_did}
+\end{table}
+
 \subsection{Framing DiD Analysis Results}
 Table~\ref{tab:app_comment_framing_did} presents the Difference-in-Differences results for audience reframing. The results confirm the ``Ratchet Effect'' hypothesis: 
 \begin{itemize}
