@@ -25,7 +25,7 @@ In the transition to P2 (Summit Diplomacy), the framing ratio (Diplomacy/Threat)
 % % \jun{Fixed: Moved tables to Method section.}
 % As reported in the Method section (Tables~\ref{tab:pt_sentiment} and~\ref{tab:pt_framing}), all three control groups (China, Iran, Russia) satisfy the parallel trends assumption for both sentiment and framing, so we include all three in our analysis.
 
-\textbf{Impact on Sentiment: } Figure~\ref{fig:sentiment_did} visualizes the DiD effects. The Singapore Summit (P1$\rightarrow$P2) produced a statistically significant positive shift in sentiment toward North Korea across all control groups (Table~\ref{tab:did_sentiment_summary}), with estimated effects ranging from +0.10 to +0.21 ($p < 0.001$). In contrast, the failure of the Hanoi Summit (P2$\rightarrow$P3) resulted in a significant negative shift in sentiment, ranging from -0.06 to -0.12 ($p < 0.001$). 
+\textbf{Impact on Sentiment: } Figure~\ref{fig:sentiment_did} visualizes the DiD estimates. The Singapore Summit (P1$\rightarrow$P2) produced a statistically significant positive shift in sentiment toward North Korea across all control groups (Table~\ref{tab:did_sentiment_summary}), with causal estimates ranging from +0.10 to +0.21 ($p < 0.001$). In contrast, the failure of the Hanoi Summit (P2$\rightarrow$P3) resulted in a significant negative shift in sentiment, ranging from -0.06 to -0.12 ($p < 0.001$). 
 % \mohit{I would recommend putting the p value in brackets next to the the DiD est, and the other coloumn should have the confidence intervals, and as a footnote you can have the stars related to the p value, check the Table 1 in in my Parler paper.}
 
 % \begin{figure*}[t]
@@ -74,7 +74,7 @@ Hanoi & China & -0.11*** & [-0.14, -0.08] \\
 
 \textbf{Impact on Framing:} We next examine changes in framing, where higher values indicate diplomacy-oriented narratives and lower values indicate threat-oriented narratives. 
 % As noted in the parallel trends validation, Russia is excluded from this analysis due to pre-trend violations, leaving China and Iran as valid control groups. 
-Figure~\ref{fig:did} visualizes the DiD effects.
+Figure~\ref{fig:did} visualizes the DiD estimates.
 
 % \begin{figure*}[t]
 % \centering
@@ -120,14 +120,14 @@ To verify that these findings are not artifacts of the diplomacy scale construct
 % We next examine whether these effects exhibit asymmetric persistence.
 
 \subsection{Asymmetric Effect Persistence (RQ1b)} 
-To test whether diplomatic effects exhibit asymmetric persistence (the ratchet effect hypothesis), we compare the magnitude of framing shifts following the Singapore Summit ($|P1 \rightarrow P2|$) against subsequent reversals following the Hanoi failure ($|P2 \rightarrow P3|$). If the ratchet hypothesis holds, the reversal effect should be significantly smaller than the original effect.
+To test whether diplomatic effects exhibit asymmetric persistence (the ratchet effect hypothesis), we compare the magnitude of framing shifts following the Singapore Summit ($|P1 \rightarrow P2|$) against subsequent reversals following the Hanoi failure ($|P2 \rightarrow P3|$). If the asymmetric persistence hypothesis holds, the reversal effect should be significantly smaller than the original effect.
 Table~\ref{tab:ratchet_validation} presents bootstrap validation results across multiple dimensions. For framing dimensions, we use a combined score (DIPLOMACY\% $-$ THREAT\%) to capture the overall shift from threat-dominant to diplomacy-dominant discourse. Ratios significantly below 1.0 indicate incomplete reversal.
 
 \begin{table}[t]
 \centering
 \small
 \setlength{\tabcolsep}{3pt}
-\caption{Ratchet Effect Validation: Unlike sentiment, framing shifts exhibit asymmetric persistence (Ratio $\ll$ 1.0). Content, Edge, and Community refer to framing metrics at the post, relationship, and cluster levels, respectively.}
+\caption{Asymmetric Persistence Validation: Unlike sentiment, framing shifts exhibit asymmetric persistence (Ratio $\ll$ 1.0). Content, Edge, and Community refer to framing metrics at the post, relationship, and cluster levels, respectively.}
 \resizebox{\columnwidth}{!}{
 \begin{tabular}{lcccc}
 \toprule
@@ -144,11 +144,11 @@ Sentiment & 0.095 & 0.109 & 1.15 & [0.97, 1.35] \\
 \label{tab:ratchet_validation}
 \end{table}
 
-The results are consistent with the ratchet hypothesis for framing dimensions. Content framing shows a reversal ratio of 0.39 (95\% CI: [0.15, 0.65]), indicating that the Hanoi failure reversed only 39\% of the Singapore Summit's framing effect. Edge-level framing exhibits an even stronger ratchet pattern (ratio = 0.11), and community framing shows similar persistence (ratio = 0.24). Critically, all framing dimensions have 95\% CIs excluding 1.0. In contrast, sentiment shows a ratio of 1.15 (95\% CI including 1.0), indicating that emotional valence fully reverted following diplomatic failure.
+The results are consistent with the asymmetric persistence hypothesis for framing dimensions. Content framing shows a reversal ratio of 0.39 (95\% CI: [0.15, 0.65]), indicating that the Hanoi failure reversed only 39\% of the Singapore Summit's framing effect. Edge-level framing exhibits an even stronger ratchet-like pattern (ratio = 0.11), and community framing shows similar persistence (ratio = 0.24). Critically, all framing dimensions have 95\% CIs excluding 1.0. In contrast, sentiment shows a ratio of 1.15 (95\% CI including 1.0), indicating that emotional valence fully reverted following diplomatic failure.
 The DiD analysis provides additional statistical evidence for this asymmetry. During the Singapore Summit period (P1$\rightarrow$P2), framing shifts were statistically significant across all valid control groups (China: $p < 0.001$; Iran: $p = 0.014$). In contrast, during the Hanoi reversal period (P2$\rightarrow$P3), only one control group (China) showed a marginally significant effect ($p = 0.048$), while Iran ($p = 0.58$) and Russia ($p = 0.087$) showed no significant reversal. This pattern---where diplomatic engagement produces robust, statistically significant shifts but diplomatic failure produces weaker, less consistent reversals---provides evidence consistent with such a dynamic.
 % \mohit{Jun, I have added this Summary textbf, i would recommend putting that for RQ2 and RQ3 also, at the end} \jun{fixed!}
 
-\textbf{Summary: }This divergence between framing and sentiment provides important theoretical insight (RQ1a): while affective responses to diplomacy may be transient, interpretive frames—how North Korea is discussed as a threat versus a negotiation partner—exhibit greater persistence. The ratchet effect (RQ1b) appears to be specific to framing rather than sentiment, suggesting that diplomatic engagement primarily reshapes cognitive interpretive schemas rather than emotional evaluations.
+\textbf{Summary: }This divergence between framing and sentiment provides important theoretical insight (RQ1a): while affective responses to diplomacy may be transient, interpretive frames—how North Korea is discussed as a threat versus a negotiation partner—exhibit greater persistence. The asymmetric persistence (RQ1b) appears to be specific to framing rather than sentiment, suggesting that diplomatic engagement primarily reshapes cognitive interpretive schemas rather than emotional evaluations.
 
 \subsection{Structural Reorganization of Discourse Networks (RQ2)}
 To assess whether observed framing changes are reflected in the organization of discourse itself, we analyze discourse networks constructed from Reddit discussions across the three diplomatic phases. Using a graph-based indexing approach~\cite{edge2024graphrag}, we extract entities and relationships from 10,659 documents, constructing knowledge graphs that capture how actors, events, and concepts are interconnected in public discourse.
