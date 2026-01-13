@@ -84,8 +84,9 @@ Detailed prompt instructions and category definitions are provided in Appendix~\
 
 %------------------------------------------------------------------------------
 \subsection{Causal Identification}
-We estimate the causal impact of summit diplomacy using a Difference-in-Differences (DiD) design with North Korea as the treated group and control countries (China, Iran, Russia) as comparisons. 
-We favor DiD over Interrupted Time Series (ITS) given its robustness for quasi-experimental interventions~\cite{berger2020tarp,yang2022effects}. Following Kumarswamy et al.~\cite{kumarswamy2025}, who used a control platform to isolate policy effects, we leverage multiple control countries to separate summit impacts from global geopolitical confounds.
+We estimate the causal impact of summit diplomacy using a Difference-in-Differences (DiD) design,
+a widely used quasi-experimental approach for evaluating the effects of discrete political events
+in observational data~\cite{berger2020tarp,yang2022effects}. Following Kumarswamy et al.~\cite{kumarswamy2025}, who used a control platform to isolate policy effects, we leverage multiple control countries to separate summit impacts from global geopolitical confounds.
 By using China, Iran, and Russia as counterfactuals, we control for external shocks such as the U.S.-China trade war, JCPOA withdrawal tensions, and the Mueller investigation, respectively. This design ensures that observed changes in North Korea discourse are attributable to summit diplomacy rather than general fluctuations in foreign policy attention or sentiment.
 
 \textbf{Difference-in-Differences Specification:} Our main specification uses two-way fixed effects:
