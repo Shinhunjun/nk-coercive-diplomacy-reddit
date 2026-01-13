@@ -113,7 +113,7 @@ Unlike simple keyword co-occurrence networks, which cannot distinguish whether t
 
 \textbf{Graph Construction and Customization: }We customized the graph extraction prompts to capture domain-specific constraints. We extended the default entity taxonomy to include \textbf{WEAPON} (e.g., ``ICBM,'' ``nuclear warhead'') and \textbf{POLICY} (e.g., ``denuclearization,'' ``maximum pressure'') categories, ensuring the retrieval of security-relevant concepts central to North Korea discourse.
 
-\textbf{Hierarchical Frame Classification: }To ensure methodological consistency between content and structural analyses, we applied the same ``Codebook LLM'' classifier (GPT-4o-mini) used for individual posts to the structural outputs of the graph-based indexing pipeline:
+\textbf{Hierarchical Framing Classification: }To ensure methodological consistency between content and structural analyses, we applied the same ``Codebook LLM'' classifier (GPT-4o-mini) used for individual posts to the structural outputs of the graph-based indexing pipeline:
 \begin{enumerate}
     \item \textbf{Edge Classification}: We classified the extracted relationship descriptions between entities to determine if the structural link represented a ``Threat,'' ``Diplomacy,'' or other connection type.
     \item \textbf{Community Classification}: We classified the generated summaries of each community to identify the dominant narrative orientation of that cluster.
