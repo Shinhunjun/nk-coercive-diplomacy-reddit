@@ -192,81 +192,6 @@ P2$\rightarrow$P3 & Russia & 0.50 & Valid \\
 \label{tab:app_comment_pt_framing}
 \end{table}
 
-\subsection{Asymmetric Persistence and Reversion in Audience Discourse}
-Table~\ref{tab:app_comment_ratchet_validation} presents a consolidated verification of the ``Ratchet Effect'' across multiple levels of audience discourse—content framing, discursive edges, and community structures—alongside emotional sentiment. The results reveal a clear distinction between narrative orientation and affective response. While the structural framing of audience discourse permanently shifted toward diplomatic engagement following the Singapore Summit and failed to revert to pre-summit hostilities (Ratios $\ll$ 1.0), emotional sentiment (measured by monthly aggregation) exhibited full reversion toward pre-summit levels (Ratio = 1.63). This confirms that while the conceptual and relational frameworks of audience discourse are persistent (``sticky''), the underlying emotional valence remains volatile and transient, mirroring the patterns observed at the post level.
-
-
-\begin{table}[h]
-\centering
-\small
-\setlength{\tabcolsep}{3pt}
-\caption{Comment Ratchet Effect Validation: Unlike framing (which ratchets), sentiment exhibits full reversion (Ratio $>$ 1.0) when measured by monthly aggregation.}
-\resizebox{\columnwidth}{!}{
-\begin{tabular}{lcccc}
-\toprule
-\textbf{Metric} & \textbf{$\Delta$(P1$\to$P2)} & \textbf{$\Delta$(P2$\to$P3)} & \textbf{Ratio} & \textbf{95\% CI} \\
-\midrule
-Content & 11.6pp & 2.1pp & 0.18* & [0.08, 0.26] \\
-Edge & 23.7pp & 9.5pp & 0.40* & [0.31, 0.48] \\
-Community & 22.1pp & 11.9pp & 0.54* & [0.17, 0.83] \\
-Sentiment & 0.046 & 0.074 & 1.63 & [0.06, 8.85] \\
-\bottomrule
-\multicolumn{5}{l}{\footnotesize pp = percentage points; * Significant asymmetry (Ratio $<$ 1.0)} \\
-\end{tabular}
-}
-\label{tab:app_comment_ratchet_validation}
-\end{table}
-
-\subsection{Sentiment DiD Analysis Results}
-Table~\ref{tab:app_comment_sentiment_did} presents the Difference-in-Differences results for comment sentiment.
-
-\begin{table}[h]
-\centering
-\caption{Comment Sentiment Difference-in-Differences Results}
-\begin{tabular}{llcc}
-\toprule
-\textbf{Event} & \textbf{Control} & \textbf{DiD Est.} & \textbf{95\% CI} \\
-\midrule
-Singapore & China & +0.04* & [0.01, 0.08] \\
-(P1$\rightarrow$P2) & Iran & +0.04 & [-0.00, 0.09] \\
- & Russia & +0.05** & [0.02, 0.09] \\
-\midrule
-Hanoi & China & -0.05 & [-0.18, 0.08] \\
-(P2$\rightarrow$P3) & Iran & -0.00 & [-0.04, 0.04] \\
- & Russia & -0.03* & [-0.05, -0.00] \\
-\bottomrule
-\multicolumn{4}{l}{\footnotesize *$p<0.05$, **$p<0.01$, ***$p<0.001$} \\
-\end{tabular}
-\label{tab:app_comment_sentiment_did}
-\end{table}
-
-\subsection{Framing DiD Analysis Results}
-Table~\ref{tab:app_comment_framing_did} presents the Difference-in-Differences results for audience reframing. The results confirm the ``Ratchet Effect'' hypothesis: 
-\begin{itemize}
-    \item \textbf{Singapore Summit (P1$\rightarrow$P2)}: Engagement produced a statistically significant shift toward diplomatic framing across valid control groups (China: $+0.480$, $p=0.007$; Iran: $+0.436$, $p=0.025$).
-    \item \textbf{Hanoi Reversal (P2$\rightarrow$P3)}: Crucially, none of the control groups showed a statistically significant reversal to threat framing (all $p > 0.10$). The framing shift was sustained despite the diplomatic failure.
-\end{itemize}
-
-\begin{table}[h]
-\centering
-\caption{Comment Framing Difference-in-Differences Results}
-\begin{tabular}{llcc}
-\toprule
-\textbf{Event} & \textbf{Control} & \textbf{DiD Est.} & \textbf{95\% CI} \\
-\midrule
-Singapore & China & +0.48** & [0.14, 0.82] \\
-(P1$\rightarrow$P2) & Iran & +0.44* & [0.06, 0.82] \\
- & Russia & +0.32 & [-0.03, 0.67] \\
-\midrule
-Hanoi & China & -0.15 & [-0.63, 0.33] \\
-(P2$\rightarrow$P3) & Iran & +0.07 & [-0.54, 0.67] \\
- & Russia & -0.18 & [-0.49, 0.12] \\
-\bottomrule
-\multicolumn{4}{l}{\footnotesize *$p<0.05$, **$p<0.01$, ***$p<0.001$} \\
-\end{tabular}
-\label{tab:app_comment_framing_did}
-\end{table}
-
 \subsection{Structuring of Discourse: Communities and Edges}
 Table~\ref{tab:app_comment_structure} details the distribution of framing within comment-derived knowledge graphs. The analysis reveals a persistent structural shift:
 \begin{itemize}
@@ -311,6 +236,8 @@ NEUTRAL & 45.1\% & 58.3\% & 48.5\% \\
 \toprule
 \textbf{Model Family} & \textbf{Model Version} & \textbf{Agreement (\%)} & \textbf{Cohen's $\kappa$} \\
 \midrule
+Anthropic Claude & Claude Sonnet 4.5 & 84.0\% & 0.76 \\
+Anthropic Claude & Claude Haiku 4.5 & 81.6\% & 0.73 \\
 Meta Llama & Llama 3.3 70B & 81.5\% & 0.71 \\
 Meta Llama & Llama 3.1 8B & 75.3\% & 0.62 \\
 \bottomrule
