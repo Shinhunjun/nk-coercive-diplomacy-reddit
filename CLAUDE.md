@@ -61,6 +61,28 @@ Before inserting any statistic (%, count, p-value, etc.):
 - If sources disagree, resolve the discrepancy before writing
 - If data coverage is incomplete (e.g., P3 only 4 months), do NOT use that number
 
+### Response Letter — point reviewers to the exact location of each change
+
+Reviewers only see the PDF manuscript, not our scripts/data. Every response in the letter must let the reviewer find the change in the paper without guessing.
+
+**Rule:** Each response must cite both
+1. **Section path** in **bold** (e.g., `**Discussion → Limitations** (fifth item)`), and
+2. **A 5–10 word quote** of the new text in *italics*, so the reviewer can `Ctrl+F` it directly.
+
+Format template:
+```
+"...in **Section → Subsection** (Nth item/paragraph), beginning with *'first 5–10 words of the new sentence...'*"
+```
+
+How to apply:
+- For new paragraphs: quote the first 5–10 words of the new sentence.
+- For replaced sentences: quote the first 5–10 words of the *replacement* (the blue text).
+- For new tables/figures: cite the **table/figure number** (e.g., `**Table 16**`, `**Figure 5**`).
+- For ethics-checklist or fielded items: cite the item identifier (e.g., `Ethics Checklist item 2.a`).
+- For TODO entries: keep the `*[TODO: ... pending HIGH #N]*` marker — quote will be added when the change lands.
+
+Verification: every non-TODO response cell should contain at least one **bold section path** AND one *italic quote* (or a **Table/Figure number**).
+
 ### Response Letter — dual-format sync (.md + .tex)
 
 The response letter is maintained in **two parallel files**:
