@@ -1,0 +1,110 @@
+{
+  "design": "P1->P2 level-change DiD, full window, varying transition exclusion",
+  "spec": "framing_mean ~ treated + post + time + treated:post (HC1 SE)",
+  "period": "2017-01..2019-01",
+  "treat_date": "2018-06",
+  "iran": {
+    "no_exclusion": {
+      "did_coef": 0.5390807196577143,
+      "se": 0.2773885480041213,
+      "p": 0.05196618665444921,
+      "n_obs": 50,
+      "pre_months_n": 17,
+      "post_months_n": 8,
+      "pre_range": "2017-01..2018-05",
+      "post_range": "2018-06..2019-01"
+    },
+    "Mar_only": {
+      "did_coef": 0.5885944925866451,
+      "se": 0.2756994728892267,
+      "p": 0.03276808647600296,
+      "n_obs": 48,
+      "pre_months_n": 16,
+      "post_months_n": 8,
+      "pre_range": "2017-01..2018-05",
+      "post_range": "2018-06..2019-01"
+    },
+    "Mar_Apr": {
+      "did_coef": 0.6635846414547115,
+      "se": 0.2647158901327871,
+      "p": 0.012183633192360203,
+      "n_obs": 46,
+      "pre_months_n": 15,
+      "post_months_n": 8,
+      "pre_range": "2017-01..2018-05",
+      "post_range": "2018-06..2019-01"
+    },
+    "Mar_May_ours": {
+      "did_coef": 0.6937512741077619,
+      "se": 0.26567440906903084,
+      "p": 0.009020300917995123,
+      "n_obs": 44,
+      "pre_months_n": 14,
+      "post_months_n": 8,
+      "pre_range": "2017-01..2018-02",
+      "post_range": "2018-06..2019-01"
+    },
+    "Jan_May": {
+      "did_coef": 0.737616260315948,
+      "se": 0.24351077716034697,
+      "p": 0.0024529092939653534,
+      "n_obs": 40,
+      "pre_months_n": 12,
+      "post_months_n": 8,
+      "pre_range": "2017-01..2017-12",
+      "post_range": "2018-06..2019-01"
+    }
+  },
+  "china": {
+    "no_exclusion": {
+      "did_coef": 0.9138860149898613,
+      "se": 0.27179301868896394,
+      "p": 0.0007725866643418179,
+      "n_obs": 50,
+      "pre_months_n": 17,
+      "post_months_n": 8,
+      "pre_range": "2017-01..2018-05",
+      "post_range": "2018-06..2019-01"
+    },
+    "Mar_only": {
+      "did_coef": 0.9792915007216374,
+      "se": 0.2702922265807624,
+      "p": 0.00029111098430502114,
+      "n_obs": 48,
+      "pre_months_n": 16,
+      "post_months_n": 8,
+      "pre_range": "2017-01..2018-05",
+      "post_range": "2018-06..2019-01"
+    },
+    "Mar_Apr": {
+      "did_coef": 1.0887398904151189,
+      "se": 0.2586882991604884,
+      "p": 2.5685095824356817e-05,
+      "n_obs": 46,
+      "pre_months_n": 15,
+      "post_months_n": 8,
+      "pre_range": "2017-01..2018-05",
+      "post_range": "2018-06..2019-01"
+    },
+    "Mar_May_ours": {
+      "did_coef": 1.1688322854764317,
+      "se": 0.2593540691937573,
+      "p": 6.584206583192255e-06,
+      "n_obs": 44,
+      "pre_months_n": 14,
+      "post_months_n": 8,
+      "pre_range": "2017-01..2018-02",
+      "post_range": "2018-06..2019-01"
+    },
+    "Jan_May": {
+      "did_coef": 1.3483462771279489,
+      "se": 0.252080329535849,
+      "p": 8.850243648846605e-08,
+      "n_obs": 40,
+      "pre_months_n": 12,
+      "post_months_n": 8,
+      "pre_range": "2017-01..2017-12",
+      "post_range": "2018-06..2019-01"
+    }
+  }
+}
