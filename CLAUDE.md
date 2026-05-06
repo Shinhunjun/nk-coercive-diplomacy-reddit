@@ -63,25 +63,24 @@ Before inserting any statistic (%, count, p-value, etc.):
 
 ### Response Letter — point reviewers to the exact location of each change
 
-Reviewers only see the PDF manuscript, not our scripts/data. Every response in the letter must let the reviewer find the change in the paper without guessing.
+Reviewers only see the PDF manuscript, not our scripts/data. Every response in the letter must let the reviewer find the change in the paper without guessing, while staying concise (matches the professor's RnRresponsesample.pdf style).
 
-**Rule:** Each response must cite both
-1. **Section path** in **bold** (e.g., `**Discussion → Limitations** (fifth item)`), and
-2. **A 5–10 word quote** of the new text in *italics*, so the reviewer can `Ctrl+F` it directly.
+**Rule:** Each response must
+1. State plainly what was done ("We have added...", "We have updated...", "As recommended..."), and
+2. Name the **section** (or subsection) in **bold** where the change lives.
 
 Format template:
 ```
-"...in **Section → Subsection** (Nth item/paragraph), beginning with *'first 5–10 words of the new sentence...'*"
+"<We have / As recommended / etc.> ... in the **Section Name** section."
 ```
 
 How to apply:
-- For new paragraphs: quote the first 5–10 words of the new sentence.
-- For replaced sentences: quote the first 5–10 words of the *replacement* (the blue text).
-- For new tables/figures: cite the **table/figure number** (e.g., `**Table 16**`, `**Figure 5**`).
-- For ethics-checklist or fielded items: cite the item identifier (e.g., `Ethics Checklist item 2.a`).
-- For TODO entries: keep the `*[TODO: ... pending HIGH #N]*` marker — quote will be added when the change lands.
+- Use **bold** for section/subsection names exactly as they appear in the paper (e.g., `**Discussion → Limitations**`, `**Method → Network Structure Analysis**`).
+- For new tables/figures, cite the **table/figure number** in bold (e.g., `**Table 16**`).
+- Do NOT quote the new text verbatim, do NOT mention color/strikethrough conventions, and do NOT include a "Note on the revised manuscript" preamble — keep the response professorial and tight.
+- For TODO entries: keep the `*[TODO: ... pending HIGH #N]*` marker — replace with the section pointer when the change lands.
 
-Verification: every non-TODO response cell should contain at least one **bold section path** AND one *italic quote* (or a **Table/Figure number**).
+Verification: every non-TODO response cell should contain at least one **bold section path** (or **Table/Figure number**), and should read naturally as a brief acknowledgment.
 
 ### Response Letter — dual-format sync (.md + .tex)
 
