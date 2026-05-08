@@ -1,0 +1,43 @@
+{
+  "design": "Post-level: NK_v2 authors (from final_framing_v2/nk_framing_v2.csv joined to nk_posts_merged.csv) intersected with control country v2 authors (joined to data/control/{ctry}_posts.csv). Comment-level: NK recursive comment authors intersected with control country recursive comment authors. [deleted], [removed], AutoModerator excluded from all sets.",
+  "post_level": {
+    "denominator_NK_authors": 4009,
+    "by_country": {
+      "iran": {
+        "country_authors_v2": 573,
+        "overlap_authors": 163,
+        "overlap_pct_of_NK": 4.07
+      },
+      "china": {
+        "country_authors_v2": 496,
+        "overlap_authors": 123,
+        "overlap_pct_of_NK": 3.07
+      },
+      "russia": {
+        "country_authors_v2": 661,
+        "overlap_authors": 165,
+        "overlap_pct_of_NK": 4.12
+      }
+    }
+  },
+  "comment_level": {
+    "denominator_NK_comment_authors": 27521,
+    "by_country": {
+      "iran": {
+        "country_comment_authors": 14751,
+        "overlap_authors": 5126,
+        "overlap_pct_of_NK": 18.63
+      },
+      "china": {
+        "country_comment_authors": 22123,
+        "overlap_authors": 6440,
+        "overlap_pct_of_NK": 23.4
+      },
+      "russia": {
+        "country_comment_authors": 30934,
+        "overlap_authors": 8959,
+        "overlap_pct_of_NK": 32.55
+      }
+    }
+  }
+}
