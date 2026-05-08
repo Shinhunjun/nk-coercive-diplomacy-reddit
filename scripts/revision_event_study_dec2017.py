@@ -42,10 +42,12 @@ def main():
         out[key] = summary
         plot_event_study(es_df, -6,
                          f'NK Framing (Control: {label_text}, ref=Dec 2017)',
-                         os.path.join(FIGURES_DIR, f'{fig_name}.pdf'))
+                         os.path.join(FIGURES_DIR, f'{fig_name}.pdf'),
+                         show_title=False)
         plot_event_study(es_df, -6,
                          f'NK Framing (Control: {label_text}, ref=Dec 2017)',
-                         os.path.join(FIGURES_DIR, f'{fig_name}.png'))
+                         os.path.join(FIGURES_DIR, f'{fig_name}.png'),
+                         show_title=False)
 
         ps = summary['post_singapore']
         ph = summary['post_hanoi']
