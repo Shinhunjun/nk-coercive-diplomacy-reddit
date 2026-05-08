@@ -12,6 +12,7 @@
 \centering
 \setlength{\tabcolsep}{3pt}
 \caption{Dataset Overview}
+\resizebox{0.75\linewidth}{!}{
 \begin{tabular}{llrr}
 \hline
 \textbf{Group} & \textbf{Topic} & \textbf{Posts} & \textbf{Comments} \\
@@ -25,11 +26,14 @@ Control 3 & Russia & 8,570 & 81,883 \\
 \hline
 \end{tabular}
 \label{tab:dataset}
+}
 \end{table}
 We selected control countries exposed to contemporaneous high-salience geopolitical events but not subject to U.S.--North Korea summit diplomacy: China (trade conflict), Iran (post-JCPOA tensions), and Russia (U.S. election interference).
-Using multiple controls allows us to assess robustness across different confounding structures. However, the validity of a DiD design rests on the parallel trends assumption: treated and control groups must exhibit similar trends in the outcome variable prior to the intervention. We verified this assumption for all groups (see Appendix Tables~\ref{tab:app_pt_sentiment} and~\ref{tab:app_pt_framing}). For sentiment, all three control groups satisfied parallel trends ($p > 0.05$ for all comparisons). For framing, China and Iran satisfied parallel trends, while Russia exhibited a significant violation for P1$\rightarrow$P2 ($p = 0.01$), likely reflecting differential political attention to Russia during the pre-treatment period. When parallel trends assumptions are violated, including such controls can bias DiD estimates rather than strengthen identification. Accordingly, we adopt a conservative strategy and exclude Russia from framing analyses where violations are detected. Consequently, we exclude Russia from framing analyses for the Singapore Summit effect and retain China and Iran as primary counterfactuals.
+Using multiple controls allows us to assess robustness across different confounding structures. However, the validity of a DiD design rests on the parallel trends assumption: treated and control groups must exhibit similar trends in the outcome variable prior to the intervention. We verified this assumption for all groups (see Appendix Tables~\ref{tab:app_pt_sentiment} and~\ref{tab:app_pt_framing}). For sentiment, all three control groups satisfied parallel trends ($p > 0.05$ for all comparisons). For framing, China and Iran satisfied parallel trends, while Russia exhibited a significant violation for P1$\rightarrow$P2 ($p = 0.01$), likely reflecting differential political attention to Russia during the pre-treatment period, hence, 
+% When parallel trends assumptions are violated, including such controls can bias DiD estimates rather than strengthen identification. Accordingly, 
+we exclude Russia from framing analyses for the Singapore Summit effect and retain China and Iran as primary counterfactuals.
 
-\textbf{Key Events and Analysis Periods:} To avoid anticipation effects, we define three analysis periods excluding transition months and Figure~\ref{fig:timeline} visually summarizes these periods and events:
+\textbf{Key Events and Analysis Periods:} To avoid anticipation effects, we define three analysis periods excluding transition months, and Figure~\ref{fig:timeline} visually summarizes these periods and events:
 \begin{itemize}
     \item \textbf{P1} (2017.01--2018.02): Pre-Announcement
     \item \textbf{P2} (2018.06--2019.01): Singapore-Hanoi
@@ -55,28 +59,20 @@ Detailed prompt instructions and category definitions are provided in Appendix~\
 \textbf{Human Annotation Benchmark: } To validate our LLM-based classification in a domain-sensitive setting, we constructed a gold-standard human annotation benchmark. Two military officers with expertise in North Korean affairs independently labeled 500 stratified samples (4 countries $\times$ 3 periods $\times$ 5 frames). We provide detailed information in the Results section.
 
 \subsection{Causal Identification}
-We estimate the causal impact of summit diplomacy using a Difference-in-Differences (DiD) design,
-a widely used quasi-experimental approach for evaluating the effects of discrete political events
-in observational data~\cite{berger2020tarp,yang2022effects}. Following Kumarswamy et al.~\cite{kumarswamy2025}, who used a control platform to isolate policy effects, we leverage multiple control countries to separate summit impacts from global geopolitical confounds.
+We estimate the causal impact of summit diplomacy using a Difference-in-Difference (DiD) design, a widely used quasi-experimental approach for evaluating the effects of discrete political events in observational data~\cite{berger2020tarp,yang2022effects}. Following Kumarswamy et al.~\cite{kumarswamy2025}, who used a control platform to isolate policy effects, we leverage multiple control countries to separate summit impacts from global geopolitical confounds.
 By using China, Iran, and Russia as counterfactuals, we control for external shocks such as the U.S.-China trade war, JCPOA withdrawal tensions, and the Mueller investigation, respectively. This design ensures that observed changes in North Korea discourse are attributable to summit diplomacy rather than general fluctuations in foreign policy attention or sentiment.
 
-\textbf{Difference-in-Differences Specification:} Our main specification uses two-way fixed effects:
+\textbf{Difference-in-Difference Specification:} Our main specification uses two-way fixed effects:
 \begin{equation}
 Y_{g,t} = \alpha_g + \gamma_t + \beta \big(\text{Treat}_g \times \text{Post}_t\big) + \epsilon_{g,t},
 \end{equation}
-where $Y_{g,t}$ is the monthly average sentiment (or framing) for group $g$ in month $t$, 
-$\alpha_g$ and $\gamma_t$ denote group and month fixed effects, and $\beta$ captures the DID estimate of the summit effect. We report heteroskedasticity-robust standard errors clustered at the group level. We explicitly verified the parallel trends assumption, as detailed in the Data Collection subsection above.
+where $Y_{g,t}$ is the monthly average sentiment (or framing) for group $g$ in month $t$, $\alpha_g$ and $\gamma_t$ denote group and month fixed effects, and $\beta$ captures the DiD estimate of the summit effect. We report heteroskedasticity-robust standard errors clustered at the group level. We explicitly verified the parallel trends assumption, as detailed in the Data Collection subsection above.
 
 \textbf{Causal Scope:}
-Our primary causal identification is defined at the post level, where the unit of
-analysis is the agenda-setting initial post.
-We additionally estimate Difference-in-Differences models at the comment level
-to assess whether post-level effects extend to highly visible audience responses.
-These comment-level estimates are interpreted as supporting evidence of propagation
-and external validity, rather than as independent causal identification.
+Our primary causal identification is defined at the post level, where the unit of analysis is the agenda-setting initial post. We additionally estimate DiD at the comment level to assess whether post-level effects extend to highly visible audience responses. These comment-level estimates are interpreted as supporting evidence of propagation and external validity, rather than as independent causal identification.
 
 \subsection{Network Structure Analysis}
-Beyond content-level changes, we examine whether diplomatic events reorganize the \textit{structure} of discourse. We adopt a \textbf{GraphRAG-inspired indexing pipeline}~\cite{edge2024graphrag}, leveraging its entity and relationship extraction capabilities to construct structured knowledge graphs. Recent advances have demonstrated that Large Language Models (LLMs) can effectively extract structured knowledge from unstructured text across complex domains, often outperforming traditional information extraction methods~\cite{Anuyah2025CoDeKG,Yang2025SepsisKG}. This approach has proven particularly valuable for analyzing political discourse, where LLMs can identify key actors, events, and their relationships from noisy media content~\cite{Arslan2024PoliticalRAG,Fadda2025LLM_KG_Viewpoints}. While GraphRAG is primarily designed for retrieval-augmented generation, we utilize only its initial \textbf{indexing phase} (which extracts entities and relationships via LLM to build a structured knowledge graph) as a scalable, automated method for constructing the inputs needed for Discourse Network Analysis (DNA)~\cite{leifeld2016policy}. This methodology aligns with recent frameworks that use LLM-constructed graphs to capture complex multi-level relationships and unification of fragmented evidence~\cite{Feng2025BioRAG,Ling2026LLM_KG_Review}.
+Beyond content-level changes, we examine whether diplomatic events reorganize the \textit{structure} of discourse. We adopt a GraphRAG-inspired indexing pipeline~\cite{edge2024graphrag}, leveraging its entity and relationship extraction capabilities to construct structured knowledge graphs. Recent advances have demonstrated that Large Language Models (LLMs) can effectively extract structured knowledge from unstructured text across complex domains, often outperforming traditional information extraction methods~\cite{Anuyah2025CoDeKG,Yang2025SepsisKG}. This approach has proven particularly valuable for analyzing political discourse, where LLMs can identify key actors, events, and their relationships from noisy media content~\cite{Arslan2024PoliticalRAG,Fadda2025LLM_KG_Viewpoints}. While GraphRAG is primarily designed for retrieval-augmented generation, we utilize only its initial \textbf{indexing phase} (which extracts entities and relationships via LLM to build a structured knowledge graph) as a scalable, automated method for constructing the inputs needed for Discourse Network Analysis (DNA)~\cite{leifeld2016policy}. This methodology aligns with recent frameworks that use LLM-constructed graphs to capture complex multi-level relationships and unification of fragmented evidence~\cite{Feng2025BioRAG,Ling2026LLM_KG_Review}.
 Unlike simple keyword co-occurrence networks, which cannot distinguish whether two entities co-occur in a ``threat'' or ``negotiation'' context, this approach extracts semantically meaningful relationships, enabling analysis of \textit{narrative connectivity} rather than mere lexical proximity. We utilize this pipeline to generate knowledge graphs from Reddit discussions for each analysis period.
 
 \textbf{Graph Construction and Customization: }We customized the graph extraction prompts to capture domain-specific constraints. We extended the default entity taxonomy to include \textbf{WEAPON} (e.g., ``ICBM,'' ``nuclear warhead'') and \textbf{POLICY} (e.g., ``denuclearization,'' ``maximum pressure'') categories, ensuring the retrieval of security-relevant concepts central to North Korea discourse.
